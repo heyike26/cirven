@@ -1,0 +1,78 @@
+.as-conversation-sidebar{display:flex;flex-direction:column;flex:1;min-height:0;min-width:0;overflow:hidden;color:var(--as-ink,#36393c);font-family:var(--font-family-sans,system-ui,sans-serif);font-size:14px;line-height:20px}
+.as-conversation-sidebar :is(button,input,select){font-family:inherit;box-sizing:border-box}
+.as-conversation-sidebar .as-conversation-sidebar-tabs{display:flex;gap:4px;flex:none;min-width:0;padding:4px 0 12px;border-bottom:1px solid var(--as-stroke,#dfe0e2)}
+.as-conversation-sidebar .as-conversation-sidebar-tabs button{display:flex;justify-content:center;align-items:center;flex:1;min-width:0;height:32px;padding:4px 8px;border:0;border-radius:8px;background:transparent;color:var(--as-muted,#6e7175);font-size:13px;line-height:20px;font-weight:500;cursor:pointer}
+.as-conversation-sidebar .as-conversation-sidebar-tabs button[aria-selected=true]{background:var(--as-surface,#fff);color:var(--as-ink,#36393c);box-shadow:0 1px 4px #2222220a}
+.as-conversation-sidebar .as-conversation-sidebar-panel{display:flex;flex:1;flex-direction:column;min-height:0;min-width:0;overflow:hidden;padding-top:12px}
+.as-conversation-sidebar .as-conversation-sidebar-panel[hidden]{display:none}
+.as-conversation-sidebar .as-conversation-sidebar-search{display:flex;flex:none;align-items:center;gap:8px;height:36px;min-width:0;padding:0 8px;border:1px solid var(--as-stroke,#dfe0e2);border-radius:8px;background:var(--as-surface,#fff);color:var(--as-muted,#6e7175)}
+.as-conversation-sidebar .as-conversation-sidebar-panel[role=tabpanel] .as-conversation-sidebar-search input:not([type]){display:block;flex:1;min-width:0;width:0;max-width:100%;height:32px;min-height:0;padding:4px 0;border:0;outline:0;border-radius:0;background:transparent;color:var(--as-ink,#36393c);font-size:13px;line-height:20px;box-shadow:none}
+.as-conversation-sidebar .as-conversation-sidebar-search:focus-within{border-color:var(--as-focus,#71787c)}
+.as-conversation-sidebar .as-conversation-sidebar-search button{flex:none;width:24px;height:24px;min-height:0;padding:0;border:0;border-radius:4px;background:transparent;color:var(--as-muted,#6e7175);font-size:18px;line-height:20px;cursor:pointer}
+.as-conversation-sidebar svg{display:block;flex:none;width:16px;height:16px;fill:none;stroke:currentColor;stroke-width:1.4;stroke-linecap:round;stroke-linejoin:round}
+.as-conversation-sidebar .as-conversation-sidebar-controls{display:flex;flex:none;align-items:center;justify-content:space-between;gap:8px;min-width:0;margin:8px 0}
+.as-conversation-sidebar .as-conversation-sidebar-panel[role=tabpanel] .as-conversation-sidebar-controls select[aria-label]{flex:1;min-width:0;width:0;max-width:100%;height:32px;min-height:0;padding:4px 8px;border:0;border-radius:6px;background:transparent;color:var(--as-muted,#6e7175);font-size:13px;line-height:20px;cursor:pointer}
+.as-conversation-sidebar .as-conversation-sidebar-refresh{display:grid;place-items:center;flex:none;width:28px;height:28px;min-height:0;padding:4px;border:0;border-radius:6px;background:transparent;color:var(--as-muted,#6e7175);cursor:pointer}
+.as-conversation-sidebar button:hover:enabled,.as-conversation-sidebar select:hover{background:color-mix(in srgb,var(--as-ink,#36393c) 5%,transparent)}
+.as-conversation-sidebar :is(button,input,select):focus-visible{outline:2px solid var(--as-focus,#71787c);outline-offset:0}
+.as-conversation-sidebar .as-conversation-sidebar-note{flex:none;min-width:0;margin:0 0 8px;padding:0 8px;color:var(--as-muted,#6e7175);font-size:12px;line-height:20px;overflow-wrap:anywhere}
+.as-conversation-sidebar .as-conversation-sidebar-note[role=alert]{color:var(--as-error,#993f3e)}
+.as-conversation-sidebar .as-conversation-sidebar-list{flex:1;min-width:0;min-height:0;overflow:auto;overscroll-behavior:contain;padding:0 4px 8px 0;scrollbar-width:thin;scrollbar-color:#bfc3c6 transparent;scroll-padding:8px}
+.as-conversation-sidebar .as-conversation-sidebar-group{margin:0 0 16px;min-width:0}
+.as-conversation-sidebar .as-conversation-sidebar-group h3{margin:0;padding:4px 8px 8px;color:var(--as-muted,#6e7175);font-size:12px;line-height:16px;font-weight:500}
+.as-conversation-sidebar .as-conversation-sidebar-group-list{display:flex;flex-direction:column;gap:4px;min-width:0}
+.as-conversation-sidebar .as-conversation-row{display:flex;align-items:center;gap:8px;min-width:0;width:100%;min-height:36px;margin:0;padding:8px;border:0;border-radius:8px;background:transparent;color:var(--as-ink,#36393c);text-align:left;font-size:14px;line-height:20px;cursor:pointer;box-shadow:none}
+.as-conversation-sidebar .as-conversation-row-container>.as-conversation-row[aria-current=page]{background:color-mix(in srgb,var(--as-ink,#36393c) 7%,transparent);color:var(--as-ink,#36393c);box-shadow:none}
+.as-conversation-sidebar .as-conversation-row[aria-current=page] .as-conversation-row-label>span{font-weight:550}
+.as-conversation-sidebar .as-conversation-row-label{display:flex;flex:1;flex-direction:column;min-width:0;gap:4px}
+.as-conversation-sidebar .as-conversation-row-label>span,.as-conversation-sidebar .as-conversation-row-label>small{display:block;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;min-width:0;max-width:100%}
+.as-conversation-sidebar .as-conversation-row-label>span{font-size:14px;line-height:20px;font-weight:400}
+.as-conversation-sidebar .as-conversation-row-label>small{color:var(--as-muted,#6e7175);font-size:12px;line-height:16px}
+.as-conversation-sidebar .as-conversation-row-icon,.as-conversation-sidebar .as-conversation-row-lock{display:flex;flex:none;align-items:center;justify-content:center;width:16px;height:20px;color:var(--as-muted,#6e7175)}
+.as-conversation-sidebar .as-conversation-row-lock svg{width:12px;height:12px}
+.as-conversation-sidebar .as-conversation-sidebar-empty{margin:0;padding:24px 8px;color:var(--as-muted,#6e7175);font-size:13px;line-height:20px;overflow-wrap:anywhere}
+.as-conversation-sidebar .as-conversation-sidebar-more{display:flex;flex-direction:column;align-items:flex-start;gap:8px;padding:4px 8px 12px;color:var(--as-muted,#6e7175);font-size:12px;line-height:20px}
+.as-conversation-sidebar .as-conversation-sidebar-more button{min-height:28px;padding:4px 8px;border:0;border-radius:6px;background:transparent;color:var(--as-ink,#36393c);font-size:13px;line-height:20px;cursor:pointer}
+.as-conversation-sidebar .as-conversation-sidebar-skeleton{display:flex;flex-direction:column;gap:16px;padding:12px 8px}
+.as-conversation-sidebar .as-conversation-sidebar-skeleton span{height:16px;border-radius:4px;background:color-mix(in srgb,var(--as-ink,#36393c) 8%,transparent);animation:as-conversation-sidebar-pulse 1200ms ease-in-out infinite alternate}
+.as-conversation-sidebar .as-conversation-sidebar-skeleton span:nth-child(2){width:76%}.as-conversation-sidebar .as-conversation-sidebar-skeleton span:nth-child(3){width:88%}
+.as-conversation-sidebar .as-conversation-sidebar-files{padding-top:12px}
+@keyframes as-conversation-sidebar-pulse{to{opacity:.45}}
+
+.as-conversation-sidebar .as-conversation-sidebar-management{flex:none;width:100%;min-height:40px;margin-top:8px;padding:8px;border:0;border-top:1px solid var(--as-stroke,#dfe0e2);border-radius:0;background:transparent;color:var(--as-muted,#6e7175);font-size:13px;line-height:20px;text-align:start;cursor:pointer}
+.as-conversation-sidebar .as-conversation-sidebar-management[aria-pressed=true]{color:var(--as-ink,#36393c);background:var(--as-surface,#fff)}
+
+/* Projects own the first level; time orders conversations within that project. */
+.as-conversation-sidebar .as-conversation-sidebar-project{min-width:0;margin:0 0 12px}
+.as-conversation-sidebar .as-conversation-sidebar-project>h3{margin:0;padding:0;font:inherit}
+.as-conversation-sidebar .as-conversation-project-toggle{display:flex;align-items:center;gap:8px;width:100%;min-width:0;min-height:40px;padding:8px 4px;border:0;border-radius:8px;background:transparent;color:var(--as-ink,#36393c);font-size:14px;font-weight:500;line-height:20px;text-align:start;cursor:pointer}
+.as-conversation-sidebar .as-conversation-project-name{flex:1;min-width:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.as-conversation-sidebar .as-conversation-project-toggle>small{flex:none;color:var(--as-muted,#6e7175);font-size:12px;font-weight:400;font-variant-numeric:tabular-nums}
+.as-conversation-sidebar .as-conversation-project-chevron{display:flex;flex:none;transition:transform 180ms var(--as-ease,ease-out)}
+.as-conversation-sidebar .as-conversation-project-chevron>svg{width:12px;height:12px}
+.as-conversation-sidebar .as-conversation-project-toggle[aria-expanded=true]>.as-conversation-project-chevron{transform:rotate(90deg)}
+.as-conversation-sidebar .as-conversation-project-contents{margin-inline-start:10px;padding-inline-start:10px;min-width:0;border-inline-start:1px solid color-mix(in srgb,var(--as-muted,#6e7175) 20%,transparent)}
+.as-conversation-sidebar .as-conversation-project-contents[hidden]{display:none}
+.as-conversation-sidebar .as-conversation-project-contents>.as-conversation-row-container{margin-top:7px}
+.as-conversation-row-container{display:flex;align-items:center;min-width:0;border-radius:8px}
+.as-conversation-row-container>.as-conversation-row{flex:1;min-width:0;width:0}
+.as-conversation-row-container>.as-popover-anchor{flex:none}
+.as-conversation-sidebar .as-conversation-row-more{display:grid;place-items:center;flex:none;width:28px;height:32px;margin:0;padding:4px;border:0;border-radius:6px;background:transparent;color:var(--as-muted,#6e7175);opacity:0;cursor:pointer;transition:opacity 160ms ease-out,background 160ms ease-out}
+.as-conversation-row-container:hover .as-conversation-row-more,.as-conversation-row-container:focus-within .as-conversation-row-more,.as-conversation-row-container:has([aria-current=page]) .as-conversation-row-more{opacity:1}
+.as-conversation-sidebar .as-conversation-row-more:hover{background:#e6e9ec}
+.as-conversation-actions-popover{width:180px;min-width:0;padding:4px}
+.as-conversation-actions-popover>button{display:block;width:100%;padding:8px 12px;border:0;border-radius:6px;background:transparent;color:var(--as-ink,#36393c);font:14px/20px var(--font-family-sans,system-ui,sans-serif);text-align:start;cursor:pointer}
+.as-conversation-actions-popover>button:hover{background:#eef0f2}
+@media(hover:none){.as-conversation-sidebar .as-conversation-row-more{opacity:1}}
+
+.as-conversation-sidebar .as-conversation-new-chat{display:flex;align-items:center;gap:8px;flex:none;width:100%;min-height:40px;margin-block:8px;padding:8px 12px;border:1px solid var(--as-stroke,#dfe0e2);border-radius:8px;background:var(--as-surface,#fff);font:inherit;text-align:start;cursor:pointer}
+.as-conversation-sidebar .as-conversation-sidebar-project>h3{display:flex;align-items:center;min-width:0}.as-conversation-sidebar .as-conversation-project-toggle{flex:1;min-width:0}.as-conversation-sidebar .as-conversation-project-create{flex:none;width:32px;height:36px;border:0;border-radius:8px;background:transparent;color:inherit;font-size:20px;cursor:pointer;opacity:0;transition:opacity 120ms ease}.as-conversation-sidebar-project>h3:is(:hover,:focus-within) .as-conversation-project-create{opacity:1}.as-conversation-project-create:focus-visible{outline:2px solid var(--as-focus,#71787c);outline-offset:-2px}.as-conversation-sidebar button:disabled{cursor:default;opacity:.5}
+@media(hover:none){.as-conversation-sidebar .as-conversation-project-create{opacity:1}}
+
+/* The project identifies these as conversations. Keep special source and lock
+   indicators, while giving ordinary titles the full reading line. */
+.as-conversation-sidebar .as-conversation-row:is([data-kind=native],[data-kind=original]) .as-conversation-row-icon{display:none}
+.as-conversation-sidebar .as-conversation-row-container>button.as-conversation-row{border:0;box-shadow:none}
+.as-conversation-sidebar .as-conversation-row:not(:focus-visible),.as-conversation-sidebar .as-conversation-project-toggle:not(:focus-visible){outline:none}
+.as-conversation-sidebar .as-conversation-row:focus-visible,.as-conversation-sidebar .as-conversation-project-toggle:focus-visible{outline:2px solid var(--as-focus,#71787c);outline-offset:-2px}
+@media(forced-colors:active){.as-conversation-sidebar .as-conversation-row[aria-current=page]{color:HighlightText;background:Highlight}}

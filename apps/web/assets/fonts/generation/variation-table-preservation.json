@@ -1,0 +1,67 @@
+{
+  "schema": "eeas.font-variation-table-preservation.v1",
+  "python": "3.10.22",
+  "fonttools": "4.65.0",
+  "records": [
+    {
+      "family": "Noto Sans SC",
+      "original_sha256": "a3041811a78c361b1de50f953c805e0244951c21c5bd412f7232ef0d899af0da",
+      "woff2_sha256": "aef8c34277afad81ecd0227138a830263c0caea65b7aea66d1195395f097b55a",
+      "tables": {
+        "fvar": {
+          "byte_length": 108,
+          "sha256": "7d1ae6f1706522015c44fd4623046e775b47f3778a7fc13738d076428ce6d6db",
+          "original_equals_decoded_woff2": true
+        },
+        "gvar": {
+          "byte_length": 7081744,
+          "sha256": "5de4494f3572945b2164c7c8e708a90fb6374fc515ebeba26a4f4397a7975370",
+          "original_equals_decoded_woff2": true
+        },
+        "avar": {
+          "byte_length": 42,
+          "sha256": "5a3bf1be101a7743210674df106310d8fa6a77afb966496b15ac45a10ed2775e",
+          "original_equals_decoded_woff2": true
+        },
+        "HVAR": {
+          "byte_length": 62122,
+          "sha256": "e1700d32d0ce8533e6fa2e2df4f87128ee23ef782fc6322c030a08379eacad02",
+          "original_equals_decoded_woff2": true
+        },
+        "STAT": {
+          "byte_length": 158,
+          "sha256": "4b71b740ee7f91d2b9d0c918563712bc6f502d9129d36d59742989e9b2cfdba6",
+          "original_equals_decoded_woff2": true
+        }
+      }
+    },
+    {
+      "family": "Manrope",
+      "original_sha256": "3ae11c49db0455a3cc33e37d380f20fdb8c7f8b41dc07625c177e3d87a9d6ae6",
+      "woff2_sha256": "30b83738add8c9edd9e3450b98036a9a8fb5668d0cbd4eb0ce5fe6761197f21f",
+      "tables": {
+        "fvar": {
+          "byte_length": 106,
+          "sha256": "5f811d812d9a75b9e7a87ede3fad2f6b05507ae494a48ec7f02242c0efc12582",
+          "original_equals_decoded_woff2": true
+        },
+        "gvar": {
+          "byte_length": 57786,
+          "sha256": "11651c2aac3509657b49b1c8fd3714561bee3d8f1330517ad01e1f75599e92dc",
+          "original_equals_decoded_woff2": true
+        },
+        "HVAR": {
+          "byte_length": 1014,
+          "sha256": "ea3e91a9166ca38d01dd95abe66d0bbbc1edc122511bb9e281ab7d85eaf6a2ce",
+          "original_equals_decoded_woff2": true
+        },
+        "STAT": {
+          "byte_length": 130,
+          "sha256": "083924b543b677eb462600e377505249ea284400821814924067797729cebbaa",
+          "original_equals_decoded_woff2": true
+        }
+      }
+    }
+  ],
+  "limitation": "Raw variable tables are identical after WOFF2 decoding; browser interpolation/visual qualification remains NOT_RUN."
+}

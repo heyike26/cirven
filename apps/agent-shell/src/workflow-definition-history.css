@@ -1,0 +1,24 @@
+.wf-definition-history{min-block-size:0;flex:1;display:grid;grid-template-rows:auto minmax(0,1fr)}
+.wf-history-version{display:flex;align-items:center;flex-wrap:wrap;gap:6px 12px;padding:14px 22px;border-block-end:1px solid var(--wf-line)}
+.wf-history-version strong{min-inline-size:0;overflow-wrap:anywhere}
+.wf-history-version span,.wf-history-state small{color:var(--wf-muted);font-size:12px;font-variant-numeric:tabular-nums}
+.wf-history-scroll{min-inline-size:0;overflow:auto;overscroll-behavior:contain;scrollbar-gutter:stable;padding:14px 22px 24px}
+.wf-history-scroll[hidden]{display:none}
+.wf-history-scroll>p{margin-block:8px}
+.wf-history-list{margin:0 0 12px;padding:0;list-style:none}
+.wf-history-list>li+li{border-block-start:1px solid var(--wf-line)}
+.wf-history-list li>button{
+ inline-size:100%;min-block-size:64px;justify-content:space-between;gap:8px 14px;padding:9px 10px;
+ text-align:start;border-color:transparent;background:transparent
+}
+.wf-history-list li>button>span:first-child{display:grid;gap:4px;min-inline-size:0;overflow-wrap:anywhere}
+.wf-history-list li>button small,.wf-history-description small,.wf-history-quote small{color:var(--wf-muted);font-size:13px}
+.wf-history-state{display:flex;flex-wrap:wrap;justify-content:flex-end;align-items:center;gap:4px 8px;text-align:end}
+.wf-history-source,.wf-history-quote{display:grid;gap:14px;align-content:start;justify-items:start}
+.wf-history-description,.wf-history-quote>div{display:grid;gap:4px;overflow-wrap:anywhere}
+.wf-history-quote{inline-size:100%;padding:14px 16px;border-radius:10px;background:var(--wf-canvas);overflow-wrap:anywhere}
+.wf-column .wf-history-quote blockquote{margin-block:2px;color:var(--wf-ink)}
+.wf-history-source [aria-disabled=true],.wf-history-scroll [aria-disabled=true]{opacity:.6;cursor:wait}
+@media(max-width:480px){.wf-history-version,.wf-history-scroll{padding-inline:16px}.wf-history-state{max-inline-size:42%}}
+.wf-library-title:has(.wf-library-history){flex-wrap:wrap}
+.wf-column .wf-library-history{margin-inline-start:auto;min-block-size:34px}

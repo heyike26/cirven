@@ -1,0 +1,83 @@
+{
+  "schema": "eeas.office-vendored-source.v1",
+  "origin": "https://github.com/microsoft/markitdown",
+  "release": "v0.1.8",
+  "commit": "b8f79c57ebc0044be41323d89b2a45d3fda8460e",
+  "license": "MIT",
+  "scope": "Original transitive PPTX converter source only; no MarkItDown dispatcher/package initializer/plugins",
+  "namespace": "packages.adapters.office_vendor.markitdown_v018",
+  "package_initializer": "NOT_EXECUTED; inert original at originals/package-init.py.txt",
+  "network_caption": "Original helper retained as import closure; adapter never supplies llm_client or llm_model",
+  "files": [
+    {
+      "path": "_base_converter.py",
+      "original_path": "packages/markitdown/src/markitdown/_base_converter.py",
+      "upstream_url": "https://raw.githubusercontent.com/microsoft/markitdown/b8f79c57ebc0044be41323d89b2a45d3fda8460e/packages/markitdown/src/markitdown/_base_converter.py",
+      "byte_length": 4516,
+      "sha256": "3b9cfbe86bc2af4f7f23042e60eaccf5e8d9df866d8a35a77d00672eab5202e6"
+    },
+    {
+      "path": "_stream_info.py",
+      "original_path": "packages/markitdown/src/markitdown/_stream_info.py",
+      "upstream_url": "https://raw.githubusercontent.com/microsoft/markitdown/b8f79c57ebc0044be41323d89b2a45d3fda8460e/packages/markitdown/src/markitdown/_stream_info.py",
+      "byte_length": 1076,
+      "sha256": "039bce7e9d0c5e62a6ed55ac6133e7fa530d7025a2ed8372e35538b072f6dbdf"
+    },
+    {
+      "path": "_exceptions.py",
+      "original_path": "packages/markitdown/src/markitdown/_exceptions.py",
+      "upstream_url": "https://raw.githubusercontent.com/microsoft/markitdown/b8f79c57ebc0044be41323d89b2a45d3fda8460e/packages/markitdown/src/markitdown/_exceptions.py",
+      "byte_length": 2826,
+      "sha256": "5e927ec2e2aaf7eeee1bbfa845fff82763a5892ccd8c6e2046b12af9eae1e206"
+    },
+    {
+      "path": "converters/_pptx_converter.py",
+      "original_path": "packages/markitdown/src/markitdown/converters/_pptx_converter.py",
+      "upstream_url": "https://raw.githubusercontent.com/microsoft/markitdown/b8f79c57ebc0044be41323d89b2a45d3fda8460e/packages/markitdown/src/markitdown/converters/_pptx_converter.py",
+      "byte_length": 14271,
+      "sha256": "626fc4614e96b4646ef1f927aa5c873e12a323e44822d5629db5fb8b702471fb"
+    },
+    {
+      "path": "converters/_html_converter.py",
+      "original_path": "packages/markitdown/src/markitdown/converters/_html_converter.py",
+      "upstream_url": "https://raw.githubusercontent.com/microsoft/markitdown/b8f79c57ebc0044be41323d89b2a45d3fda8460e/packages/markitdown/src/markitdown/converters/_html_converter.py",
+      "byte_length": 3676,
+      "sha256": "07bcb80d3370528ffcb222e8b0ca0032bcbc8205a636980937eb6f9f2a6a448d"
+    },
+    {
+      "path": "converters/_markdownify.py",
+      "original_path": "packages/markitdown/src/markitdown/converters/_markdownify.py",
+      "upstream_url": "https://raw.githubusercontent.com/microsoft/markitdown/b8f79c57ebc0044be41323d89b2a45d3fda8460e/packages/markitdown/src/markitdown/converters/_markdownify.py",
+      "byte_length": 6136,
+      "sha256": "67f835097e53f8ac94c87e80db8b233b47e426738887a8d16de850cc0aaf16ff"
+    },
+    {
+      "path": "converters/_llm_caption.py",
+      "original_path": "packages/markitdown/src/markitdown/converters/_llm_caption.py",
+      "upstream_url": "https://raw.githubusercontent.com/microsoft/markitdown/b8f79c57ebc0044be41323d89b2a45d3fda8460e/packages/markitdown/src/markitdown/converters/_llm_caption.py",
+      "byte_length": 1445,
+      "sha256": "1f59673a3214b0f02bb669b6c883166fd39f9b6fbcb0e3f777d1eb184e92b4bc"
+    },
+    {
+      "path": "converter_utils/_image.py",
+      "original_path": "packages/markitdown/src/markitdown/converter_utils/_image.py",
+      "upstream_url": "https://raw.githubusercontent.com/microsoft/markitdown/b8f79c57ebc0044be41323d89b2a45d3fda8460e/packages/markitdown/src/markitdown/converter_utils/_image.py",
+      "byte_length": 683,
+      "sha256": "8a1e80fb487e2240a74ad7ebccb1f2ba6b2ac751590fcda451b0b4b0a8749672"
+    },
+    {
+      "path": "LICENSE",
+      "original_path": "LICENSE",
+      "upstream_url": "https://raw.githubusercontent.com/microsoft/markitdown/b8f79c57ebc0044be41323d89b2a45d3fda8460e/LICENSE",
+      "byte_length": 1141,
+      "sha256": "c2cfccb812fe482101a8f04597dfc5a9991a6b2748266c47ac91b6a5aae15383"
+    },
+    {
+      "path": "originals/package-init.py.txt",
+      "original_path": "packages/markitdown/src/markitdown/__init__.py",
+      "upstream_url": "https://raw.githubusercontent.com/microsoft/markitdown/b8f79c57ebc0044be41323d89b2a45d3fda8460e/packages/markitdown/src/markitdown/__init__.py",
+      "byte_length": 899,
+      "sha256": "ba28afb90c25691ee46a7868b565369b04e5073484fc1e224d7ead4d8ed9f533"
+    }
+  ]
+}

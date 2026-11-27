@@ -1,0 +1,16 @@
+{
+  "schema_version": "eeas.upgrade-design.v1",
+  "upgrade_id": null,
+  "from_stack": null,
+  "to_candidate_stack": null,
+  "source_refs": [],
+  "new_capabilities": [],
+  "new_permissions": [],
+  "loaded_evidence": [],
+  "behavior_evidence": [],
+  "regression_evidence": [],
+  "inflight_isolation_evidence": [],
+  "rollback_evidence": [],
+  "data_migration_strategy": null,
+  "status": "PLANNED"
+}

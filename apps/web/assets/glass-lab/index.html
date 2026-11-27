@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <meta name="description" content="原创数据驱动的银白玻璃布局与动效试验；与真实 EEAS 项目、任务和验收记录无关。">
+  <title>EEAS Glass Lab · 布局与动效试验</title>
+  <link rel="stylesheet" href="./lab.css">
+  <script src="./lab.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#lab-article">跳到正文</a>
+  <div class="lab-shell">
+    <header class="lab-header">
+      <a class="lab-wordmark" href="./index.html" aria-label="Glass Lab 试验页首页">EEAS <span>Glass Lab</span></a>
+      <p class="experiment-label">布局与动效试验 <span>全部数据为原创示意</span></p>
+    </header>
+
+    <section class="comparison-controls" aria-label="布局比较设置">
+      <div class="mode-options" role="group" aria-label="导航布局">
+        <button id="lab-mode-floating" type="button" data-mode="floating" aria-pressed="true">浮动文字导航</button>
+        <button id="lab-mode-top" type="button" data-mode="top" aria-pressed="false">顶部标签与依据</button>
+        <button id="lab-mode-rail" type="button" data-mode="rail" aria-pressed="false">窄幅导航</button>
+      </div>
+      <div class="motion-options">
+        <label for="lab-reduce-motion"><input id="lab-reduce-motion" type="checkbox">减少动态</label>
+        <output id="lab-motion-status" aria-live="polite">遵循系统动态设置</output>
+      </div>
+    </section>
+
+    <div id="lab-canvas" class="lab-canvas" data-mode="floating">
+      <nav id="lab-navigation" class="lab-navigation glass-surface" aria-label="试验内容导航">
+        <span id="lab-nav-indicator" class="nav-indicator" aria-hidden="true"></span>
+        <button id="lab-nav-source" type="button" data-page="source" aria-current="page" aria-controls="lab-article">
+          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M7 3h7l4 4v14H7zM14 3v5h4M10 12h5M10 16h5"/></svg><span>原文</span>
+        </button>
+        <button id="lab-nav-notes" type="button" data-page="notes" aria-controls="lab-article">
+          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="m5 17-1 4 4-1L20 8l-3-3zM14 8l3 3M5 4h6M5 8h3"/></svg><span>标注</span>
+        </button>
+        <button id="lab-nav-task" type="button" data-page="task" aria-controls="lab-article">
+          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M9 5H5v16h14V5h-4M9 3h6v5H9zM8 13h8M8 17h5"/></svg><span>任务</span>
+        </button>
+        <button id="lab-nav-review" type="button" data-page="review" aria-controls="lab-article">
+          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="m4 13 5 5L20 6M4 5h6M4 9h3"/></svg><span>审阅</span>
+        </button>
+      </nav>
+
+      <div class="content-grid">
+      <main class="reading-room glass-surface">
+        <div class="object-strip">
+          <div>
+            <p class="object-label">当前对象</p>
+            <p id="lab-current-object" class="object-name">通信链路说明 <span>原创示意 v1</span></p>
+          </div>
+          <button id="lab-open-context" class="context-trigger" type="button" aria-haspopup="dialog" aria-controls="lab-object-drawer">查看依据<svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M6 4h8v12H6zM9 7h2M9 10h2M9 13h2"/></svg></button>
+        </div>
+        <div class="reading-meta"><span id="lab-current-view" role="status">正在阅读原文</span><span>仅供比较布局</span></div>
+        <article id="lab-article" class="reading-article" tabindex="-1" aria-labelledby="lab-page-title">
+          <h1 id="lab-page-title">通信链路与数据交接</h1>
+          <p class="article-intro">让原文始终留在眼前，再讨论它如何进入下一步工作。</p>
+          <p>这是一份为界面比较撰写的原创材料。它描述一个虚构观测点的数据交接过程，便于观察导航、正文和对象依据之间的关系；它不是已上传的企业文档，也不代表真实工程或验收结论。</p>
+          <h2>从一段可读的原文开始</h2>
+          <p>观测点按既定周期读取传感器数据，并将读取时间、通道标识和原始数值一起写入记录。交接人员首先确认记录属于哪个时间段，再检查它与对应说明是否一致。</p>
+          <p>通信暂时中断时，记录保留在本地。恢复连接后，交接人员应能区分新读取的数据与此前尚未传送的记录，而无需根据界面颜色猜测它们的来源。</p>
+          <h2>把来源放在操作附近</h2>
+          <p>一条标注需要指向它所解释的原文。将材料名称、示意版本和选中对象放在正文上方，可以在切换页面后继续辨认当前上下文，而不必重新寻找菜单中的项目名称。</p>
+          <blockquote>“恢复连接”描述的是交接条件。它没有自动说明重试次数、最长等待时间或最终是否成功。</blockquote>
+          <p>这段界面试验希望保留这种区别：阅读文字是一件事，提出任务是一件事，明确审阅与运行又是另外的动作。此页只展示布局，没有执行这些产品操作。</p>
+          <h2>让正文连续地走到末尾</h2>
+          <p>阅读区采用连续排版，段落之间只保留必要的层级与留白。辅助信息可以出现在侧边，也可以由按钮展开；它不应把每一段说明切成形状相同的卡片。</p>
+          <p>当窗口变窄或通过键盘操作时，当前对象和导航文字仍保持可见。关闭动态效果后，所有正文、依据和操作标签也应完整保留。</p>
+          <p class="source-end">原创示意原文结束。此页不会创建任务、提交审批、调用模型或写入 EEAS 数据库。</p>
+        </article>
+      </main>
+
+      <aside id="lab-context-panel" class="context-panel glass-surface" aria-labelledby="lab-context-heading" hidden>
+        <h2 id="lab-context-heading">对象依据</h2>
+        <p class="context-title">通信链路说明</p>
+        <dl class="context-details">
+          <div><dt>来源</dt><dd>本页原创示意</dd></div>
+          <div><dt>版本</dt><dd>示意 v1</dd></div>
+          <div><dt>用途</dt><dd>比较同一份内容在三种布局中的阅读与操作方式</dd></div>
+        </dl>
+        <p class="context-note">没有绑定真实项目、原件哈希或验收记录。</p>
+      </aside>
+      </div>
+    </div>
+
+    <footer class="lab-footer">浮动导航保留轻量入口；顶部标签把依据放在视线内；窄幅导航保留常驻入口。比较时内容与对象保持相同。</footer>
+  </div>
+
+  <dialog id="lab-object-drawer" class="object-drawer" aria-labelledby="lab-drawer-title">
+    <div class="drawer-heading"><h2 id="lab-drawer-title">当前对象的依据</h2><button id="lab-close-context" class="close-context" type="button" autofocus aria-label="关闭对象依据"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18"/></svg></button></div>
+    <p class="context-title">通信链路说明</p>
+    <p>原创示意 v1</p>
+    <dl class="context-details">
+      <div><dt>当前页面</dt><dd id="lab-drawer-page">原文</dd></div>
+      <div><dt>材料来源</dt><dd>为本次布局与动效试验原创</dd></div>
+      <div><dt>数据范围</dt><dd>正文、标注、任务说明和审阅说明均属于同一份试验数据</dd></div>
+    </dl>
+    <p class="context-note">这不是产品项目或审计回执。页面不提交任务、不保存审批、不产生模型调用。</p>
+    <button id="lab-return-reading" class="return-reading" type="button">返回阅读</button>
+  </dialog>
+</body>
+</html>

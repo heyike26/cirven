@@ -1,0 +1,21 @@
+{
+  "schema": "eeas.original-native-protocol-samples.v1",
+  "version": "1.19.0",
+  "source_commit": "733b2c627e5aec39cb33cc22373bdce33053ef2c",
+  "captured_from": "reports/E04-opencode-mock-wire/20261013/first",
+  "scope": "UNMODIFIED_NATIVE_CLI_WITH_ORIGINAL_MODEL_HTTP_TRANSPORT",
+  "company_qualification": "NOT_VALIDATED",
+  "native_windows": "NOT_RUN",
+  "files": [
+    {
+      "path": "original-native-events.json",
+      "sha256": "af509ac7658cd51ab1d5451127109220f8d44004658971dab0e92e65384224da",
+      "byte_length": 20226
+    },
+    {
+      "path": "original-native-messages.json",
+      "sha256": "3065f1cb0b7a4b218b3933b4fe47a240788320236b0d78a9980b7b650dfeceff",
+      "byte_length": 2539
+    }
+  ]
+}

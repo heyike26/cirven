@@ -1,0 +1,11 @@
+import { spawnSync } from 'node:child_process';
+import { mkdirSync, writeFileSync } from 'node:fs';
+import { resolve, dirname } from 'node:path';
+import { fileURLToPath } from 'node:url';
+import { applyUpstreamPatches } from './apply-upstream-patches.mjs';
+const app=resolve(dirname(fileURLToPath(import.meta.url)),'..');
+applyUpstreamPatches();
+const result=spawnSync(process.execPath,[resolve(app,'node_modules/typescript/bin/tsc'),'--noEmit'],{cwd:app,encoding:'utf8'});
+const output=(result.stdout??'')+(result.stderr??'');const all=output.split('\n').filter(line=>line.includes('error TS'));const own=all.filter(line=>line.startsWith('src/')||line.startsWith('scripts/'));
+mkdirSync(resolve(app,'validation'),{recursive:true});writeFileSync(resolve(app,'validation/full-upstream-typecheck.log'),output);writeFileSync(resolve(app,'validation/typecheck-scope.json'),JSON.stringify({full_upstream_exit_code:result.status,new_source_errors:own,upstream_errors:all.filter(line=>!own.includes(line)),qualification:own.length?'FAIL':'NEW_SOURCE_TYPECHECK_PASS',full_upstream_qualification:result.status===0?'PASS':'NOT_PASSED'},null,2)+'\n');
+process.stdout.write(`New source errors: ${own.length}; upstream diagnostics: ${all.length-own.length}. Full upstream exit ${result.status}; exact scope recorded in validation/.\n`);if(result.status!==0)process.stdout.write(output);process.exit(result.status??1);

@@ -1,0 +1,11 @@
+{
+  "name": "zod",
+  "version": "4.1.8",
+  "license": "MIT",
+  "source_url": "https://registry.npmjs.org/zod/-/zod-4.1.8.tgz",
+  "registry_integrity": "sha512-5R1P+WwQqmmMIEACyzSvo4JXHY5WiAFHRMg+zBZKgKS+Q1viRa0C1hmUKtHltoIFKtIdki3pRxkmpP74jnNYHQ==",
+  "archive_sha256": "193e3a33dc66d679d522c40e6a5138788646d3c6a5039d0c5c2b3bede83b6635",
+  "archive_bytes": 639838,
+  "unpacked_bytes": 3958238,
+  "runtime_dependencies": {}
+}

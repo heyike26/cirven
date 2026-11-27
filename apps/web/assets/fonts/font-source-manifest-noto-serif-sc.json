@@ -1,0 +1,83 @@
+{
+  "schema": "eeas.runtime-font-source.v1",
+  "family": "Noto Serif SC",
+  "recommended_css_alias": "Studio Serif SC",
+  "official_repository": "https://github.com/google/fonts",
+  "official_commit": "66928797f271fed5ee428544e7229685e2d90127",
+  "official_ttf_url": "https://raw.githubusercontent.com/google/fonts/66928797f271fed5ee428544e7229685e2d90127/ofl/notoserifsc/NotoSerifSC%5Bwght%5D.ttf",
+  "original_ttf_sha256": "050080d9255a86808f2945bffac582b31ef32bc36411ce29563b4961670c66f9",
+  "original_ttf_bytes": 25125512,
+  "woff2_filename": "noto-serif-sc-variable.woff2",
+  "woff2_sha256": "4ee9b0921ec9bd3f8b04587c7bc66c62731045e89d74eec054f37fc7a2d26383",
+  "woff2_bytes": 11032420,
+  "original_ofl_filename": "LICENSE-noto-serif-sc.txt",
+  "original_ofl_sha256": "5e0da210fb04058a8c0087985d2d456b931c2579811a49655721d3cf0c36b6d6",
+  "axes": [
+    {
+      "tag": "wght",
+      "min": 200.0,
+      "default": 200.0,
+      "max": 900.0
+    }
+  ],
+  "names": {
+    "1": [
+      "Noto Serif SC ExtraLight"
+    ],
+    "2": [
+      "Regular"
+    ],
+    "4": [
+      "Noto Serif SC ExtraLight"
+    ],
+    "5": [
+      "Version 2.003-H1;hotconv 1.1.1;makeotfexe 2.6.0"
+    ],
+    "6": [
+      "NotoSerifSC-ExtraLight"
+    ],
+    "16": [
+      "Noto Serif SC"
+    ],
+    "17": [
+      "ExtraLight"
+    ]
+  },
+  "cmap_codepoint_count": 30928,
+  "glyph_count": 31058,
+  "coverage": {
+    "cjk_unified": {
+      "covered": 20992,
+      "range_size": 20992,
+      "complete": true
+    },
+    "cjk_extension_a": {
+      "covered": 6592,
+      "range_size": 6592,
+      "complete": true
+    },
+    "cjk_extension_b": {
+      "covered": 52,
+      "range_size": 42720,
+      "complete": false
+    },
+    "latin_printable": {
+      "covered": 95,
+      "range_size": 95,
+      "complete": true
+    }
+  },
+  "subsetting": "NONE",
+  "toolchain_provenance": "toolchain/ui-fonts/noto-serif-sc/manifest.json",
+  "toolchain_sources": "toolchain/ui-fonts/noto-serif-sc/sources.json",
+  "toolchain_release_status_at_base_12a1efe": "NOT_AUTOMATICALLY_INCLUDED_BY_CURRENT_BUILDER",
+  "generator": {
+    "python": "3.10.22",
+    "fonttools": "4.65.0",
+    "Brotli": "1.2.0",
+    "script_sha256": "238916b10cff17dba648fd478986302d7ab90cf49d22920170348cf3fe6e31ff"
+  },
+  "browser_visual": "NOT_RUN",
+  "native_windows": "NOT_RUN",
+  "coverage_limit": "Actual cmap counts; no claim to cover all extended CJK, every script or emoji."
+}

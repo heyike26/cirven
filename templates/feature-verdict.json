@@ -1,0 +1,71 @@
+{
+  "schema_version": "eeas.external-feature-verdict.v1",
+  "release_status": "DEVELOPMENT_PREVIEW",
+  "features": [
+    {
+      "id": "F01",
+      "status": "NOT_RUN",
+      "evidence": [],
+      "limitations": []
+    },
+    {
+      "id": "F02",
+      "status": "NOT_RUN",
+      "evidence": [],
+      "limitations": []
+    },
+    {
+      "id": "F03",
+      "status": "NOT_RUN",
+      "evidence": [],
+      "limitations": []
+    },
+    {
+      "id": "F04",
+      "status": "NOT_RUN",
+      "evidence": [],
+      "limitations": []
+    },
+    {
+      "id": "F05",
+      "status": "NOT_RUN",
+      "evidence": [],
+      "limitations": []
+    },
+    {
+      "id": "F06",
+      "status": "NOT_RUN",
+      "evidence": [],
+      "limitations": []
+    },
+    {
+      "id": "F07",
+      "status": "NOT_RUN",
+      "evidence": [],
+      "limitations": []
+    },
+    {
+      "id": "F08",
+      "status": "NOT_RUN",
+      "evidence": [],
+      "limitations": []
+    },
+    {
+      "id": "F09",
+      "status": "NOT_RUN",
+      "evidence": [],
+      "limitations": []
+    },
+    {
+      "id": "F10",
+      "status": "NOT_RUN",
+      "evidence": [],
+      "limitations": []
+    }
+  ],
+  "security_gate": "NOT_RUN",
+  "live_runtime_gate": "NOT_RUN",
+  "windows_native_gate": "NOT_RUN",
+  "offline_install_gate": "NOT_RUN",
+  "intranet_business_validated": false
+}

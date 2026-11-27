@@ -1,0 +1,67 @@
+{
+  "schema_version": 1,
+  "source": {
+    "path": "icon.svg",
+    "sha256": "10b5389c203a580263aabcbdf812c2a35704ae0e883918add9152e67a29cdb5d",
+    "bytes": 1247
+  },
+  "monochrome": {
+    "path": "icon-monochrome.svg",
+    "sha256": "cfa9f59604981e7d31e097f372213961ca870d7a405147e97a2812cae5c74c91",
+    "bytes": 886
+  },
+  "assets": {
+    "mark16": {
+      "path": "icon-16.png",
+      "width": 16,
+      "height": 16,
+      "sha256": "e97bb3ad5678a9bd181cc2b263a86e423b77edb9c07943138e52bcdc6a38bcab",
+      "bytes": 654
+    },
+    "mark24": {
+      "path": "icon-24.png",
+      "width": 24,
+      "height": 24,
+      "sha256": "4100b84aaf0568e332872fed3ded42037f840b86c129994255d33f3f4630bbb4",
+      "bytes": 1089
+    },
+    "mark32": {
+      "path": "icon-32.png",
+      "width": 32,
+      "height": 32,
+      "sha256": "b1968d0d243a3b05783e6af0a73bde549f4f2d09016c8735cf0ffa0563157e7c",
+      "bytes": 1542
+    },
+    "mark256": {
+      "path": "icon-256.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "add05abd2796edac740c50853ea1c969bf0813c7fd75a9c8433393f57872a9fa",
+      "bytes": 12770
+    },
+    "tray32": {
+      "path": "tray-32.png",
+      "width": 32,
+      "height": 32,
+      "sha256": "23d0b80afb7422d87f1498ccdbe878c923f26b06ac7553b433c4776ed65a637a",
+      "bytes": 2042
+    },
+    "app256": {
+      "path": "app-256.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "ac9d3c4877b4ebbe3567760525d11dd73e8aae165ffeaa5687297aebf9693115",
+      "bytes": 16043
+    }
+  },
+  "generator": {
+    "name": "CairoSVG",
+    "version": "2.8.2",
+    "cairo": "1.18.0",
+    "pillow": "12.3.0",
+    "runtime_dependency": false,
+    "oversampling": 4,
+    "plate": "silver",
+    "circle_pathLength_normalized": false
+  }
+}

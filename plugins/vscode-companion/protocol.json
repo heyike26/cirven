@@ -1,0 +1,2866 @@
+{
+  "protocol": "eeas.ide-companion.v1",
+  "version": 1,
+  "transport": "MAIN_OWNED_LOOPBACK_HTTP",
+  "host": "127.0.0.1",
+  "discovery_relative_path": "user-data/ide-companion/discovery.json",
+  "custom_data_dir_relative_path": "ide-companion/discovery.json",
+  "discovery_schema": "eeas.ide-discovery.v1",
+  "discovery_fields": [
+    "schema",
+    "protocol",
+    "instance_id",
+    "nonce",
+    "port",
+    "pid",
+    "version"
+  ],
+  "nonce_pattern": "^[a-f0-9]{64}$",
+  "client_secret_pattern": "^[a-f0-9]{64}$",
+  "authorization": {
+    "header": "Authorization",
+    "format": "Bearer <client_secret>",
+    "client_id_header": "X-EEAS-Client-Id",
+    "storage": "VSCODE_SECRET_STORAGE_ONLY",
+    "server_stores": "DOMAIN_SEPARATED_SHA256_ONLY"
+  },
+  "pair": {
+    "method": "POST",
+    "path": "/v1/pair",
+    "fields": [
+      "protocol",
+      "client_id",
+      "client_secret",
+      "nonce",
+      "client_label"
+    ],
+    "status_path": "/v1/pair/status",
+    "status_method": "GET",
+    "states": [
+      "NOT_FOUND",
+      "PENDING",
+      "UNKNOWN",
+      "PAIRED",
+      "DENIED",
+      "REVOKED"
+    ],
+    "automatic_post_replay": false
+  },
+  "rpc": {
+    "method": "POST",
+    "path": "/v1/rpc",
+    "fields": [
+      "protocol",
+      "request_id",
+      "method",
+      "scope",
+      "payload"
+    ],
+    "status_method": "GET",
+    "status_path": "/v1/rpc/{request_id}",
+    "scope_fields": [
+      "project_id",
+      "session_ref",
+      "generation",
+      "conversation_id",
+      "conversation_ref"
+    ],
+    "session_ref_fields": [
+      "id",
+      "revision",
+      "sha256"
+    ],
+    "automatic_post_replay": false,
+    "scope_variants": {
+      "agent_session": [
+        "project_id",
+        "session_ref",
+        "generation"
+      ],
+      "native_conversation": [
+        "project_id",
+        "conversation_id"
+      ],
+      "mutually_exclusive": true
+    }
+  },
+  "envelope_fields": [
+    "protocol",
+    "instance_id",
+    "request_id",
+    "status",
+    "result",
+    "error",
+    "local_persistence_status"
+  ],
+  "envelope_status": [
+    "OK",
+    "ERROR",
+    "PENDING",
+    "UNKNOWN"
+  ],
+  "error_fields": [
+    "code",
+    "message"
+  ],
+  "methods": [
+    "projects.list",
+    "sessions.list",
+    "session.get",
+    "session.create",
+    "session.message",
+    "session.guidance",
+    "session.operation",
+    "session.events",
+    "session.cancel",
+    "session.question.reply",
+    "session.question.reject",
+    "session.permission.reply",
+    "artifact.open",
+    "lifecycle.reveal",
+    "status",
+    "session.diff",
+    "session.diff.file",
+    "native.conversations.list",
+    "native.conversation.get",
+    "native.message",
+    "native.operation",
+    "native.guidance",
+    "native.control",
+    "native.cancel",
+    "native.file.read",
+    "native.file.open",
+    "native.feedback.record",
+    "native.feedback.operation",
+    "native.rework.preview",
+    "native.rework.apply",
+    "native.rework.operation",
+    "session.tool",
+    "session.child",
+    "session.child.message",
+    "session.child.diff",
+    "session.child.diff.file",
+    "session.diff.prepare",
+    "session.diff.review",
+    "session.diff.review.operation",
+    "session.editor.reserve",
+    "session.editor.get",
+    "session.editor.control",
+    "session.editor.control.operation",
+    "session.editor.file.prepare",
+    "session.editor.file.command",
+    "session.editor.file.operation",
+    "session.editor.observer.prepare",
+    "session.editor.observer.command",
+    "session.editor.observer.operation",
+    "session.editor.observer.get",
+    "session.editor.capture.request",
+    "session.editor.capture.operation",
+    "session.editor.capture.status",
+    "session.editor.capture.listen",
+    "session.editor.capture.wait",
+    "session.editor.observer.recovery.prepare",
+    "session.editor.observer.recovery.command",
+    "session.editor.observer.recovery.operation",
+    "session.context.recovery.prepare",
+    "session.context.recovery.command",
+    "session.context.recovery.operation",
+    "conversation.list",
+    "conversation.select",
+    "conversation.get",
+    "conversation.file.open",
+    "conversation.create",
+    "conversation.creation.operation",
+    "conversation.message",
+    "conversation.operation",
+    "conversation.connect",
+    "conversation.connection.operation",
+    "conversation.configuration.prepare",
+    "conversation.configure",
+    "conversation.configuration.operation",
+    "conversation.configuration.continue",
+    "conversation.owner.prepare",
+    "conversation.owner.select",
+    "conversation.owner.operation",
+    "conversation.configuration.adoption.prepare",
+    "conversation.configuration.adoption.command",
+    "conversation.configuration.adoption.operation",
+    "native.context.recovery.prepare",
+    "native.context.recovery.command",
+    "native.context.recovery.operation",
+    "conversation.native.recovery.prepare",
+    "conversation.native.recovery.command",
+    "conversation.native.recovery.operation",
+    "session.tool.reports",
+    "session.tool.report",
+    "session.work.requirements",
+    "session.work.requirements.link",
+    "session.work.requirements.operation",
+    "session.work.cases",
+    "session.work.cases.map",
+    "session.work.cases.operation",
+    "session.work.retests.prepare",
+    "session.work.retests.submit",
+    "session.work.retests.operation",
+    "session.work.retests.continue",
+    "session.work.sources.catalog",
+    "session.work.sources.review",
+    "session.work.sources.decision",
+    "session.work.sources.operation",
+    "session.work.roots",
+    "session.work.deliveries.list",
+    "session.work.deliveries.select",
+    "session.work.deliveries.prepare",
+    "session.work.deliveries.submit",
+    "session.work.deliveries.operation",
+    "session.work.deliveries.recovery",
+    "session.work.deliveries.continue",
+    "session.work.deliveries.retain",
+    "session.work.deliveries.tree",
+    "session.work.deliveries.export",
+    "session.work.deliveries.export.operation",
+    "session.work.deliveries.export.cancel",
+    "session.work.deliveries.export.reconcile",
+    "session.work.deliveries.exports",
+    "session.work.maintenance.deliveries",
+    "session.work.maintenance.delivery",
+    "session.work.maintenance.prepare",
+    "session.work.maintenance.change",
+    "session.work.maintenance.inspect",
+    "session.work.maintenance.operation"
+  ],
+  "read_only_methods": [
+    "projects.list",
+    "sessions.list",
+    "session.get",
+    "session.operation",
+    "session.events",
+    "status",
+    "session.diff",
+    "session.diff.file",
+    "native.conversations.list",
+    "native.conversation.get",
+    "native.operation",
+    "native.control",
+    "native.file.read",
+    "native.feedback.operation",
+    "native.rework.preview",
+    "native.rework.operation",
+    "session.tool",
+    "session.child",
+    "session.child.diff",
+    "session.child.diff.file",
+    "session.diff.prepare",
+    "session.diff.review.operation",
+    "session.editor.get",
+    "session.editor.control.operation",
+    "session.editor.file.prepare",
+    "session.editor.file.operation",
+    "session.editor.observer.prepare",
+    "session.editor.observer.operation",
+    "session.editor.observer.get",
+    "session.editor.capture.operation",
+    "session.editor.capture.status",
+    "session.editor.capture.listen",
+    "session.editor.capture.wait",
+    "session.editor.observer.recovery.prepare",
+    "session.editor.observer.recovery.operation",
+    "session.context.recovery.prepare",
+    "session.context.recovery.operation",
+    "conversation.list",
+    "conversation.get",
+    "conversation.creation.operation",
+    "conversation.operation",
+    "conversation.connection.operation",
+    "conversation.configuration.prepare",
+    "conversation.configuration.operation",
+    "conversation.owner.prepare",
+    "conversation.owner.operation",
+    "conversation.configuration.adoption.prepare",
+    "conversation.configuration.adoption.operation",
+    "native.context.recovery.prepare",
+    "native.context.recovery.operation",
+    "conversation.native.recovery.prepare",
+    "conversation.native.recovery.operation",
+    "session.tool.reports",
+    "session.tool.report",
+    "session.work.requirements",
+    "session.work.requirements.operation",
+    "session.work.cases",
+    "session.work.cases.operation",
+    "session.work.retests.prepare",
+    "session.work.retests.operation",
+    "session.work.sources.catalog",
+    "session.work.sources.review",
+    "session.work.sources.operation",
+    "session.work.roots",
+    "session.work.deliveries.list",
+    "session.work.deliveries.select",
+    "session.work.deliveries.prepare",
+    "session.work.deliveries.operation",
+    "session.work.deliveries.recovery",
+    "session.work.deliveries.tree",
+    "session.work.deliveries.export.operation",
+    "session.work.deliveries.exports",
+    "session.work.maintenance.deliveries",
+    "session.work.maintenance.delivery",
+    "session.work.maintenance.prepare",
+    "session.work.maintenance.inspect",
+    "session.work.maintenance.operation"
+  ],
+  "unknown_recovery": "GET_ORIGINAL_BRIDGE_REQUEST_THEN_EXACT_SESSION_OPERATION_WITHOUT_POST_REPLAY",
+  "history_result_fields": [
+    "request_status",
+    "response_available",
+    "method",
+    "scope",
+    "operation_id",
+    "observed_status",
+    "recovery"
+  ],
+  "history_semantics": "UNKNOWN_MEANS_REPLY_NOT_AVAILABLE_NOT_EXECUTION_UNKNOWN;observed_status_retains_known_original_status",
+  "limits": {
+    "body_bytes": 131072,
+    "response_bytes": 2097152,
+    "clients": 32,
+    "durable_mutating_requests": 2048,
+    "memory_responses": 256,
+    "concurrent_dispatches": 8,
+    "pending_pairs": 3,
+    "request_bytes": 131072,
+    "native_export_rpc_timeout_ms": 180000,
+    "native_export_client_timeout_ms": 190000
+  },
+  "remote_workspace": "WINDOWS_LOCAL_FILE_FIRST_REMOTE_OPT_IN_NOT_ADAPTED",
+  "external_agent_owner": "DESKTOP_EEAS_ONLY",
+  "client_close_semantics": "DISCONNECT_ONLY_NO_TASK_CANCEL_NO_DESKTOP_SHUTDOWN",
+  "disallowed": [
+    "ARBITRARY_URL_PROXY",
+    "ARBITRARY_COMMAND",
+    "PROVIDER_SECRET_COPY",
+    "DESKTOP_TOKEN_COPY",
+    "BOOTSTRAP_COOKIE_COPY",
+    "IMPLICIT_REPAIR_OR_REPAIRING",
+    "REMOTE_FILE_SHARING_WITHOUT_EXPLICIT_GRANT"
+  ],
+  "payload_validation_authority": "EXISTING_EEAS_API_ADAPTER_AND_CORE;BRIDGE_VALIDATES_ENVELOPE_AND_APPROVED_SCOPE",
+  "method_contracts": {
+    "projects.list": {
+      "scope_required": [],
+      "payload_fields": []
+    },
+    "sessions.list": {
+      "scope_required": [
+        "project_id"
+      ],
+      "payload_fields": []
+    },
+    "session.get": {
+      "scope_required": [
+        "project_id",
+        "session_ref",
+        "generation"
+      ],
+      "generation_min": 0,
+      "payload_fields": []
+    },
+    "session.create": {
+      "scope_required": [],
+      "payload_required": [
+        "operation_id",
+        "provider_profile_ref",
+        "capability_binding_sha256"
+      ],
+      "payload_optional": [
+        "workspace_ref",
+        "title",
+        "ttl_seconds",
+        "max_calls",
+        "max_output_tokens",
+        "allowed_effects",
+        "command_allowlist",
+        "mcp_tool_allowlist",
+        "network_mode",
+        "workflow_ref",
+        "workflow_provider_refs"
+      ]
+    },
+    "session.message": {
+      "scope_required": [
+        "project_id",
+        "session_ref",
+        "generation"
+      ],
+      "generation_min": 1,
+      "payload_required": [
+        "operation_id",
+        "raw_text"
+      ],
+      "payload_optional": [
+        "agent",
+        "timeout_seconds",
+        "original_work_ref",
+        "expected_active_operation_id"
+      ],
+      "original_work_ref_contract": {
+        "fields": [
+          "root_operation_id",
+          "root_sha256"
+        ],
+        "scope": "CURRENT_PROJECT_SESSION_AND_WORKSPACE_ROOT_METADATA_ONLY",
+        "source_or_execution_permission_granted": false,
+        "choice_does_not_dispatch": true,
+        "positive_error_policy": "LOOKUP_ORIGINAL_OPERATION_ONLY_OTHERWISE_UNKNOWN_NO_AUTOMATIC_REPLAY"
+      }
+    },
+    "session.guidance": {
+      "scope_required": [
+        "project_id",
+        "session_ref",
+        "generation"
+      ],
+      "generation_min": 1,
+      "payload_required": [
+        "operation_id",
+        "raw_text"
+      ],
+      "payload_optional": [
+        "intent",
+        "expected_active_operation_id",
+        "original_work_ref"
+      ],
+      "original_work_ref_contract": {
+        "fields": [
+          "root_operation_id",
+          "root_sha256"
+        ],
+        "scope": "CURRENT_PROJECT_SESSION_AND_WORKSPACE_ROOT_METADATA_ONLY",
+        "source_or_execution_permission_granted": false,
+        "choice_does_not_dispatch": true,
+        "positive_error_policy": "LOOKUP_ORIGINAL_OPERATION_ONLY_OTHERWISE_UNKNOWN_NO_AUTOMATIC_REPLAY"
+      }
+    },
+    "session.operation": {
+      "scope_required": [
+        "project_id",
+        "session_ref",
+        "generation"
+      ],
+      "generation_min": 0,
+      "payload_required": [
+        "operation_id"
+      ]
+    },
+    "session.events": {
+      "scope_required": [
+        "project_id",
+        "session_ref",
+        "generation"
+      ],
+      "generation_min": 0,
+      "payload_optional": [
+        "after",
+        "limit"
+      ],
+      "limit_max": 200
+    },
+    "session.cancel": {
+      "scope_required": [
+        "project_id",
+        "session_ref",
+        "generation"
+      ],
+      "generation_min": 1,
+      "payload_required": [
+        "operation_id",
+        "expected_active_operation_id"
+      ]
+    },
+    "artifact.open": {
+      "scope_required": [
+        "project_id"
+      ],
+      "kind_enum": [
+        "report",
+        "workspace-file"
+      ],
+      "download_url": "EXACT_EXISTING_LOCAL_NATIVE_REPORT_URL_ONLY",
+      "payload_variants": {
+        "report": {
+          "required": [
+            "kind",
+            "artifact_id",
+            "sha256",
+            "download_url"
+          ]
+        },
+        "workspace-file": {
+          "scope_required": [
+            "project_id",
+            "session_ref",
+            "generation"
+          ],
+          "required": [
+            "kind",
+            "file_ref"
+          ],
+          "file_ref_fields": [
+            "workspace_ref",
+            "path",
+            "message_id",
+            "part_id"
+          ],
+          "current_bytes": "RESOLVE_EXACT_FILE_SOURCE_ONLY_ON_EXPLICIT_OPEN",
+          "destinations": [
+            "MAIN_NATIVE_OPEN",
+            "VSCODE_FILE_EDITOR"
+          ],
+          "optional_markdown_fields": [
+            "link_index",
+            "href_sha256"
+          ],
+          "source_authority": "REPARSE_EXACT_ORIGINAL_ASSISTANT_MARKDOWN_HREF_OR_FILE_PART_WITH_REGISTERED_WORKSPACE_BINDING"
+        }
+      }
+    },
+    "lifecycle.reveal": {
+      "scope_required": [],
+      "payload_fields": []
+    },
+    "status": {
+      "scope_required": [],
+      "payload_fields": []
+    },
+    "session.diff": {
+      "scope_required": [
+        "project_id",
+        "session_ref",
+        "generation"
+      ],
+      "generation_min": 0,
+      "payload_required": [
+        "workspace_ref"
+      ],
+      "read_only": true,
+      "current_disk_compared": false,
+      "files_max": 128,
+      "historical_coverage": "ROOT_SAVED_OBSERVATIONS_ONLY_EXPLICIT_COVERAGE"
+    },
+    "session.diff.file": {
+      "scope_required": [
+        "project_id",
+        "session_ref",
+        "generation"
+      ],
+      "generation_min": 0,
+      "payload_required": [
+        "workspace_ref",
+        "snapshot_ref",
+        "diff_ref"
+      ],
+      "read_only": true,
+      "current_disk_compared": false,
+      "content_scopes": [
+        "HUNK_EXCERPTS",
+        "FULL_FILE"
+      ],
+      "full_file_requires": "AUTHORIZED_IMMUTABLE_FILE_SNAPSHOTS_WITH_UTF8_CONTENT_HASHES",
+      "automatic_apply": false,
+      "max_response_bytes": 524288,
+      "full_file_source": {
+        "required": [
+          "source_generation",
+          "source_scope"
+        ],
+        "source_scope_fields": [
+          "project_id",
+          "session_ref",
+          "generation",
+          "workspace_ref"
+        ],
+        "generation": "1<=source_generation==source_scope.generation<=current_scope.generation",
+        "identity": "EXACT_SAME_PROJECT_SESSION_REF_AND_WORKSPACE_REF",
+        "binding": "SOURCE_FIELDS_AND_IMMUTABLE_RECORD_SHA_INCLUDED_IN_DIFF_REF",
+        "directory_file_source": "EXACT_MATCH",
+        "legacy_hunk_generation": "NOT_INFERRED_FIELDS_ABSENT"
+      }
+    },
+    "native.conversations.list": {
+      "scope_required": [
+        "project_id"
+      ],
+      "payload_optional": [
+        "limit"
+      ],
+      "read_only": true
+    },
+    "native.conversation.get": {
+      "scope_required": [
+        "project_id",
+        "conversation_id"
+      ],
+      "payload_optional": [
+        "limit"
+      ],
+      "read_only": true
+    },
+    "native.message": {
+      "scope_required": [
+        "project_id",
+        "conversation_id"
+      ],
+      "payload_required": [
+        "operation_id",
+        "raw_text",
+        "provider_profile_ref"
+      ],
+      "payload_optional": [
+        "file_source_ref",
+        "file_link_ref",
+        "native_feedback_ref"
+      ]
+    },
+    "native.operation": {
+      "scope_required": [
+        "project_id",
+        "conversation_id"
+      ],
+      "payload_required": [
+        "operation_id"
+      ],
+      "read_only": true
+    },
+    "native.guidance": {
+      "scope_required": [
+        "project_id",
+        "conversation_id"
+      ],
+      "payload_required": [
+        "parent_operation_id",
+        "operation_id",
+        "expected_native_message_ref",
+        "raw_text"
+      ],
+      "payload_optional": [
+        "intent"
+      ]
+    },
+    "native.control": {
+      "scope_required": [
+        "project_id",
+        "conversation_id"
+      ],
+      "payload_required": [
+        "parent_operation_id",
+        "operation_id"
+      ],
+      "read_only": true
+    },
+    "native.cancel": {
+      "scope_required": [
+        "project_id",
+        "conversation_id"
+      ],
+      "payload_required": [
+        "operation_id",
+        "expected_native_message_ref"
+      ]
+    },
+    "native.file.read": {
+      "scope_required": [
+        "project_id",
+        "conversation_id"
+      ],
+      "payload_required": [
+        "parent_operation_id"
+      ],
+      "payload_optional": [
+        "version"
+      ],
+      "read_only": true
+    },
+    "native.file.open": {
+      "scope_required": [
+        "project_id",
+        "conversation_id"
+      ],
+      "payload_required": [
+        "parent_operation_id",
+        "file_source_ref",
+        "target"
+      ]
+    },
+    "native.feedback.record": {
+      "scope_required": [
+        "project_id",
+        "conversation_id"
+      ],
+      "payload_required": [
+        "parent_operation_id",
+        "operation_id",
+        "file_source_ref",
+        "comment",
+        "selection"
+      ]
+    },
+    "native.feedback.operation": {
+      "scope_required": [
+        "project_id",
+        "conversation_id"
+      ],
+      "payload_required": [
+        "parent_operation_id",
+        "operation_id"
+      ],
+      "read_only": true
+    },
+    "native.rework.preview": {
+      "scope_required": [
+        "project_id",
+        "conversation_id"
+      ],
+      "payload_required": [
+        "parent_operation_id",
+        "plan_ref"
+      ],
+      "read_only": true
+    },
+    "native.rework.apply": {
+      "scope_required": [
+        "project_id",
+        "conversation_id"
+      ],
+      "payload_required": [
+        "parent_operation_id",
+        "operation_id",
+        "plan_ref",
+        "expected_current_sources",
+        "user_approved"
+      ],
+      "payload_optional": [
+        "allow_rebase"
+      ]
+    },
+    "native.rework.operation": {
+      "scope_required": [
+        "project_id",
+        "conversation_id"
+      ],
+      "payload_required": [
+        "parent_operation_id",
+        "operation_id"
+      ],
+      "read_only": true
+    },
+    "session.tool": {
+      "scope_required": [
+        "project_id",
+        "session_ref",
+        "generation"
+      ],
+      "payload_required": [
+        "tool_ref"
+      ],
+      "read_only": true,
+      "source": "EXACT_SAVED_ORIGINAL_TOOL_PART",
+      "automatic_replay": false,
+      "tool_invocations": 0,
+      "model_calls": 0
+    },
+    "session.child": {
+      "scope_required": [
+        "project_id",
+        "session_ref",
+        "generation"
+      ],
+      "payload_required": [
+        "child_ref"
+      ],
+      "read_only": true,
+      "new_owner_started": false,
+      "native_posts": 0,
+      "model_calls": 0,
+      "history_complete": false
+    },
+    "session.child.message": {
+      "scope_required": [
+        "project_id",
+        "session_ref",
+        "generation"
+      ],
+      "generation_min": 1,
+      "payload_required": [
+        "operation_id",
+        "child_ref",
+        "raw_text"
+      ],
+      "payload_optional": [
+        "timeout_seconds",
+        "expected_active_operation_id"
+      ],
+      "read_only": false,
+      "owner": "ORIGINAL_ADMITTED_PARENT_PROCESS_ONLY",
+      "shared_root_operation_barrier": true,
+      "active_root_child_guidance": "EXACT_CURRENT_FOREGROUND_TASK_CALL_ONLY",
+      "root_settlement": "WAIT_FOR_EXACT_LATEST_DELEGATED_CHILD_RESULTS",
+      "automatic_post_replay": false
+    },
+    "session.child.diff": {
+      "scope_required": [
+        "project_id",
+        "session_ref",
+        "generation"
+      ],
+      "generation_min": 1,
+      "payload_required": [
+        "child_ref",
+        "workspace_ref"
+      ],
+      "read_only": true,
+      "model_calls": 0,
+      "native_posts": 0,
+      "current_disk_compared": false,
+      "history_complete": false,
+      "snapshot_identity": "EXACT_ROOT_SCOPE_WORKSPACE_AND_CHILD_REF",
+      "automatic_apply": false
+    },
+    "session.child.diff.file": {
+      "scope_required": [
+        "project_id",
+        "session_ref",
+        "generation"
+      ],
+      "generation_min": 1,
+      "payload_required": [
+        "child_ref",
+        "workspace_ref",
+        "snapshot_ref",
+        "diff_ref"
+      ],
+      "read_only": true,
+      "model_calls": 0,
+      "native_posts": 0,
+      "current_disk_compared": false,
+      "history_complete": false,
+      "snapshot_identity": "EXACT_ROOT_SCOPE_WORKSPACE_AND_CHILD_REF",
+      "automatic_apply": false
+    },
+    "session.question.reply": {
+      "scope_required": [
+        "project_id",
+        "session_ref",
+        "generation"
+      ],
+      "generation_min": 1,
+      "payload_required": [
+        "operation_id",
+        "request_ref",
+        "answers"
+      ],
+      "read_only": false,
+      "request_ref_fields": [
+        "id",
+        "sha256",
+        "generation"
+      ],
+      "identity": "EXACT_CURRENT_PENDING_REQUEST_RECHECKED_BEFORE_ORIGINAL_REPLY",
+      "automatic_post_replay": false
+    },
+    "session.question.reject": {
+      "scope_required": [
+        "project_id",
+        "session_ref",
+        "generation"
+      ],
+      "generation_min": 1,
+      "payload_required": [
+        "operation_id",
+        "request_ref"
+      ],
+      "read_only": false,
+      "request_ref_fields": [
+        "id",
+        "sha256",
+        "generation"
+      ],
+      "identity": "EXACT_CURRENT_PENDING_REQUEST_RECHECKED_BEFORE_ORIGINAL_REPLY",
+      "automatic_post_replay": false
+    },
+    "session.permission.reply": {
+      "scope_required": [
+        "project_id",
+        "session_ref",
+        "generation"
+      ],
+      "generation_min": 1,
+      "payload_required": [
+        "operation_id",
+        "request_ref",
+        "reply"
+      ],
+      "read_only": false,
+      "request_ref_fields": [
+        "id",
+        "sha256",
+        "generation"
+      ],
+      "identity": "EXACT_CURRENT_PENDING_REQUEST_RECHECKED_BEFORE_ORIGINAL_REPLY",
+      "automatic_post_replay": false
+    },
+    "session.diff.prepare": {
+      "scope_required": [
+        "project_id",
+        "session_ref",
+        "generation"
+      ],
+      "generation_min": 1,
+      "payload_required": [
+        "workspace_ref",
+        "snapshot_ref",
+        "diff_ref"
+      ],
+      "payload_optional": [
+        "child_ref"
+      ],
+      "read_only": true,
+      "workspace_writes": 0,
+      "model_calls": 0,
+      "native_posts": 0,
+      "effect_scope": "HISTORICAL_USER_REVIEW_ONLY_NOT_FILE_APPLICATION_OR_ROLLBACK",
+      "automatic_post_replay": false
+    },
+    "session.diff.review": {
+      "scope_required": [
+        "project_id",
+        "session_ref",
+        "generation"
+      ],
+      "generation_min": 1,
+      "payload_required": [
+        "workspace_ref",
+        "snapshot_ref",
+        "diff_ref",
+        "operation_id",
+        "preparation_sha256",
+        "expected_review_revision",
+        "decision"
+      ],
+      "payload_optional": [
+        "child_ref"
+      ],
+      "read_only": false,
+      "workspace_writes": 0,
+      "model_calls": 0,
+      "native_posts": 0,
+      "effect_scope": "HISTORICAL_USER_REVIEW_ONLY_NOT_FILE_APPLICATION_OR_ROLLBACK",
+      "automatic_post_replay": false
+    },
+    "session.diff.review.operation": {
+      "scope_required": [
+        "project_id",
+        "session_ref",
+        "generation"
+      ],
+      "generation_min": 1,
+      "payload_required": [
+        "operation_id"
+      ],
+      "payload_optional": [],
+      "read_only": true,
+      "workspace_writes": 0,
+      "model_calls": 0,
+      "native_posts": 0,
+      "effect_scope": "HISTORICAL_USER_REVIEW_ONLY_NOT_FILE_APPLICATION_OR_ROLLBACK",
+      "automatic_post_replay": false
+    },
+    "session.editor.reserve": {
+      "scope_required": [
+        "project_id",
+        "session_ref",
+        "generation"
+      ],
+      "generation_min": 1,
+      "payload_required": [
+        "operation_id",
+        "workspace_ref",
+        "snapshot_ref",
+        "diff_ref",
+        "preparation_sha256",
+        "direction",
+        "editor_window_id",
+        "editor_nonce"
+      ],
+      "payload_optional": [
+        "child_ref"
+      ],
+      "read_only": false,
+      "editor_client_id": "INJECTED_FROM_ORIGINAL_MAIN_PAIRING_CONTEXT_NOT_WEBVIEW_PAYLOAD",
+      "workspace_writes": 0,
+      "native_posts": 0,
+      "model_calls": 0,
+      "automatic_post_replay": false,
+      "idle_or_timeout_does_not_release": true,
+      "file_application": "NATIVE_EDITOR_ONLY_NOT_PERFORMED_BY_THIS_BACKEND"
+    },
+    "session.editor.get": {
+      "scope_required": [
+        "project_id",
+        "session_ref",
+        "generation"
+      ],
+      "generation_min": 1,
+      "payload_required": [
+        "operation_id"
+      ],
+      "payload_optional": [],
+      "read_only": true,
+      "editor_client_id": "INJECTED_FROM_ORIGINAL_MAIN_PAIRING_CONTEXT_NOT_WEBVIEW_PAYLOAD",
+      "workspace_writes": 0,
+      "native_posts": 0,
+      "model_calls": 0,
+      "automatic_post_replay": false,
+      "idle_or_timeout_does_not_release": true,
+      "file_application": "NATIVE_EDITOR_ONLY_NOT_PERFORMED_BY_THIS_BACKEND"
+    },
+    "session.editor.control": {
+      "scope_required": [
+        "project_id",
+        "session_ref",
+        "generation"
+      ],
+      "generation_min": 1,
+      "payload_required": [
+        "operation_id",
+        "target_operation_id",
+        "editor_window_id",
+        "editor_nonce",
+        "expected_revision",
+        "action"
+      ],
+      "payload_optional": [
+        "lease_ref",
+        "editor_basis",
+        "expected_saved_sha256",
+        "user_approved_manual_saved"
+      ],
+      "read_only": false,
+      "editor_client_id": "INJECTED_FROM_ORIGINAL_MAIN_PAIRING_CONTEXT_NOT_WEBVIEW_PAYLOAD",
+      "workspace_writes": 0,
+      "native_posts": 0,
+      "model_calls": 0,
+      "automatic_post_replay": false,
+      "idle_or_timeout_does_not_release": true,
+      "file_application": "NATIVE_EDITOR_ONLY_NOT_PERFORMED_BY_THIS_BACKEND"
+    },
+    "session.editor.control.operation": {
+      "scope_required": [
+        "project_id",
+        "session_ref",
+        "generation"
+      ],
+      "generation_min": 1,
+      "payload_required": [
+        "operation_id"
+      ],
+      "payload_optional": [],
+      "read_only": true,
+      "editor_client_id": "INJECTED_FROM_ORIGINAL_MAIN_PAIRING_CONTEXT_NOT_WEBVIEW_PAYLOAD",
+      "workspace_writes": 0,
+      "native_posts": 0,
+      "model_calls": 0,
+      "automatic_post_replay": false,
+      "idle_or_timeout_does_not_release": true,
+      "file_application": "NATIVE_EDITOR_ONLY_NOT_PERFORMED_BY_THIS_BACKEND"
+    },
+    "session.editor.file.prepare": {
+      "scope_required": [
+        "project_id",
+        "session_ref",
+        "generation"
+      ],
+      "generation_min": 1,
+      "actor": "MAIN_PAIRED_CLIENT_ID_ONLY",
+      "automatic_file_replay": false,
+      "payload_required": [
+        "target_operation_id",
+        "lease_ref",
+        "editor_window_id",
+        "editor_nonce",
+        "expected_revision",
+        "action"
+      ],
+      "read_only": true,
+      "workspace_writes": 0,
+      "model_calls": 0,
+      "native_posts": 0,
+      "metadata_recovery_version": 1,
+      "metadata_material": "ORIGINAL_PRIVATE_ACTION_SCOPED_RECORD_NOT_WEBVIEW_INPUT"
+    },
+    "session.editor.file.command": {
+      "scope_required": [
+        "project_id",
+        "session_ref",
+        "generation"
+      ],
+      "generation_min": 1,
+      "actor": "MAIN_PAIRED_CLIENT_ID_ONLY",
+      "automatic_file_replay": false,
+      "payload_required": [
+        "target_operation_id",
+        "lease_ref",
+        "editor_window_id",
+        "editor_nonce",
+        "expected_revision",
+        "action",
+        "operation_id",
+        "preparation_sha256",
+        "editor_observation",
+        "user_approved"
+      ],
+      "read_only": false,
+      "actions": [
+        "COMMIT",
+        "UNDO",
+        "CONFIRM",
+        "MANUAL_RESOLVE"
+      ],
+      "writer": "ORIGINAL_WINDOWS_EXCLUSIVE_PARENT_LEAF_HANDLES",
+      "native_text_undo": false,
+      "model_calls": 0,
+      "native_posts": 0,
+      "metadata_recovery_version": 1,
+      "metadata_material": "ORIGINAL_PRIVATE_ACTION_SCOPED_RECORD_NOT_WEBVIEW_INPUT",
+      "unsupported_metadata": "PRESERVE_ORIGINAL_AND_REQUIRE_NATIVE_MANUAL_HANDLING"
+    },
+    "session.editor.file.operation": {
+      "scope_required": [
+        "project_id",
+        "session_ref",
+        "generation"
+      ],
+      "generation_min": 1,
+      "actor": "MAIN_PAIRED_CLIENT_ID_ONLY",
+      "automatic_file_replay": false,
+      "payload_required": [
+        "operation_id"
+      ],
+      "read_only": true,
+      "model_calls": 0,
+      "native_posts": 0
+    },
+    "session.editor.observer.prepare": {
+      "scope_required": [
+        "project_id",
+        "session_ref",
+        "generation"
+      ],
+      "generation_min": 1,
+      "actor": "MAIN_PAIRED_CLIENT_ID_ONLY",
+      "model_calls": 0,
+      "native_posts": 0,
+      "workspace_writes": 0,
+      "automatic_replay": false,
+      "editor_buffer_text": "NEVER_TRANSMITTED",
+      "atomic_editor_write_guarantee": false,
+      "read_only": true,
+      "payload_required": [
+        "workspace_ref",
+        "editor_window_id",
+        "editor_process_id",
+        "editor_parent_process_id",
+        "action"
+      ],
+      "root": "ORIGINAL_BINDING_METADATA_URI_ONLY_NO_CURRENT_REPLACEMENT_READ"
+    },
+    "session.editor.observer.command": {
+      "scope_required": [
+        "project_id",
+        "session_ref",
+        "generation"
+      ],
+      "generation_min": 1,
+      "actor": "MAIN_PAIRED_CLIENT_ID_ONLY",
+      "model_calls": 0,
+      "native_posts": 0,
+      "workspace_writes": 0,
+      "automatic_replay": false,
+      "editor_buffer_text": "NEVER_TRANSMITTED",
+      "atomic_editor_write_guarantee": false,
+      "read_only": false,
+      "payload_required": [
+        "workspace_ref",
+        "editor_window_id",
+        "editor_process_id",
+        "editor_parent_process_id",
+        "action",
+        "operation_id",
+        "expected_revision",
+        "preparation_sha256",
+        "observation",
+        "user_approved"
+      ],
+      "actions": [
+        "OBSERVE",
+        "RETIRE"
+      ],
+      "permission_granted": false,
+      "receipt": "SAME_SQL_TRANSACTION_AS_OBSERVATION",
+      "unknown": "READ_ORIGINAL_OPERATION_ONLY",
+      "limits": {
+        "active_windows": 16,
+        "stored_windows": 128,
+        "documents": 64,
+        "snapshot_bytes": 49152,
+        "fresh_seconds": 15,
+        "permission_fresh_seconds": 5,
+        "observations": 8192,
+        "retirement_reserve": 128
+      },
+      "retirement": "EXPLICIT_CURRENT_COMPLETE_CLEAN_CAPTURE_OR_NAMESPACE_DRIFT_WITH_COMPLETE_CLEAN_LOCAL_DOCUMENTS",
+      "recovery": "ORIGINAL_EXTENSION_PROCESS_BIRTH_ENDED_BEFORE_DIFFERENT_PROCESS_RETIREMENT_METADATA_ONLY_NATIVE_HANDOFF_UNCHANGED",
+      "capture_freshness": {
+        "same_host_clock_max_age_seconds": 3,
+        "max_future_skew_seconds": 1,
+        "stale_basis": "LOCAL_CAPTURE_TIME_NOT_RECEIPT_TIME"
+      },
+      "mutation_journal": "ORIGINAL_API_ATOMIC_SQL_RECEIPT_NOT_DUPLICATE_MAIN_HUMAN_REQUEST_ROW",
+      "capture_ref": "OPTIONAL_OPAQUE_ORIGINAL_COHORT_REF_NONE_OMITTED_FROM_LEGACY_REQUEST_HASH",
+      "concurrent_capture_evidence": "UP_TO_8_PURPOSE_REFS_FOR_UNCHANGED_DOCUMENT_FINGERPRINT_INDEPENDENT_CAPTURE_TIMES",
+      "capture_target_kinds": [
+        "ORIGINAL_SESSION",
+        "WORKSPACE_EDIT"
+      ],
+      "workspace_capture": "EXACT_EDIT_DIGEST_METADATA_ONLY_NO_SESSION_OR_PERMISSION_BORROWING"
+    },
+    "session.editor.observer.operation": {
+      "scope_required": [
+        "project_id",
+        "session_ref",
+        "generation"
+      ],
+      "generation_min": 1,
+      "actor": "MAIN_PAIRED_CLIENT_ID_ONLY",
+      "model_calls": 0,
+      "native_posts": 0,
+      "workspace_writes": 0,
+      "automatic_replay": false,
+      "editor_buffer_text": "NEVER_TRANSMITTED",
+      "atomic_editor_write_guarantee": false,
+      "read_only": true,
+      "payload_required": [
+        "operation_id"
+      ],
+      "observation_time_scope": "AT_ORIGINAL_COMMAND_ONLY"
+    },
+    "session.editor.observer.get": {
+      "scope_required": [
+        "project_id",
+        "session_ref",
+        "generation"
+      ],
+      "generation_min": 1,
+      "actor": "MAIN_PAIRED_CLIENT_ID_ONLY",
+      "model_calls": 0,
+      "native_posts": 0,
+      "workspace_writes": 0,
+      "automatic_replay": false,
+      "editor_buffer_text": "NEVER_TRANSMITTED",
+      "atomic_editor_write_guarantee": false,
+      "read_only": true,
+      "payload_required": [
+        "observer_id"
+      ],
+      "current": "NEW_METADATA_READ_NOT_OLD_RECEIPT",
+      "current_scope": "OWN_ORIGINAL_BINDING_METADATA_ONLY_NOT_EXECUTION_AUTHORIZATION"
+    },
+    "session.editor.capture.request": {
+      "scope_required": [
+        "project_id",
+        "session_ref",
+        "generation"
+      ],
+      "generation_min": 0,
+      "actor": "MAIN_PAIRED_CLIENT_ID_ONLY",
+      "workspace_writes": 0,
+      "model_calls": 0,
+      "native_posts": 0,
+      "permission_granted": false,
+      "automatic_replay": false,
+      "atomic_editor_write_guarantee": false,
+      "read_only": false,
+      "payload_required": [
+        "operation_id",
+        "workspace_ref"
+      ],
+      "payload_optional": [
+        "permission_ref"
+      ],
+      "capture_only": true,
+      "journal": "ORIGINAL_API_ATOMIC_IMMUTABLE_COHORT_INTENT",
+      "membership": "FROZEN_REGISTERED_OVERLAPPING_OBSERVER_IDS_BINDINGS_AND_PROCESS_BIRTHS",
+      "limits": {
+        "members": 16,
+        "active": 8,
+        "records": 2048,
+        "lifetime_ms": 12000,
+        "record_bytes": 49152
+      },
+      "generation_zero": "METADATA_COHORT_BEFORE_FIRST_OWNER_ONLY_NO_EXECUTION_CONTROL",
+      "desktop_admission": "ORIGINAL_SERVER_ENTRY_BROKER_MAIN_ONLY_METADATA_FEED_NO_SECOND_OWNER"
+    },
+    "session.editor.capture.operation": {
+      "scope_required": [
+        "project_id",
+        "session_ref",
+        "generation"
+      ],
+      "generation_min": 0,
+      "actor": "MAIN_PAIRED_CLIENT_ID_ONLY",
+      "workspace_writes": 0,
+      "model_calls": 0,
+      "native_posts": 0,
+      "permission_granted": false,
+      "automatic_replay": false,
+      "atomic_editor_write_guarantee": false,
+      "read_only": true,
+      "payload_required": [
+        "operation_id"
+      ],
+      "observation_time_scope": "IMMUTABLE_CAPTURE_INTENT_NOT_CURRENT_CLEAN_STATE",
+      "generation_zero": "METADATA_COHORT_BEFORE_FIRST_OWNER_ONLY_NO_EXECUTION_CONTROL"
+    },
+    "session.editor.capture.status": {
+      "scope_required": [
+        "project_id",
+        "session_ref",
+        "generation"
+      ],
+      "generation_min": 0,
+      "actor": "MAIN_PAIRED_CLIENT_ID_ONLY",
+      "workspace_writes": 0,
+      "model_calls": 0,
+      "native_posts": 0,
+      "permission_granted": false,
+      "automatic_replay": false,
+      "atomic_editor_write_guarantee": false,
+      "read_only": true,
+      "payload_required": [
+        "operation_id"
+      ],
+      "status_scope": "CURRENT_METADATA_SNAPSHOT_NOT_EXECUTION_LEASE",
+      "dispatch": "MAIN_ONLY_OWN_OBSERVER_ID_OPAQUE_CAPTURE_REF_DEADLINE_NO_TARGET_CONTENT",
+      "states": [
+        "READY",
+        "WAITING",
+        "DIRTY",
+        "UNAVAILABLE",
+        "OWNER_ENDED",
+        "STALE",
+        "RESTARTED",
+        "MEMBERSHIP_CHANGED",
+        "TARGET_CHANGED",
+        "EXPIRED"
+      ],
+      "generation_zero": "METADATA_COHORT_BEFORE_FIRST_OWNER_ONLY_NO_EXECUTION_CONTROL"
+    },
+    "session.editor.capture.listen": {
+      "transport": "AUTHENTICATED_SSE_GET",
+      "rpc": false,
+      "path": "/v1/editor-capture-events?window_id={original_window_id}",
+      "actor": "MAIN_PAIRED_CLIENT_ID_ONLY",
+      "required_grants": [
+        "session.editor.capture.listen",
+        "session.editor.observer.command"
+      ],
+      "window_owner": "NATIVE_OBSERVER_PROCESS_BIRTH_AND_ORIGINAL_SLOT_ENFORCED_ON_PUBLICATION",
+      "read_only": true,
+      "workspace_writes": 0,
+      "model_calls": 0,
+      "native_posts": 0,
+      "permission_granted": false,
+      "idle_heartbeat": false,
+      "limits": {
+        "streams": 16,
+        "notices": 128,
+        "members_per_notify": 16,
+        "frame_bytes": 16384
+      },
+      "payload_fields": [
+        "type",
+        "instance_id",
+        "window_id",
+        "observer_id",
+        "capture_ref",
+        "expires_at_ms"
+      ],
+      "target_conversation_or_permission_content": false,
+      "decoder": "BOUNDED_FIXED_FRAME_STRICT_INSTANCE_WINDOW_SCHEMA_NO_ACTION_FIELDS"
+    },
+    "session.editor.capture.wait": {
+      "scope_required": [
+        "project_id",
+        "session_ref",
+        "generation"
+      ],
+      "generation_min": 0,
+      "actor": "MAIN_PAIRED_CLIENT_ID_ONLY",
+      "payload_required": [
+        "operation_id",
+        "capture_ref"
+      ],
+      "read_only": true,
+      "permission_granted": false,
+      "workspace_writes": 0,
+      "model_calls": 0,
+      "native_posts": 0,
+      "automatic_replay": false,
+      "atomic_editor_write_guarantee": false,
+      "wake": "ORIGINAL_VERIFIED_OBSERVER_API_RECEIPT_NOT_IDLE_POLL",
+      "limits": {
+        "waiters": 8,
+        "wait_ms": 8000,
+        "status_reads": 32
+      },
+      "state_scope": "CURRENT_METADATA_SNAPSHOT_NOT_EXECUTION_LEASE",
+      "generation_zero": "METADATA_COHORT_BEFORE_FIRST_OWNER_ONLY_NO_EXECUTION_CONTROL"
+    },
+    "session.editor.observer.recovery.prepare": {
+      "scope_required": [
+        "project_id",
+        "session_ref",
+        "generation"
+      ],
+      "generation_min": 1,
+      "actor": "MAIN_PAIRED_CLIENT_ID_ONLY",
+      "model_calls": 0,
+      "native_posts": 0,
+      "workspace_writes": 0,
+      "automatic_replay": false,
+      "editor_buffer_text": "NEVER_TRANSMITTED",
+      "atomic_editor_write_guarantee": false,
+      "read_only": true,
+      "payload_required": [
+        "workspace_ref",
+        "observer_id",
+        "editor_window_id",
+        "editor_process_id",
+        "editor_parent_process_id"
+      ],
+      "root": "ORIGINAL_BINDING_METADATA_URI_ONLY_NO_CURRENT_REPLACEMENT_READ",
+      "recovery": "EXPLICIT_CURRENT_CLEAN_CAPTURE_SAME_EXACT_PROCESS_OR_ENDED_ORIGINAL_PRODUCER",
+      "evidence": "PRESERVE_ORIGINAL_ACTOR_SNAPSHOT_AND_UNRESOLVED_RECEIPTS",
+      "native_file_handoff": "UNCHANGED_NOT_RETIRED_BY_METADATA_RECOVERY",
+      "current_scope": "SAME_IMMUTABLE_SESSION_METADATA_ONLY_NOT_EXECUTION_AUTHORIZATION"
+    },
+    "session.editor.observer.recovery.command": {
+      "scope_required": [
+        "project_id",
+        "session_ref",
+        "generation"
+      ],
+      "generation_min": 1,
+      "actor": "MAIN_PAIRED_CLIENT_ID_ONLY",
+      "model_calls": 0,
+      "native_posts": 0,
+      "workspace_writes": 0,
+      "automatic_replay": false,
+      "editor_buffer_text": "NEVER_TRANSMITTED",
+      "atomic_editor_write_guarantee": false,
+      "read_only": false,
+      "payload_required": [
+        "workspace_ref",
+        "observer_id",
+        "editor_window_id",
+        "editor_process_id",
+        "editor_parent_process_id",
+        "operation_id",
+        "expected_revision",
+        "preparation_sha256",
+        "observation",
+        "user_preserved_original"
+      ],
+      "permission_granted": false,
+      "receipt": "SAME_SQL_TRANSACTION_AS_OBSERVATION",
+      "unknown": "READ_ORIGINAL_OPERATION_ONLY",
+      "limits": {
+        "active_windows": 16,
+        "stored_windows": 128,
+        "documents": 64,
+        "snapshot_bytes": 49152,
+        "fresh_seconds": 15,
+        "permission_fresh_seconds": 5,
+        "observations": 8192,
+        "retirement_reserve": 128
+      },
+      "retirement": "EXPLICIT_CURRENT_COMPLETE_CLEAN_CAPTURE_OR_NAMESPACE_DRIFT_WITH_COMPLETE_CLEAN_LOCAL_DOCUMENTS",
+      "recovery": "EXPLICIT_CURRENT_CLEAN_CAPTURE_SAME_EXACT_PROCESS_OR_ENDED_ORIGINAL_PRODUCER",
+      "capture_freshness": {
+        "same_host_clock_max_age_seconds": 3,
+        "max_future_skew_seconds": 1,
+        "stale_basis": "LOCAL_CAPTURE_TIME_NOT_RECEIPT_TIME"
+      },
+      "mutation_journal": "ORIGINAL_API_ATOMIC_SQL_RECEIPT_NOT_DUPLICATE_MAIN_HUMAN_REQUEST_ROW",
+      "capture_ref": "OPTIONAL_OPAQUE_ORIGINAL_COHORT_REF_NONE_OMITTED_FROM_LEGACY_REQUEST_HASH",
+      "concurrent_capture_evidence": "UP_TO_8_PURPOSE_REFS_FOR_UNCHANGED_DOCUMENT_FINGERPRINT_INDEPENDENT_CAPTURE_TIMES",
+      "evidence": "PRESERVE_ORIGINAL_ACTOR_SNAPSHOT_AND_UNRESOLVED_RECEIPTS",
+      "native_file_handoff": "UNCHANGED_NOT_RETIRED_BY_METADATA_RECOVERY",
+      "request_hash": "OWN_SCHEMA_INCLUDES_EXPLICIT_NULL_CAPTURE_REF"
+    },
+    "session.editor.observer.recovery.operation": {
+      "scope_required": [
+        "project_id",
+        "session_ref",
+        "generation"
+      ],
+      "generation_min": 1,
+      "actor": "MAIN_PAIRED_CLIENT_ID_ONLY",
+      "model_calls": 0,
+      "native_posts": 0,
+      "workspace_writes": 0,
+      "automatic_replay": false,
+      "editor_buffer_text": "NEVER_TRANSMITTED",
+      "atomic_editor_write_guarantee": false,
+      "read_only": true,
+      "payload_required": [
+        "operation_id"
+      ],
+      "observation_time_scope": "AT_ORIGINAL_COMMAND_ONLY",
+      "recovery": "EXPLICIT_CURRENT_CLEAN_CAPTURE_SAME_EXACT_PROCESS_OR_ENDED_ORIGINAL_PRODUCER",
+      "evidence": "PRESERVE_ORIGINAL_ACTOR_SNAPSHOT_AND_UNRESOLVED_RECEIPTS",
+      "native_file_handoff": "UNCHANGED_NOT_RETIRED_BY_METADATA_RECOVERY"
+    },
+    "session.context.recovery.prepare": {
+      "scope_required": [
+        "project_id",
+        "session_ref",
+        "generation"
+      ],
+      "generation_min": 1,
+      "model_calls": 0,
+      "workspace_writes": 0,
+      "new_owner_started": false,
+      "old_history_transferred": false,
+      "drafts_transferred": false,
+      "permission_granted": false,
+      "automatic_replay": false,
+      "metadata_only": true,
+      "public_canonical_owner_only": true,
+      "final_direct_IDE_canonical_routing": "NOT_COMPLETE",
+      "read_only": true,
+      "payload_required": [],
+      "native_posts": 0,
+      "new_conversations": 0,
+      "scope_source": "ORIGINAL_ALIAS_AND_CURRENT_CANONICAL_OWNER"
+    },
+    "session.context.recovery.command": {
+      "scope_required": [
+        "project_id",
+        "session_ref",
+        "generation"
+      ],
+      "generation_min": 1,
+      "model_calls": 0,
+      "workspace_writes": 0,
+      "new_owner_started": false,
+      "old_history_transferred": false,
+      "drafts_transferred": false,
+      "permission_granted": false,
+      "automatic_replay": false,
+      "metadata_only": true,
+      "public_canonical_owner_only": true,
+      "final_direct_IDE_canonical_routing": "NOT_COMPLETE",
+      "read_only": false,
+      "payload_required": [
+        "operation_id",
+        "preparation"
+      ],
+      "native_posts": "EXACT_OWNED_STOP_ONLY_NOT_INFERENCE",
+      "new_conversations": "ONE_EMPTY_METADATA_CONVERSATION_AFTER_CONFIRMED_OLD_PROCESS_CLOSURE",
+      "unknown": "ORIGINAL_API_RECOVERY_KEY_INSPECTION_EXISTING_STOP_CLAIM_NEVER_REDISPATCHED",
+      "explicit_retry": "SAME_BODY_AND_KEY_ONLY_FOR_UNCOMMITTED_STOP_CLAIM_OR_METADATA_CREATION"
+    },
+    "session.context.recovery.operation": {
+      "scope_required": [
+        "project_id",
+        "session_ref",
+        "generation"
+      ],
+      "generation_min": 1,
+      "model_calls": 0,
+      "workspace_writes": 0,
+      "new_owner_started": false,
+      "old_history_transferred": false,
+      "drafts_transferred": false,
+      "permission_granted": false,
+      "automatic_replay": false,
+      "metadata_only": true,
+      "public_canonical_owner_only": true,
+      "final_direct_IDE_canonical_routing": "NOT_COMPLETE",
+      "read_only": true,
+      "payload_required": [
+        "operation_id",
+        "request_sha256"
+      ],
+      "native_posts": 0,
+      "new_conversations": 0,
+      "receipt": "ORIGINAL_API_RECOVERY_REQUEST_SHA256_MATCH_REQUIRED"
+    },
+    "conversation.list": {
+      "scope_required": [
+        "project_id"
+      ],
+      "project_id": "EXPLICIT_USER_PROJECT_OR_NULL_CHATS",
+      "read_only": true,
+      "original_loop": "EXISTING_CANONICAL_API_ONLY",
+      "automatic_post_replay": false,
+      "credentials": "NEVER_EXPOSED",
+      "execution_owner": "SEPARATE_EXACT_IDENTITY_OR_NONE",
+      "permission_expansion": false,
+      "payload_optional": [
+        "limit",
+        "cursor"
+      ]
+    },
+    "conversation.select": {
+      "scope_required": [
+        "project_id",
+        "conversation_ref"
+      ],
+      "project_id": "EXPLICIT_USER_PROJECT_OR_NULL_CHATS",
+      "read_only": false,
+      "original_loop": "EXISTING_CANONICAL_API_ONLY",
+      "automatic_post_replay": false,
+      "credentials": "NEVER_EXPOSED",
+      "execution_owner": "SEPARATE_EXACT_IDENTITY_OR_NONE",
+      "permission_expansion": false,
+      "payload_required": [
+        "source_ref"
+      ],
+      "effects": "METADATA_ENROLLMENT_ONLY_NO_SDK_OR_MODEL"
+    },
+    "conversation.get": {
+      "scope_required": [
+        "project_id",
+        "conversation_ref"
+      ],
+      "project_id": "EXPLICIT_USER_PROJECT_OR_NULL_CHATS",
+      "read_only": true,
+      "original_loop": "EXISTING_CANONICAL_API_ONLY",
+      "automatic_post_replay": false,
+      "credentials": "NEVER_EXPOSED",
+      "execution_owner": "SEPARATE_EXACT_IDENTITY_OR_NONE",
+      "permission_expansion": false,
+      "payload_optional": [
+        "cursor"
+      ]
+    },
+    "conversation.file.open": {
+      "scope_required": ["project_id", "conversation_ref"],
+      "payload_required": ["execution_project_id", "operation_id"],
+      "read_only": false,
+      "automatic_post_replay": false,
+      "effects": "OPEN_ONLY_EXACT_REGISTERED_INPUT_FILE"
+    },
+    "conversation.create": {
+      "scope_required": [
+        "project_id"
+      ],
+      "project_id": "EXPLICIT_USER_PROJECT_OR_NULL_CHATS",
+      "read_only": false,
+      "original_loop": "EXISTING_CANONICAL_API_ONLY",
+      "automatic_post_replay": false,
+      "credentials": "NEVER_EXPOSED",
+      "execution_owner": "SEPARATE_EXACT_IDENTITY_OR_NONE",
+      "permission_expansion": false,
+      "payload_required": [
+        "operation_id"
+      ]
+    },
+    "conversation.creation.operation": {
+      "scope_required": [
+        "project_id"
+      ],
+      "project_id": "EXPLICIT_USER_PROJECT_OR_NULL_CHATS",
+      "read_only": true,
+      "original_loop": "EXISTING_CANONICAL_API_ONLY",
+      "automatic_post_replay": false,
+      "credentials": "NEVER_EXPOSED",
+      "execution_owner": "SEPARATE_EXACT_IDENTITY_OR_NONE",
+      "permission_expansion": false,
+      "payload_required": [
+        "operation_id"
+      ]
+    },
+    "conversation.message": {
+      "scope_required": [
+        "project_id",
+        "conversation_ref"
+      ],
+      "project_id": "EXPLICIT_USER_PROJECT_OR_NULL_CHATS",
+      "read_only": false,
+      "original_loop": "EXISTING_CANONICAL_API_ONLY",
+      "automatic_post_replay": false,
+      "credentials": "NEVER_EXPOSED",
+      "execution_owner": "SEPARATE_EXACT_IDENTITY_OR_NONE",
+      "permission_expansion": false,
+      "payload_required": [
+        "operation_id",
+        "provider_profile_ref",
+        "raw_text"
+      ],
+      "payload_optional": [
+        "agent",
+        "original_source",
+        "original_work_ref"
+      ],
+      "receipt": "EXACT_CANONICAL_BODY_SHA256_AND_ORIGINAL_DISPATCH_ACKNOWLEDGEMENT",
+      "original_work_scope": "EXACT_TWO_FIELD_REFERENCE_EXISTING_BOUND_OWNER_ONLY_NO_PERMISSION_OR_OWNER_CREATION"
+    },
+    "conversation.operation": {
+      "scope_required": [
+        "project_id",
+        "conversation_ref"
+      ],
+      "project_id": "EXPLICIT_USER_PROJECT_OR_NULL_CHATS",
+      "read_only": true,
+      "original_loop": "EXISTING_CANONICAL_API_ONLY",
+      "automatic_post_replay": false,
+      "credentials": "NEVER_EXPOSED",
+      "execution_owner": "SEPARATE_EXACT_IDENTITY_OR_NONE",
+      "permission_expansion": false,
+      "payload_required": [
+        "operation_id",
+        "request_sha256"
+      ]
+    },
+    "conversation.connect": {
+      "scope_required": [
+        "project_id",
+        "conversation_ref"
+      ],
+      "project_id": "EXPLICIT_USER_PROJECT_OR_NULL_CHATS",
+      "read_only": false,
+      "original_loop": "EXISTING_CANONICAL_API_ONLY",
+      "automatic_post_replay": false,
+      "credentials": "NEVER_EXPOSED",
+      "execution_owner": "SEPARATE_EXACT_IDENTITY_OR_NONE",
+      "permission_expansion": false,
+      "payload_required": [
+        "operation_id",
+        "provider_profile_ref",
+        "capability_binding_sha256"
+      ],
+      "effects": "EXPLICIT_IDLE_OWNER_PROVIDER_CONNECTION_NO_INFERENCE_NO_WORKSPACE_OR_TOOL_GRANTS"
+    },
+    "conversation.connection.operation": {
+      "scope_required": [
+        "project_id",
+        "conversation_ref"
+      ],
+      "project_id": "EXPLICIT_USER_PROJECT_OR_NULL_CHATS",
+      "read_only": true,
+      "original_loop": "EXISTING_CANONICAL_API_ONLY",
+      "automatic_post_replay": false,
+      "credentials": "NEVER_EXPOSED",
+      "execution_owner": "SEPARATE_EXACT_IDENTITY_OR_NONE",
+      "permission_expansion": false,
+      "payload_required": [
+        "operation_id",
+        "request_sha256"
+      ]
+    },
+    "conversation.configuration.prepare": {
+      "authority": "existing canonical scope and saved original manifest",
+      "side_effects": "NONE_SAVED_METADATA_ONLY_NO_SDK_REFRESH",
+      "request": "conversation_ref scope, optional exact original_source",
+      "result": "bounded workspace and tool choices, original request, preparation digest; no permission granted"
+    },
+    "conversation.configure": {
+      "authority": "exact existing canonical entry and original owner, explicit full configuration confirmation",
+      "side_effects": "SETTLED_ORIGINAL_STOP_AND_ONE_NEW_OWNER_NO_MESSAGE",
+      "request": "frozen OpenConversation request and preparation/source/execution project/confirmation hash",
+      "result": "original canonical connection receipt only; UNKNOWN never replays POST"
+    },
+    "conversation.configuration.operation": {
+      "authority": "original connection operation/hash/confirmation",
+      "side_effects": "NONE_NO_BIND_START_OR_REPLAY",
+      "request": "original operation_id/request_sha256/confirmation_sha256",
+      "result": "matching original configuration receipt; saved candidate states may offer explicit same-owner continuation, query never starts or binds"
+    },
+    "conversation.configuration.continue": {
+      "authority": "original operation/request/confirmation and both logical and execution project grants",
+      "side_effects": "EXPLICIT_SAME_KEY_KNOWN_NOT_STARTED_OR_CLOSED_SAME_CANDIDATE_LOAD_OR_READY_CANDIDATE_PUBLICATION_NO_MESSAGE_OR_CONFIGURE_REPLAY",
+      "request": "original operation_id/request_sha256/confirmation_sha256; backend loads frozen configuration",
+      "result": "matching original configuration receipt; unknown/processing/committed only observed"
+    },
+    "conversation.owner.prepare": {
+      "authority": "exact canonical scope and registered public original owner; logical and original execution project grants",
+      "side_effects": "READ_ONLY_METADATA_NO_SDK_MODEL_START",
+      "request": "exact scope; selection uses frozen operation/source/expected previous selection; operation uses original hash/source",
+      "result": "bounded original owner metadata or exact original selection receipt"
+    },
+    "conversation.owner.select": {
+      "authority": "exact canonical scope and registered public original owner; logical and original execution project grants",
+      "side_effects": "METADATA_SELECTION_ONLY_NO_SDK_MODEL_LOAD_STOP_OR_PERMISSION",
+      "request": "exact scope; selection uses frozen operation/source/expected previous selection; operation uses original hash/source",
+      "result": "bounded original owner metadata or exact original selection receipt"
+    },
+    "conversation.owner.operation": {
+      "authority": "exact canonical scope and registered public original owner; logical and original execution project grants",
+      "side_effects": "READ_ONLY_METADATA_NO_SDK_MODEL_START",
+      "request": "exact scope; selection uses frozen operation/source/expected previous selection; operation uses original hash/source",
+      "result": "bounded original owner metadata or exact original selection receipt"
+    },
+    "conversation.configuration.adoption.prepare": {
+      "authority": "exact original config key/native hash/confirmation plus current logical scope and all old/current/execution project grants",
+      "side_effects": "READ_ONLY_METADATA_NO_START_BIND_OR_REPLAY",
+      "request": "original reference/current scope, immutable preparation/confirmation; operation reads original metadata key/hash",
+      "result": "exact adoption preparation or original acknowledgement receipt; original SDK request and grants unchanged"
+    },
+    "conversation.configuration.adoption.command": {
+      "authority": "exact original config key/native hash/confirmation plus current logical scope and all old/current/execution project grants",
+      "side_effects": "METADATA_ACKNOWLEDGEMENT_ONLY_NO_SDK_MODEL_MESSAGE_OR_PERMISSION",
+      "request": "original reference/current scope, immutable preparation/confirmation; operation reads original metadata key/hash",
+      "result": "exact adoption preparation or original acknowledgement receipt; original SDK request and grants unchanged"
+    },
+    "conversation.configuration.adoption.operation": {
+      "authority": "exact original config key/native hash/confirmation plus current logical scope and all old/current/execution project grants",
+      "side_effects": "READ_ONLY_METADATA_NO_START_BIND_OR_REPLAY",
+      "request": "original reference/current scope, immutable preparation/confirmation; operation reads original metadata key/hash",
+      "result": "exact adoption preparation or original acknowledgement receipt; original SDK request and grants unchanged"
+    },
+    "native.context.recovery.prepare": {
+      "scope_required": [
+        "project_id",
+        "conversation_id"
+      ],
+      "payload_required": [
+        "parent_operation_id",
+        "expected_native_ref"
+      ],
+      "read_only": true,
+      "authority": "ORIGINAL_NATIVE_PARENT_SCOPE_ADMISSION_AND_ORIGINAL_RECOVERY_JOURNAL",
+      "project_grants": "ORIGINAL_DISCUSSION_AND_FROZEN_NEW_CHAT_TARGET_RECHECKED_IN_MAIN",
+      "model_calls": 0,
+      "workspace_writes": 0,
+      "source_data_copied": false,
+      "drafts_transferred": false,
+      "execution_started": false,
+      "automatic_replay": false,
+      "native_posts": 0,
+      "unknown": "QUERY_EXACT_ORIGINAL_PARENT_KEY_REQUEST_SHA_NO_UNKNOWN_STOP_REPLAY"
+    },
+    "native.context.recovery.command": {
+      "scope_required": [
+        "project_id",
+        "conversation_id"
+      ],
+      "payload_required": [
+        "parent_operation_id",
+        "request",
+        "preparation"
+      ],
+      "read_only": false,
+      "authority": "ORIGINAL_NATIVE_PARENT_SCOPE_ADMISSION_AND_ORIGINAL_RECOVERY_JOURNAL",
+      "project_grants": "ORIGINAL_DISCUSSION_AND_FROZEN_NEW_CHAT_TARGET_RECHECKED_IN_MAIN",
+      "model_calls": 0,
+      "workspace_writes": 0,
+      "source_data_copied": false,
+      "drafts_transferred": false,
+      "execution_started": false,
+      "automatic_replay": false,
+      "native_posts": "EXACT_ORIGINAL_OWNED_STOP_ONLY",
+      "unknown": "QUERY_EXACT_ORIGINAL_PARENT_KEY_REQUEST_SHA_NO_UNKNOWN_STOP_REPLAY"
+    },
+    "native.context.recovery.operation": {
+      "scope_required": [
+        "project_id",
+        "conversation_id"
+      ],
+      "payload_required": [
+        "parent_operation_id",
+        "operation_id",
+        "request_sha256"
+      ],
+      "read_only": true,
+      "authority": "ORIGINAL_NATIVE_PARENT_SCOPE_ADMISSION_AND_ORIGINAL_RECOVERY_JOURNAL",
+      "project_grants": "ORIGINAL_DISCUSSION_AND_FROZEN_NEW_CHAT_TARGET_RECHECKED_IN_MAIN",
+      "model_calls": 0,
+      "workspace_writes": 0,
+      "source_data_copied": false,
+      "drafts_transferred": false,
+      "execution_started": false,
+      "automatic_replay": false,
+      "native_posts": 0,
+      "unknown": "QUERY_EXACT_ORIGINAL_PARENT_KEY_REQUEST_SHA_NO_UNKNOWN_STOP_REPLAY"
+    },
+    "conversation.native.recovery.prepare": {
+      "scope_required": [
+        "project_id",
+        "conversation_ref"
+      ],
+      "payload_required": [
+        "source_ref",
+        "parent_operation_id",
+        "expected_native_ref"
+      ],
+      "read_only": true,
+      "authority": "EXACT_CANONICAL_MEMBERSHIP_AND_NATIVE_ADMISSION_ORIGINAL_STOP_JOURNAL",
+      "project_grants": "ORIGINAL_DISCUSSION_AND_FROZEN_NEW_CHAT_TARGET_RECHECKED_IN_MAIN",
+      "model_calls": 0,
+      "workspace_writes": 0,
+      "source_data_copied": false,
+      "drafts_transferred": false,
+      "execution_started": false,
+      "automatic_replay": false,
+      "native_posts": 0,
+      "unknown": "QUERY_EXACT_ORIGINAL_PARENT_KEY_REQUEST_SHA_NO_UNKNOWN_STOP_REPLAY",
+      "source_ref": "NATIVE_ALIAS_ID_AND_IMMUTABLE_IDENTITY_SHA",
+      "unbound_origin": "EXPLICIT_NULL_NOT_LITERAL_NULL_STRING_FULL_PROJECT_GRANT_REQUIRED",
+      "query": "ORIGINAL_KEY_PRESERVED_ACROSS_ORGANIZATION_REVISION_WITH_CURRENT_MEMBERSHIP_AND_GRANTS_RECHECK",
+      "positive_command": "CURRENT_CANONICAL_SCOPE_RECHECKED_BEFORE_POST_NO_AUTOMATIC_METADATA_FOLLOW"
+    },
+    "conversation.native.recovery.command": {
+      "scope_required": [
+        "project_id",
+        "conversation_ref"
+      ],
+      "payload_required": [
+        "source_ref",
+        "parent_operation_id",
+        "request",
+        "preparation"
+      ],
+      "read_only": false,
+      "authority": "EXACT_CANONICAL_MEMBERSHIP_AND_NATIVE_ADMISSION_ORIGINAL_STOP_JOURNAL",
+      "project_grants": "ORIGINAL_DISCUSSION_AND_FROZEN_NEW_CHAT_TARGET_RECHECKED_IN_MAIN",
+      "model_calls": 0,
+      "workspace_writes": 0,
+      "source_data_copied": false,
+      "drafts_transferred": false,
+      "execution_started": false,
+      "automatic_replay": false,
+      "native_posts": "EXACT_ORIGINAL_OWNED_STOP_ONLY",
+      "unknown": "QUERY_EXACT_ORIGINAL_PARENT_KEY_REQUEST_SHA_NO_UNKNOWN_STOP_REPLAY",
+      "source_ref": "NATIVE_ALIAS_ID_AND_IMMUTABLE_IDENTITY_SHA",
+      "unbound_origin": "EXPLICIT_NULL_NOT_LITERAL_NULL_STRING_FULL_PROJECT_GRANT_REQUIRED",
+      "query": "ORIGINAL_KEY_PRESERVED_ACROSS_ORGANIZATION_REVISION_WITH_CURRENT_MEMBERSHIP_AND_GRANTS_RECHECK",
+      "positive_command": "CURRENT_CANONICAL_SCOPE_RECHECKED_BEFORE_POST_NO_AUTOMATIC_METADATA_FOLLOW"
+    },
+    "conversation.native.recovery.operation": {
+      "scope_required": [
+        "project_id",
+        "conversation_ref"
+      ],
+      "payload_required": [
+        "source_ref",
+        "parent_operation_id",
+        "operation_id",
+        "request_sha256"
+      ],
+      "read_only": true,
+      "authority": "EXACT_CANONICAL_MEMBERSHIP_AND_NATIVE_ADMISSION_ORIGINAL_STOP_JOURNAL",
+      "project_grants": "ORIGINAL_DISCUSSION_AND_FROZEN_NEW_CHAT_TARGET_RECHECKED_IN_MAIN",
+      "model_calls": 0,
+      "workspace_writes": 0,
+      "source_data_copied": false,
+      "drafts_transferred": false,
+      "execution_started": false,
+      "automatic_replay": false,
+      "native_posts": 0,
+      "unknown": "QUERY_EXACT_ORIGINAL_PARENT_KEY_REQUEST_SHA_NO_UNKNOWN_STOP_REPLAY",
+      "source_ref": "NATIVE_ALIAS_ID_AND_IMMUTABLE_IDENTITY_SHA",
+      "unbound_origin": "EXPLICIT_NULL_NOT_LITERAL_NULL_STRING_FULL_PROJECT_GRANT_REQUIRED",
+      "query": "ORIGINAL_KEY_PRESERVED_ACROSS_ORGANIZATION_REVISION_WITH_CURRENT_MEMBERSHIP_AND_GRANTS_RECHECK",
+      "positive_command": "CURRENT_CANONICAL_SCOPE_RECHECKED_BEFORE_POST_NO_AUTOMATIC_METADATA_FOLLOW"
+    },
+    "session.tool.reports": {
+      "scope_required": [
+        "project_id",
+        "session_ref",
+        "generation"
+      ],
+      "payload_required": [
+        "tool_ref"
+      ],
+      "read_only": true,
+      "source": "EXACT_ORIGINAL_COMMAND_AFTER_SNAPSHOT",
+      "automatic_replay": false,
+      "commands_started": 0,
+      "model_calls": 0,
+      "whole_task_acceptance": "NOT_ASSESSED"
+    },
+    "session.tool.report": {
+      "scope_required": [
+        "project_id",
+        "session_ref",
+        "generation"
+      ],
+      "payload_required": [
+        "tool_ref",
+        "source_ref",
+        "offset",
+        "outcome"
+      ],
+      "read_only": true,
+      "source": "EXACT_ORIGINAL_COMMAND_AFTER_SNAPSHOT",
+      "automatic_replay": false,
+      "commands_started": 0,
+      "model_calls": 0,
+      "whole_task_acceptance": "NOT_ASSESSED",
+      "payload_optional": [
+        "report_ref"
+      ]
+    },
+    "session.work.requirements": {
+      "scope_required": [
+        "project_id",
+        "session_ref",
+        "generation"
+      ],
+      "read_only": true,
+      "payload_required": [],
+      "payload_optional": [
+        "tool_ref",
+        "root_operation_id",
+        "workspace_ref",
+        "include_catalog",
+        "catalog_offset",
+        "selected_requirement_ref",
+        "detail_kind",
+        "detail_id",
+        "selected_source_authority"
+      ],
+      "source": "EXACT_ACKNOWLEDGED_ORIGINAL_MESSAGE_ROOT_AND_IMMUTABLE_REQUIREMENT_VERSION",
+      "metadata_only": true,
+      "commands_started": 0,
+      "model_calls": 0,
+      "automatic_replay": false,
+      "whole_task_acceptance": "NOT_ASSESSED"
+    },
+    "session.work.requirements.link": {
+      "scope_required": [
+        "project_id",
+        "session_ref",
+        "generation"
+      ],
+      "read_only": false,
+      "payload_required": [
+        "request",
+        "request_sha256"
+      ],
+      "payload_optional": [],
+      "source": "EXACT_ACKNOWLEDGED_ORIGINAL_MESSAGE_ROOT_AND_IMMUTABLE_REQUIREMENT_VERSION",
+      "metadata_only": true,
+      "commands_started": 0,
+      "model_calls": 0,
+      "automatic_replay": false,
+      "whole_task_acceptance": "NOT_ASSESSED"
+    },
+    "session.work.requirements.operation": {
+      "scope_required": [
+        "project_id",
+        "session_ref",
+        "generation"
+      ],
+      "read_only": true,
+      "payload_required": [
+        "request",
+        "request_sha256"
+      ],
+      "payload_optional": [],
+      "source": "EXACT_ACKNOWLEDGED_ORIGINAL_MESSAGE_ROOT_AND_IMMUTABLE_REQUIREMENT_VERSION",
+      "metadata_only": true,
+      "commands_started": 0,
+      "model_calls": 0,
+      "automatic_replay": false,
+      "whole_task_acceptance": "NOT_ASSESSED"
+    },
+    "session.work.cases": {
+      "scope_required": [
+        "project_id",
+        "session_ref",
+        "generation"
+      ],
+      "read_only": true,
+      "payload_required": [],
+      "payload_optional": [
+        "tool_ref",
+        "root_operation_id",
+        "workspace_ref",
+        "offset",
+        "case_source",
+        "selected_requirement_link_operation_id",
+        "mapping_key"
+      ],
+      "source": "EXACT_ACKNOWLEDGED_ROOT_AND_IMMUTABLE_ORIGINAL_REPORT_CASE_ORDINAL_AND_HASH",
+      "metadata_only": true,
+      "commands_started": 0,
+      "model_calls": 0,
+      "automatic_replay": false,
+      "whole_task_acceptance": "NOT_ASSESSED",
+      "coverage": "HUMAN_DECLARED_MAPPING_NOT_MEASURED_TEST_COVERAGE",
+      "positive_write": "NONE"
+    },
+    "session.work.cases.map": {
+      "scope_required": [
+        "project_id",
+        "session_ref",
+        "generation"
+      ],
+      "read_only": false,
+      "payload_required": [
+        "request",
+        "request_sha256"
+      ],
+      "payload_optional": [],
+      "source": "EXACT_ACKNOWLEDGED_ROOT_AND_IMMUTABLE_ORIGINAL_REPORT_CASE_ORDINAL_AND_HASH",
+      "metadata_only": true,
+      "commands_started": 0,
+      "model_calls": 0,
+      "automatic_replay": false,
+      "whole_task_acceptance": "NOT_ASSESSED",
+      "coverage": "HUMAN_DECLARED_MAPPING_NOT_MEASURED_TEST_COVERAGE",
+      "positive_write": "APPEND_ONLY_METADATA_WITH_BOTH_HEAD_CAS"
+    },
+    "session.work.cases.operation": {
+      "scope_required": [
+        "project_id",
+        "session_ref",
+        "generation"
+      ],
+      "read_only": true,
+      "payload_required": [],
+      "payload_optional": [
+        "request",
+        "request_sha256",
+        "root_operation_id",
+        "workspace_ref",
+        "operation_id",
+        "root_sha256",
+        "original_generation"
+      ],
+      "source": "EXACT_ACKNOWLEDGED_ROOT_AND_IMMUTABLE_ORIGINAL_REPORT_CASE_ORDINAL_AND_HASH",
+      "metadata_only": true,
+      "commands_started": 0,
+      "model_calls": 0,
+      "automatic_replay": false,
+      "whole_task_acceptance": "NOT_ASSESSED",
+      "coverage": "HUMAN_DECLARED_MAPPING_NOT_MEASURED_TEST_COVERAGE",
+      "positive_write": "NONE",
+      "payload_variants": {
+        "original_packet": [
+          "request",
+          "request_sha256"
+        ],
+        "confirmed_receipt_pointer": [
+          "root_operation_id",
+          "workspace_ref",
+          "operation_id",
+          "request_sha256",
+          "root_sha256",
+          "original_generation"
+        ],
+        "mutually_exclusive": true,
+        "pointer_validation": "RECONSTRUCT_EXACT_ORIGINAL_ELEVEN_FIELDS_FROM_RECEIPT_AND_PINNED_GENERATION_THEN_VERIFY_ORIGINAL_REQUEST_SHA256"
+      }
+    },
+    "session.work.retests.prepare": {
+      "scope_required": [
+        "project_id",
+        "session_ref",
+        "generation"
+      ],
+      "read_only": true,
+      "payload_required": [
+        "request"
+      ],
+      "payload_optional": [],
+      "source": "EXACT_ORIGINAL_WORK_MAPPING_REQUIREMENT_REPORT_AND_DURABLE_RETEST_REQUEST",
+      "execution_path": "READ_ONLY",
+      "automatic_replay": false,
+      "target_case_execution": "NOT_PROVEN",
+      "whole_task_acceptance": "NOT_ASSESSED",
+      "permission_scope": "EXISTING_CONFIRMED_SESSION_SCOPE_NOT_NARROWED",
+      "error_after_positive_POST": "NO_EXECUTION"
+    },
+    "session.work.retests.submit": {
+      "scope_required": [
+        "project_id",
+        "session_ref",
+        "generation"
+      ],
+      "read_only": false,
+      "payload_required": [
+        "request",
+        "request_sha256"
+      ],
+      "payload_optional": [],
+      "source": "EXACT_ORIGINAL_WORK_MAPPING_REQUIREMENT_REPORT_AND_DURABLE_RETEST_REQUEST",
+      "execution_path": "EXISTING_ORIGINAL_SEND_AND_BUDGETS",
+      "automatic_replay": false,
+      "target_case_execution": "NOT_PROVEN",
+      "whole_task_acceptance": "NOT_ASSESSED",
+      "permission_scope": "EXISTING_CONFIRMED_SESSION_SCOPE_NOT_NARROWED",
+      "error_after_positive_POST": "UNKNOWN_INCLUDING_4XX"
+    },
+    "session.work.retests.operation": {
+      "scope_required": [
+        "project_id",
+        "session_ref",
+        "generation"
+      ],
+      "read_only": true,
+      "payload_required": [
+        "request",
+        "request_sha256"
+      ],
+      "payload_optional": [
+        "include_command_evidence"
+      ],
+      "source": "EXACT_ORIGINAL_WORK_MAPPING_REQUIREMENT_REPORT_AND_DURABLE_RETEST_REQUEST",
+      "execution_path": "READ_ONLY",
+      "automatic_replay": false,
+      "target_case_execution": "NOT_PROVEN",
+      "whole_task_acceptance": "NOT_ASSESSED",
+      "permission_scope": "EXISTING_CONFIRMED_SESSION_SCOPE_NOT_NARROWED",
+      "error_after_positive_POST": "NO_EXECUTION"
+    },
+    "session.work.retests.continue": {
+      "scope_required": [
+        "project_id",
+        "session_ref",
+        "generation"
+      ],
+      "read_only": false,
+      "payload_required": [
+        "request",
+        "request_sha256"
+      ],
+      "payload_optional": [],
+      "source": "EXACT_ORIGINAL_WORK_MAPPING_REQUIREMENT_REPORT_AND_DURABLE_RETEST_REQUEST",
+      "execution_path": "EXISTING_ORIGINAL_SEND_AND_BUDGETS",
+      "automatic_replay": false,
+      "target_case_execution": "NOT_PROVEN",
+      "whole_task_acceptance": "NOT_ASSESSED",
+      "permission_scope": "EXISTING_CONFIRMED_SESSION_SCOPE_NOT_NARROWED",
+      "error_after_positive_POST": "UNKNOWN_INCLUDING_4XX"
+    },
+    "session.work.sources.catalog": {
+      "scope_required": [
+        "project_id",
+        "session_ref",
+        "generation"
+      ],
+      "payload_required": [
+        "root_operation_id",
+        "workspace_ref",
+        "source_project_id"
+      ],
+      "payload_optional": [
+        "selected_requirement_ref",
+        "catalog_offset"
+      ],
+      "read_only": true,
+      "source": "EXACT_ORIGINAL_ROOT_AND_EXPLICIT_SELECTED_FOREIGN_REQUIREMENT_DATA_GRANT",
+      "metadata_only": true,
+      "source_workspace_authorized": false,
+      "commands_started": 0,
+      "model_calls": 0,
+      "automatic_replay": false,
+      "whole_task_acceptance": "NOT_ASSESSED",
+      "project_grants": "TARGET_AND_SOURCE_FOR_CATALOG_REVIEW_AND_ALLOW_LIVE_RECHECK_BEFORE_API_AND_RESPONSE;TARGET_ONLY_FOR_ORIGINAL_RECEIPT_OR_EXACT_REVOKE",
+      "error_after_positive_POST": "NO_EXECUTION"
+    },
+    "session.work.sources.review": {
+      "scope_required": [
+        "project_id",
+        "session_ref",
+        "generation"
+      ],
+      "payload_required": [
+        "request"
+      ],
+      "payload_optional": [],
+      "read_only": true,
+      "source": "EXACT_ORIGINAL_ROOT_AND_EXPLICIT_SELECTED_FOREIGN_REQUIREMENT_DATA_GRANT",
+      "metadata_only": true,
+      "source_workspace_authorized": false,
+      "commands_started": 0,
+      "model_calls": 0,
+      "automatic_replay": false,
+      "whole_task_acceptance": "NOT_ASSESSED",
+      "project_grants": "TARGET_AND_SOURCE_FOR_CATALOG_REVIEW_AND_ALLOW_LIVE_RECHECK_BEFORE_API_AND_RESPONSE;TARGET_ONLY_FOR_ORIGINAL_RECEIPT_OR_EXACT_REVOKE",
+      "error_after_positive_POST": "NO_EXECUTION"
+    },
+    "session.work.sources.decision": {
+      "scope_required": [
+        "project_id",
+        "session_ref",
+        "generation"
+      ],
+      "payload_required": [
+        "request",
+        "request_sha256"
+      ],
+      "payload_optional": [],
+      "read_only": false,
+      "source": "EXACT_ORIGINAL_ROOT_AND_EXPLICIT_SELECTED_FOREIGN_REQUIREMENT_DATA_GRANT",
+      "metadata_only": true,
+      "source_workspace_authorized": false,
+      "commands_started": 0,
+      "model_calls": 0,
+      "automatic_replay": false,
+      "whole_task_acceptance": "NOT_ASSESSED",
+      "project_grants": "TARGET_AND_SOURCE_FOR_CATALOG_REVIEW_AND_ALLOW_LIVE_RECHECK_BEFORE_API_AND_RESPONSE;TARGET_ONLY_FOR_ORIGINAL_RECEIPT_OR_EXACT_REVOKE",
+      "error_after_positive_POST": "UNKNOWN_INCLUDING_4XX"
+    },
+    "session.work.sources.operation": {
+      "scope_required": [
+        "project_id",
+        "session_ref",
+        "generation"
+      ],
+      "payload_required": [
+        "request",
+        "request_sha256"
+      ],
+      "payload_optional": [],
+      "read_only": true,
+      "source": "EXACT_ORIGINAL_ROOT_AND_EXPLICIT_SELECTED_FOREIGN_REQUIREMENT_DATA_GRANT",
+      "metadata_only": true,
+      "source_workspace_authorized": false,
+      "commands_started": 0,
+      "model_calls": 0,
+      "automatic_replay": false,
+      "whole_task_acceptance": "NOT_ASSESSED",
+      "project_grants": "TARGET_AND_SOURCE_FOR_CATALOG_REVIEW_AND_ALLOW_LIVE_RECHECK_BEFORE_API_AND_RESPONSE;TARGET_ONLY_FOR_ORIGINAL_RECEIPT_OR_EXACT_REVOKE",
+      "error_after_positive_POST": "NO_EXECUTION"
+    },
+    "session.work.roots": {
+      "scope_required": [
+        "project_id",
+        "session_ref",
+        "generation"
+      ],
+      "read_only": true,
+      "payload_required": [
+        "workspace_ref"
+      ],
+      "payload_optional": [
+        "offset"
+      ],
+      "source": "EXACT_ACKNOWLEDGED_ORIGINAL_ROOT_AND_SAVED_SOURCE_VERSIONS",
+      "execution_path": "READ_ONLY",
+      "model_calls": 0,
+      "commands_started": 0,
+      "source_files_written": 0,
+      "automatic_replay": false,
+      "whole_task_acceptance": "NOT_ASSESSED",
+      "native_export": "SEPARATE_BOUNDED_BINARY_SAVE_REQUIRED_NOT_RPC_BYTES",
+      "error_after_positive_POST": "NO_EXECUTION"
+    },
+    "session.work.deliveries.list": {
+      "scope_required": [
+        "project_id",
+        "session_ref",
+        "generation"
+      ],
+      "read_only": true,
+      "payload_required": [
+        "root_operation_id",
+        "workspace_ref"
+      ],
+      "payload_optional": [
+        "offset"
+      ],
+      "source": "EXACT_ACKNOWLEDGED_ORIGINAL_ROOT_AND_SAVED_SOURCE_VERSIONS",
+      "execution_path": "READ_ONLY",
+      "model_calls": 0,
+      "commands_started": 0,
+      "source_files_written": 0,
+      "automatic_replay": false,
+      "whole_task_acceptance": "NOT_ASSESSED",
+      "native_export": "SEPARATE_BOUNDED_BINARY_SAVE_REQUIRED_NOT_RPC_BYTES",
+      "error_after_positive_POST": "NO_EXECUTION"
+    },
+    "session.work.deliveries.select": {
+      "scope_required": [
+        "project_id",
+        "session_ref",
+        "generation"
+      ],
+      "read_only": true,
+      "payload_required": [
+        "root_operation_id",
+        "workspace_ref",
+        "path"
+      ],
+      "payload_optional": [],
+      "source": "EXACT_ACKNOWLEDGED_ORIGINAL_ROOT_AND_SAVED_SOURCE_VERSIONS",
+      "execution_path": "READ_ONLY",
+      "model_calls": 0,
+      "commands_started": 0,
+      "source_files_written": 0,
+      "automatic_replay": false,
+      "whole_task_acceptance": "NOT_ASSESSED",
+      "native_export": "SEPARATE_BOUNDED_BINARY_SAVE_REQUIRED_NOT_RPC_BYTES",
+      "error_after_positive_POST": "NO_EXECUTION"
+    },
+    "session.work.deliveries.prepare": {
+      "scope_required": [
+        "project_id",
+        "session_ref",
+        "generation"
+      ],
+      "read_only": true,
+      "payload_required": [
+        "request"
+      ],
+      "payload_optional": [],
+      "source": "EXACT_ACKNOWLEDGED_ORIGINAL_ROOT_AND_SAVED_SOURCE_VERSIONS",
+      "execution_path": "READ_ONLY",
+      "model_calls": 0,
+      "commands_started": 0,
+      "source_files_written": 0,
+      "automatic_replay": false,
+      "whole_task_acceptance": "NOT_ASSESSED",
+      "native_export": "SEPARATE_BOUNDED_BINARY_SAVE_REQUIRED_NOT_RPC_BYTES",
+      "error_after_positive_POST": "NO_EXECUTION"
+    },
+    "session.work.deliveries.submit": {
+      "scope_required": [
+        "project_id",
+        "session_ref",
+        "generation"
+      ],
+      "read_only": false,
+      "payload_required": [
+        "request",
+        "request_sha256",
+        "manifest_sha256"
+      ],
+      "payload_optional": [],
+      "source": "EXACT_ACKNOWLEDGED_ORIGINAL_ROOT_AND_SAVED_SOURCE_VERSIONS",
+      "execution_path": "ORIGINAL_DELIVERY_INTENT_AND_FROZEN_MANIFEST",
+      "model_calls": 0,
+      "commands_started": 0,
+      "source_files_written": 0,
+      "automatic_replay": false,
+      "whole_task_acceptance": "NOT_ASSESSED",
+      "native_export": "SEPARATE_BOUNDED_BINARY_SAVE_REQUIRED_NOT_RPC_BYTES",
+      "error_after_positive_POST": "UNKNOWN_INCLUDING_4XX"
+    },
+    "session.work.deliveries.operation": {
+      "scope_required": [
+        "project_id",
+        "session_ref",
+        "generation"
+      ],
+      "read_only": true,
+      "payload_required": [
+        "identity"
+      ],
+      "payload_optional": [
+        "request"
+      ],
+      "source": "EXACT_ACKNOWLEDGED_ORIGINAL_ROOT_AND_SAVED_SOURCE_VERSIONS",
+      "execution_path": "READ_ONLY",
+      "model_calls": 0,
+      "commands_started": 0,
+      "source_files_written": 0,
+      "automatic_replay": false,
+      "whole_task_acceptance": "NOT_ASSESSED",
+      "native_export": "SEPARATE_BOUNDED_BINARY_SAVE_REQUIRED_NOT_RPC_BYTES",
+      "error_after_positive_POST": "NO_EXECUTION"
+    },
+    "session.work.deliveries.recovery": {
+      "scope_required": [
+        "project_id",
+        "session_ref",
+        "generation"
+      ],
+      "read_only": true,
+      "payload_required": [
+        "identity"
+      ],
+      "payload_optional": [
+        "request"
+      ],
+      "source": "EXACT_ACKNOWLEDGED_ORIGINAL_ROOT_AND_SAVED_SOURCE_VERSIONS",
+      "execution_path": "READ_ONLY",
+      "model_calls": 0,
+      "commands_started": 0,
+      "source_files_written": 0,
+      "automatic_replay": false,
+      "whole_task_acceptance": "NOT_ASSESSED",
+      "native_export": "SEPARATE_BOUNDED_BINARY_SAVE_REQUIRED_NOT_RPC_BYTES",
+      "error_after_positive_POST": "NO_EXECUTION"
+    },
+    "session.work.deliveries.continue": {
+      "scope_required": [
+        "project_id",
+        "session_ref",
+        "generation"
+      ],
+      "read_only": false,
+      "payload_required": [
+        "identity"
+      ],
+      "payload_optional": [
+        "request"
+      ],
+      "source": "EXACT_ACKNOWLEDGED_ORIGINAL_ROOT_AND_SAVED_SOURCE_VERSIONS",
+      "execution_path": "ORIGINAL_DELIVERY_INTENT_AND_FROZEN_MANIFEST",
+      "model_calls": 0,
+      "commands_started": 0,
+      "source_files_written": 0,
+      "automatic_replay": false,
+      "whole_task_acceptance": "NOT_ASSESSED",
+      "native_export": "SEPARATE_BOUNDED_BINARY_SAVE_REQUIRED_NOT_RPC_BYTES",
+      "error_after_positive_POST": "UNKNOWN_INCLUDING_4XX"
+    },
+    "session.work.deliveries.retain": {
+      "scope_required": [
+        "project_id",
+        "session_ref",
+        "generation"
+      ],
+      "read_only": false,
+      "payload_required": [
+        "identity",
+        "statement"
+      ],
+      "payload_optional": [
+        "request"
+      ],
+      "source": "EXACT_ACKNOWLEDGED_ORIGINAL_ROOT_AND_SAVED_SOURCE_VERSIONS",
+      "execution_path": "ORIGINAL_DELIVERY_INTENT_AND_FROZEN_MANIFEST",
+      "model_calls": 0,
+      "commands_started": 0,
+      "source_files_written": 0,
+      "automatic_replay": false,
+      "whole_task_acceptance": "NOT_ASSESSED",
+      "native_export": "SEPARATE_BOUNDED_BINARY_SAVE_REQUIRED_NOT_RPC_BYTES",
+      "error_after_positive_POST": "UNKNOWN_INCLUDING_4XX"
+    },
+    "session.work.deliveries.tree": {
+      "scope_required": [
+        "project_id",
+        "session_ref",
+        "generation"
+      ],
+      "read_only": true,
+      "payload_required": [
+        "root_operation_id",
+        "workspace_ref"
+      ],
+      "payload_optional": [
+        "path",
+        "offset"
+      ],
+      "source": "EXISTING_REGISTERED_WORKSPACE_BOUNDED_100_ROW_TREE_NO_FOLLOW_SYMLINKS",
+      "execution_path": "READ_ONLY",
+      "model_calls": 0,
+      "commands_started": 0,
+      "source_files_written": 0,
+      "automatic_replay": false,
+      "whole_task_acceptance": "NOT_ASSESSED",
+      "native_export": "SEPARATE_BOUNDED_BINARY_SAVE_REQUIRED_NOT_RPC_BYTES",
+      "error_after_positive_POST": "NO_EXECUTION",
+      "directory_limit": 10000
+    },
+    "session.work.deliveries.export": {
+      "scope_required": [
+        "project_id",
+        "session_ref",
+        "generation"
+      ],
+      "payload_required": [
+        "request",
+        "request_sha256"
+      ],
+      "payload_optional": [],
+      "read_only": false,
+      "source": "EXACT_ORIGINAL_DELIVERY_EXPORT_INTENT_AND_IMMUTABLE_NATIVE_CHOICE_CREATION_PROOF_EVENTS",
+      "execution_path": "TRUSTED_MAIN_NATIVE_DIALOG_AND_HOST_EXISTING_ARCHIVE_OR_EXPLICIT_METADATA_CANCEL_RECOVERY",
+      "model_calls": 0,
+      "commands_started": 0,
+      "automatic_file_replay": false,
+      "new_delivery_created": false,
+      "whole_task_acceptance": "NOT_ASSESSED",
+      "native_path_from_webview_allowed": false,
+      "binary_RPC_bytes": 0,
+      "positive_error": "UNKNOWN_INCLUDING_4XX",
+      "timeout_ms": 180000
+    },
+    "session.work.deliveries.export.operation": {
+      "scope_required": [
+        "project_id",
+        "session_ref",
+        "generation"
+      ],
+      "payload_required": [
+        "identity"
+      ],
+      "payload_optional": [
+        "observe_output"
+      ],
+      "read_only": true,
+      "source": "EXACT_ORIGINAL_DELIVERY_EXPORT_INTENT_AND_IMMUTABLE_NATIVE_CHOICE_CREATION_PROOF_EVENTS",
+      "execution_path": "READ_ONLY_ORIGINAL_METADATA_AND_EXPLICIT_OUTPUT_OBSERVATION",
+      "model_calls": 0,
+      "commands_started": 0,
+      "automatic_file_replay": false,
+      "new_delivery_created": false,
+      "whole_task_acceptance": "NOT_ASSESSED",
+      "native_path_from_webview_allowed": false,
+      "binary_RPC_bytes": 0,
+      "positive_error": "UNKNOWN_INCLUDING_4XX",
+      "timeout_ms": 15000
+    },
+    "session.work.deliveries.export.cancel": {
+      "scope_required": [
+        "project_id",
+        "session_ref",
+        "generation"
+      ],
+      "payload_required": [
+        "identity"
+      ],
+      "payload_optional": [],
+      "read_only": false,
+      "source": "EXACT_ORIGINAL_DELIVERY_EXPORT_INTENT_AND_IMMUTABLE_NATIVE_CHOICE_CREATION_PROOF_EVENTS",
+      "execution_path": "TRUSTED_MAIN_NATIVE_DIALOG_AND_HOST_EXISTING_ARCHIVE_OR_EXPLICIT_METADATA_CANCEL_RECOVERY",
+      "model_calls": 0,
+      "commands_started": 0,
+      "automatic_file_replay": false,
+      "new_delivery_created": false,
+      "whole_task_acceptance": "NOT_ASSESSED",
+      "native_path_from_webview_allowed": false,
+      "binary_RPC_bytes": 0,
+      "positive_error": "UNKNOWN_INCLUDING_4XX",
+      "timeout_ms": 15000
+    },
+    "session.work.deliveries.export.reconcile": {
+      "scope_required": [
+        "project_id",
+        "session_ref",
+        "generation"
+      ],
+      "payload_required": [
+        "identity"
+      ],
+      "payload_optional": [],
+      "read_only": false,
+      "source": "EXACT_ORIGINAL_DELIVERY_EXPORT_INTENT_AND_IMMUTABLE_NATIVE_CHOICE_CREATION_PROOF_EVENTS",
+      "execution_path": "TRUSTED_MAIN_NATIVE_DIALOG_AND_HOST_EXISTING_ARCHIVE_OR_EXPLICIT_METADATA_CANCEL_RECOVERY",
+      "model_calls": 0,
+      "commands_started": 0,
+      "automatic_file_replay": false,
+      "new_delivery_created": false,
+      "whole_task_acceptance": "NOT_ASSESSED",
+      "native_path_from_webview_allowed": false,
+      "binary_RPC_bytes": 0,
+      "positive_error": "UNKNOWN_INCLUDING_4XX",
+      "timeout_ms": 15000
+    },
+    "session.work.deliveries.exports": {
+      "scope_required": [
+        "project_id",
+        "session_ref",
+        "generation"
+      ],
+      "payload_required": [
+        "root_operation_id",
+        "workspace_ref",
+        "root_sha256"
+      ],
+      "payload_optional": [
+        "offset"
+      ],
+      "read_only": true,
+      "source": "EXACT_ORIGINAL_DELIVERY_EXPORT_INTENT_AND_IMMUTABLE_NATIVE_CHOICE_CREATION_PROOF_EVENTS",
+      "execution_path": "READ_ONLY_ORIGINAL_METADATA_AND_EXPLICIT_OUTPUT_OBSERVATION",
+      "model_calls": 0,
+      "commands_started": 0,
+      "automatic_file_replay": false,
+      "new_delivery_created": false,
+      "whole_task_acceptance": "NOT_ASSESSED",
+      "native_path_from_webview_allowed": false,
+      "binary_RPC_bytes": 0,
+      "positive_error": "UNKNOWN_INCLUDING_4XX",
+      "timeout_ms": 15000
+    },
+    "session.work.maintenance.deliveries": {
+      "scope_required": [
+        "project_id",
+        "session_ref",
+        "generation"
+      ],
+      "payload_required": [
+        "root_operation_id",
+        "workspace_ref",
+        "root_sha256"
+      ],
+      "payload_optional": [
+        "offset"
+      ],
+      "read_only": true,
+      "source": "EXACT_ORIGINAL_WORK_AND_SAME_PROJECT_FROZEN_COMPLETED_DELIVERY_METADATA",
+      "execution_path": "READ_ONLY",
+      "model_calls": 0,
+      "commands_started": 0,
+      "source_files_written": 0,
+      "automatic_replay": false,
+      "permission_granted": false,
+      "issue_resolution": "NOT_ASSESSED",
+      "whole_task_acceptance": "NOT_ASSESSED",
+      "error_after_positive_POST": "NO_EXECUTION",
+      "native_path_or_binary_RPC": false
+    },
+    "session.work.maintenance.delivery": {
+      "scope_required": [
+        "project_id",
+        "session_ref",
+        "generation"
+      ],
+      "payload_required": [
+        "root_operation_id",
+        "workspace_ref",
+        "root_sha256",
+        "delivery_ref"
+      ],
+      "payload_optional": [
+        "section",
+        "offset"
+      ],
+      "read_only": true,
+      "source": "EXACT_ORIGINAL_WORK_AND_SAME_PROJECT_FROZEN_COMPLETED_DELIVERY_METADATA",
+      "execution_path": "READ_ONLY",
+      "model_calls": 0,
+      "commands_started": 0,
+      "source_files_written": 0,
+      "automatic_replay": false,
+      "permission_granted": false,
+      "issue_resolution": "NOT_ASSESSED",
+      "whole_task_acceptance": "NOT_ASSESSED",
+      "error_after_positive_POST": "NO_EXECUTION",
+      "native_path_or_binary_RPC": false
+    },
+    "session.work.maintenance.prepare": {
+      "scope_required": [
+        "project_id",
+        "session_ref",
+        "generation"
+      ],
+      "payload_required": [
+        "request"
+      ],
+      "payload_optional": [],
+      "read_only": true,
+      "source": "EXACT_ORIGINAL_WORK_AND_SAME_PROJECT_FROZEN_COMPLETED_DELIVERY_METADATA",
+      "execution_path": "READ_ONLY",
+      "model_calls": 0,
+      "commands_started": 0,
+      "source_files_written": 0,
+      "automatic_replay": false,
+      "permission_granted": false,
+      "issue_resolution": "NOT_ASSESSED",
+      "whole_task_acceptance": "NOT_ASSESSED",
+      "error_after_positive_POST": "NO_EXECUTION",
+      "native_path_or_binary_RPC": false
+    },
+    "session.work.maintenance.change": {
+      "scope_required": [
+        "project_id",
+        "session_ref",
+        "generation"
+      ],
+      "payload_required": [
+        "request",
+        "request_sha256"
+      ],
+      "payload_optional": [],
+      "read_only": false,
+      "source": "EXACT_ORIGINAL_WORK_AND_SAME_PROJECT_FROZEN_COMPLETED_DELIVERY_METADATA",
+      "execution_path": "APPEND_ONLY_METADATA_DECISION",
+      "model_calls": 0,
+      "commands_started": 0,
+      "source_files_written": 0,
+      "automatic_replay": false,
+      "permission_granted": false,
+      "issue_resolution": "NOT_ASSESSED",
+      "whole_task_acceptance": "NOT_ASSESSED",
+      "error_after_positive_POST": "UNKNOWN_INCLUDING_4XX",
+      "native_path_or_binary_RPC": false
+    },
+    "session.work.maintenance.inspect": {
+      "scope_required": [
+        "project_id",
+        "session_ref",
+        "generation"
+      ],
+      "payload_required": [
+        "root_operation_id",
+        "workspace_ref",
+        "root_sha256"
+      ],
+      "payload_optional": [
+        "history_offset"
+      ],
+      "read_only": true,
+      "source": "EXACT_ORIGINAL_WORK_AND_SAME_PROJECT_FROZEN_COMPLETED_DELIVERY_METADATA",
+      "execution_path": "READ_ONLY",
+      "model_calls": 0,
+      "commands_started": 0,
+      "source_files_written": 0,
+      "automatic_replay": false,
+      "permission_granted": false,
+      "issue_resolution": "NOT_ASSESSED",
+      "whole_task_acceptance": "NOT_ASSESSED",
+      "error_after_positive_POST": "NO_EXECUTION",
+      "native_path_or_binary_RPC": false
+    },
+    "session.work.maintenance.operation": {
+      "scope_required": [
+        "project_id",
+        "session_ref",
+        "generation"
+      ],
+      "payload_required": [
+        "identity"
+      ],
+      "payload_optional": [],
+      "read_only": true,
+      "source": "EXACT_ORIGINAL_WORK_AND_SAME_PROJECT_FROZEN_COMPLETED_DELIVERY_METADATA",
+      "execution_path": "READ_ONLY",
+      "model_calls": 0,
+      "commands_started": 0,
+      "source_files_written": 0,
+      "automatic_replay": false,
+      "permission_granted": false,
+      "issue_resolution": "NOT_ASSESSED",
+      "whole_task_acceptance": "NOT_ASSESSED",
+      "error_after_positive_POST": "NO_EXECUTION",
+      "native_path_or_binary_RPC": false
+    }
+  },
+  "canonical_scope": {
+    "fields": [
+      "project_id",
+      "conversation_ref"
+    ],
+    "conversation_ref": {
+      "id_pattern": "^(native|original|discovery):[a-f0-9]{64}$",
+      "revision_min": 0,
+      "revision_zero": "LEGACY_SELECTION_METADATA_ONLY"
+    },
+    "mutually_exclusive": [
+      "session_ref",
+      "generation",
+      "conversation_id"
+    ],
+    "project_id_null": "DEFAULT_CHATS_ALL_PROJECT_TICKET_ONLY"
+  }
+}

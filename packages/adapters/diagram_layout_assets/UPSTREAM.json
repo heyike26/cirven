@@ -1,0 +1,29 @@
+{
+  "schema": "cirven.diagram-layout-assets.v1",
+  "engine": "elkjs",
+  "version": "0.12.0",
+  "source_repository": "https://github.com/kieler/elkjs/tree/ff5771d7165445c42c408bb8a090c8035272218c",
+  "tarball_url": "https://registry.npmjs.org/elkjs/-/elkjs-0.12.0.tgz",
+  "tarball_sha256": "c1d7719723e020b10724e3ccbc935696a2884f1e78d361cdd03766309e8e8e2a",
+  "registry_integrity": "sha512-YZcKynxVxYoKIOEpywEPwCFdg+BTbxQRNf3pbwdDCvc8O3kQD8bmIwSxKU1eOTVc4Xo+VG9Te+575mlfvOrhEQ==",
+  "license": "EPL-2.0 OR GPL-3.0-or-later",
+  "selected_closure": "official self-contained lib/elk.bundled.js; non-worker execution; no Java/GWT compiler/npm installation at runtime",
+  "files": {
+    "worker.cjs": {
+      "sha256": "a1a01b2cc047bb4107a70b4369e8ac5c4050aedcd0a7d7b1e2110a2be653c383",
+      "bytes": 3052
+    },
+    "elk.bundled.js": {
+      "sha256": "1222e44f953ce7746af23801e723708f8e6f436b8b377a6a5fc7552f34a307b3",
+      "bytes": 1609707
+    },
+    "LICENSE.md": {
+      "sha256": "637e81f4a1b6b4079535c499fca05e238cf7605c1ff5b76d60d7da7ce96700c9",
+      "bytes": 14443
+    },
+    "upstream-package.json": {
+      "sha256": "4614a8db12f1c46a1d988d55e92012286c5a25dde3ea69be7695013f4d23cf02",
+      "bytes": 1687
+    }
+  }
+}

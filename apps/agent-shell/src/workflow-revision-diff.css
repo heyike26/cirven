@@ -1,0 +1,28 @@
+.wf-revision-diff{min-block-size:0;flex:1;display:flex;flex-direction:column}
+.wf-diff-basis{display:flex;flex-wrap:wrap;align-items:center;gap:6px 12px;padding:14px 22px;border-block-end:1px solid var(--wf-line);color:var(--wf-muted);font-size:13px}
+.wf-diff-scroll{flex:1;min-block-size:0;min-inline-size:0;overflow:auto;overscroll-behavior:contain;scrollbar-gutter:stable;padding:14px 22px 26px}
+.wf-diff-scroll[hidden]{display:none}
+.wf-diff-counts{display:flex;flex-wrap:wrap;column-gap:24px;row-gap:8px;padding-block:4px 16px}
+.wf-diff-counts span,.wf-diff-tag{color:var(--wf-muted);font-size:13px}
+.wf-diff-counts strong{padding-inline-start:4px;font-variant-numeric:tabular-nums}
+.wf-diff-counts [data-change=added],.wf-diff-tag[data-change=added]{color:var(--wf-brand)}
+.wf-diff-counts [data-change=removed],.wf-diff-tag[data-change=removed]{color:var(--wf-danger)}
+.wf-column .wf-diff-note{color:var(--wf-muted);margin:0 0 12px}
+.wf-diff-overview{margin-block-end:10px}
+.wf-diff-rows{list-style:none;margin:0 0 12px;padding:0}
+.wf-diff-rows li+li{border-block-start:1px solid var(--wf-line)}
+.wf-diff-rows li>button{inline-size:100%;min-block-size:56px;justify-content:space-between;gap:8px 12px;text-align:start;border-color:transparent;background:transparent}
+.wf-diff-rows li>button>span:first-child{display:grid;gap:3px;flex:1;min-inline-size:0;overflow-wrap:anywhere}
+.wf-diff-rows small,.wf-diff-detail-title small{color:var(--wf-muted);font-size:12px}
+.wf-diff-tag{white-space:nowrap}
+.wf-diff-detail>.wf-link,.wf-diff-detail-title{margin-block-end:12px}
+.wf-diff-detail-title{overflow-wrap:anywhere}
+.wf-diff-field{border-block-start:1px solid var(--wf-line);min-inline-size:0}
+.wf-diff-pair{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin-block:4px 14px}
+.wf-diff-value{display:grid;gap:6px;align-content:start;padding:12px;border-radius:8px;background:var(--wf-canvas);white-space:pre-wrap;overflow-wrap:anywhere;min-inline-size:0}
+.wf-diff-value:nth-child(2){background:color-mix(in srgb,var(--wf-accent-soft) 52%,var(--wf-paper))}
+.wf-diff-value>strong{font-size:12px;color:var(--wf-muted)}
+.wf-diff-value :is(ul,dl){margin-block:0}
+.wf-diff-value dd{margin-inline-start:10px;min-inline-size:0}
+.wf-diff-more[aria-disabled=true]{opacity:.6;cursor:wait}
+@media(max-width:560px){.wf-diff-pair{grid-template-columns:minmax(0,1fr)}.wf-diff-basis,.wf-diff-scroll{padding-inline:16px}}

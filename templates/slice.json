@@ -1,0 +1,17 @@
+{
+  "schema_version": "eeas.development-slice.v1",
+  "slice_id": null,
+  "milestone_id": null,
+  "objective": null,
+  "scope_in": [],
+  "scope_out": [],
+  "input_revisions": [],
+  "allowed_write_paths": [],
+  "acceptance_before_run": [],
+  "implementation_files": [],
+  "commands_executed": [],
+  "evidence_refs": [],
+  "status": "PLANNED",
+  "blockers": [],
+  "next_action": null
+}

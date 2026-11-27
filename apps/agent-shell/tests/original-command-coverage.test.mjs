@@ -1,0 +1,6 @@
+import test from 'node:test';import assert from 'node:assert/strict';
+import {parseOriginalCommandObservations} from '../src/original-command-observations.ts';
+import {originalFileScope} from '../src/original-session-files.ts';
+const H='a'.repeat(64),s={project_id:'project',session_ref:{id:'session',revision:1,sha256:H},generation:2,workspace_ref:{id:'b'.repeat(64),revision:1,binding_sha256:'c'.repeat(64)},original_session_id:'ses_root',messages:[]};
+const raw=reasons=>({schema:'eeas.original-command-observations.v1',scope:originalFileScope(s),snapshot_ref:{id:'snapshot',revision:1,sha256:H},commands:[],coverage:{basis_scope:'DECLARED_FILES_ONLY',all_dependencies_captured:false,reason_codes:reasons},read_only:true,model_calls:0,automatic_replay:false});
+test('capacity and unavailable reasons survive only as scoped read-only coverage, not commands',()=>{for(const reasons of [['COMMAND_GENERATION_CAPACITY_REACHED'],['COMMAND_RECORD_UNAVAILABLE'],['COMMAND_OPERATION_INDEX_UNAVAILABLE'],['COMMAND_OPERATION_NOT_UNIQUELY_ASSOCIATED']]){const value=parseOriginalCommandObservations(raw(reasons),s);assert.deepEqual(value.coverage.reason_codes,reasons);assert.deepEqual(value.commands,[]);}assert.throws(()=>parseOriginalCommandObservations(raw(['<script>internal payload</script>']),s));});

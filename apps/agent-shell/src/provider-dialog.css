@@ -1,0 +1,17 @@
+.as-provider-dialog-overlay{position:fixed;inset:0;z-index:120;background:#25292f38;animation:as-provider-shade-in 160ms var(--as-ease)}
+.as-provider-dialog-position{position:fixed;inset:0;z-index:121;display:grid;place-items:center;padding:24px;pointer-events:none}
+.as-provider-dialog{display:flex;flex-direction:column;pointer-events:auto;width:min(720px,100%);max-height:min(760px,calc(100dvh - 48px));min-width:0;min-height:0;border:1px solid var(--as-stroke);border-radius:20px;background:var(--as-overlay);color:var(--as-ink);box-shadow:0 24px 80px #25292f29;overflow:hidden;animation:as-provider-dialog-in 200ms var(--as-ease)}
+.as-provider-dialog>header{display:flex;align-items:center;justify-content:space-between;gap:16px;flex:none;padding:20px 24px 16px;border-bottom:1px solid var(--as-stroke)}
+.as-provider-dialog>header h2{margin:0;font-size:20px;line-height:1.5;font-weight:600}
+.as-provider-dialog>header button{display:grid;place-items:center;flex:none;width:40px;height:40px;border-radius:10px;font-size:28px;line-height:1;transition:background 140ms var(--as-ease)}
+.as-provider-dialog>header button:hover{background:var(--as-canvas)}
+.as-provider-dialog-body{min-height:0;overflow:auto;overscroll-behavior:contain;padding:24px;scrollbar-gutter:stable}
+.as-app-frame .as-provider-dialog .as-object.as-provider{width:100%;max-width:none;min-width:0;margin:0;font-size:16px;line-height:1.7}
+.as-app-frame .as-provider-dialog .as-provider-choices{max-width:none;margin-bottom:24px}
+.as-provider-dialog[data-closed]{animation:as-provider-dialog-out 140ms var(--as-ease)}
+.as-provider-dialog-overlay[data-closed]{animation:as-provider-shade-out 140ms var(--as-ease)}
+@keyframes as-provider-dialog-in{from{opacity:0;transform:translateY(8px) scale(.985)}to{opacity:1;transform:translateY(0) scale(1)}}
+@keyframes as-provider-dialog-out{to{opacity:0;transform:translateY(4px) scale(.99)}}
+@keyframes as-provider-shade-in{from{opacity:0}to{opacity:1}}
+@keyframes as-provider-shade-out{to{opacity:0}}
+@media(max-width:480px){.as-provider-dialog-position{padding:12px}.as-provider-dialog{max-height:calc(100dvh - 24px);border-radius:16px}.as-provider-dialog>header{padding:12px 16px}.as-provider-dialog-body{padding:20px 16px}.as-app-frame .as-provider-dialog .as-provider-directory{grid-template-columns:minmax(0,1fr)}}

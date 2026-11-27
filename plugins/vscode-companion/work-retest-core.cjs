@@ -1,0 +1,173 @@
+'use strict';
+// Generated from desktop source authority; do not edit independently.
+// SHA256 apps/agent-shell/src/original-work-retests.ts 54dd551124af3a22387090c5efeb3d2857e76ad935daf05f36db23bd0ba61845
+// SHA256 apps/agent-shell/src/work-retest-editor.ts a23ef49f984087da35335243d0ae209b745373143384a21093b8a774c772402c
+// SHA256 apps/agent-shell/src/original-work-maintenance.ts d82af858d52312e6896e1e7e235c82c3f92ea475eb9fced645b5addb18ffa710
+const { webcrypto: crypto } = require('node:crypto');
+const wire = require('./work-retest-wire.cjs');
+const { canonical, hash, workRequirementScope, OriginalWorkRetestsApi, retestPrepareBody, retestRequest } = wire;
+const same = (a, b) => canonical(a) === canonical(b), copy = (v) => structuredClone(v), sha = (v) => typeof v === 'string' && /^[a-f0-9]{64}$/.test(v), id = (v) => typeof v === 'string' && /^[A-Za-z0-9_-]{1,100}$/.test(v), count = (v, max = Number.MAX_SAFE_INTEGER) => Number.isSafeInteger(v) && Number(v) >= 0 && Number(v) <= max;
+function check(v, code = 'WORK_RETEST_LOCAL_INVALID') { if (!v)
+    throw Error(code); }
+function ownerOf(s, root) { const { generation, ...rest } = workRequirementScope(s, root); return { project_id: s.project_id, ...rest }; }
+function retestLocalKey(s, root) { return 'cirven-work-retest-v1:' + canonical(ownerOf(s, root)); }
+function owned(r, o) { return same(r.session_ref, o.session_ref) && same(r.workspace_ref, o.workspace_ref) && r.root_operation_id === o.root_operation_id; }
+function labels(v) { return Array.isArray(v) && v.length <= 8 && v.every(r => typeof r.name === 'string' && Array.from(r.name).length <= 160 && typeof r.path === 'string' && Array.from(r.path).length <= 1024 && count(r.ordinal, 1999) && Array.isArray(r.acceptance_ids) && r.acceptance_ids.length <= 100 && r.acceptance_ids.every(v => typeof v === 'string' && /^[A-Za-z0-9_-]{1,40}$/.test(v))); }
+function draft(d, o) { return d && Array.isArray(d.query?.mappings) && d.query.mappings.length <= 8 && retestPrepareBody({ ...d.query, mappings: d.query.mappings.length ? d.query.mappings : [{ operation_id: 'empty_private_draft', request_sha256: '0'.repeat(64) }] }) && owned(d.query, o) && labels(d.labels) && d.labels.length === d.query.mappings.length; }
+function attempt(a, o) { return a && retestRequest(a.request) && owned(a.request, o) && sha(a.checksum) && labels(a.labels) && a.labels.length === a.request.mappings.length && typeof a.initial_unknown === 'boolean' && Array.isArray(a.native_outcomes) && a.native_outcomes.length <= 7 && new Set(a.native_outcomes).size === a.native_outcomes.length && a.native_outcomes.every(v => ['RECORDED_NOT_DISPATCHED', 'DISPATCHING', 'ACCEPTED', 'RETURNED', 'FAILED', 'CANCELLED', 'UNKNOWN_OUTCOME'].includes(v)) && ['PENDING', 'UNKNOWN', 'RECORDED'].includes(a.phase) && ['NOT_CHECKED', 'NOT_FOUND', 'RECORDED'].includes(a.last_lookup) && (a.observation === null ? a.phase !== 'RECORDED' : a.phase === 'RECORDED' && a.observation.intent_known === true && typeof a.observation.has_native === 'boolean' && (a.observation.native_status === null || typeof a.observation.native_status === 'string') && sha(a.observation.inspection_sha256) && sha(a.observation.native_request_sha256)) && (a.disposition === null || sha(a.disposition.preparation_sha256) && count(a.disposition.generation) && a.disposition.generation >= 1 && count(a.disposition.case_revision, 512) && count(a.disposition.requirement_revision, 512)); }
+function validateRetestLocal(raw, o) { if (raw === null)
+    return { version: 1, owner: copy(o), revision: 0, draft: null, copies: [], attempts: [] }; check(new TextEncoder().encode(raw).length <= 524288, 'WORK_RETEST_LOCAL_CAPACITY'); const v = JSON.parse(raw); check(v && v.version === 1 && same(v.owner, o) && count(v.revision) && (v.draft === null || draft(v.draft, o)) && Array.isArray(v.copies) && v.copies.length <= 4 && v.copies.every(r => id(r.id) && draft(r.draft, o)) && new Set(v.copies.map(r => r.id)).size === v.copies.length && Array.isArray(v.attempts) && v.attempts.length <= 128 && v.attempts.every(a => attempt(a, o)) && new Set(v.attempts.map(a => a.request.operation_id)).size === v.attempts.length && new Set(v.attempts.map(a => a.checksum)).size === v.attempts.length); return v; }
+function retestUnresolved(a) { return !a.disposition && (a.phase !== 'RECORDED' || !a.observation?.has_native || ['RECORDED_NOT_DISPATCHED', 'DISPATCHING', 'ACCEPTED', 'UNKNOWN_OUTCOME'].includes(a.observation.native_status ?? '')); }
+const dirty = new Set(), queued = new Set();
+async function flushWorkRetestDrafts() { try {
+    for (;;) {
+        const all = [...new Set([...dirty, ...queued])];
+        if (!all.length)
+            return;
+        await Promise.all(all.map(j => j.flush()));
+    }
+}
+catch {
+    throw Error('WORK_RETEST_DRAFT_UNSAVED');
+} }
+class RetestJournal {
+    session;
+    root;
+    storage;
+    locks;
+    newId;
+    owner;
+    key;
+    local;
+    raw;
+    changed = false;
+    waiting = 0;
+    tail = Promise.resolve();
+    listeners = new Set();
+    constructor(session, root, storage, locks = globalThis.navigator?.locks ?? null, newId = () => crypto.randomUUID()) {
+        this.session = session;
+        this.root = root;
+        this.storage = storage;
+        this.locks = locks;
+        this.newId = newId;
+        this.owner = ownerOf(session, root);
+        this.key = retestLocalKey(session, root);
+        this.raw = storage.getItem(this.key);
+        this.local = validateRetestLocal(this.raw, this.owner);
+        if (this.local.attempts.some(a => a.phase === 'PENDING')) {
+            this.local.attempts = this.local.attempts.map(a => a.phase === 'PENDING' ? { ...a, phase: 'UNKNOWN', initial_unknown: true } : a);
+            this.local.revision++;
+            this.changed = true;
+            dirty.add(this);
+        }
+    }
+    value() { return copy(this.local); }
+    unsaved() { return this.changed; }
+    running() { return this.waiting > 0; }
+    observed() { return this.listeners.size > 0; }
+    subscribe(fn) { this.listeners.add(fn); return () => this.listeners.delete(fn); }
+    emit() { for (const fn of this.listeners)
+        fn(); }
+    async validate() { for (const a of this.local.attempts)
+        check(await hash(a.request) === a.checksum); return this; }
+    edit(d) { check(draft(d, this.owner)); this.local = { ...this.value(), revision: this.local.revision + 1, draft: copy(d) }; this.changed = true; dirty.add(this); this.emit(); }
+    write(v, basis = this.raw) { this.local = copy(v); this.changed = true; dirty.add(this); this.emit(); const raw = JSON.stringify(v); check(new TextEncoder().encode(raw).length <= 524288, 'WORK_RETEST_LOCAL_CAPACITY'); check(this.storage.getItem(this.key) === basis, 'WORK_RETEST_DRAFT_CONFLICT'); this.storage.setItem(this.key, raw); check(this.storage.getItem(this.key) === raw, 'WORK_RETEST_DRAFT_CONFLICT'); this.raw = raw; this.changed = false; dirty.delete(this); this.emit(); return this.value(); }
+    current() { check(!this.changed, 'WORK_RETEST_DRAFT_UNSAVED'); check(this.storage.getItem(this.key) === this.raw, 'WORK_RETEST_DRAFT_CONFLICT'); return this.value(); }
+    serial(run) { this.waiting++; queued.add(this); const next = this.tail.catch(() => { }).then(async () => { check(this.locks, 'WORK_RETEST_LOCK_UNAVAILABLE'); const abort = new AbortController(), timer = setTimeout(() => abort.abort(), 5000); try {
+        return await this.locks.request(this.key, { mode: 'exclusive', signal: abort.signal }, async () => { clearTimeout(timer); return run(); });
+    }
+    finally {
+        clearTimeout(timer);
+    } }).finally(() => { this.waiting--; if (!this.waiting)
+        queued.delete(this); this.emit(); }); this.tail = next; return next; }
+    flush() { return this.serial(async () => this.changed ? this.write(this.local) : this.value()); }
+    save(a) { check(attempt(a, this.owner)); const v = this.value(), i = v.attempts.findIndex(r => r.checksum === a.checksum); if (i < 0) {
+        check(v.attempts.length < 128, 'WORK_RETEST_HISTORY_CAPACITY');
+        v.attempts.push(copy(a));
+    }
+    else {
+        check(same(v.attempts[i].request, a.request));
+        v.attempts[i] = copy(a);
+    } v.revision++; return this.write(v); }
+    async observe(a, v) { const observation = { intent_known: true, has_native: v.original_dispatch !== null, native_status: v.original_dispatch?.status ?? null, inspection_sha256: await hash(v), native_request_sha256: v.native_request_sha256 }; const current = this.local.attempts.find(r => r.checksum === a.checksum); check(current); return this.save({ ...copy(current), phase: 'RECORDED', last_lookup: 'RECORDED', native_outcomes: [...new Set([...current.native_outcomes, ...(observation.native_status ? [observation.native_status] : [])])], observation }); }
+    async retain(sum, preparation) { return this.serial(async () => { const v = this.current(), a = v.attempts.find(r => r.checksum === sum); check(a && a.last_lookup !== 'NOT_CHECKED' && preparation.ready && same(preparation.basis.scope.session_ref, this.owner.session_ref) && same(preparation.basis.scope.workspace_ref, this.owner.workspace_ref) && preparation.basis.scope.root_operation_id === this.root && a.request.root_sha256 === preparation.basis.root_sha256, 'WORK_RETEST_REVIEW_REQUIRED'); a.disposition = { preparation_sha256: preparation.preparation_sha256, generation: preparation.basis.scope.generation, case_revision: preparation.basis.case_revision, requirement_revision: preparation.basis.requirement_revision }; v.revision++; return this.write(v); }); }
+    async copyAction(id, remove = false) { return this.serial(async () => { const v = this.value(), row = v.copies.find(r => r.id === id); check(row); if (remove)
+        v.copies = v.copies.filter(r => r.id !== id);
+    else {
+        const prior = v.draft;
+        v.draft = row.draft;
+        if (prior)
+            row.draft = prior;
+        else
+            v.copies = v.copies.filter(r => r.id !== id);
+    } v.revision++; return this.write(v); }); }
+    async resolve(which) {
+        return this.serial(async () => {
+            const raw = this.storage.getItem(this.key), saved = validateRetestLocal(raw, this.owner), local = this.value(), selected = which === 'LOCAL' ? local.draft : saved.draft, result = { ...copy(saved), draft: copy(selected) };
+            const keep = (d, id) => { if (!d || same(d, selected) || result.copies.some(r => same(r.draft, d)))
+                return; check(result.copies.length < 4, 'WORK_RETEST_COPY_CAPACITY'); result.copies.push({ id: id && !result.copies.some(r => r.id === id) ? id : this.newId(), draft: copy(d) }); };
+            for (const row of local.copies)
+                keep(row.draft, row.id);
+            keep(which === 'LOCAL' ? saved.draft : local.draft);
+            for (const a of local.attempts) {
+                const i = result.attempts.findIndex(r => r.checksum === a.checksum);
+                if (i < 0) {
+                    check(result.attempts.length < 128, 'WORK_RETEST_HISTORY_CAPACITY');
+                    result.attempts.push(copy(a));
+                }
+                else {
+                    const other = result.attempts[i];
+                    check(same(a.request, other.request));
+                    if (a.disposition && other.disposition)
+                        check(same(a.disposition, other.disposition));
+                    const known = a.phase === 'RECORDED' ? a : other.phase === 'RECORDED' ? other : a;
+                    result.attempts[i] = { ...copy(known), initial_unknown: a.initial_unknown || other.initial_unknown, native_outcomes: [...new Set([...a.native_outcomes, ...other.native_outcomes])], disposition: copy(a.disposition ?? other.disposition) };
+                }
+            }
+            result.revision = Math.max(local.revision, saved.revision) + 1;
+            return this.write(result, raw);
+        });
+    }
+}
+class RetestActions {
+    journal;
+    reader;
+    newId;
+    constructor(journal, reader = new OriginalWorkRetestsApi(), newId = () => crypto.randomUUID()) {
+        this.journal = journal;
+        this.reader = reader;
+        this.newId = newId;
+    }
+    async bounded(run) { const abort = new AbortController(); let timer; try {
+        return await Promise.race([run(abort.signal), new Promise((_, reject) => { timer = setTimeout(() => { abort.abort(); reject(Error('WORK_RETEST_TRANSPORT_UNKNOWN')); }, 25000); })]);
+    }
+    finally {
+        clearTimeout(timer);
+    } }
+    async transmit(s, a, continued = false) { const prior = this.journal.value().attempts.find(r => r.checksum === a.checksum); check(prior); if (prior.phase === 'UNKNOWN')
+        this.journal.save({ ...prior, phase: 'PENDING' }); let response; try {
+        response = await this.bounded(signal => continued ? this.reader.continue(s, a.request, signal) : this.reader.submit(s, a.request, signal));
+    }
+    catch {
+        const current = this.journal.value().attempts.find(r => r.checksum === a.checksum);
+        this.journal.save({ ...current, initial_unknown: true, phase: current.phase === 'RECORDED' ? 'RECORDED' : 'UNKNOWN' });
+        return null;
+    } await this.journal.observe(a, response); return response; }
+    async submit(s, reviewed) { return this.journal.serial(async () => { await this.journal.validate(); const local = this.journal.current(), d = local.draft; check(d && reviewed.ready && owned(d.query, this.journal.owner) && !local.attempts.some(retestUnresolved) && same(reviewed.basis.scope, workRequirementScope(s, this.journal.root)), 'WORK_RETEST_PENDING'); const expected = { ...d.query, operation_id: this.newId(), preparation_sha256: reviewed.preparation_sha256 }; check(retestRequest(expected)); const fresh = await this.bounded(signal => this.reader.prepare(s, d.query, signal)); check(fresh.ready && fresh.preparation_sha256 === reviewed.preparation_sha256 && same(fresh.basis, reviewed.basis), 'WORK_RETEST_REVIEW_REQUIRED'); const labels = fresh.basis.selected.map(r => ({ name: r.case_label.name, path: r.source.report_path, ordinal: r.source.case_ordinal, acceptance_ids: copy(r.acceptance_ids) })), a = { request: expected, checksum: await hash(expected), labels, initial_unknown: false, native_outcomes: [], phase: 'PENDING', last_lookup: 'NOT_CHECKED', observation: null, disposition: null }; this.journal.save(a); return this.transmit(s, a); }); }
+    async lookup(s, a, evidence = false) { let result; try {
+        result = await this.bounded(signal => this.reader.inspect(s, this.journal.root, a.request.operation_id, a.checksum, evidence, signal, a.request));
+    }
+    catch (error) {
+        if (error?.status !== 404)
+            throw error;
+        const current = this.journal.value().attempts.find(r => r.checksum === a.checksum);
+        if (current.phase !== 'RECORDED')
+            this.journal.save({ ...current, phase: 'UNKNOWN', initial_unknown: true, last_lookup: 'NOT_FOUND' });
+        return null;
+    } await this.journal.observe(a, result); return result; }
+    inspect(s, sum, evidence = false) { return this.journal.serial(async () => { await this.journal.validate(); const a = this.journal.value().attempts.find(r => r.checksum === sum); check(a); return this.lookup(s, a, evidence); }); }
+    continue(s, sum) { return this.journal.serial(async () => { await this.journal.validate(); const a = this.journal.current().attempts.find(r => r.checksum === sum); check(a); const found = await this.lookup(s, a); if (found?.original_dispatch)
+        throw Error('WORK_RETEST_NATIVE_UNRESOLVED'); if (a.native_outcomes.length || !found && a.phase === 'RECORDED')
+        throw Error('WORK_RETEST_ORIGINAL_RECORD_UNAVAILABLE'); check(a.request.generation === s.generation, 'WORK_RETEST_REVIEW_REQUIRED'); const fresh = await this.bounded(signal => this.reader.prepare(s, a.request, signal)); check(fresh.ready && fresh.preparation_sha256 === a.request.preparation_sha256, 'WORK_RETEST_REVIEW_REQUIRED'); return this.transmit(s, this.journal.value().attempts.find(r => r.checksum === sum), !!found); }); }
+}
+module.exports = { RetestJournal, RetestActions, retestLocalKey, validateRetestLocal, retestUnresolved, flushWorkRetestDrafts };

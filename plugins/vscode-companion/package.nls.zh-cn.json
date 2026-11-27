@@ -1,0 +1,18 @@
+{
+  "command.configure": "关联桌面 App",
+  "command.start": "后台启动桌面 App",
+  "command.connect": "连接并配对",
+  "command.repairPair": "显式重新配对",
+  "command.reveal": "打开桌面 App",
+  "command.attachSelection": "将当前选文加入草稿",
+  "command.compareSaved": "比较当前文稿与已保存版本",
+  "command.previewMarkdown": "原生预览当前 Markdown",
+  "extension.description": "在编辑器继续 Cirven 的同一对话与任务。",
+  "language.description": "此扩展的界面语言；跟随系统时使用 VS Code 显示语言。",
+  "setting.installDirectory.description": "明确指定包含 START_EEAS.cmd 的本机 Windows 桌面安装目录；不会扫描磁盘。",
+  "setting.dataDirectory.description": "可选：明确指定桌面 App 数据目录。留空使用 <安装目录>/user-data。",
+  "command.showChat": "打开聊天",
+  "language.system": "跟随系统",
+  "language.zh-CN": "简体中文",
+  "language.en": "English"
+}

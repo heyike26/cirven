@@ -1,0 +1,8 @@
+{
+  "schema_version": "eeas.capability-registry.v1",
+  "capabilities": [],
+  "notes": [
+    "未填写不是已不支持，必须按运行时探测和实测登记。",
+    "supported、loaded、qualified 独立记录，Mock 不可证明 live。"
+  ]
+}

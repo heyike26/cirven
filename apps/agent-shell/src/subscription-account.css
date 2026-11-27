@@ -1,0 +1,29 @@
+.as-subscription-account{padding:0 0 24px;min-width:0}
+.as-subscription-account h3{font-size:18px;font-weight:600;letter-spacing:normal;margin:0 0 12px}
+.as-subscription-account>.as-capability-note{font-size:14px;line-height:1.85;max-width:65ch;color:#4e5b65}
+.as-subscription-steps{display:flex;gap:16px;flex-wrap:wrap;list-style:none;margin:24px 0 20px;padding:0;counter-reset:login-step}
+.as-subscription-steps li{display:flex;align-items:center;gap:8px;font-size:14px;color:#5a6670;counter-increment:login-step}
+.as-subscription-steps li:before{content:counter(login-step);display:grid;place-items:center;width:24px;height:24px;border:1px solid #b9c5ce;border-radius:50%;font-variant-numeric:tabular-nums;font-size:13px;background:#f8fafb}
+.as-subscription-steps li[aria-current=step]{color:#2d3d49;font-weight:600}
+.as-subscription-steps li[aria-current=step]:before{background:#3e4c57;border-color:#3e4c57;color:#fff}
+.as-subscription-steps li[data-complete=true]:before{border-color:#6c8b7c;color:#2a634e;background:#eef5f0}
+.as-subscription-account .as-capability-actions button{min-height:44px;font-size:14px;padding:12px 16px}
+.as-subscription-account .as-capability-actions .as-subscription-primary{min-height:44px;padding:12px 16px;background:#36434d;border-color:#36434d;color:#fff}
+.as-subscription-account .as-capability-actions .as-subscription-primary:hover:not(:disabled){background:#24323c;border-color:#24323c}
+.as-subscription-account button:disabled{opacity:.55;cursor:default}
+.as-subscription-account :is(button,input,select,summary):focus-visible{outline:2px solid #526f85;outline-offset:4px}
+.as-subscription-account details{margin:12px 0;font-size:14px}
+.as-subscription-account summary{cursor:pointer;padding:8px 0;color:#4b5e6d}
+.as-subscription-account form>label{font-size:14px}
+.as-subscription-account form select{min-height:44px;font-size:13px}
+.as-subscription-account .as-inline-warning{color:#705222;background:#f5efdf}
+.as-provider-choices{display:flex;flex-wrap:wrap;gap:4px;padding:4px;margin:20px 0 12px;background:#e7edf1;border:1px solid #c9d3db;border-radius:12px}
+.as-provider-choices>button{flex:1;min-height:42px;min-width:0;padding:8px 12px;font-size:14px;color:#4a5c69;border:1px solid transparent;border-radius:8px;transition:background 160ms ease-out,color 160ms ease-out}
+.as-provider-choices>button[aria-selected=true]{background:#fff;border-color:#c4d0d9;color:#253f51;font-weight:600;box-shadow:0 2px 4px #3346530a}
+.as-provider-choices>button:hover:not([aria-selected=true]){background:#f3f6f8;color:#263e4f}
+.as-provider-choices>button:focus-visible{outline:2px solid #526f85;outline-offset:4px}
+.as-provider-api{padding:8px 0 16px;min-width:0}
+@media(max-width:420px){.as-subscription-steps{column-gap:12px;row-gap:8px}.as-subscription-steps li{font-size:13px;gap:8px}.as-subscription-steps li:before{width:21px;height:21px}}
+
+.as-subscription-status{display:grid;gap:4px;min-width:0}
+.as-subscription-selection{display:grid;min-width:0}

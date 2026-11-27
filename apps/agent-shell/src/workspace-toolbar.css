@@ -1,0 +1,24 @@
+.as-directory-toolbar{display:flex;align-items:center;gap:4px;min-width:0;max-width:100%;-webkit-app-region:no-drag}
+.as-directory-toolbar>.as-popover-anchor{display:flex;min-width:0;max-width:100%}
+.as-app-frame .as-directory-toolbar button{display:flex;align-items:center;justify-content:center;gap:8px;min-width:0;height:32px;min-height:32px;padding:4px 8px;border:0;border-radius:8px;background:transparent;color:var(--as-ink,#303842);font-size:13px;line-height:20px;cursor:pointer}
+.as-directory-toolbar button>span{min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.as-directory-toolbar button :is([data-component=icon],svg){flex:none;width:16px;height:16px}
+.as-directory-toolbar svg,.as-directory-menu svg{fill:none;stroke:currentColor;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+.as-app-frame .as-directory-toolbar .as-directory-open{flex:none;width:32px;padding:8px}
+.as-app-frame .as-directory-toolbar button:hover{background:#e4e7eb}
+.as-app-frame .as-directory-toolbar button:focus-visible{outline:2px solid var(--as-focus,#527d9b);outline-offset:2px}
+.as-titleband-actions{display:flex;align-items:center;min-width:0;max-width:min(480px,60%);margin-left:12px;-webkit-app-region:no-drag}
+.as-app-frame .as-titleband .as-directory-toolbar button{height:28px;min-height:28px;font-size:12px}
+.as-app-frame .as-titleband .as-directory-open{width:28px;padding:4px}
+.as-directory-menu.as-studio-popover{width:min(320px,calc(100vw - 32px));padding:8px}
+.as-directory-menu nav{display:flex;flex-direction:column;gap:4px;max-height:min(360px,60vh);overflow:auto}
+.as-directory-menu nav>button{display:flex;align-items:center;gap:12px;flex:none;min-height:40px;padding:8px 12px;border:0;border-radius:8px;text-align:left;background:transparent;color:var(--as-ink,#303842);font-size:13px;line-height:24px;cursor:pointer}
+.as-directory-menu nav>button>span{flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.as-directory-menu nav>button :is([data-component=icon],svg){flex:none;width:16px;height:16px}
+.as-directory-menu nav>button:hover,.as-directory-menu nav>button[aria-current=true]{background:#e9edf0}
+.as-app-frame .as-file-pane>.as-directory-toolbar{flex:none;margin:0 0 12px}
+.as-app-frame .as-shell .as-file-pane{padding-top:12px}
+.as-app-frame .as-shell .as-file-pane .as-tree-header{margin:0 0 12px;min-height:32px}
+.as-shell[data-layout=workbench][data-compact=true] .as-file-activity .as-sidebar-close{position:static;flex:none;width:32px;height:32px;margin-top:auto;padding:8px}
+@media(max-width:520px){.as-titleband-actions{margin-left:0;max-width:calc(100% - 100px)}}
+

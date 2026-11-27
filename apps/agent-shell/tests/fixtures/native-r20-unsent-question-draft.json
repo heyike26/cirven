@@ -1,0 +1,126 @@
+{
+  "provenance": {
+    "path": "fixtures/BASELINE_AFTER_GENERATION.r1.json",
+    "sha256": "d3bfaeb3082c3efcfaa3ecfceb6954d5010ad6b410c78b238379ad62754d5342",
+    "scope": "Actual Windows R20 real OAuth question, typed unsubmitted draft, exact disconnect and LOAD 7 to 8; zero replies"
+  },
+  "session": {
+    "project_id": "52d6432a-5eeb-4920-aff1-705c3d3caaad",
+    "session_ref": {
+      "id": "05d7ec1c1fe24e81a28695b8283fcde5",
+      "revision": 1,
+      "sha256": "ca7cd44ff8e7068571b1b4ba410c010c815079074bb4611ed6cd34aee9143f67"
+    },
+    "generation": 8,
+    "active_operation_id": null,
+    "owner_status": "READY",
+    "connected_owner": true,
+    "configuration_current": true,
+    "observation_is_current": true,
+    "pending_questions": [],
+    "pending_permissions": [],
+    "original_session_id": "ses_ea6be673fffek2r1DECGiSzGxI"
+  },
+  "source": {
+    "key": "eeas-discussion-draft-v1:[\"original\",\"52d6432a-5eeb-4920-aff1-705c3d3caaad\",\"ctl_05d7ec1c1fe24e81a28695b8283fcde5_7_13c4a7bf-7a0f-4c43-8911-b41b47fa1622_fSdiKX_8nowCjxJBzdM9RQm9OsDFkqP8yw9Pg_vjukw\"]",
+    "raw": "{\"text\":\"{\\\"identity\\\":{\\\"project\\\":\\\"52d6432a-5eeb-4920-aff1-705c3d3caaad\\\",\\\"session\\\":{\\\"id\\\":\\\"05d7ec1c1fe24e81a28695b8283fcde5\\\",\\\"revision\\\":1,\\\"sha256\\\":\\\"ca7cd44ff8e7068571b1b4ba410c010c815079074bb4611ed6cd34aee9143f67\\\"},\\\"generation\\\":7,\\\"parent\\\":\\\"13c4a7bf-7a0f-4c43-8911-b41b47fa1622\\\",\\\"request\\\":{\\\"generation\\\":7,\\\"id\\\":\\\"que_15b6efec20013F0x9zwi7N7VZE\\\",\\\"sha256\\\":\\\"7d2762297ffc9e8c028f1241cdd33d4509bd3ac0c592a3fccb0f4f83fbe3ba4c\\\"},\\\"kind\\\":\\\"QUESTION\\\"},\\\"draft\\\":{\\\"answers\\\":[[\\\"交付复核\\\"]],\\\"custom\\\":[\\\"用于离线交付的检查；保留 {\\\\\\\"draft\\\\\\\":\\\\\\\"原话\\\\\\\"} 😀\\\\n仅作为新消息的数据，不授权文件修改。\\\"]}}\",\"attachments\":[]}",
+    "identity": {
+      "project": "52d6432a-5eeb-4920-aff1-705c3d3caaad",
+      "session": {
+        "id": "05d7ec1c1fe24e81a28695b8283fcde5",
+        "revision": 1,
+        "sha256": "ca7cd44ff8e7068571b1b4ba410c010c815079074bb4611ed6cd34aee9143f67"
+      },
+      "generation": 7,
+      "parent": "13c4a7bf-7a0f-4c43-8911-b41b47fa1622",
+      "request": {
+        "generation": 7,
+        "id": "que_15b6efec20013F0x9zwi7N7VZE",
+        "sha256": "7d2762297ffc9e8c028f1241cdd33d4509bd3ac0c592a3fccb0f4f83fbe3ba4c"
+      },
+      "kind": "QUESTION"
+    },
+    "draft": {
+      "answers": [
+        [
+          "交付复核"
+        ]
+      ],
+      "custom": [
+        "用于离线交付的检查；保留 {\"draft\":\"原话\"} 😀\n仅作为新消息的数据，不授权文件修改。"
+      ]
+    }
+  },
+  "question": {
+    "allowed_choices": [
+      "reply",
+      "reject"
+    ],
+    "kind": "QUESTION",
+    "native_request": {
+      "id": "que_15b6efec20013F0x9zwi7N7VZE",
+      "questions": [
+        {
+          "header": "检查用途",
+          "multiple": true,
+          "options": [
+            {
+              "description": "用于交付结果的复核。",
+              "label": "交付复核"
+            },
+            {
+              "description": "用于界面呈现的复核。",
+              "label": "界面复核"
+            }
+          ],
+          "question": "这份核对结果优先用于哪种检查？"
+        }
+      ],
+      "sessionID": "ses_ea6be673fffek2r1DECGiSzGxI",
+      "tool": {
+        "callID": "call_cfec98ffb5354319a782682224644541",
+        "messageID": "msg_15b6eec0b00115PuQfNxsW4d09"
+      }
+    },
+    "reply_is_execution_authorization": false,
+    "request_ref": {
+      "generation": 7,
+      "id": "que_15b6efec20013F0x9zwi7N7VZE",
+      "sha256": "7d2762297ffc9e8c028f1241cdd33d4509bd3ac0c592a3fccb0f4f83fbe3ba4c"
+    }
+  },
+  "operation": {
+    "id": "13c4a7bf-7a0f-4c43-8911-b41b47fa1622",
+    "kind": "MESSAGE",
+    "status": "UNKNOWN_OUTCOME",
+    "generation": 7,
+    "original_session_id": "ses_ea6be673fffek2r1DECGiSzGxI",
+    "request": {
+      "agent": "build",
+      "conversation_ref": {
+        "id": "native:e0dfe0396f7ad4fc5caf7c52fc4a506e7ecd45a774551176a92eb982bba46a1d",
+        "revision": 1
+      },
+      "file_input": {
+        "kind": "LINKED_FILE",
+        "link_ref": {
+          "id": "06c4b26810208ffed446348c60307e07a2acfa0d5507808931bf121fc35f010e",
+          "project_id": "52d6432a-5eeb-4920-aff1-705c3d3caaad",
+          "revision": 1,
+          "sha256": "1349824d64d71671334a117966aea90c8f64507876752d2cb8b4d114607ecad3"
+        },
+        "source_ref": null
+      },
+      "generation": 7,
+      "operation_id": "13c4a7bf-7a0f-4c43-8911-b41b47fa1622",
+      "raw_text": "这是未提交回答恢复验收。不要读取或修改任何文件，不运行命令、不联网、不使用Git或子Agent。现在只使用 question 工具提出一条澄清问题“这份核对结果优先用于哪种检查？”，提供“交付复核”“界面复核”两个选项，允许多选和自定义回答。在我提交回答前等待，不要做其他工作。",
+      "session_ref": {
+        "id": "05d7ec1c1fe24e81a28695b8283fcde5",
+        "revision": 1,
+        "sha256": "ca7cd44ff8e7068571b1b4ba410c010c815079074bb4611ed6cd34aee9143f67"
+      },
+      "timeout_seconds": 300
+    }
+  },
+  "conversation": "native:e0dfe0396f7ad4fc5caf7c52fc4a506e7ecd45a774551176a92eb982bba46a1d"
+}

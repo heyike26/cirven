@@ -1,0 +1,28 @@
+// Original complete planning fixture. No paid reply, account or runtime store.
+export const copy=value=>structuredClone(value);
+const H='a'.repeat(64),QH='b'.repeat(64),RH='c'.repeat(64);
+export function proposalFixture(){
+ const nodes=Array.from({length:17},(_,index)=>({id:`T${String(index+1).padStart(2,'0')}`,title:`任务 ${index+1} · Original task ${index+1}`,description:'保留人工编写的任务说明；需要工程师审阅。',kind:'TASK',parent_id:null,depends_on:index&&index<4?[`T${String(index).padStart(2,'0')}`]:[],inputs:['同版本原始资料'],outputs:['可检查的实际交付物'],acceptance:['由负责人检查具体结果'],capabilities:[],risks:[],source_anchors:[],origin:'USER_STATEMENT'}));
+ const questions=Array.from({length:13},(_,index)=>({id:`Q${String(index+1).padStart(2,'0')}`,text:`问题 ${index+1} / Decision ${index+1}`,reason:'明确影响范围与验收依据，保留负责人判断。',category:'DECISION',blocking:index<11,affects_node_ids:[nodes[index].id],requested_materials:[],source_anchors:[]}));
+ const answers=questions.slice(0,11).map((question,index)=>({answer_id:`answer_${index+1}`,proposal_id:'plan_one',proposal_revision:2,question_id:question.id,question_sha256:QH,text:`保存的原答复 ${index+1} / Original saved answer`,accepted:false,implementation_started:false}));
+ const resolutions=answers.map(answer=>({question_id:answer.question_id,mode:'ANSWER_ACCEPTED',answer_id:answer.answer_id,answer_text:answer.text,answer_sha256:RH,assumption:null,reason:'负责人明确采纳此版本依据'}));
+ const payload={project_id:'project_one',proposal_id:'plan_one',revision:3,status:'CONFIRMED',candidate:{title:'连续确认 · Task plan continuity',summary:'已有任务、人改与待答问题保留，不重新生成业务结论。',goals:['延续原工作'],constraints:['不自动授权执行'],risks:[],assumptions:[],nodes,questions},source_receipt:{documents:[],coverage:'OWN_COMPLETE_FIXTURE'},intake_ref:{id:'intake_one',revision:1,sha256:H},execution:null,workspace_ref:{id:'workspace_one',revision:1,binding_sha256:H},confirmation:{accepted_revision:2,accepted_sha256:H,user_confirmed:true,execution_authorized:false,resolutions}};
+ const data={id:'plan_one',project_id:'project_one',revision:3,current_revision:3,sha256:H,payload,answers,review_status:'CURRENT',flow:{nodes:nodes.map(node=>({id:node.id,planning_status:'READY_TO_PLAN_NOT_EXECUTION'}))}};
+ return {artifactId:data.id,type:'proposal',schemaVersion:1,scope:{projectId:data.project_id,workspaceId:'workspace_one'},revision:3,contentHash:H,availability:'IMPLEMENTED',data};
+}
+export function observedAnswer(artifact,questionId='Q12',text='新保存的负责人答复 / New saved response'){
+ const next=copy(artifact);next.data.answers.push({answer_id:`new_${questionId}_${next.data.answers.length}`,proposal_id:next.data.id,proposal_revision:next.revision,question_id:questionId,question_sha256:QH,text,accepted:false});return next;
+}
+export function editedFixture(){
+ const before=proposalFixture(),next=copy(before),ref={project_id:before.data.project_id,id:before.artifactId,revision:3,sha256:before.contentHash};
+ next.revision=4;next.contentHash='d'.repeat(64);next.data.revision=4;next.data.current_revision=4;next.data.sha256=next.contentHash;next.data.payload.revision=4;next.data.payload.status='DRAFT';next.data.payload.confirmation=null;
+ next.data.payload.candidate.nodes[1].acceptance.push('新增人工验收条件');next.data.payload.candidate.questions[1].text+=' · 修改后的问题';
+ next.data.payload.decision_continuity={schema:'cirven.plan-decision-continuity.v1',basis_ref:ref,retained_decisions:before.data.payload.confirmation.resolutions.filter(row=>!['Q02','Q03'].includes(row.question_id)).map(resolution=>({resolution,provenance:{proposal_ref:ref,question_sha256:QH,resolution_sha256:RH}})),invalidated_question_ids:['Q02','Q03'],structural_impact:{changed_question_ids:['Q02'],changed_node_ids:['T02'],affected_node_ids:['T02','T03','T04'],global_changed_fields:[],semantic_coverage:'STRUCTURAL_ONLY_NOT_EXHAUSTIVE'}};
+ return next;
+}
+export function confirmedFixture(artifact,selections){
+ const next=copy(artifact),basis=artifact.data,prior=basis.payload.status==='CONFIRMED'?basis.payload.confirmation.resolutions:basis.payload.decision_continuity?.retained_decisions.map(row=>row.resolution)??[];
+ const merged=new Map(prior.map(row=>[row.question_id,copy(row)]));
+ for(const selection of selections){const answer=basis.answers.find(row=>row.answer_id===selection.answer_id);merged.set(selection.question_id,{...selection,answer_text:answer?.text,answer_sha256:answer?RH:undefined,assumption:selection.assumption??null});}
+ next.revision++;next.contentHash='e'.repeat(64);next.data.revision=next.revision;next.data.current_revision=next.revision;next.data.sha256=next.contentHash;next.data.payload.revision=next.revision;next.data.payload.status='CONFIRMED';next.data.payload.decision_continuity={schema:'cirven.plan-decision-continuity.v1',basis_ref:{project_id:basis.project_id,id:basis.id,revision:artifact.revision,sha256:artifact.contentHash},retained_decisions:prior.filter(row=>!selections.some(value=>value.question_id===row.question_id)).map(resolution=>({resolution,provenance:{proposal_ref:{project_id:basis.project_id,id:basis.id,revision:basis.revision,sha256:basis.sha256},question_sha256:QH,resolution_sha256:RH}})),invalidated_question_ids:[],structural_impact:{changed_question_ids:selections.map(row=>row.question_id),changed_node_ids:[],affected_node_ids:[...new Set(selections.flatMap(row=>row.question_id==='Q01'?['T01','T02','T03','T04']:basis.payload.candidate.questions.find(q=>q.id===row.question_id)?.affects_node_ids??[]))],global_changed_fields:[],semantic_coverage:'STRUCTURAL_ONLY_NOT_EXHAUSTIVE'}};next.data.payload.confirmation={accepted_revision:artifact.revision,accepted_sha256:artifact.contentHash,user_confirmed:true,execution_authorized:false,resolutions:[...merged.values()]};return next;
+}

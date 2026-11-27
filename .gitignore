@@ -1,0 +1,36 @@
+# Local dependencies and generated outputs
+/node_modules/
+**/node_modules/
+**/dist/
+**/__pycache__/
+*.py[cod]
+/.venv*/
+/.pytest_cache/
+/staging-native-ui/
+/apps/agent-shell/public/native-assets/
+/apps/agent-shell/public/licenses/upstream-patches/
+/apps/desktop-host/vendor/marked.cjs
+/packages/adapters/diagram_layout_assets/elk.bundled.js
+/packages/adapters/diagram_layout_assets/elk-worker.min.js
+/toolchain/opencode-plugins/dynamic-workflow/vendor/zod/
+*.bundle.cjs
+*.build.json
+*.egg-info/
+# Machine configuration and project data
+/.claude/
+/.opencode/
+/runtime/
+/var/
+/data/
+/reports/
+.env
+.env.*
+*.sqlite*
+*.log
+# Packaged releases
+*.exe
+*.msi
+*.vsix
+*.whl
+*.zip
+/apps/web/assets/fonts/*.woff2

@@ -1,0 +1,845 @@
+[
+  {
+    "id": "evt_133a24840001Q2JNSJBUDAuXc3",
+    "type": "server.connected",
+    "properties": {}
+  },
+  {
+    "id": "evt_133a2484e001Dh82cgoxBrf424",
+    "type": "session.created",
+    "properties": {
+      "sessionID": "ses_ecc5db7b3ffeqYYxaCB1NzeP3P",
+      "info": {
+        "id": "ses_ecc5db7b3ffeqYYxaCB1NzeP3P",
+        "slug": "witty-knight",
+        "version": "1.19.0",
+        "projectID": "global",
+        "directory": "/tmp/eeas-original-wire-workspace-o6gnmfq2/original-project",
+        "path": "tmp/eeas-original-wire-workspace-o6gnmfq2/original-project",
+        "title": "EEAS ORIGINAL MOCK WIRE — explicit title avoids auxiliary titlegen",
+        "permission": [
+          {
+            "permission": "*",
+            "pattern": "*",
+            "action": "deny"
+          }
+        ],
+        "cost": 0,
+        "tokens": {
+          "input": 0,
+          "output": 0,
+          "reasoning": 0,
+          "cache": {
+            "read": 0,
+            "write": 0
+          }
+        },
+        "time": {
+          "created": 1791867635789,
+          "updated": 1791867635789
+        }
+      }
+    }
+  },
+  {
+    "id": "evt_133a24893001BcaAIX4vI2roTB",
+    "type": "session.updated",
+    "properties": {
+      "sessionID": "ses_ecc5db7b3ffeqYYxaCB1NzeP3P",
+      "info": {
+        "id": "ses_ecc5db7b3ffeqYYxaCB1NzeP3P",
+        "slug": "witty-knight",
+        "projectID": "global",
+        "directory": "/tmp/eeas-original-wire-workspace-o6gnmfq2/original-project",
+        "path": "tmp/eeas-original-wire-workspace-o6gnmfq2/original-project",
+        "title": "EEAS ORIGINAL MOCK WIRE — explicit title avoids auxiliary titlegen",
+        "agent": "eeas-wire-readonly",
+        "model": {
+          "id": "eeas-original-wire-v1",
+          "providerID": "eeas-original-mock-wire",
+          "variant": "default"
+        },
+        "version": "1.19.0",
+        "cost": 0,
+        "tokens": {
+          "input": 0,
+          "output": 0,
+          "reasoning": 0,
+          "cache": {
+            "read": 0,
+            "write": 0
+          }
+        },
+        "permission": [
+          {
+            "permission": "*",
+            "pattern": "*",
+            "action": "deny"
+          }
+        ],
+        "time": {
+          "created": 1791867635789,
+          "updated": 1791867635857
+        }
+      }
+    }
+  },
+  {
+    "id": "evt_133a2489a0014QY0tBwVZBtofd",
+    "type": "message.updated",
+    "properties": {
+      "sessionID": "ses_ecc5db7b3ffeqYYxaCB1NzeP3P",
+      "info": {
+        "id": "msg_133a248910014FL22IPbcZZUVx",
+        "role": "user",
+        "sessionID": "ses_ecc5db7b3ffeqYYxaCB1NzeP3P",
+        "time": {
+          "created": 1791867635857
+        },
+        "agent": "eeas-wire-readonly",
+        "model": {
+          "providerID": "eeas-original-mock-wire",
+          "modelID": "eeas-original-wire-v1"
+        }
+      }
+    }
+  },
+  {
+    "id": "evt_133a2489d001TCG5jIVCuiw7ej",
+    "type": "message.part.updated",
+    "properties": {
+      "sessionID": "ses_ecc5db7b3ffeqYYxaCB1NzeP3P",
+      "part": {
+        "type": "text",
+        "text": "Return exactly EEAS_ORIGINAL_MOCK_WIRE_REPLY. This is an original transport fixture. Do not call tools.",
+        "messageID": "msg_133a248910014FL22IPbcZZUVx",
+        "sessionID": "ses_ecc5db7b3ffeqYYxaCB1NzeP3P",
+        "id": "prt_133a24899001Td13p9t0ahD2wA"
+      },
+      "time": 1791867635869
+    }
+  },
+  {
+    "id": "evt_133a248a2001emozfNYjvxK8kn",
+    "type": "session.updated",
+    "properties": {
+      "sessionID": "ses_ecc5db7b3ffeqYYxaCB1NzeP3P",
+      "info": {
+        "id": "ses_ecc5db7b3ffeqYYxaCB1NzeP3P",
+        "slug": "witty-knight",
+        "projectID": "global",
+        "directory": "/tmp/eeas-original-wire-workspace-o6gnmfq2/original-project",
+        "path": "tmp/eeas-original-wire-workspace-o6gnmfq2/original-project",
+        "title": "EEAS ORIGINAL MOCK WIRE — explicit title avoids auxiliary titlegen",
+        "agent": "eeas-wire-readonly",
+        "model": {
+          "id": "eeas-original-wire-v1",
+          "providerID": "eeas-original-mock-wire",
+          "variant": "default"
+        },
+        "version": "1.19.0",
+        "cost": 0,
+        "tokens": {
+          "input": 0,
+          "output": 0,
+          "reasoning": 0,
+          "cache": {
+            "read": 0,
+            "write": 0
+          }
+        },
+        "permission": [
+          {
+            "permission": "*",
+            "pattern": "*",
+            "action": "deny"
+          }
+        ],
+        "time": {
+          "created": 1791867635789,
+          "updated": 1791867635873
+        }
+      }
+    }
+  },
+  {
+    "id": "evt_133a248aa001AbuAjuhNw25pwj",
+    "type": "session.status",
+    "properties": {
+      "sessionID": "ses_ecc5db7b3ffeqYYxaCB1NzeP3P",
+      "status": {
+        "type": "busy"
+      }
+    }
+  },
+  {
+    "id": "evt_133a248af001Gmt2k2tTM1evje",
+    "type": "message.updated",
+    "properties": {
+      "sessionID": "ses_ecc5db7b3ffeqYYxaCB1NzeP3P",
+      "info": {
+        "id": "msg_133a248ae0015Li3ZhHjB6717Q",
+        "parentID": "msg_133a248910014FL22IPbcZZUVx",
+        "role": "assistant",
+        "mode": "eeas-wire-readonly",
+        "agent": "eeas-wire-readonly",
+        "path": {
+          "cwd": "/tmp/eeas-original-wire-workspace-o6gnmfq2/original-project",
+          "root": "/"
+        },
+        "cost": 0,
+        "tokens": {
+          "input": 0,
+          "output": 0,
+          "reasoning": 0,
+          "cache": {
+            "read": 0,
+            "write": 0
+          }
+        },
+        "modelID": "eeas-original-wire-v1",
+        "providerID": "eeas-original-mock-wire",
+        "time": {
+          "created": 1791867635886
+        },
+        "sessionID": "ses_ecc5db7b3ffeqYYxaCB1NzeP3P"
+      }
+    }
+  },
+  {
+    "id": "evt_133a248df001Miz7pAsxKlj6vH",
+    "type": "session.updated",
+    "properties": {
+      "sessionID": "ses_ecc5db7b3ffeqYYxaCB1NzeP3P",
+      "info": {
+        "id": "ses_ecc5db7b3ffeqYYxaCB1NzeP3P",
+        "slug": "witty-knight",
+        "projectID": "global",
+        "directory": "/tmp/eeas-original-wire-workspace-o6gnmfq2/original-project",
+        "path": "tmp/eeas-original-wire-workspace-o6gnmfq2/original-project",
+        "title": "EEAS ORIGINAL MOCK WIRE — explicit title avoids auxiliary titlegen",
+        "agent": "eeas-wire-readonly",
+        "model": {
+          "id": "eeas-original-wire-v1",
+          "providerID": "eeas-original-mock-wire",
+          "variant": "default"
+        },
+        "version": "1.19.0",
+        "summary": {
+          "additions": 0,
+          "deletions": 0,
+          "files": 0
+        },
+        "cost": 0,
+        "tokens": {
+          "input": 0,
+          "output": 0,
+          "reasoning": 0,
+          "cache": {
+            "read": 0,
+            "write": 0
+          }
+        },
+        "permission": [
+          {
+            "permission": "*",
+            "pattern": "*",
+            "action": "deny"
+          }
+        ],
+        "time": {
+          "created": 1791867635789,
+          "updated": 1791867635934
+        }
+      }
+    }
+  },
+  {
+    "id": "evt_133a248e3001T35LWl7imHTe3M",
+    "type": "session.diff",
+    "properties": {
+      "sessionID": "ses_ecc5db7b3ffeqYYxaCB1NzeP3P",
+      "diff": []
+    }
+  },
+  {
+    "id": "evt_133a2493c0010xD1w5jy3iNwGH",
+    "type": "plugin.added",
+    "properties": {
+      "id": "core/config-reference"
+    }
+  },
+  {
+    "id": "evt_133a2493d001pX1dANB9Fkjjsk",
+    "type": "plugin.added",
+    "properties": {
+      "id": "agent"
+    }
+  },
+  {
+    "id": "evt_133a2493e0011obnVOxClNT8P9",
+    "type": "plugin.added",
+    "properties": {
+      "id": "command"
+    }
+  },
+  {
+    "id": "evt_133a2493e002OqTcohGOWTind1",
+    "type": "plugin.added",
+    "properties": {
+      "id": "skill"
+    }
+  },
+  {
+    "id": "evt_133a249410017EwwcI1RMWY0wx",
+    "type": "plugin.added",
+    "properties": {
+      "id": "models-dev"
+    }
+  },
+  {
+    "id": "evt_133a24941002FvWnTizfu3uv3m",
+    "type": "plugin.added",
+    "properties": {
+      "id": "config-agent"
+    }
+  },
+  {
+    "id": "evt_133a249420011rCgMm7z7dYEFZ",
+    "type": "plugin.added",
+    "properties": {
+      "id": "config-command"
+    }
+  },
+  {
+    "id": "evt_133a24942002utGmvkxCQZG3uR",
+    "type": "plugin.added",
+    "properties": {
+      "id": "config-skill"
+    }
+  },
+  {
+    "id": "evt_133a24943001tjblwYpSpGj8JA",
+    "type": "plugin.added",
+    "properties": {
+      "id": "alibaba"
+    }
+  },
+  {
+    "id": "evt_133a24944001YgwZoSdHX4Wn1L",
+    "type": "plugin.added",
+    "properties": {
+      "id": "amazon-bedrock"
+    }
+  },
+  {
+    "id": "evt_133a24944002lIFEfft6Iz5XpO",
+    "type": "plugin.added",
+    "properties": {
+      "id": "anthropic"
+    }
+  },
+  {
+    "id": "evt_133a24944003Thg1E5jJS1PTux",
+    "type": "plugin.added",
+    "properties": {
+      "id": "azure-cognitive-services"
+    }
+  },
+  {
+    "id": "evt_133a2495f001b2Zy0JqtiW6zBy",
+    "type": "plugin.added",
+    "properties": {
+      "id": "azure"
+    }
+  },
+  {
+    "id": "evt_133a2495f002vVSiu0DZCLo22c",
+    "type": "plugin.added",
+    "properties": {
+      "id": "cerebras"
+    }
+  },
+  {
+    "id": "evt_133a249600014E0BV5lEEwEwud",
+    "type": "plugin.added",
+    "properties": {
+      "id": "cloudflare-ai-gateway"
+    }
+  },
+  {
+    "id": "evt_133a249610016CvV24120IpAvA",
+    "type": "plugin.added",
+    "properties": {
+      "id": "cloudflare-workers-ai"
+    }
+  },
+  {
+    "id": "evt_133a24961002EV209FYIGsvH7K",
+    "type": "plugin.added",
+    "properties": {
+      "id": "cohere"
+    }
+  },
+  {
+    "id": "evt_133a24962001ErWwoPWkOSqPbi",
+    "type": "plugin.added",
+    "properties": {
+      "id": "deepinfra"
+    }
+  },
+  {
+    "id": "evt_133a24962002v6mU5IZH0XaJ0k",
+    "type": "plugin.added",
+    "properties": {
+      "id": "gateway"
+    }
+  },
+  {
+    "id": "evt_133a24963001g802nHN2MXPJth",
+    "type": "plugin.added",
+    "properties": {
+      "id": "github-copilot"
+    }
+  },
+  {
+    "id": "evt_133a24964001zPLxX8JrhaDsPR",
+    "type": "plugin.added",
+    "properties": {
+      "id": "gitlab"
+    }
+  },
+  {
+    "id": "evt_133a24964002kZgstj9yA2Ay0B",
+    "type": "plugin.added",
+    "properties": {
+      "id": "google"
+    }
+  },
+  {
+    "id": "evt_133a24965001t6XHBTK5yDUVpw",
+    "type": "plugin.added",
+    "properties": {
+      "id": "google-vertex-anthropic"
+    }
+  },
+  {
+    "id": "evt_133a24966001NiGOubdJBhbIzT",
+    "type": "plugin.added",
+    "properties": {
+      "id": "google-vertex"
+    }
+  },
+  {
+    "id": "evt_133a2497c001VzoPgMCausqEHZ",
+    "type": "session.status",
+    "properties": {
+      "sessionID": "ses_ecc5db7b3ffeqYYxaCB1NzeP3P",
+      "status": {
+        "type": "busy"
+      }
+    }
+  },
+  {
+    "id": "evt_133a2499f001JeW8445W0WNk3g",
+    "type": "plugin.added",
+    "properties": {
+      "id": "groq"
+    }
+  },
+  {
+    "id": "evt_133a249a0001kNOE0OciOpPAzE",
+    "type": "plugin.added",
+    "properties": {
+      "id": "kilo"
+    }
+  },
+  {
+    "id": "evt_133a249a10012GazZxgS8PfTVE",
+    "type": "plugin.added",
+    "properties": {
+      "id": "llmgateway"
+    }
+  },
+  {
+    "id": "evt_133a249a1002LQmv1LBXhp5Ki9",
+    "type": "plugin.added",
+    "properties": {
+      "id": "mistral"
+    }
+  },
+  {
+    "id": "evt_133a249a1003qdqFzwTw3CoP3y",
+    "type": "plugin.added",
+    "properties": {
+      "id": "nvidia"
+    }
+  },
+  {
+    "id": "evt_133a249a4001WrXKGtBcU9maPV",
+    "type": "plugin.added",
+    "properties": {
+      "id": "opencode"
+    }
+  },
+  {
+    "id": "evt_133a249a5001FrDPSxflNhVRNw",
+    "type": "plugin.added",
+    "properties": {
+      "id": "snowflake-cortex"
+    }
+  },
+  {
+    "id": "evt_133a249a6001ahsWFNWkoB57t8",
+    "type": "plugin.added",
+    "properties": {
+      "id": "openai-compatible"
+    }
+  },
+  {
+    "id": "evt_133a249a7001XDbl8yaToF2N7d",
+    "type": "plugin.added",
+    "properties": {
+      "id": "openai"
+    }
+  },
+  {
+    "id": "evt_133a249a8001ny9M1VqjlcKd7n",
+    "type": "plugin.added",
+    "properties": {
+      "id": "openrouter"
+    }
+  },
+  {
+    "id": "evt_133a249a8002LOWBM2nakKBMwM",
+    "type": "plugin.added",
+    "properties": {
+      "id": "perplexity"
+    }
+  },
+  {
+    "id": "evt_133a249a9001Q10oR0ZFfwsUZM",
+    "type": "plugin.added",
+    "properties": {
+      "id": "sap-ai-core"
+    }
+  },
+  {
+    "id": "evt_133a24aa7001R8twVFZYx35KK5",
+    "type": "catalog.updated",
+    "properties": {}
+  },
+  {
+    "id": "evt_133a249a9002oYVf2LKMa7E4M0",
+    "type": "plugin.added",
+    "properties": {
+      "id": "togetherai"
+    }
+  },
+  {
+    "id": "evt_133a24aa8001ohGUYdSa1UB3dQ",
+    "type": "plugin.added",
+    "properties": {
+      "id": "vercel"
+    }
+  },
+  {
+    "id": "evt_133a24aa90010cHdkPju2yPR9i",
+    "type": "plugin.added",
+    "properties": {
+      "id": "venice"
+    }
+  },
+  {
+    "id": "evt_133a24aaa001LoaJ5HaW9YPwcd",
+    "type": "plugin.added",
+    "properties": {
+      "id": "xai"
+    }
+  },
+  {
+    "id": "evt_133a24aaa002P5puAexx43YZ1k",
+    "type": "plugin.added",
+    "properties": {
+      "id": "zenmux"
+    }
+  },
+  {
+    "id": "evt_133a24aab001liw802nrsacS5v",
+    "type": "plugin.added",
+    "properties": {
+      "id": "dynamic-provider"
+    }
+  },
+  {
+    "id": "evt_133a24aad001Sc0ZPI1Nho7jQd",
+    "type": "plugin.added",
+    "properties": {
+      "id": "config-plugin"
+    }
+  },
+  {
+    "id": "evt_133a24aae001Wph35SfkLJuIKN",
+    "type": "plugin.added",
+    "properties": {
+      "id": "config-provider"
+    }
+  },
+  {
+    "id": "evt_133a24aae002wzIdJ06yHEZtJw",
+    "type": "plugin.added",
+    "properties": {
+      "id": "variant"
+    }
+  },
+  {
+    "id": "evt_133a24ab0001EiH5JNm1a33oqE",
+    "type": "reference.updated",
+    "properties": {}
+  },
+  {
+    "id": "evt_133a24ac3001Hk9UZuTq3BIW2T",
+    "type": "message.part.updated",
+    "properties": {
+      "sessionID": "ses_ecc5db7b3ffeqYYxaCB1NzeP3P",
+      "part": {
+        "id": "prt_133a24ac3001Ve5VEWM4oaTaMT",
+        "messageID": "msg_133a248ae0015Li3ZhHjB6717Q",
+        "sessionID": "ses_ecc5db7b3ffeqYYxaCB1NzeP3P",
+        "type": "step-start"
+      },
+      "time": 1791867636419
+    }
+  },
+  {
+    "id": "evt_133a24ac8001qnM1mWJ8jQIHaI",
+    "type": "message.part.updated",
+    "properties": {
+      "sessionID": "ses_ecc5db7b3ffeqYYxaCB1NzeP3P",
+      "part": {
+        "id": "prt_133a24ac8001iYt5MMRyMZUHNi",
+        "messageID": "msg_133a248ae0015Li3ZhHjB6717Q",
+        "sessionID": "ses_ecc5db7b3ffeqYYxaCB1NzeP3P",
+        "type": "text",
+        "text": "",
+        "time": {
+          "start": 1791867636424
+        }
+      },
+      "time": 1791867636424
+    }
+  },
+  {
+    "id": "evt_133a24acb001v3TtF3YKoLjppn",
+    "type": "message.part.delta",
+    "properties": {
+      "sessionID": "ses_ecc5db7b3ffeqYYxaCB1NzeP3P",
+      "messageID": "msg_133a248ae0015Li3ZhHjB6717Q",
+      "partID": "prt_133a24ac8001iYt5MMRyMZUHNi",
+      "field": "text",
+      "delta": "EEAS_ORIGINAL_MOCK_WIRE_REPLY"
+    }
+  },
+  {
+    "id": "evt_133a24acd0014unRaokpxn4LXu",
+    "type": "message.part.updated",
+    "properties": {
+      "sessionID": "ses_ecc5db7b3ffeqYYxaCB1NzeP3P",
+      "part": {
+        "id": "prt_133a24ac8001iYt5MMRyMZUHNi",
+        "messageID": "msg_133a248ae0015Li3ZhHjB6717Q",
+        "sessionID": "ses_ecc5db7b3ffeqYYxaCB1NzeP3P",
+        "type": "text",
+        "text": "EEAS_ORIGINAL_MOCK_WIRE_REPLY",
+        "time": {
+          "start": 1791867636424,
+          "end": 1791867636429
+        }
+      },
+      "time": 1791867636429
+    }
+  },
+  {
+    "id": "evt_133a24ad4001m4x25WwXOss3n6",
+    "type": "message.part.updated",
+    "properties": {
+      "sessionID": "ses_ecc5db7b3ffeqYYxaCB1NzeP3P",
+      "part": {
+        "id": "prt_133a24ad3001IHlVy58OCdXOjx",
+        "reason": "stop",
+        "messageID": "msg_133a248ae0015Li3ZhHjB6717Q",
+        "sessionID": "ses_ecc5db7b3ffeqYYxaCB1NzeP3P",
+        "type": "step-finish",
+        "tokens": {
+          "total": 16,
+          "input": 10,
+          "output": 6,
+          "reasoning": 0,
+          "cache": {
+            "write": 0,
+            "read": 0
+          }
+        },
+        "cost": 0
+      },
+      "time": 1791867636436
+    }
+  },
+  {
+    "id": "evt_133a24ad7001yENEheboG2XNJ3",
+    "type": "message.updated",
+    "properties": {
+      "sessionID": "ses_ecc5db7b3ffeqYYxaCB1NzeP3P",
+      "info": {
+        "id": "msg_133a248ae0015Li3ZhHjB6717Q",
+        "parentID": "msg_133a248910014FL22IPbcZZUVx",
+        "role": "assistant",
+        "mode": "eeas-wire-readonly",
+        "agent": "eeas-wire-readonly",
+        "path": {
+          "cwd": "/tmp/eeas-original-wire-workspace-o6gnmfq2/original-project",
+          "root": "/"
+        },
+        "cost": 0,
+        "tokens": {
+          "total": 16,
+          "input": 10,
+          "output": 6,
+          "reasoning": 0,
+          "cache": {
+            "write": 0,
+            "read": 0
+          }
+        },
+        "modelID": "eeas-original-wire-v1",
+        "providerID": "eeas-original-mock-wire",
+        "time": {
+          "created": 1791867635886,
+          "completed": 1791867636443
+        },
+        "sessionID": "ses_ecc5db7b3ffeqYYxaCB1NzeP3P",
+        "finish": "stop"
+      }
+    }
+  },
+  {
+    "id": "evt_133a24adb001O893QCC1Eja6ug",
+    "type": "message.updated",
+    "properties": {
+      "sessionID": "ses_ecc5db7b3ffeqYYxaCB1NzeP3P",
+      "info": {
+        "id": "msg_133a248ae0015Li3ZhHjB6717Q",
+        "parentID": "msg_133a248910014FL22IPbcZZUVx",
+        "role": "assistant",
+        "mode": "eeas-wire-readonly",
+        "agent": "eeas-wire-readonly",
+        "path": {
+          "cwd": "/tmp/eeas-original-wire-workspace-o6gnmfq2/original-project",
+          "root": "/"
+        },
+        "cost": 0,
+        "tokens": {
+          "total": 16,
+          "input": 10,
+          "output": 6,
+          "reasoning": 0,
+          "cache": {
+            "write": 0,
+            "read": 0
+          }
+        },
+        "modelID": "eeas-original-wire-v1",
+        "providerID": "eeas-original-mock-wire",
+        "time": {
+          "created": 1791867635886,
+          "completed": 1791867636443
+        },
+        "sessionID": "ses_ecc5db7b3ffeqYYxaCB1NzeP3P",
+        "finish": "stop"
+      }
+    }
+  },
+  {
+    "id": "evt_133a24ade001xE3mMpFsc6nKti",
+    "type": "session.status",
+    "properties": {
+      "sessionID": "ses_ecc5db7b3ffeqYYxaCB1NzeP3P",
+      "status": {
+        "type": "busy"
+      }
+    }
+  },
+  {
+    "id": "evt_133a24ae2001Hx76Cm799YISJ3",
+    "type": "session.status",
+    "properties": {
+      "sessionID": "ses_ecc5db7b3ffeqYYxaCB1NzeP3P",
+      "status": {
+        "type": "idle"
+      }
+    }
+  },
+  {
+    "id": "evt_133a24ae2002pFyrfag2yEOsw5",
+    "type": "session.idle",
+    "properties": {
+      "sessionID": "ses_ecc5db7b3ffeqYYxaCB1NzeP3P"
+    }
+  },
+  {
+    "id": "evt_133a24ae60011uikB0V0gErBii",
+    "type": "session.updated",
+    "properties": {
+      "sessionID": "ses_ecc5db7b3ffeqYYxaCB1NzeP3P",
+      "info": {
+        "id": "ses_ecc5db7b3ffeqYYxaCB1NzeP3P",
+        "slug": "witty-knight",
+        "projectID": "global",
+        "directory": "/tmp/eeas-original-wire-workspace-o6gnmfq2/original-project",
+        "path": "tmp/eeas-original-wire-workspace-o6gnmfq2/original-project",
+        "title": "EEAS ORIGINAL MOCK WIRE — explicit title avoids auxiliary titlegen",
+        "agent": "eeas-wire-readonly",
+        "model": {
+          "id": "eeas-original-wire-v1",
+          "providerID": "eeas-original-mock-wire",
+          "variant": "default"
+        },
+        "version": "1.19.0",
+        "summary": {
+          "additions": 0,
+          "deletions": 0,
+          "files": 0
+        },
+        "cost": 0,
+        "tokens": {
+          "input": 10,
+          "output": 6,
+          "reasoning": 0,
+          "cache": {
+            "read": 0,
+            "write": 0
+          }
+        },
+        "permission": [
+          {
+            "permission": "*",
+            "pattern": "*",
+            "action": "deny"
+          }
+        ],
+        "time": {
+          "created": 1791867635789,
+          "updated": 1791867636453
+        }
+      }
+    }
+  },
+  {
+    "id": "evt_133a24ae9001zmusWxhXGLevcm",
+    "type": "session.diff",
+    "properties": {
+      "sessionID": "ses_ecc5db7b3ffeqYYxaCB1NzeP3P",
+      "diff": []
+    }
+  }
+]

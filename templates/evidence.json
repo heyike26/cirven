@@ -1,0 +1,21 @@
+{
+  "schema_version": "eeas.evidence-design.v1",
+  "evidence_id": null,
+  "run_id": null,
+  "attempt_id": null,
+  "task_revision": null,
+  "acceptance_hash": null,
+  "source_hash": null,
+  "artifact_hash": null,
+  "stack_lock_hash": null,
+  "source_kind": "synthetic",
+  "runtime_kind": "none",
+  "environment": null,
+  "command": null,
+  "exit_code": null,
+  "raw_log_ref": null,
+  "result": "NOT_RUN",
+  "business_validated": false,
+  "hardware_validated": false,
+  "limitations": []
+}

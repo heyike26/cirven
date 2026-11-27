@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="460" viewBox="0 0 600 460" fill="none">
+  <title>工程原文与独立工作窗口的玻璃层次示意</title>
+  <defs>
+    <linearGradient id="pane" x1="176" y1="45" x2="469" y2="364" gradientUnits="userSpaceOnUse"><stop stop-color="white" stop-opacity=".94"/><stop offset="1" stop-color="#D9E5ED" stop-opacity=".64"/></linearGradient>
+    <linearGradient id="edge" x1="124" y1="81" x2="398" y2="408" gradientUnits="userSpaceOnUse"><stop stop-color="white"/><stop offset="1" stop-color="#B6C9D8" stop-opacity=".63"/></linearGradient>
+    <linearGradient id="paper" x1="162" y1="142" x2="375" y2="390" gradientUnits="userSpaceOnUse"><stop stop-color="white"/><stop offset="1" stop-color="#F2F6FA"/></linearGradient>
+    <filter id="shadow" x="0" y="0" width="650" height="530" filterUnits="userSpaceOnUse"><feGaussianBlur stdDeviation="15"/></filter>
+  </defs>
+  <ellipse cx="330" cy="379" rx="167" ry="23" fill="#627F95" opacity=".13" filter="url(#shadow)"/>
+  <g transform="translate(292 190) rotate(8) translate(-292 -190)">
+    <rect x="176" y="69" width="310" height="260" rx="16" fill="url(#pane)" stroke="url(#edge)" stroke-width="1.5"/>
+    <path d="M176 108H486" stroke="#C3D3E0"/>
+    <circle cx="193" cy="88" r="3.2" fill="#8FA4B7"/><circle cx="205" cy="88" r="3.2" fill="#B7C8D5"/><circle cx="217" cy="88" r="3.2" fill="#D0DCE5"/>
+    <rect x="307" y="136" width="146" height="24" rx="5" fill="#EDF3F7" stroke="#CBDCE8"/>
+    <path d="M323 148H410" stroke="#819AAF" stroke-width="2" stroke-linecap="round"/>
+    <path d="M322 177H440M322 190H421" stroke="#BCCBD7" stroke-width="2" stroke-linecap="round"/>
+    <path d="M329 263H379V232H437" stroke="#8FA6BA" stroke-width="1.4"/>
+    <rect x="305" y="248" width="46" height="30" rx="6" fill="#F8FBFD" stroke="#B4C8D9"/>
+    <rect x="411" y="217" width="45" height="30" rx="6" fill="#E3EDF4" stroke="#A8C0D3"/>
+    <rect x="411" y="273" width="45" height="30" rx="6" fill="#F8FBFD" stroke="#B4C8D9"/>
+    <path d="M379 263V288H411" stroke="#8FA6BA" stroke-width="1.4"/>
+  </g>
+  <g transform="translate(251 246) rotate(-7) translate(-251 -246)">
+    <rect x="113" y="110" width="259" height="295" rx="16" fill="url(#paper)" stroke="url(#edge)" stroke-width="1.5"/>
+    <path d="M113 150H372" stroke="#D3DFE8"/>
+    <circle cx="132" cy="130" r="3" fill="#829BAF"/><circle cx="144" cy="130" r="3" fill="#B2C6D5"/><circle cx="156" cy="130" r="3" fill="#D5E2EA"/>
+    <rect x="138" y="178" width="28" height="33" rx="4" fill="#DEEAF2"/>
+    <path d="M179 184H300M179 197H261" stroke="#839BAF" stroke-width="3" stroke-linecap="round"/>
+    <path d="M140 237H342M140 250H326M140 263H337M140 276H297" stroke="#C0CFDA" stroke-width="2.5" stroke-linecap="round"/>
+    <rect x="139" y="299" width="205" height="53" rx="6" fill="#EBF2F7" stroke="#CFDFEA"/>
+    <path d="M153 314H298M153 326H322M153 338H269" stroke="#9BB3C6" stroke-width="2.1" stroke-linecap="round"/>
+    <path d="M140 375H222" stroke="#94ACBF" stroke-width="2.5" stroke-linecap="round"/>
+    <rect x="299" y="368" width="44" height="14" rx="5" fill="#D4E2EC"/>
+  </g>
+</svg>

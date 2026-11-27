@@ -1,0 +1,106 @@
+{
+  "observed_source": {
+    "path": "fixtures/root41-observe-fresh-build-03.result.json",
+    "sha256": "b662cd2b5028b767145cab751765b5bbd13bb16a45a03e2ef0f11431ee2c3415"
+  },
+  "session_ref": {
+    "id": "ab27b3b8184f46189666cbf954e2a9aa",
+    "revision": 1,
+    "sha256": "9fd36930632bafecfb01fccb6efe859aa2a1fa3c04ce78abdb791e59f2e39490"
+  },
+  "generation": 1,
+  "active_operation_id": "b78951d0-001f-43dd-ae5f-8966dc4654a5",
+  "workspace_root": "D:\\EEAS-qualification-20261015\\source39-code-full-diff-native-qa\\workspace",
+  "native": {
+    "always": [
+      "*"
+    ],
+    "id": "per_146ac9d98001oo2igcvfpA9vyO",
+    "metadata": {
+      "diff": "Index: D:\\EEAS-qualification-20261015\\source39-code-full-diff-native-qa\\workspace\\calc.py\n===================================================================\n--- D:\\EEAS-qualification-20261015\\source39-code-full-diff-native-qa\\workspace\\calc.py\n+++ D:\\EEAS-qualification-20261015\\source39-code-full-diff-native-qa\\workspace\\calc.py\n@@ -1,2 +1,2 @@\n def add(a, b):\n-    return a - b\n+    return a + b\n\n",
+      "filepath": "EEAS-qualification-20261015/source39-code-full-diff-native-qa/workspace/calc.py",
+      "files": [
+        {
+          "additions": 1,
+          "deletions": 1,
+          "filePath": "D:\\EEAS-qualification-20261015\\source39-code-full-diff-native-qa\\workspace\\calc.py",
+          "patch": "Index: D:\\EEAS-qualification-20261015\\source39-code-full-diff-native-qa\\workspace\\calc.py\n===================================================================\n--- D:\\EEAS-qualification-20261015\\source39-code-full-diff-native-qa\\workspace\\calc.py\n+++ D:\\EEAS-qualification-20261015\\source39-code-full-diff-native-qa\\workspace\\calc.py\n@@ -1,2 +1,2 @@\n def add(a, b):\n-    return a - b\n+    return a + b\n",
+          "relativePath": "EEAS-qualification-20261015/source39-code-full-diff-native-qa/workspace/calc.py",
+          "type": "update"
+        }
+      ]
+    },
+    "patterns": [
+      "EEAS-qualification-20261015/source39-code-full-diff-native-qa/workspace/calc.py"
+    ],
+    "permission": "edit",
+    "sessionID": "ses_eb955e728ffesdn2zbBOvYa4w7",
+    "tool": {
+      "callID": "call_3282fcf0a7d844c6ad139a20ac249383",
+      "messageID": "msg_146ac91ec001iMRansssdxjSN1"
+    }
+  },
+  "message": {
+    "info": {
+      "agent": "build",
+      "cost": 0,
+      "id": "msg_146ac91ec001iMRansssdxjSN1",
+      "mode": "build",
+      "modelID": "gpt-6.1-sol",
+      "parentID": "msg_146aaef94001WhH68u5uIwHLWe",
+      "path": {
+        "cwd": "D:\\EEAS-qualification-20261015\\source39-code-full-diff-native-qa\\workspace",
+        "root": "/"
+      },
+      "providerID": "openai",
+      "role": "assistant",
+      "sessionID": "ses_eb955e728ffesdn2zbBOvYa4w7",
+      "time": {
+        "created": 1792187077100
+      },
+      "tokens": {
+        "cache": {
+          "read": 0,
+          "write": 0
+        },
+        "input": 0,
+        "output": 0,
+        "reasoning": 0
+      }
+    },
+    "parts": [
+      {
+        "id": "prt_146ac9a33001kavw4SY30LvEsu",
+        "messageID": "msg_146ac91ec001iMRansssdxjSN1",
+        "sessionID": "ses_eb955e728ffesdn2zbBOvYa4w7",
+        "type": "step-start"
+      },
+      {
+        "callID": "call_3282fcf0a7d844c6ad139a20ac249383",
+        "id": "prt_146ac9a350016T5CUz7aCY5l5n",
+        "messageID": "msg_146ac91ec001iMRansssdxjSN1",
+        "metadata": {
+          "openai": {
+            "itemId": "fc_0251b8ecbb0f2f98016ad29ac32e8081999d73210270ed7d15"
+          }
+        },
+        "sessionID": "ses_eb955e728ffesdn2zbBOvYa4w7",
+        "state": {
+          "input": {
+            "patchText": "*** Begin Patch\n*** Update File: D:\\EEAS-qualification-20261015\\source39-code-full-diff-native-qa\\workspace\\calc.py\n@@\n-    return a - b\n+    return a + b\n*** End Patch"
+          },
+          "status": "running",
+          "time": {
+            "start": 1792187080064
+          }
+        },
+        "tool": "apply_patch",
+        "type": "tool"
+      }
+    ]
+  },
+  "expected_choices": [
+    "reject"
+  ],
+  "own_calc_sha256": "e1a894022d1a082987b87adecb623438c9e386d86b2b621cff4a5fe7fdf7edc8"
+}

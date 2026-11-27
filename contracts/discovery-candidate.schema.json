@@ -1,0 +1,566 @@
+{
+  "$defs": {
+    "CompetitorObservation": {
+      "additionalProperties": false,
+      "properties": {
+        "dimension": {
+          "maxLength": 300,
+          "minLength": 1,
+          "title": "Dimension",
+          "type": "string"
+        },
+        "text": {
+          "maxLength": 8000,
+          "minLength": 1,
+          "title": "Text",
+          "type": "string"
+        },
+        "status": {
+          "enum": [
+            "OFFICIAL_CLAIM",
+            "USER_TESTED",
+            "INFERENCE",
+            "UNKNOWN"
+          ],
+          "title": "Status",
+          "type": "string"
+        },
+        "source_anchors": {
+          "items": {
+            "$ref": "#/$defs/QuestionAnchor"
+          },
+          "maxItems": 32,
+          "title": "Source Anchors",
+          "type": "array"
+        }
+      },
+      "required": [
+        "dimension",
+        "text",
+        "status"
+      ],
+      "title": "CompetitorObservation",
+      "type": "object"
+    },
+    "DiagramEdge": {
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "pattern": "^[A-Za-z0-9_-]{1,100}$",
+          "title": "Id",
+          "type": "string"
+        },
+        "source": {
+          "pattern": "^[A-Za-z0-9_-]{1,100}$",
+          "title": "Source",
+          "type": "string"
+        },
+        "target": {
+          "pattern": "^[A-Za-z0-9_-]{1,100}$",
+          "title": "Target",
+          "type": "string"
+        },
+        "relation": {
+          "maxLength": 300,
+          "minLength": 1,
+          "title": "Relation",
+          "type": "string"
+        },
+        "claim_ids": {
+          "items": {
+            "pattern": "^[A-Za-z0-9_-]{1,100}$",
+            "type": "string"
+          },
+          "maxItems": 100,
+          "title": "Claim Ids",
+          "type": "array"
+        },
+        "source_anchors": {
+          "items": {
+            "$ref": "#/$defs/QuestionAnchor"
+          },
+          "maxItems": 32,
+          "title": "Source Anchors",
+          "type": "array"
+        },
+        "origin": {
+          "default": "MODEL_SUGGESTION",
+          "enum": [
+            "USER_STATEMENT",
+            "SOURCE_FACT",
+            "MODEL_SUGGESTION"
+          ],
+          "title": "Origin",
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "source",
+        "target",
+        "relation"
+      ],
+      "title": "DiagramEdge",
+      "type": "object"
+    },
+    "DiagramNode": {
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "pattern": "^[A-Za-z0-9_-]{1,100}$",
+          "title": "Id",
+          "type": "string"
+        },
+        "label": {
+          "maxLength": 300,
+          "minLength": 1,
+          "title": "Label",
+          "type": "string"
+        },
+        "description": {
+          "maxLength": 24000,
+          "minLength": 1,
+          "title": "Description",
+          "type": "string"
+        },
+        "claim_ids": {
+          "items": {
+            "pattern": "^[A-Za-z0-9_-]{1,100}$",
+            "type": "string"
+          },
+          "maxItems": 100,
+          "title": "Claim Ids",
+          "type": "array"
+        },
+        "source_anchors": {
+          "items": {
+            "$ref": "#/$defs/QuestionAnchor"
+          },
+          "maxItems": 32,
+          "title": "Source Anchors",
+          "type": "array"
+        },
+        "origin": {
+          "default": "MODEL_SUGGESTION",
+          "enum": [
+            "USER_STATEMENT",
+            "SOURCE_FACT",
+            "MODEL_SUGGESTION"
+          ],
+          "title": "Origin",
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "label",
+        "description"
+      ],
+      "title": "DiagramNode",
+      "type": "object"
+    },
+    "DiscoveryAction": {
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "pattern": "^[A-Za-z0-9_-]{1,100}$",
+          "title": "Id",
+          "type": "string"
+        },
+        "method": {
+          "maxLength": 300,
+          "minLength": 1,
+          "title": "Method",
+          "type": "string"
+        },
+        "action": {
+          "maxLength": 8000,
+          "minLength": 1,
+          "title": "Action",
+          "type": "string"
+        },
+        "reason": {
+          "maxLength": 4000,
+          "minLength": 1,
+          "title": "Reason",
+          "type": "string"
+        },
+        "expected_artifact": {
+          "maxLength": 4000,
+          "minLength": 1,
+          "title": "Expected Artifact",
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "method",
+        "action",
+        "reason",
+        "expected_artifact"
+      ],
+      "title": "DiscoveryAction",
+      "type": "object"
+    },
+    "DiscoveryClaim": {
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "pattern": "^[A-Za-z0-9_-]{1,100}$",
+          "title": "Id",
+          "type": "string"
+        },
+        "text": {
+          "maxLength": 24000,
+          "minLength": 1,
+          "title": "Text",
+          "type": "string"
+        },
+        "category": {
+          "enum": [
+            "PROBLEM",
+            "NEED",
+            "REQUIREMENT",
+            "CONSTRAINT",
+            "RISK",
+            "ASSUMPTION",
+            "DECISION"
+          ],
+          "title": "Category",
+          "type": "string"
+        },
+        "origin": {
+          "default": "MODEL_SUGGESTION",
+          "enum": [
+            "USER_STATEMENT",
+            "SOURCE_FACT",
+            "MODEL_SUGGESTION"
+          ],
+          "title": "Origin",
+          "type": "string"
+        },
+        "source_anchors": {
+          "items": {
+            "$ref": "#/$defs/QuestionAnchor"
+          },
+          "maxItems": 32,
+          "title": "Source Anchors",
+          "type": "array"
+        },
+        "acceptance": {
+          "items": {
+            "type": "string"
+          },
+          "maxItems": 100,
+          "title": "Acceptance",
+          "type": "array"
+        }
+      },
+      "required": [
+        "id",
+        "text",
+        "category"
+      ],
+      "title": "DiscoveryClaim",
+      "type": "object"
+    },
+    "DiscoveryCompetitor": {
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "pattern": "^[A-Za-z0-9_-]{1,100}$",
+          "title": "Id",
+          "type": "string"
+        },
+        "name": {
+          "maxLength": 300,
+          "minLength": 1,
+          "title": "Name",
+          "type": "string"
+        },
+        "alternative_type": {
+          "enum": [
+            "DIRECT",
+            "INDIRECT",
+            "MANUAL",
+            "NON_CONSUMPTION"
+          ],
+          "title": "Alternative Type",
+          "type": "string"
+        },
+        "summary": {
+          "maxLength": 16000,
+          "minLength": 1,
+          "title": "Summary",
+          "type": "string"
+        },
+        "observations": {
+          "items": {
+            "$ref": "#/$defs/CompetitorObservation"
+          },
+          "maxItems": 100,
+          "title": "Observations",
+          "type": "array"
+        }
+      },
+      "required": [
+        "id",
+        "name",
+        "alternative_type",
+        "summary"
+      ],
+      "title": "DiscoveryCompetitor",
+      "type": "object"
+    },
+    "DiscoveryGraph": {
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "pattern": "^[A-Za-z0-9_-]{1,100}$",
+          "title": "Id",
+          "type": "string"
+        },
+        "kind": {
+          "enum": [
+            "ARCHITECTURE",
+            "FLOW",
+            "MINDMAP"
+          ],
+          "title": "Kind",
+          "type": "string"
+        },
+        "title": {
+          "maxLength": 300,
+          "minLength": 1,
+          "title": "Title",
+          "type": "string"
+        },
+        "nodes": {
+          "items": {
+            "$ref": "#/$defs/DiagramNode"
+          },
+          "maxItems": 2000,
+          "minItems": 1,
+          "title": "Nodes",
+          "type": "array"
+        },
+        "edges": {
+          "items": {
+            "$ref": "#/$defs/DiagramEdge"
+          },
+          "maxItems": 8000,
+          "title": "Edges",
+          "type": "array"
+        }
+      },
+      "required": [
+        "id",
+        "kind",
+        "title",
+        "nodes"
+      ],
+      "title": "DiscoveryGraph",
+      "type": "object"
+    },
+    "DiscoveryQuestion": {
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "pattern": "^[A-Za-z0-9_-]{1,100}$",
+          "title": "Id",
+          "type": "string"
+        },
+        "text": {
+          "maxLength": 16000,
+          "minLength": 1,
+          "title": "Text",
+          "type": "string"
+        },
+        "reason": {
+          "maxLength": 4000,
+          "minLength": 1,
+          "title": "Reason",
+          "type": "string"
+        },
+        "category": {
+          "enum": [
+            "MISSING_INPUT",
+            "CONFLICT",
+            "UNREASONABLE",
+            "DECISION"
+          ],
+          "title": "Category",
+          "type": "string"
+        },
+        "blocking": {
+          "default": true,
+          "title": "Blocking",
+          "type": "boolean"
+        },
+        "affects_claim_ids": {
+          "items": {
+            "pattern": "^[A-Za-z0-9_-]{1,100}$",
+            "type": "string"
+          },
+          "maxItems": 2000,
+          "title": "Affects Claim Ids",
+          "type": "array"
+        },
+        "requested_materials": {
+          "items": {
+            "type": "string"
+          },
+          "maxItems": 100,
+          "title": "Requested Materials",
+          "type": "array"
+        },
+        "source_anchors": {
+          "items": {
+            "$ref": "#/$defs/QuestionAnchor"
+          },
+          "maxItems": 32,
+          "title": "Source Anchors",
+          "type": "array"
+        }
+      },
+      "required": [
+        "id",
+        "text",
+        "reason",
+        "category"
+      ],
+      "title": "DiscoveryQuestion",
+      "type": "object"
+    },
+    "QuestionAnchor": {
+      "additionalProperties": false,
+      "properties": {
+        "document_id": {
+          "pattern": "^[A-Za-z0-9_-]{1,100}$",
+          "title": "Document Id",
+          "type": "string"
+        },
+        "revision": {
+          "minimum": 1,
+          "title": "Revision",
+          "type": "integer"
+        },
+        "raw_sha256": {
+          "pattern": "^[0-9a-f]{64}$",
+          "title": "Raw Sha256",
+          "type": "string"
+        },
+        "chunk_index": {
+          "minimum": 0,
+          "title": "Chunk Index",
+          "type": "integer"
+        },
+        "chunk_sha256": {
+          "pattern": "^[0-9a-f]{64}$",
+          "title": "Chunk Sha256",
+          "type": "string"
+        },
+        "char_start": {
+          "minimum": 0,
+          "title": "Char Start",
+          "type": "integer"
+        },
+        "char_end": {
+          "exclusiveMinimum": 0,
+          "title": "Char End",
+          "type": "integer"
+        },
+        "quote_sha256": {
+          "pattern": "^[0-9a-f]{64}$",
+          "title": "Quote Sha256",
+          "type": "string"
+        }
+      },
+      "required": [
+        "document_id",
+        "revision",
+        "raw_sha256",
+        "chunk_index",
+        "chunk_sha256",
+        "char_start",
+        "char_end",
+        "quote_sha256"
+      ],
+      "title": "QuestionAnchor",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "title": {
+      "maxLength": 200,
+      "minLength": 1,
+      "title": "Title",
+      "type": "string"
+    },
+    "phase": {
+      "enum": [
+        "DISCOVER",
+        "DEFINE",
+        "RESEARCH",
+        "SPECIFY",
+        "PLAN"
+      ],
+      "title": "Phase",
+      "type": "string"
+    },
+    "summary": {
+      "maxLength": 24000,
+      "minLength": 1,
+      "title": "Summary",
+      "type": "string"
+    },
+    "claims": {
+      "items": {
+        "$ref": "#/$defs/DiscoveryClaim"
+      },
+      "maxItems": 2000,
+      "title": "Claims",
+      "type": "array"
+    },
+    "questions": {
+      "items": {
+        "$ref": "#/$defs/DiscoveryQuestion"
+      },
+      "maxItems": 200,
+      "title": "Questions",
+      "type": "array"
+    },
+    "competitors": {
+      "items": {
+        "$ref": "#/$defs/DiscoveryCompetitor"
+      },
+      "maxItems": 100,
+      "title": "Competitors",
+      "type": "array"
+    },
+    "graphs": {
+      "items": {
+        "$ref": "#/$defs/DiscoveryGraph"
+      },
+      "maxItems": 20,
+      "title": "Graphs",
+      "type": "array"
+    },
+    "next_actions": {
+      "items": {
+        "$ref": "#/$defs/DiscoveryAction"
+      },
+      "maxItems": 20,
+      "title": "Next Actions",
+      "type": "array"
+    }
+  },
+  "required": [
+    "title",
+    "phase",
+    "summary"
+  ],
+  "title": "DiscoveryCandidate",
+  "type": "object"
+}

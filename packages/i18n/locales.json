@@ -1,0 +1,6 @@
+{
+  "schema_version": 1,
+  "supported": ["zh-CN", "en"],
+  "preference_options": ["system", "zh-CN", "en"],
+  "default_preference": "system"
+}

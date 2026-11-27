@@ -1,0 +1,4865 @@
+{
+  "schema_version": 1,
+  "messages": {
+    "请先发送或清空当前补充": {
+      "zh-CN": "请先发送或清空当前补充",
+      "en": "Send or clear the current follow-up first"
+    },
+    "界面语言": {
+      "zh-CN": "界面语言",
+      "en": "Interface language"
+    },
+    "跟随系统": {
+      "zh-CN": "跟随系统",
+      "en": "System default"
+    },
+    "语言设置未保存，请重试。": {
+      "zh-CN": "语言设置未保存，请重试。",
+      "en": "Language was not saved. Please try again."
+    },
+    "清除勾画": {
+      "zh-CN": "清除勾画",
+      "en": "Clear drawing"
+    },
+    "实际原软件窗口冻结画面": {
+      "zh-CN": "实际原软件窗口冻结画面",
+      "en": "Frozen capture of the actual application window"
+    },
+    " · 识别置信度 ": {
+      "zh-CN": " · 识别置信度 ",
+      "en": " · Recognition confidence "
+    },
+    "批注绑定此实际捕获画面。文字识别与模型视觉处理以实际执行回执为准。": {
+      "zh-CN": "批注绑定此实际捕获画面。文字识别与模型视觉处理以实际执行回执为准。",
+      "en": "Annotations refer to this captured image. OCR and model vision depend on their actual execution receipts."
+    },
+    "修改意见": {
+      "zh-CN": "修改意见",
+      "en": "Feedback"
+    },
+    "原软件画面修改意见": {
+      "zh-CN": "原软件画面修改意见",
+      "en": "Feedback on the application view"
+    },
+    "加入聊天草稿": {
+      "zh-CN": "加入聊天草稿",
+      "en": "Add to chat draft"
+    },
+    "直接发送给 Agent": {
+      "zh-CN": "直接发送给 Agent",
+      "en": "Send to Agent"
+    },
+    "明确选择的文件上下文": {
+      "zh-CN": "明确选择的文件上下文",
+      "en": "Explicitly selected file context"
+    },
+    "按需选择文件；也可直接提问当前页": {
+      "zh-CN": "按需选择文件；也可直接提问当前页",
+      "en": "Select a file when needed, or ask about the current page"
+    },
+    "文件上下文": {
+      "zh-CN": "文件上下文",
+      "en": "File context"
+    },
+    "固定文件上下文": {
+      "zh-CN": "固定文件上下文",
+      "en": "Pin file context"
+    },
+    "选择其他文件": {
+      "zh-CN": "选择其他文件",
+      "en": "Choose another file"
+    },
+    "选择要处理的文件": {
+      "zh-CN": "选择要处理的文件",
+      "en": "Choose a file to work on"
+    },
+    "UTF-8 ≤ 1 MiB，支持单文件处理": {
+      "zh-CN": "UTF-8 ≤ 1 MiB，支持单文件处理",
+      "en": "UTF-8, up to 1 MiB; one file at a time"
+    },
+    "只读问答；修改适配尚未满足": {
+      "zh-CN": "只读问答；修改适配尚未满足",
+      "en": "Read-only questions; editing requirements are not met yet"
+    },
+    "原软件打开": {
+      "zh-CN": "原软件打开",
+      "en": "Open in its application"
+    },
+    "重新读取当前版本": {
+      "zh-CN": "重新读取当前版本",
+      "en": "Read current version again"
+    },
+    "移除此文件上下文": {
+      "zh-CN": "移除此文件上下文",
+      "en": "Remove this file context"
+    },
+    "实际文件来源与修改范围": {
+      "zh-CN": "实际文件来源与修改范围",
+      "en": "Actual file source and edit scope"
+    },
+    "先选择需要修改的实际文件。当前没有调用模型或启动修改；已有文字保留。": {
+      "zh-CN": "先选择需要修改的实际文件。当前没有调用模型或启动修改；已有文字保留。",
+      "en": "Choose the actual file to edit first. No model call or edit has started; your existing text is retained."
+    },
+    "选择要修改的文件": {
+      "zh-CN": "选择要修改的文件",
+      "en": "Choose a file to edit"
+    },
+    "竞品与替代方案资料": {
+      "zh-CN": "竞品与替代方案资料",
+      "en": "Competitors and alternatives"
+    },
+    "先保存证据，再比较能力。没有提及的功能保持未知；来源身份由你声明。": {
+      "zh-CN": "先保存证据，再比较能力。没有提及的功能保持未知；来源身份由你声明。",
+      "en": "Save evidence before comparing capabilities. Unmentioned features remain unknown; you declare each source's identity."
+    },
+    "来源获取方式": {
+      "zh-CN": "来源获取方式",
+      "en": "Source acquisition"
+    },
+    "已有离线资料": {
+      "zh-CN": "已有离线资料",
+      "en": "Existing offline material"
+    },
+    "公网单页": {
+      "zh-CN": "公网单页",
+      "en": "One public web page"
+    },
+    "公开页面地址": {
+      "zh-CN": "公开页面地址",
+      "en": "Public page URL"
+    },
+    "https://产品官网/资料": {
+      "zh-CN": "https://产品官网/资料",
+      "en": "https://example.com/reference"
+    },
+    "此操作会访问你明确指定的公网页面；内网可使用离线资料。": {
+      "zh-CN": "此操作会访问你明确指定的公网页面；内网可使用离线资料。",
+      "en": "This accesses only the public page you specify. Offline materials are available for an intranet."
+    },
+    "已保存的本地资料": {
+      "zh-CN": "已保存的本地资料",
+      "en": "Saved local materials"
+    },
+    "选择一份真实资料": {
+      "zh-CN": "选择一份真实资料",
+      "en": "Choose an actual material"
+    },
+    " · 版本 ": {
+      "zh-CN": " · 版本 ",
+      "en": " · Revision "
+    },
+    "从左侧工作文件选择资料，点击“加入梳理”，再回到这里。无需上传文件字节。": {
+      "zh-CN": "从左侧工作文件选择资料，点击“加入梳理”，再回到这里。无需上传文件字节。",
+      "en": "Choose material in the file list, select Add to discovery, then return here. File bytes do not need uploading."
+    },
+    "你如何标记这份来源": {
+      "zh-CN": "你如何标记这份来源",
+      "en": "How do you classify this source?"
+    },
+    "其他 / 尚未核实": {
+      "zh-CN": "其他 / 尚未核实",
+      "en": "Other / Not verified"
+    },
+    "用户标为官方资料": {
+      "zh-CN": "用户标为官方资料",
+      "en": "Marked by user as official material"
+    },
+    "用户实际测试记录": {
+      "zh-CN": "用户实际测试记录",
+      "en": "User's actual test record"
+    },
+    "保存来源快照": {
+      "zh-CN": "保存来源快照",
+      "en": "Save source snapshot"
+    },
+    "保存的来源": {
+      "zh-CN": "保存的来源",
+      "en": "Saved sources"
+    },
+    "尚无来源快照。真实采集结果会保存在这里。": {
+      "zh-CN": "尚无来源快照。真实采集结果会保存在这里。",
+      "en": "No source snapshots yet. Actual collected results will appear here."
+    },
+    "用户标为官方来源，身份未独立验证": {
+      "zh-CN": "用户标为官方来源，身份未独立验证",
+      "en": "Marked official by user; identity not independently verified"
+    },
+    "用户标为测试记录": {
+      "zh-CN": "用户标为测试记录",
+      "en": "Marked by user as a test record"
+    },
+    "来源身份未核实": {
+      "zh-CN": "来源身份未核实",
+      "en": "Source identity not verified"
+    },
+    "覆盖范围与冻结凭据": {
+      "zh-CN": "覆盖范围与冻结凭据",
+      "en": "Coverage and frozen reference"
+    },
+    "选择加入本轮梳理": {
+      "zh-CN": "选择加入本轮梳理",
+      "en": "Include in this discovery round"
+    },
+    "下载原始快照": {
+      "zh-CN": "下载原始快照",
+      "en": "Download original snapshot"
+    },
+    "图": {
+      "zh-CN": "图",
+      "en": "Graph"
+    },
+    "项目文件": {
+      "zh-CN": "项目文件",
+      "en": "Project file"
+    },
+    "核对中…": {
+      "zh-CN": "核对中…",
+      "en": "Checking…"
+    },
+    "工作台预览": {
+      "zh-CN": "工作台预览",
+      "en": "Workbench preview"
+    },
+    "回答中的交付文件": {
+      "zh-CN": "回答中的交付文件",
+      "en": "Files delivered in the answer"
+    },
+    "全部文件（": {
+      "zh-CN": "全部文件（",
+      "en": "All files ("
+    },
+    "文件按钮已显示在上方。": {
+      "zh-CN": "文件按钮已显示在上方。",
+      "en": "File buttons are shown above."
+    },
+    "网页调试入口将读取真实文件并打开工作台预览。": {
+      "zh-CN": "网页调试入口将读取真实文件并打开工作台预览。",
+      "en": "The web debugging view reads the actual file and opens a workbench preview."
+    },
+    "另有 ": {
+      "zh-CN": "另有 ",
+      "en": "Another "
+    },
+    " 份目录产物尚未返回实际文件来源，请核对回执。": {
+      "zh-CN": " 份目录产物尚未返回实际文件来源，请核对回执。",
+      "en": " directory outputs have not returned actual file references; check the receipt."
+    },
+    "历史交付依据保留 · ": {
+      "zh-CN": "历史交付依据保留 · ",
+      "en": "Historical delivery basis retained · "
+    },
+    "。打开前会核对实际文件版本。": {
+      "zh-CN": "。打开前会核对实际文件版本。",
+      "en": ". The actual file version is checked before opening."
+    },
+    "交付依据与回执": {
+      "zh-CN": "交付依据与回执",
+      "en": "Delivery basis and receipts"
+    },
+    "电脑操作归属": {
+      "zh-CN": "电脑操作归属",
+      "en": "Computer control"
+    },
+    "正在接管…": {
+      "zh-CN": "正在接管…",
+      "en": "Taking over…"
+    },
+    "正在交接…": {
+      "zh-CN": "正在交接…",
+      "en": "Handing over…"
+    },
+    "Agent 正在操作": {
+      "zh-CN": "Agent 正在操作",
+      "en": "Agent is operating"
+    },
+    "用户操作": {
+      "zh-CN": "用户操作",
+      "en": "User control"
+    },
+    "撤回交接": {
+      "zh-CN": "撤回交接",
+      "en": "Withdraw handover"
+    },
+    "接管": {
+      "zh-CN": "接管",
+      "en": "Take over"
+    },
+    "授权当前确切 Agent 执行操作电脑": {
+      "zh-CN": "授权当前确切 Agent 执行操作电脑",
+      "en": "Authorize this exact Agent execution to operate the computer"
+    },
+    "交给 Agent": {
+      "zh-CN": "交给 Agent",
+      "en": "Hand over to Agent"
+    },
+    "查看控制与停止状态": {
+      "zh-CN": "查看控制与停止状态",
+      "en": "View control and stop status"
+    },
+    "当前电脑可交接给 Agent": {
+      "zh-CN": "当前电脑可交接给 Agent",
+      "en": "The computer can be handed over to Agent"
+    },
+    "只交接真实桌面操作授权；应用、视口与未保存内容保留。文件修改按其自身范围与版本校验。": {
+      "zh-CN": "只交接真实桌面操作授权；应用、视口与未保存内容保留。文件修改按其自身范围与版本校验。",
+      "en": "Only actual desktop input authority is transferred. Applications, viewports, and unsaved content stay in place. File edits use their own scope and version checks."
+    },
+    "尚未取得宿主控制回执，不声明 Agent 已控制电脑。": {
+      "zh-CN": "尚未取得宿主控制回执，不声明 Agent 已控制电脑。",
+      "en": "No host control receipt is available. Agent control is not confirmed."
+    },
+    "控制版本 ": {
+      "zh-CN": "控制版本 ",
+      "en": "Control revision "
+    },
+    " · 输入版本 ": {
+      "zh-CN": " · 输入版本 ",
+      "en": " · Input revision "
+    },
+    "未绑定": {
+      "zh-CN": "未绑定",
+      "en": "Not bound"
+    },
+    "工作面 ": {
+      "zh-CN": "工作面 ",
+      "en": "Surface "
+    },
+    "本机会话 ": {
+      "zh-CN": "本机会话 ",
+      "en": "Local session "
+    },
+    "来源 ": {
+      "zh-CN": "来源 ",
+      "en": "Source "
+    },
+    "当前": {
+      "zh-CN": "当前",
+      "en": "Current"
+    },
+    "尚未核对": {
+      "zh-CN": "尚未核对",
+      "en": "Not checked yet"
+    },
+    " · 排队输入 ": {
+      "zh-CN": " · 排队输入 ",
+      "en": " · Queued inputs "
+    },
+    "已启用": {
+      "zh-CN": "已启用",
+      "en": "Enabled"
+    },
+    "已关闭": {
+      "zh-CN": "已关闭",
+      "en": "Off"
+    },
+    "停止状态 ": {
+      "zh-CN": "停止状态 ",
+      "en": "Stop status "
+    },
+    "刷新控制状态": {
+      "zh-CN": "刷新控制状态",
+      "en": "Refresh control status"
+    },
+    "应用标题栏": {
+      "zh-CN": "应用标题栏",
+      "en": "Application title bar"
+    },
+    "轻量协作": {
+      "zh-CN": "轻量协作",
+      "en": "In-place collaboration"
+    },
+    "项目工作台": {
+      "zh-CN": "项目工作台",
+      "en": "Project workbench"
+    },
+    "需求工作 · 版本 ": {
+      "zh-CN": "需求工作 · 版本 ",
+      "en": "Requirements · Revision "
+    },
+    "要求已确认": {
+      "zh-CN": "要求已确认",
+      "en": "Requirements confirmed"
+    },
+    "待完善与确认": {
+      "zh-CN": "待完善与确认",
+      "en": "Needs refinement and confirmation"
+    },
+    "来源需要复核": {
+      "zh-CN": "来源需要复核",
+      "en": "Sources need checking"
+    },
+    "工作标题": {
+      "zh-CN": "工作标题",
+      "en": "Work title"
+    },
+    "当前理解": {
+      "zh-CN": "当前理解",
+      "en": "Current understanding"
+    },
+    "当前工作位置": {
+      "zh-CN": "当前工作位置",
+      "en": "Current stage"
+    },
+    "工作位置可以回访。当前 ": {
+      "zh-CN": "工作位置可以回访。当前 ",
+      "en": "You can return to each stage. Currently "
+    },
+    " 项待确认 · ": {
+      "zh-CN": " 项待确认 · ",
+      "en": " items need confirmation · "
+    },
+    " 项影响要求确认。": {
+      "zh-CN": " 项影响要求确认。",
+      "en": " affect requirements approval."
+    },
+    "收起编辑": {
+      "zh-CN": "收起编辑",
+      "en": "Collapse editing"
+    },
+    "编辑文稿与图": {
+      "zh-CN": "编辑文稿与图",
+      "en": "Edit document and graphs"
+    },
+    "下载待确认事项": {
+      "zh-CN": "下载待确认事项",
+      "en": "Download open questions"
+    },
+    "查看已有任务计划": {
+      "zh-CN": "查看已有任务计划",
+      "en": "View existing task plan"
+    },
+    "接下来值得做什么": {
+      "zh-CN": "接下来值得做什么",
+      "en": "What is worth doing next?"
+    },
+    "补充一个具体经历、已有需求或工作资料，继续共同梳理。": {
+      "zh-CN": "补充一个具体经历、已有需求或工作资料，继续共同梳理。",
+      "en": "Add a concrete experience, an existing requirement, or work materials to continue discovery together."
+    },
+    "预期得到：": {
+      "zh-CN": "预期得到：",
+      "en": "Expected outcome: "
+    },
+    "沿此方向继续": {
+      "zh-CN": "沿此方向继续",
+      "en": "Continue in this direction"
+    },
+    "当前问题与要求": {
+      "zh-CN": "当前问题与要求",
+      "en": "Current problems and requirements"
+    },
+    "添加条目": {
+      "zh-CN": "添加条目",
+      "en": "Add item"
+    },
+    "尚未形成条目；现阶段保留真实陈述，不把想法自动当作已验证需求。": {
+      "zh-CN": "尚未形成条目；现阶段保留真实陈述，不把想法自动当作已验证需求。",
+      "en": "No items yet. Statements are retained as stated; ideas are not automatically treated as validated requirements."
+    },
+    "已纳入要求": {
+      "zh-CN": "已纳入要求",
+      "en": "Included in requirements"
+    },
+    "条目类型": {
+      "zh-CN": "条目类型",
+      "en": "Item type"
+    },
+    "条目内容": {
+      "zh-CN": "条目内容",
+      "en": "Item content"
+    },
+    "验收条件（每行一条）": {
+      "zh-CN": "验收条件（每行一条）",
+      "en": "Acceptance criteria (one per line)"
+    },
+    "删除条目": {
+      "zh-CN": "删除条目",
+      "en": "Delete item"
+    },
+    "验收条件": {
+      "zh-CN": "验收条件",
+      "en": "Acceptance criteria"
+    },
+    "本次确认纳入此条目": {
+      "zh-CN": "本次确认纳入此条目",
+      "en": "Include this item in the current confirmation"
+    },
+    "现有解决办法与竞品": {
+      "zh-CN": "现有解决办法与竞品",
+      "en": "Existing approaches and competitors"
+    },
+    "保存或导入竞品资料": {
+      "zh-CN": "保存或导入竞品资料",
+      "en": "Save or import competitor materials"
+    },
+    "包括直接竞品、间接替代、人工办法和不采取行动。未找到证据的能力保持待核实。": {
+      "zh-CN": "包括直接竞品、间接替代、人工办法和不采取行动。未找到证据的能力保持待核实。",
+      "en": "Include direct competitors, alternatives, manual approaches, and doing nothing. Capabilities without evidence remain unverified."
+    },
+    "尚无有依据的比较；可以加入产品资料或让下一步核查具体替代方案。": {
+      "zh-CN": "尚无有依据的比较；可以加入产品资料或让下一步核查具体替代方案。",
+      "en": "No evidence-based comparison yet. Add product material or investigate a specific alternative next."
+    },
+    "维度": {
+      "zh-CN": "维度",
+      "en": "Dimension"
+    },
+    "记录与证据": {
+      "zh-CN": "记录与证据",
+      "en": "Records and evidence"
+    },
+    "结构与关系": {
+      "zh-CN": "结构与关系",
+      "en": "Structure and relationships"
+    },
+    "图与条目共享来源。结构检查不等于工程内容已验证；流程可含合法回路。": {
+      "zh-CN": "图与条目共享来源。结构检查不等于工程内容已验证；流程可含合法回路。",
+      "en": "Graphs and items share their sources. Structural checks do not validate engineering content; workflows may contain valid loops."
+    },
+    "生成此版本图文件": {
+      "zh-CN": "生成此版本图文件",
+      "en": "Generate graph files for this version"
+    },
+    "下载 ": {
+      "zh-CN": "下载 ",
+      "en": "Download "
+    },
+    "本次确认接受此图": {
+      "zh-CN": "本次确认接受此图",
+      "en": "Accept this graph in the current confirmation"
+    },
+    "有明确问题和条目后，可以共同建立架构、流程或思维图。": {
+      "zh-CN": "有明确问题和条目后，可以共同建立架构、流程或思维图。",
+      "en": "Once a concrete problem and items exist, build an architecture, flow, or mind map together."
+    },
+    "当前定位：": {
+      "zh-CN": "当前定位：",
+      "en": "Current target: "
+    },
+    "此次修改的理由": {
+      "zh-CN": "此次修改的理由",
+      "en": "Reason for this change"
+    },
+    "保存修改并让 Agent 修订": {
+      "zh-CN": "保存修改并让 Agent 修订",
+      "en": "Save changes and ask Agent to revise"
+    },
+    "需要补充或裁决的事项": {
+      "zh-CN": "需要补充或裁决的事项",
+      "en": "Items needing more information or a decision"
+    },
+    "可以逐项回答并以后继续。保存回答不会自动接受答案。": {
+      "zh-CN": "可以逐项回答并以后继续。保存回答不会自动接受答案。",
+      "en": "Answer items individually and return later. Saving an answer does not accept it automatically."
+    },
+    "影响要求确认": {
+      "zh-CN": "影响要求确认",
+      "en": "Affects requirements approval"
+    },
+    "可继续补充": {
+      "zh-CN": "可继续补充",
+      "en": "More information welcome"
+    },
+    "问题说明": {
+      "zh-CN": "问题说明",
+      "en": "Question details"
+    },
+    "需要确认的理由": {
+      "zh-CN": "需要确认的理由",
+      "en": "Why confirmation is needed"
+    },
+    "影响条目（每行一个 ID）": {
+      "zh-CN": "影响条目（每行一个 ID）",
+      "en": "Affected items (one ID per line)"
+    },
+    "影响条目：": {
+      "zh-CN": "影响条目：",
+      "en": "Affected items: "
+    },
+    "全局": {
+      "zh-CN": "全局",
+      "en": "Global"
+    },
+    "需要：": {
+      "zh-CN": "需要：",
+      "en": "Needed: "
+    },
+    "已接受回答": {
+      "zh-CN": "已接受回答",
+      "en": "Accepted answer"
+    },
+    "已保存 · 待接受": {
+      "zh-CN": "已保存 · 待接受",
+      "en": "Saved · Not accepted yet"
+    },
+    "回答 {value0}": {
+      "zh-CN": "回答 {value0}",
+      "en": "Answer {value0}"
+    },
+    "保存回答": {
+      "zh-CN": "保存回答",
+      "en": "Save answer"
+    },
+    "本次确认采用的依据": {
+      "zh-CN": "本次确认采用的依据",
+      "en": "Basis accepted in this confirmation"
+    },
+    "采用已保存回答": {
+      "zh-CN": "采用已保存回答",
+      "en": "Use saved answer"
+    },
+    "保持待确认": {
+      "zh-CN": "保持待确认",
+      "en": "Keep open"
+    },
+    "或明确接受一个假设": {
+      "zh-CN": "或明确接受一个假设",
+      "en": "Or explicitly accept an assumption"
+    },
+    "接受理由": {
+      "zh-CN": "接受理由",
+      "en": "Reason for acceptance"
+    },
+    "未发送的选文批注": {
+      "zh-CN": "未发送的选文批注",
+      "en": "Unsent text annotations"
+    },
+    " · 继续批注": {
+      "zh-CN": " · 继续批注",
+      "en": " · Continue annotating"
+    },
+    "阶段文稿与模板": {
+      "zh-CN": "阶段文稿与模板",
+      "en": "Stage document and template"
+    },
+    "未完成确认也可生成草稿，回答与裁决随版本冻结，待确认文件单独保留。": {
+      "zh-CN": "未完成确认也可生成草稿，回答与裁决随版本冻结，待确认文件单独保留。",
+      "en": "Drafts may be generated before approval. Answers and decisions are frozen by version; open questions are retained separately."
+    },
+    "选择电脑上的 Word 模板": {
+      "zh-CN": "选择电脑上的 Word 模板",
+      "en": "Choose a Word template on this computer"
+    },
+    "移除模板": {
+      "zh-CN": "移除模板",
+      "en": "Remove template"
+    },
+    "从已关联的工作目录选择模板": {
+      "zh-CN": "从已关联的工作目录选择模板",
+      "en": "Choose a template from a linked working directory"
+    },
+    "模板相对路径": {
+      "zh-CN": "模板相对路径",
+      "en": "Template relative path"
+    },
+    "读取实际模板": {
+      "zh-CN": "读取实际模板",
+      "en": "Read actual template"
+    },
+    "采用已审阅的写法经验": {
+      "zh-CN": "采用已审阅的写法经验",
+      "en": "Use reviewed writing experience"
+    },
+    "当前工作写法": {
+      "zh-CN": "当前工作写法",
+      "en": "Writing style for this work"
+    },
+    "模板经验读取失败：": {
+      "zh-CN": "模板经验读取失败：",
+      "en": "Could not read template experience: "
+    },
+    "观察与审阅模板经验": {
+      "zh-CN": "观察与审阅模板经验",
+      "en": "Observe and review template experience"
+    },
+    "选择要随报告冻结的图（留空保存全部当前图）": {
+      "zh-CN": "选择要随报告冻结的图（留空保存全部当前图）",
+      "en": "Choose graphs to freeze with the report (leave empty to include all current graphs)"
+    },
+    "同时保存到已授权的项目目录": {
+      "zh-CN": "同时保存到已授权的项目目录",
+      "en": "Also save to an authorized project directory"
+    },
+    "实际目录读取失败：": {
+      "zh-CN": "实际目录读取失败：",
+      "en": "Could not read the actual directory: "
+    },
+    "交付工作目录": {
+      "zh-CN": "交付工作目录",
+      "en": "Delivery working directory"
+    },
+    "阶段交付工作目录": {
+      "zh-CN": "阶段交付工作目录",
+      "en": "Stage delivery working directory"
+    },
+    "选择已关联目录": {
+      "zh-CN": "选择已关联目录",
+      "en": "Choose a linked directory"
+    },
+    "交付相对目录": {
+      "zh-CN": "交付相对目录",
+      "en": "Delivery relative directory"
+    },
+    "阶段交付相对目录": {
+      "zh-CN": "阶段交付相对目录",
+      "en": "Stage delivery relative directory"
+    },
+    "选择已获写入范围的目录；本次不会扩大原有权限。": {
+      "zh-CN": "选择已获写入范围的目录；本次不会扩大原有权限。",
+      "en": "Choose a directory with existing write access. This does not expand its permissions."
+    },
+    "生成中…": {
+      "zh-CN": "生成中…",
+      "en": "Generating…"
+    },
+    "生成阶段报告、待确认事项与图": {
+      "zh-CN": "生成阶段报告、待确认事项与图",
+      "en": "Generate stage report, open questions, and graphs"
+    },
+    "读取上次回执": {
+      "zh-CN": "读取上次回执",
+      "en": "Read previous receipt"
+    },
+    "只确认选中的要求、图和明确裁决。随后可以生成任务计划；确认不代表已授权执行。": {
+      "zh-CN": "只确认选中的要求、图和明确裁决。随后可以生成任务计划；确认不代表已授权执行。",
+      "en": "Only selected requirements, graphs, and explicit decisions are approved. A task plan can follow; approval does not authorize execution."
+    },
+    "要求与图已确认": {
+      "zh-CN": "要求与图已确认",
+      "en": "Requirements and graphs confirmed"
+    },
+    "确认选中的要求与图": {
+      "zh-CN": "确认选中的要求与图",
+      "en": "Confirm selected requirements and graphs"
+    },
+    "生成任务计划": {
+      "zh-CN": "生成任务计划",
+      "en": "Generate task plan"
+    },
+    "来源、状态与工作记录": {
+      "zh-CN": "来源、状态与工作记录",
+      "en": "Sources, status, and work records"
+    },
+    "模板与写法经验": {
+      "zh-CN": "模板与写法经验",
+      "en": "Templates and writing experience"
+    },
+    "保留模板原件，观察结构和写法。审阅后复用形式；项目事实和旧结论不会迁入新工作。": {
+      "zh-CN": "保留模板原件，观察结构和写法。审阅后复用形式；项目事实和旧结论不会迁入新工作。",
+      "en": "Keep the source template and observe its structure and style. Reuse the reviewed form; project facts and old conclusions do not carry into new work."
+    },
+    "经验名称": {
+      "zh-CN": "经验名称",
+      "en": "Experience name"
+    },
+    "接下来选择的文件用途": {
+      "zh-CN": "接下来选择的文件用途",
+      "en": "Purpose of the next selected file"
+    },
+    "用户模板": {
+      "zh-CN": "用户模板",
+      "en": "User template"
+    },
+    "报告写法样例": {
+      "zh-CN": "报告写法样例",
+      "en": "Report writing sample"
+    },
+    "选择电脑上的文件": {
+      "zh-CN": "选择电脑上的文件",
+      "en": "Choose a file on this computer"
+    },
+    "当前工作目录内的文件路径": {
+      "zh-CN": "当前工作目录内的文件路径",
+      "en": "File path within the current working directory"
+    },
+    "读取这份来源": {
+      "zh-CN": "读取这份来源",
+      "en": "Read this source"
+    },
+    "模板": {
+      "zh-CN": "模板",
+      "en": "Template"
+    },
+    "写法样例": {
+      "zh-CN": "写法样例",
+      "en": "Writing sample"
+    },
+    "移除 {value0}": {
+      "zh-CN": "移除 {value0}",
+      "en": "Remove {value0}"
+    },
+    "移除": {
+      "zh-CN": "移除",
+      "en": "Remove"
+    },
+    "观察并保存草稿": {
+      "zh-CN": "观察并保存草稿",
+      "en": "Observe and save draft"
+    },
+    "已保存的经验": {
+      "zh-CN": "已保存的经验",
+      "en": "Saved experience"
+    },
+    "选择实际模板或样例后，草稿会保存在这里。": {
+      "zh-CN": "选择实际模板或样例后，草稿会保存在这里。",
+      "en": "Drafts appear here after you choose an actual template or sample."
+    },
+    "已审阅": {
+      "zh-CN": "已审阅",
+      "en": "Reviewed"
+    },
+    "待审阅": {
+      "zh-CN": "待审阅",
+      "en": "Not reviewed"
+    },
+    " 条写法规则": {
+      "zh-CN": " 条写法规则",
+      "en": " writing rules"
+    },
+    "来源与观察记录": {
+      "zh-CN": "来源与观察记录",
+      "en": "Sources and observations"
+    },
+    "逐条审阅": {
+      "zh-CN": "逐条审阅",
+      "en": "Review each rule"
+    },
+    "审阅 ": {
+      "zh-CN": "审阅 ",
+      "en": "Review "
+    },
+    "选择本次接受的规则，可修改指令。保存会追加新版本。": {
+      "zh-CN": "选择本次接受的规则，可修改指令。保存会追加新版本。",
+      "en": "Choose rules to accept and edit their instructions if needed. Saving appends a new version."
+    },
+    "写法规则 {value0}": {
+      "zh-CN": "写法规则 {value0}",
+      "en": "Writing rule {value0}"
+    },
+    "规则来源": {
+      "zh-CN": "规则来源",
+      "en": "Rule source"
+    },
+    "此次审阅理由": {
+      "zh-CN": "此次审阅理由",
+      "en": "Reason for this review"
+    },
+    "保存接受的规则": {
+      "zh-CN": "保存接受的规则",
+      "en": "Save accepted rules"
+    },
+    "编辑图的节点与关系": {
+      "zh-CN": "编辑图的节点与关系",
+      "en": "Edit graph nodes and relationships"
+    },
+    "图名称": {
+      "zh-CN": "图名称",
+      "en": "Graph name"
+    },
+    "图类型": {
+      "zh-CN": "图类型",
+      "en": "Graph type"
+    },
+    "架构图": {
+      "zh-CN": "架构图",
+      "en": "Architecture diagram"
+    },
+    "流程图": {
+      "zh-CN": "流程图",
+      "en": "Flowchart"
+    },
+    "思维图": {
+      "zh-CN": "思维图",
+      "en": "Mind map"
+    },
+    "节点 ": {
+      "zh-CN": "节点 ",
+      "en": "Node "
+    },
+    "节点说明": {
+      "zh-CN": "节点说明",
+      "en": "Node description"
+    },
+    "关联条目（每行一个 ID）": {
+      "zh-CN": "关联条目（每行一个 ID）",
+      "en": "Linked items (one ID per line)"
+    },
+    "删除节点": {
+      "zh-CN": "删除节点",
+      "en": "Delete node"
+    },
+    "先移除连接此节点的关系，再删除。": {
+      "zh-CN": "先移除连接此节点的关系，再删除。",
+      "en": "Remove relationships connected to this node before deleting it."
+    },
+    "添加节点": {
+      "zh-CN": "添加节点",
+      "en": "Add node"
+    },
+    "起点": {
+      "zh-CN": "起点",
+      "en": "From"
+    },
+    "终点": {
+      "zh-CN": "终点",
+      "en": "To"
+    },
+    "关系说明": {
+      "zh-CN": "关系说明",
+      "en": "Relationship description"
+    },
+    "删除关系": {
+      "zh-CN": "删除关系",
+      "en": "Delete relationship"
+    },
+    "添加关系": {
+      "zh-CN": "添加关系",
+      "en": "Add relationship"
+    },
+    "可关联的条目 ID": {
+      "zh-CN": "可关联的条目 ID",
+      "en": "Linkable item IDs"
+    },
+    "图批注工具": {
+      "zh-CN": "图批注工具",
+      "en": "Graph annotation tools"
+    },
+    "点击图节点定位，或直接说明需要纠正的地方。": {
+      "zh-CN": "点击图节点定位，或直接说明需要纠正的地方。",
+      "en": "Click a node to locate it, or describe what needs correcting."
+    },
+    "在图上拖动勾画，再说明修改意见。勾画辅助定位，文字和节点引用保留为反馈依据。": {
+      "zh-CN": "在图上拖动勾画，再说明修改意见。勾画辅助定位，文字和节点引用保留为反馈依据。",
+      "en": "Draw on the graph, then describe the change. Drawing assists location; text and node references remain the feedback basis."
+    },
+    "实际定位节点": {
+      "zh-CN": "实际定位节点",
+      "en": "Located nodes"
+    },
+    "点击从批注中移除此节点": {
+      "zh-CN": "点击从批注中移除此节点",
+      "en": "Click to remove this node from the annotation"
+    },
+    " · 移除": {
+      "zh-CN": " · 移除",
+      "en": " · Remove"
+    },
+    "反馈给 Agent": {
+      "zh-CN": "反馈给 Agent",
+      "en": "Send feedback to Agent"
+    },
+    "{value0} 修改意见": {
+      "zh-CN": "{value0} 修改意见",
+      "en": "{value0} feedback"
+    },
+    "这部分还缺少什么，或应该如何调整？": {
+      "zh-CN": "这部分还缺少什么，或应该如何调整？",
+      "en": "What is missing here, or how should this change?"
+    },
+    "正在保存…": {
+      "zh-CN": "正在保存…",
+      "en": "Saving…"
+    },
+    "返回项目工作台": {
+      "zh-CN": "返回项目工作台",
+      "en": "Return to project workbench"
+    },
+    "交互产物": {
+      "zh-CN": "交互产物",
+      "en": "Interactive artifact"
+    },
+    "非模态 · 其余工作面可用": {
+      "zh-CN": "非模态 · 其余工作面可用",
+      "en": "Non-modal · Other surfaces remain available"
+    },
+    "工作区交互": {
+      "zh-CN": "工作区交互",
+      "en": "Workspace interaction"
+    },
+    "收起交互面板": {
+      "zh-CN": "收起交互面板",
+      "en": "Collapse interactive panel"
+    },
+    "交互面板高度": {
+      "zh-CN": "交互面板高度",
+      "en": "Interactive panel height"
+    },
+    "已收起的交互面板": {
+      "zh-CN": "已收起的交互面板",
+      "en": "Collapsed interactive panels"
+    },
+    "工作文件树": {
+      "zh-CN": "工作文件树",
+      "en": "Working file tree"
+    },
+    "工作文件": {
+      "zh-CN": "工作文件",
+      "en": "Working files"
+    },
+    "刷新文件树与已展开目录": {
+      "zh-CN": "刷新文件树与已展开目录",
+      "en": "Refresh the file tree and expanded directories"
+    },
+    "搜索已展开的文件树": {
+      "zh-CN": "搜索已展开的文件树",
+      "en": "Search the expanded file tree"
+    },
+    "搜索已加载文件": {
+      "zh-CN": "搜索文件",
+      "en": "Search files"
+    },
+    "正在读取 ": {
+      "zh-CN": "正在读取 ",
+      "en": "Reading "
+    },
+    "当前目录没有条目。": {
+      "zh-CN": "当前目录没有条目。",
+      "en": "This directory is empty."
+    },
+    "工作目录": {
+      "zh-CN": "工作目录",
+      "en": "Working directory"
+    },
+    "重新读取": {
+      "zh-CN": "重新读取",
+      "en": "Read again"
+    },
+    "加载更多 · ": {
+      "zh-CN": "加载更多 · ",
+      "en": "Load more · "
+    },
+    "目录变更依据": {
+      "zh-CN": "目录变更依据",
+      "en": "Directory change basis"
+    },
+    "相对各目录首次观察：新增绿、修改黄、删除红并保留删除线。只读取你展开的目录；文件比较实际字节，文件夹状态不代表全部子内容。灰色问号表示尚未核验。": {
+      "zh-CN": "相对各目录首次观察：新增绿、修改黄、删除红并保留删除线。只读取你展开的目录；文件比较实际字节，文件夹状态不代表全部子内容。灰色问号表示尚未核验。",
+      "en": "Changes since each directory's first observation: green for added, yellow for modified, red with strikethrough for deleted. Only expanded directories are read. Files are compared by actual bytes; a folder status does not cover all descendants. A gray question mark means not checked."
+    },
+    "Ctrl / ⌘ 或 Shift 选择多份文件，再加入梳理。": {
+      "zh-CN": "Ctrl / ⌘ 或 Shift 选择多份文件，再加入梳理。",
+      "en": "Use Ctrl / ⌘ or Shift to select multiple files, then add them to discovery."
+    },
+    "原生追加实际回执": {
+      "zh-CN": "原生追加实际回执",
+      "en": "Actual native append receipt"
+    },
+    "上次回执：": {
+      "zh-CN": "上次回执：",
+      "en": "Previous receipt: "
+    },
+    "已读取原操作的历史回执；只供核查，不重新审批或追加。": {
+      "zh-CN": "已读取原操作的历史回执；只供核查，不重新审批或追加。",
+      "en": "The original operation's historical receipt was read for inspection only. No approval or append is repeated."
+    },
+    "原目标：": {
+      "zh-CN": "原目标：",
+      "en": "Original target: "
+    },
+    "本次锁定选文": {
+      "zh-CN": "本次锁定选文",
+      "en": "Text selection locked for this operation"
+    },
+    "本次未选择模型配置，没有执行追加。请先配置模型，再根据当前页准备新的预览。": {
+      "zh-CN": "本次未选择模型配置，没有执行追加。请先配置模型，再根据当前页准备新的预览。",
+      "en": "No model configuration was selected, so nothing was appended. Configure a model, then prepare a new preview from the current page."
+    },
+    "请先在原记事本核对实际内容，再从当前引用重新核对并准备新操作。旧操作与审批不重新执行。": {
+      "zh-CN": "请先在原记事本核对实际内容，再从当前引用重新核对并准备新操作。旧操作与审批不重新执行。",
+      "en": "Check the actual content in the original Notepad first, then recheck the current reference and prepare a new operation. Old operations and approvals are not repeated."
+    },
+    "当前页引用已变化；这里保留原目标预览，不据此追加到新页面。": {
+      "zh-CN": "当前页引用已变化；这里保留原目标预览，不据此追加到新页面。",
+      "en": "The current-page reference changed. This preview keeps its original target and cannot append to the new page."
+    },
+    "实际结果核查：": {
+      "zh-CN": "实际结果核查：",
+      "en": "Actual result check: "
+    },
+    "核查范围仅为原记事本缓冲区；没有执行保存。": {
+      "zh-CN": "核查范围仅为原记事本缓冲区；没有执行保存。",
+      "en": "Only the original Notepad buffer was checked. No save was performed."
+    },
+    "确认并追加": {
+      "zh-CN": "确认并追加",
+      "en": "Confirm and append"
+    },
+    "核查原操作": {
+      "zh-CN": "核查原操作",
+      "en": "Inspect original operation"
+    },
+    "准确引用与核查回执": {
+      "zh-CN": "准确引用与核查回执",
+      "en": "Exact references and inspection receipts"
+    },
+    "原记事本单次追加": {
+      "zh-CN": "原记事本单次追加",
+      "en": "One-time append to original Notepad"
+    },
+    "在原记事本末尾追加": {
+      "zh-CN": "在原记事本末尾追加",
+      "en": "Append at the end of original Notepad"
+    },
+    "收起": {
+      "zh-CN": "收起",
+      "en": "Collapse"
+    },
+    "按需展开": {
+      "zh-CN": "按需展开",
+      "en": "Expand when needed"
+    },
+    "仅适配已核对的经典记事本：光标须在末尾，无选文覆盖，不执行保存。开始时需要将该准确目标切到前台。": {
+      "zh-CN": "仅适配已核对的经典记事本：光标须在末尾，无选文覆盖，不执行保存。开始时需要将该准确目标切到前台。",
+      "en": "Only verified classic Notepad is supported. The caret must be at the end, with no selection to overwrite. This does not save. The exact target must be brought to the foreground when starting."
+    },
+    "当前入口尚未接入 Main 原生追加服务；普通问答仍可使用。": {
+      "zh-CN": "当前入口尚未接入 Main 原生追加服务；普通问答仍可使用。",
+      "en": "This entry is not connected to Main's native append service yet. Ordinary questions are still available."
+    },
+    "请先引用当前记事本；窗口名称不能授予输入许可。": {
+      "zh-CN": "请先引用当前记事本；窗口名称不能授予输入许可。",
+      "en": "Reference the current Notepad first. A window title does not grant input permission."
+    },
+    "尚未选择模型配置，不能开始追加。": {
+      "zh-CN": "尚未选择模型配置，不能开始追加。",
+      "en": "Select a model configuration before starting an append."
+    },
+    "从用户原话中复核追加内容": {
+      "zh-CN": "从用户原话中复核追加内容",
+      "en": "Review append content from the user's exact words"
+    },
+    "请选择指令中要原样追加的文字": {
+      "zh-CN": "请选择指令中要原样追加的文字",
+      "en": "Select the text in your instruction to append unchanged"
+    },
+    "用于追加预览的用户原话": {
+      "zh-CN": "用于追加预览的用户原话",
+      "en": "User's exact words for the append preview"
+    },
+    "选中 ": {
+      "zh-CN": "选中 ",
+      "en": "Selected "
+    },
+    "/256 UTF-16 单元": {
+      "zh-CN": "/256 UTF-16 单元",
+      "en": "/256 UTF-16 units"
+    },
+    "待复核追加选文": {
+      "zh-CN": "待复核追加选文",
+      "en": "Append text awaiting review"
+    },
+    "我已核对以上选文；下一步只生成预览，尚未授予输入权限。": {
+      "zh-CN": "我已核对以上选文；下一步只生成预览，尚未授予输入权限。",
+      "en": "I checked the selection above. The next step only creates a preview; input authority has not been granted."
+    },
+    "我已在原记事本核对实际内容，要基于当前引用准备新操作；不重放旧操作。": {
+      "zh-CN": "我已在原记事本核对实际内容，要基于当前引用准备新操作；不重放旧操作。",
+      "en": "I checked the actual content in the original Notepad and want a new operation based on the current reference. Do not replay the old operation."
+    },
+    "准备追加预览": {
+      "zh-CN": "准备追加预览",
+      "en": "Prepare append preview"
+    },
+    "刷新状态与历史": {
+      "zh-CN": "刷新状态与历史",
+      "en": "Refresh status and history"
+    },
+    "撤销并由我接管": {
+      "zh-CN": "撤销并由我接管",
+      "en": "Revoke and take over"
+    },
+    "本机主工作面": {
+      "zh-CN": "本机主工作面",
+      "en": "Local main surface"
+    },
+    "本机工作面": {
+      "zh-CN": "本机工作面",
+      "en": "Local surface"
+    },
+    "此入口尚未连接 Windows 桌面。目录与已支持的文稿预览仍可使用。": {
+      "zh-CN": "此入口尚未连接 Windows 桌面。目录与已支持的文稿预览仍可使用。",
+      "en": "This entry is not connected to the Windows desktop. Directories and supported document previews remain available."
+    },
+    "在原软件打开": {
+      "zh-CN": "在原软件打开",
+      "en": "Open in original application"
+    },
+    "下载原文件": {
+      "zh-CN": "下载原文件",
+      "en": "Download original file"
+    },
+    "读取最新原件": {
+      "zh-CN": "读取最新原件",
+      "en": "Read latest source"
+    },
+    "在系统关联的软件中阅读和编辑；从原生页面唤起轻量协作后可反馈。": {
+      "zh-CN": "在系统关联的软件中阅读和编辑；从原生页面唤起轻量协作后可反馈。",
+      "en": "Read and edit in the system's associated application, then use in-place collaboration to give feedback."
+    },
+    "可下载此实际文件，在电脑上的软件中阅读和编辑。": {
+      "zh-CN": "可下载此实际文件，在电脑上的软件中阅读和编辑。",
+      "en": "Download the actual file and read or edit it in an application on this computer."
+    },
+    "磁盘原件已变化，当前文件是历史版本。请读取最新原件后继续。": {
+      "zh-CN": "磁盘原件已变化，当前文件是历史版本。请读取最新原件后继续。",
+      "en": "The source file on disk changed. This is a historical version. Read the latest source before continuing."
+    },
+    "文件来源与版本": {
+      "zh-CN": "文件来源与版本",
+      "en": "File source and version"
+    },
+    "原生打开回执": {
+      "zh-CN": "原生打开回执",
+      "en": "Native open receipt"
+    },
+    "明确应用限定变更": {
+      "zh-CN": "明确应用限定变更",
+      "en": "Explicitly apply scoped changes"
+    },
+    "允许保留对象之外的人工修改后尝试局部合并；目标对象改变仍冲突。": {
+      "zh-CN": "允许保留对象之外的人工修改后尝试局部合并；目标对象改变仍冲突。",
+      "en": "Allow a local merge while preserving manual edits outside the retained object. A changed target object still conflicts."
+    },
+    "我授权仅写入以上实际限定文件。会在点击后重读来源并进行版本比较。": {
+      "zh-CN": "我授权仅写入以上实际限定文件。会在点击后重读来源并进行版本比较。",
+      "en": "I authorize writing only the exact scoped files above. Sources will be reread and versions compared after clicking."
+    },
+    "应用限定变更": {
+      "zh-CN": "应用限定变更",
+      "en": "Apply scoped changes"
+    },
+    "实际返工回执": {
+      "zh-CN": "实际返工回执",
+      "en": "Actual rework receipt"
+    },
+    "任务 {value0} · {value1}": {
+      "zh-CN": "任务 {value0} · {value1}",
+      "en": "Task {value0} · {value1}"
+    },
+    "分类：": {
+      "zh-CN": "分类：",
+      "en": "Classification: "
+    },
+    "用户声明": {
+      "zh-CN": "用户声明",
+      "en": "User declaration"
+    },
+    "原 Agent 提议": {
+      "zh-CN": "原 Agent 提议",
+      "en": "Original Agent proposal"
+    },
+    "；语义尚未确认": {
+      "zh-CN": "；语义尚未确认",
+      "en": "; semantics not confirmed"
+    },
+    "提议新值": {
+      "zh-CN": "提议新值",
+      "en": "Proposed new value"
+    },
+    "限定文件：": {
+      "zh-CN": "限定文件：",
+      "en": "Scoped file: "
+    },
+    "需核对 ": {
+      "zh-CN": "需核对 ",
+      "en": "Needs checking "
+    },
+    " · 未知 ": {
+      "zh-CN": " · 未知 ",
+      "en": " · Unknown "
+    },
+    " · 按声明保留 ": {
+      "zh-CN": " · 按声明保留 ",
+      "en": " · Retained as declared "
+    },
+    "原确认结论保留，当前影响另行记录": {
+      "zh-CN": "原确认结论保留，当前影响另行记录",
+      "en": "Original approvals are retained; current impact is recorded separately"
+    },
+    "请检查实际确认记录": {
+      "zh-CN": "请检查实际确认记录",
+      "en": "Check the actual approval record"
+    },
+    "未提供输入条件的任务保持未知。来源关系与影响条件不证明语义正确。": {
+      "zh-CN": "未提供输入条件的任务保持未知。来源关系与影响条件不证明语义正确。",
+      "en": "Tasks without input conditions remain unknown. Source relationships and impact conditions do not prove semantic correctness."
+    },
+    "打开实际版本 v": {
+      "zh-CN": "打开实际版本 v",
+      "en": "Open actual version v"
+    },
+    "来源、影响条件与原确认回执": {
+      "zh-CN": "来源、影响条件与原确认回执",
+      "en": "Sources, impact conditions, and original approval receipts"
+    },
+    "文件反馈的任务返工": {
+      "zh-CN": "文件反馈的任务返工",
+      "en": "Task rework from file feedback"
+    },
+    "关联任务与局部返工 ": {
+      "zh-CN": "关联任务与局部返工 ",
+      "en": "Task links and local rework "
+    },
+    "{value0} 个实际预览": {
+      "zh-CN": "{value0} 个实际预览",
+      "en": "{value0} actual previews"
+    },
+    "原操作待核查": {
+      "zh-CN": "原操作待核查",
+      "en": "Original operation needs inspection"
+    },
+    "按需": {
+      "zh-CN": "按需",
+      "en": "On demand"
+    },
+    "依据固定原件 v": {
+      "zh-CN": "依据固定原件 v",
+      "en": "Based on pinned source v"
+    },
+    "。仅关联已确认任务；普通单文件处理可继续使用上方文件动作。": {
+      "zh-CN": "。仅关联已确认任务；普通单文件处理可继续使用上方文件动作。",
+      "en": ". Only confirmed tasks are linked. Ordinary single-file work can continue using the file actions above."
+    },
+    "操作 ": {
+      "zh-CN": "操作 ",
+      "en": "Operation "
+    },
+    "读取实际任务关联": {
+      "zh-CN": "读取实际任务关联",
+      "en": "Read actual task links"
+    },
+    "此项目尚无已确认任务方案。文件反馈已保留，可继续普通问答与单文件处理。": {
+      "zh-CN": "此项目尚无已确认任务方案。文件反馈已保留，可继续普通问答与单文件处理。",
+      "en": "This project has no confirmed task proposal yet. File feedback is retained; ordinary questions and single-file work remain available."
+    },
+    "任务方案": {
+      "zh-CN": "任务方案",
+      "en": "Task proposal"
+    },
+    "选择实际已确认版本": {
+      "zh-CN": "选择实际已确认版本",
+      "en": "Choose an actual confirmed version"
+    },
+    "文件对象": {
+      "zh-CN": "文件对象",
+      "en": "File object"
+    },
+    "沿用反馈中已核对的文本范围": {
+      "zh-CN": "沿用反馈中已核对的文本范围",
+      "en": "Use the verified text range from the feedback"
+    },
+    "指定 JSON 字段": {
+      "zh-CN": "指定 JSON 字段",
+      "en": "Specify a JSON field"
+    },
+    "明确整个 UTF-8 文件": {
+      "zh-CN": "明确整个 UTF-8 文件",
+      "en": "Explicitly select the entire UTF-8 file"
+    },
+    "读取关联 · 已有关系自动沿用": {
+      "zh-CN": "读取关联 · 已有关系自动沿用",
+      "en": "Read links · Reuse existing relationships"
+    },
+    "原 Agent 准备预览 · 不写文件": {
+      "zh-CN": "原 Agent 准备预览 · 不写文件",
+      "en": "Ask original Agent for a preview · No file writes"
+    },
+    "原对象关联": {
+      "zh-CN": "原对象关联",
+      "en": "Original object links"
+    },
+    "需要你确认的对象关系": {
+      "zh-CN": "需要你确认的对象关系",
+      "en": "Object relationships needing your confirmation"
+    },
+    "没有唯一已核对关系。请选择实际任务；画面描述不会自动定位文件对象。": {
+      "zh-CN": "没有唯一已核对关系。请选择实际任务；画面描述不会自动定位文件对象。",
+      "en": "No unique verified relationship exists. Choose the actual tasks; a screen description does not locate a file object automatically."
+    },
+    "反馈没有已核对的文本范围，请在上方明确 JSON 字段或整个 UTF-8 文件。": {
+      "zh-CN": "反馈没有已核对的文本范围，请在上方明确 JSON 字段或整个 UTF-8 文件。",
+      "en": "Feedback has no verified text range. Specify a JSON field or the entire UTF-8 file above."
+    },
+    "确认这些任务与当前对象的关系": {
+      "zh-CN": "确认这些任务与当前对象的关系",
+      "en": "Confirm these tasks' relationships to the current object"
+    },
+    "我来填写局部变更提议": {
+      "zh-CN": "我来填写局部变更提议",
+      "en": "Write a proposed local change"
+    },
+    "也可用上方明确入口请求原 Agent 准备只读预览。这里的分类与条件将作为你的声明保存。": {
+      "zh-CN": "也可用上方明确入口请求原 Agent 准备只读预览。这里的分类与条件将作为你的声明保存。",
+      "en": "You can also ask the original agent for a read-only preview above. These classifications and conditions are saved as your statements."
+    },
+    "正在读取实际原值；未提供写入资格。": {
+      "zh-CN": "正在读取实际原值；未提供写入资格。",
+      "en": "Reading the original value; this grants no write permission."
+    },
+    "固定原对象值": {
+      "zh-CN": "固定原对象值",
+      "en": "Original object value"
+    },
+    "新值（JSON）": {
+      "zh-CN": "新值（JSON）",
+      "en": "New value (JSON)"
+    },
+    "新值（UTF-8 文本）": {
+      "zh-CN": "新值（UTF-8 文本）",
+      "en": "New value (UTF-8 text)"
+    },
+    "变更分类": {
+      "zh-CN": "变更分类",
+      "en": "Change classification"
+    },
+    "输入有效条件": {
+      "zh-CN": "输入有效条件",
+      "en": "Input validity condition"
+    },
+    "对象值变化时核对": {
+      "zh-CN": "对象值变化时核对",
+      "en": "Check when the object value changes"
+    },
+    "任意文件版本变化时核对": {
+      "zh-CN": "任意文件版本变化时核对",
+      "en": "Check when any file version changes"
+    },
+    "始终人工核对": {
+      "zh-CN": "始终人工核对",
+      "en": "Always review manually"
+    },
+    "声明依据": {
+      "zh-CN": "声明依据",
+      "en": "Reason for this statement"
+    },
+    "说明这些任务为何依赖该对象；分类与语义仍需核验": {
+      "zh-CN": "说明这些任务为何依赖该对象；分类与语义仍需核验",
+      "en": "Explain why these tasks depend on this object. Classification and meaning still need verification."
+    },
+    "我声明 ": {
+      "zh-CN": "我声明 ",
+      "en": "I state that "
+    },
+    " 使用此实际对象作为输入，任意分类变更均按上述条件核对；其他任务保持未知。": {
+      "zh-CN": " 使用此实际对象作为输入，任意分类变更均按上述条件核对；其他任务保持未知。",
+      "en": " use this object as input. Changes in every category are checked under the condition above; other tasks remain unknown."
+    },
+    "保存预览 · 尚不写文件": {
+      "zh-CN": "保存预览 · 尚不写文件",
+      "en": "Save preview · no file changes"
+    },
+    "持久变更预览": {
+      "zh-CN": "持久变更预览",
+      "en": "Persistent change preview"
+    },
+    " · 原方案 v": {
+      "zh-CN": " · 原方案 v",
+      "en": " · Original proposal v"
+    },
+    "原 Agent": {
+      "zh-CN": "原 Agent",
+      "en": "Original Agent"
+    },
+    "用户": {
+      "zh-CN": "用户",
+      "en": "User"
+    },
+    "此预览已有实际应用回执，可打开结果核对；未再次应用。": {
+      "zh-CN": "此预览已有实际应用回执，可打开结果核对；未再次应用。",
+      "en": "This preview already has an actual apply receipt. Open the result to check it; it has not been applied again."
+    },
+    "本机原操作索引 · 只读核查": {
+      "zh-CN": "本机原操作索引 · 只读核查",
+      "en": "Local operation index · Read-only inspection"
+    },
+    "读取原回执": {
+      "zh-CN": "读取原回执",
+      "en": "Read original receipt"
+    },
+    "本机文字识别": {
+      "zh-CN": "本机文字识别",
+      "en": "Local text recognition"
+    },
+    "画面文字": {
+      "zh-CN": "画面文字",
+      "en": "Text in the image"
+    },
+    "本机 CPU · 识别结果需核对": {
+      "zh-CN": "本机 CPU · 识别结果需核对",
+      "en": "Local CPU · Check recognized text"
+    },
+    "识别画面文字": {
+      "zh-CN": "识别画面文字",
+      "en": "Recognize image text"
+    },
+    "重载识别记录": {
+      "zh-CN": "重载识别记录",
+      "en": "Reload recognition records"
+    },
+    "，不请求外部模型。": {
+      "zh-CN": "，不请求外部模型。",
+      "en": "; no external model is requested."
+    },
+    "本机 OCR 未配置": {
+      "zh-CN": "本机 OCR 未配置",
+      "en": "Local OCR is not configured"
+    },
+    "正在核查本机 OCR 组件。": {
+      "zh-CN": "正在核查本机 OCR 组件。",
+      "en": "Checking local OCR components."
+    },
+    "未识别到文字。仍可对画面圈选并说明。": {
+      "zh-CN": "未识别到文字。仍可对画面圈选并说明。",
+      "en": "No text was recognized. You can still mark the image and describe it."
+    },
+    "文字框对应原图片像素；点击框或行可定位，选择原文后批注。": {
+      "zh-CN": "文字框对应原图片像素；点击框或行可定位，选择原文后批注。",
+      "en": "Text boxes map to original image pixels. Click a box or line to locate it, then select text to annotate."
+    },
+    " OCR 内容属于观察记录，不自动作为已验证事实。": {
+      "zh-CN": " OCR 内容属于观察记录，不自动作为已验证事实。",
+      "en": " OCR is an observation record, not automatically a verified fact."
+    },
+    "定位此行": {
+      "zh-CN": "定位此行",
+      "en": "Locate this line"
+    },
+    "识别模型的置信度；不等同于事实准确率": {
+      "zh-CN": "识别模型的置信度；不等同于事实准确率",
+      "en": "Recognition model confidence; not factual accuracy"
+    },
+    "识别置信度 ": {
+      "zh-CN": "识别置信度 ",
+      "en": "Recognition confidence "
+    },
+    "批注整行": {
+      "zh-CN": "批注整行",
+      "en": "Annotate entire line"
+    },
+    "识别来源与版本凭据": {
+      "zh-CN": "识别来源与版本凭据",
+      "en": "Recognition source and version reference"
+    },
+    "正在恢复本机草稿": {
+      "zh-CN": "正在恢复本机草稿",
+      "en": "Restoring local draft"
+    },
+    "正在保存本机草稿…": {
+      "zh-CN": "正在保存本机草稿…",
+      "en": "Saving local draft…"
+    },
+    "本机草稿已保存": {
+      "zh-CN": "本机草稿已保存",
+      "en": "Local draft saved"
+    },
+    "编辑草稿 · 尚未提交新版本": {
+      "zh-CN": "编辑草稿 · 尚未提交新版本",
+      "en": "Editing draft · New version not submitted yet"
+    },
+    "按当前版本审阅": {
+      "zh-CN": "按当前版本审阅",
+      "en": "Review against current version"
+    },
+    "核查草稿": {
+      "zh-CN": "核查草稿",
+      "en": "Inspect draft"
+    },
+    "调整文件面板宽度": {
+      "zh-CN": "调整文件面板宽度",
+      "en": "Resize file panel"
+    },
+    "调整 Agent 面板宽度": {
+      "zh-CN": "调整 Agent 面板宽度",
+      "en": "Resize Agent panel"
+    },
+    "实际阶段与交付产物": {
+      "zh-CN": "实际阶段与交付产物",
+      "en": "Actual stage and delivery outputs"
+    },
+    "阶段产物已保存": {
+      "zh-CN": "阶段产物已保存",
+      "en": "Stage outputs saved"
+    },
+    "完整交付文件已保存": {
+      "zh-CN": "完整交付文件已保存",
+      "en": "Complete delivery files saved"
+    },
+    "依据 v": {
+      "zh-CN": "依据 v",
+      "en": "Based on v"
+    },
+    "待确认 {value0} 项，其中 {value1} 项影响后续确认。可继续在页面回答。": {
+      "zh-CN": "待确认 {value0} 项，其中 {value1} 项影响后续确认。可继续在页面回答。",
+      "en": "{value0} open questions, including {value1} affecting later approval. You can continue answering here."
+    },
+    "任务书、同源图与 harness 已按确认计划派生；任务书仍为派生草稿，实际执行尚未授权。": {
+      "zh-CN": "任务书、同源图与 harness 已按确认计划派生；任务书仍为派生草稿，实际执行尚未授权。",
+      "en": "The taskbook, graphs from the same source, and harness were derived from the confirmed plan. The taskbook remains a derived draft; actual execution is not authorized yet."
+    },
+    "历史回执保留；当前状态 ": {
+      "zh-CN": "历史回执保留；当前状态 ",
+      "en": "Historical receipt retained; current status "
+    },
+    "。来源或产物有变化，请核对当前文件。": {
+      "zh-CN": "。来源或产物有变化，请核对当前文件。",
+      "en": ". Sources or artifacts changed. Check the current files."
+    },
+    "目录：": {
+      "zh-CN": "目录：",
+      "en": "Directory: "
+    },
+    "文件 v{value0}": {
+      "zh-CN": "文件 v{value0}",
+      "en": "File v{value0}"
+    },
+    "点开时读取实际文件来源": {
+      "zh-CN": "点开时读取实际文件来源",
+      "en": "Read the actual file source when opened"
+    },
+    "读取文件": {
+      "zh-CN": "读取文件",
+      "en": "Read file"
+    },
+    "实际 FileSource": {
+      "zh-CN": "实际 FileSource",
+      "en": "Actual FileSource"
+    },
+    "本次保存于产物库，未写入项目目录。": {
+      "zh-CN": "本次保存于产物库，未写入项目目录。",
+      "en": "Saved to the artifact store, not the project directory."
+    },
+    "产物库原件与下载": {
+      "zh-CN": "产物库原件与下载",
+      "en": "Artifact originals and downloads"
+    },
+    "核对文稿来源…": {
+      "zh-CN": "核对文稿来源…",
+      "en": "Checking document source…"
+    },
+    "在原软件打开 Word": {
+      "zh-CN": "在原软件打开 Word",
+      "en": "Open Word in its application"
+    },
+    "打开 Word 预览": {
+      "zh-CN": "打开 Word 预览",
+      "en": "Open Word preview"
+    },
+    "Word 原件": {
+      "zh-CN": "Word 原件",
+      "en": "Word original"
+    },
+    "操作尚在处理中": {
+      "zh-CN": "操作尚在处理中",
+      "en": "Operation is still processing"
+    },
+    "操作已中断，需要核对原步骤": {
+      "zh-CN": "操作已中断，需要核对原步骤",
+      "en": "Operation was interrupted; inspect the original steps"
+    },
+    "操作失败或仅完成部分步骤": {
+      "zh-CN": "操作失败或仅完成部分步骤",
+      "en": "Operation failed or completed only some steps"
+    },
+    "。已保存步骤保留，不会自动重放。": {
+      "zh-CN": "。已保存步骤保留，不会自动重放。",
+      "en": ". Saved steps are retained and will not replay automatically."
+    },
+    "来源、文件核对与持久回执": {
+      "zh-CN": "来源、文件核对与持久回执",
+      "en": "Sources, file checks, and persistent receipts"
+    },
+    "阶段与交付文件": {
+      "zh-CN": "阶段与交付文件",
+      "en": "Stage and delivery files"
+    },
+    "拆解提案 · 版本 ": {
+      "zh-CN": "拆解提案 · 版本 ",
+      "en": "Decomposition proposal · Revision "
+    },
+    "计划已确认": {
+      "zh-CN": "计划已确认",
+      "en": "Plan confirmed"
+    },
+    "待确认": {
+      "zh-CN": "待确认",
+      "en": "Awaiting confirmation"
+    },
+    "退出编辑": {
+      "zh-CN": "退出编辑",
+      "en": "Exit editing"
+    },
+    "编辑节点": {
+      "zh-CN": "编辑节点",
+      "en": "Edit nodes"
+    },
+    "下载待确认文件": {
+      "zh-CN": "下载待确认文件",
+      "en": "Download open-questions file"
+    },
+    "生成可编辑任务书": {
+      "zh-CN": "生成可编辑任务书",
+      "en": "Generate editable taskbook"
+    },
+    "阶段报告与完整交付": {
+      "zh-CN": "阶段报告与完整交付",
+      "en": "Stage report and complete delivery"
+    },
+    "留空使用内置报告版式": {
+      "zh-CN": "留空使用内置报告版式",
+      "en": "Leave empty to use the built-in report layout"
+    },
+    "使用内置版式": {
+      "zh-CN": "使用内置版式",
+      "en": "Use built-in layout"
+    },
+    "当前网页未连接本机文件选择器；可在桌面客户端选择模板。": {
+      "zh-CN": "当前网页未连接本机文件选择器；可在桌面客户端选择模板。",
+      "en": "This web page is not connected to a local file picker. Choose a template in the desktop client."
+    },
+    "工作目录中的模板路径": {
+      "zh-CN": "工作目录中的模板路径",
+      "en": "Template path in the working directory"
+    },
+    "如 templates/report.docx": {
+      "zh-CN": "如 templates/report.docx",
+      "en": "For example, templates/report.docx"
+    },
+    "生成草稿报告与待确认文件": {
+      "zh-CN": "生成草稿报告与待确认文件",
+      "en": "Generate draft report and open-questions file"
+    },
+    "未回答的问题独立保存；完整 harness 交付沿用现行已确认计划。": {
+      "zh-CN": "未回答的问题独立保存；完整 harness 交付沿用现行已确认计划。",
+      "en": "Unanswered questions are saved separately. Complete harness delivery uses the current confirmed plan."
+    },
+    "打开实际 Word": {
+      "zh-CN": "打开实际 Word",
+      "en": "Open actual Word file"
+    },
+    "待确认事项": {
+      "zh-CN": "待确认事项",
+      "en": "Open questions"
+    },
+    "来源快照": {
+      "zh-CN": "来源快照",
+      "en": "Source snapshot"
+    },
+    "完整交付工作目录": {
+      "zh-CN": "完整交付工作目录",
+      "en": "Complete delivery working directory"
+    },
+    "完整交付相对目录": {
+      "zh-CN": "完整交付相对目录",
+      "en": "Complete delivery relative directory"
+    },
+    "一次保存真实 Word、待确认事项、同源图、harness MD 群、任务图、任务书来源与交付回执；不会替换已有人工文件。": {
+      "zh-CN": "一次保存真实 Word、待确认事项、同源图、harness MD 群、任务图、任务书来源与交付回执；不会替换已有人工文件。",
+      "en": "Save actual Word, open questions, source-aligned graphs, harness Markdown files, task graph, taskbook sources, and delivery receipts together. Existing manually created files are not replaced."
+    },
+    "请选择已经授予写入范围的交付目录。": {
+      "zh-CN": "请选择已经授予写入范围的交付目录。",
+      "en": "Choose a delivery directory with existing write access."
+    },
+    "保存交付中…": {
+      "zh-CN": "保存交付中…",
+      "en": "Saving delivery…"
+    },
+    "生成完整交付文件": {
+      "zh-CN": "生成完整交付文件",
+      "en": "Generate complete delivery files"
+    },
+    "检查网络与来源": {
+      "zh-CN": "检查网络与来源",
+      "en": "Check graph and sources"
+    },
+    "检查验收覆盖": {
+      "zh-CN": "检查验收覆盖",
+      "en": "Check acceptance coverage"
+    },
+    "本次检查回执": {
+      "zh-CN": "本次检查回执",
+      "en": "Current check receipt"
+    },
+    "实线：任务依赖 · 虚线：分层关系 · 点线：问题影响": {
+      "zh-CN": "实线：任务依赖 · 虚线：分层关系 · 点线：问题影响",
+      "en": "Solid: task dependency · Dashed: hierarchy · Dotted: question impact"
+    },
+    "删除此节点": {
+      "zh-CN": "删除此节点",
+      "en": "Delete this node"
+    },
+    "资料结构": {
+      "zh-CN": "资料结构",
+      "en": "Material structure"
+    },
+    "用户编辑": {
+      "zh-CN": "用户编辑",
+      "en": "User edit"
+    },
+    "模型建议": {
+      "zh-CN": "模型建议",
+      "en": "Model suggestion"
+    },
+    "节点类型": {
+      "zh-CN": "节点类型",
+      "en": "Node type"
+    },
+    "任务": {
+      "zh-CN": "任务",
+      "en": "Task"
+    },
+    "里程碑": {
+      "zh-CN": "里程碑",
+      "en": "Milestone"
+    },
+    "交付物": {
+      "zh-CN": "交付物",
+      "en": "Deliverable"
+    },
+    "决策": {
+      "zh-CN": "决策",
+      "en": "Decision"
+    },
+    "节点名称": {
+      "zh-CN": "节点名称",
+      "en": "Node name"
+    },
+    "工作说明": {
+      "zh-CN": "工作说明",
+      "en": "Work description"
+    },
+    "待补充": {
+      "zh-CN": "待补充",
+      "en": "More information needed"
+    },
+    "任务依赖": {
+      "zh-CN": "任务依赖",
+      "en": "Task dependencies"
+    },
+    "无前置任务": {
+      "zh-CN": "无前置任务",
+      "en": "No prerequisite tasks"
+    },
+    "父节点": {
+      "zh-CN": "父节点",
+      "en": "Parent node"
+    },
+    "顶层": {
+      "zh-CN": "顶层",
+      "en": "Top level"
+    },
+    "精确来源 · ": {
+      "zh-CN": "精确来源 · ",
+      "en": "Exact source · "
+    },
+    "来源引用 JSON": {
+      "zh-CN": "来源引用 JSON",
+      "en": "Source reference JSON"
+    },
+    "节点精确来源 JSON": {
+      "zh-CN": "节点精确来源 JSON",
+      "en": "Node exact-source JSON"
+    },
+    "待确认问题": {
+      "zh-CN": "待确认问题",
+      "en": "Open questions"
+    },
+    "影响 ": {
+      "zh-CN": "影响 ",
+      "en": "Affects "
+    },
+    "整个计划": {
+      "zh-CN": "整个计划",
+      "en": "Entire plan"
+    },
+    "修改理由": {
+      "zh-CN": "修改理由",
+      "en": "Reason for change"
+    },
+    "说明此次结构、来源或验收的修改": {
+      "zh-CN": "说明此次结构、来源或验收的修改",
+      "en": "Describe this structure, source, or acceptance change"
+    },
+    "保存中…": {
+      "zh-CN": "保存中…",
+      "en": "Saving…"
+    },
+    "保存新版本": {
+      "zh-CN": "保存新版本",
+      "en": "Save new version"
+    },
+    "待确认问题 ": {
+      "zh-CN": "待确认问题 ",
+      "en": "Open question "
+    },
+    "可以逐条答复，也可以先输出草稿报告。已保存答复需要明确接受后才关闭问题。": {
+      "zh-CN": "可以逐条答复，也可以先输出草稿报告。已保存答复需要明确接受后才关闭问题。",
+      "en": "Answer individually or generate a draft report first. Saved answers close questions only after explicit acceptance."
+    },
+    "影响任务开始": {
+      "zh-CN": "影响任务开始",
+      "en": "Affects task start"
+    },
+    "非阻塞": {
+      "zh-CN": "非阻塞",
+      "en": "Non-blocking"
+    },
+    "影响节点：": {
+      "zh-CN": "影响节点：",
+      "en": "Affected nodes: "
+    },
+    "影响节点（每行一个 ID）": {
+      "zh-CN": "影响节点（每行一个 ID）",
+      "en": "Affected nodes (one ID per line)"
+    },
+    "写下答复，可在以后继续补充": {
+      "zh-CN": "写下答复，可在以后继续补充",
+      "en": "Write an answer; you can add more later"
+    },
+    "保存答复": {
+      "zh-CN": "保存答复",
+      "en": "Save response"
+    },
+    "确认时采用的依据": {
+      "zh-CN": "确认时采用的依据",
+      "en": "Basis to use on confirmation"
+    },
+    "采用已保存答复": {
+      "zh-CN": "采用已保存答复",
+      "en": "Use saved response"
+    },
+    "确认只接受这一版本的计划。实际任务仍需明确开始并经过原审批与验收。": {
+      "zh-CN": "确认只接受这一版本的计划。实际任务仍需明确开始并经过原审批与验收。",
+      "en": "Confirmation accepts only this plan version. Actual tasks still need explicit starting, original approval, and acceptance checks."
+    },
+    "确认中…": {
+      "zh-CN": "确认中…",
+      "en": "Confirming…"
+    },
+    "此版本计划已确认": {
+      "zh-CN": "此版本计划已确认",
+      "en": "This plan version is confirmed"
+    },
+    "确认此版本计划": {
+      "zh-CN": "确认此版本计划",
+      "en": "Confirm this plan version"
+    },
+    "图布局": {
+      "zh-CN": "图布局",
+      "en": "Graph layout"
+    },
+    "按图语义布局": {
+      "zh-CN": "按图语义布局",
+      "en": "Layout by graph meaning"
+    },
+    "层级布局": {
+      "zh-CN": "层级布局",
+      "en": "Hierarchical layout"
+    },
+    "网络布局": {
+      "zh-CN": "网络布局",
+      "en": "Network layout"
+    },
+    "环形布局": {
+      "zh-CN": "环形布局",
+      "en": "Circular layout"
+    },
+    "缩小图": {
+      "zh-CN": "缩小图",
+      "en": "Zoom out graph"
+    },
+    "放大图": {
+      "zh-CN": "放大图",
+      "en": "Zoom in graph"
+    },
+    "适配视野": {
+      "zh-CN": "适配视野",
+      "en": "Fit to view"
+    },
+    "收回大图": {
+      "zh-CN": "收回大图",
+      "en": "Collapse large graph"
+    },
+    "展开大图": {
+      "zh-CN": "展开大图",
+      "en": "Expand large graph"
+    },
+    "平移缩放并点击查看节点或关系": {
+      "zh-CN": "平移缩放并点击查看节点或关系",
+      "en": "Pan, zoom, and click to inspect nodes or relationships"
+    },
+    "图批注勾画层": {
+      "zh-CN": "图批注勾画层",
+      "en": "Graph drawing layer"
+    },
+    "选择图节点": {
+      "zh-CN": "选择图节点",
+      "en": "Select a graph node"
+    },
+    "选择节点…": {
+      "zh-CN": "选择节点…",
+      "en": "Choose a node…"
+    },
+    "搜索图节点": {
+      "zh-CN": "搜索图节点",
+      "en": "Search graph nodes"
+    },
+    "搜索节点": {
+      "zh-CN": "搜索节点",
+      "en": "Search nodes"
+    },
+    "定位": {
+      "zh-CN": "定位",
+      "en": "Locate"
+    },
+    "关系连接：": {
+      "zh-CN": "关系连接：",
+      "en": "Connected relationships: "
+    },
+    "查看要求 ": {
+      "zh-CN": "查看要求 ",
+      "en": "View requirement "
+    },
+    "资料 ": {
+      "zh-CN": "资料 ",
+      "en": "Material "
+    },
+    " · 片段 ": {
+      "zh-CN": " · 片段 ",
+      "en": " · Chunk "
+    },
+    "正在核对摘录…": {
+      "zh-CN": "正在核对摘录…",
+      "en": "Checking quotation…"
+    },
+    "摘录无法核对": {
+      "zh-CN": "摘录无法核对",
+      "en": "Quotation could not be verified"
+    },
+    "摘录 SHA 已核对 · ": {
+      "zh-CN": "摘录 SHA 已核对 · ",
+      "en": "Quotation SHA verified · "
+    },
+    "原件当前版本一致": {
+      "zh-CN": "原件当前版本一致",
+      "en": "Current source version matches"
+    },
+    "原件状态需要复核": {
+      "zh-CN": "原件状态需要复核",
+      "en": "Source status needs checking"
+    },
+    "精确引用": {
+      "zh-CN": "精确引用",
+      "en": "Exact reference"
+    },
+    " 处来源": {
+      "zh-CN": " 处来源",
+      "en": " source references"
+    },
+    "任务网络 ": {
+      "zh-CN": "任务网络 ",
+      "en": "Task network "
+    },
+    " 节点": {
+      "zh-CN": " 节点",
+      "en": " nodes"
+    },
+    "图展示模式": {
+      "zh-CN": "图展示模式",
+      "en": "Graph display mode"
+    },
+    "逻辑图": {
+      "zh-CN": "逻辑图",
+      "en": "Logic diagram"
+    },
+    "网络图": {
+      "zh-CN": "网络图",
+      "en": "Network diagram"
+    },
+    "缩小任务图": {
+      "zh-CN": "缩小任务图",
+      "en": "Zoom out task graph"
+    },
+    "放大任务图": {
+      "zh-CN": "放大任务图",
+      "en": "Zoom in task graph"
+    },
+    "收回面板": {
+      "zh-CN": "收回面板",
+      "en": "Collapse panel"
+    },
+    "拖动平移、滚轮缩放、点击查看任务节点": {
+      "zh-CN": "拖动平移、滚轮缩放、点击查看任务节点",
+      "en": "Drag to pan, scroll to zoom, and click to inspect task nodes"
+    },
+    "选择任务": {
+      "zh-CN": "选择任务",
+      "en": "Select a task"
+    },
+    "查看节点…": {
+      "zh-CN": "查看节点…",
+      "en": "Inspect a node…"
+    },
+    "搜索图中节点": {
+      "zh-CN": "搜索图中节点",
+      "en": "Search nodes in graph"
+    },
+    "搜索节点名称或 ID": {
+      "zh-CN": "搜索节点名称或 ID",
+      "en": "Search node name or ID"
+    },
+    "拖动平移 · 滚轮缩放 · 点击节点": {
+      "zh-CN": "拖动平移 · 滚轮缩放 · 点击节点",
+      "en": "Drag to pan · Scroll to zoom · Click a node"
+    },
+    "对选中原文批注": {
+      "zh-CN": "对选中原文批注",
+      "en": "Annotate selected source text"
+    },
+    "收起批注": {
+      "zh-CN": "收起批注",
+      "en": "Collapse annotation"
+    },
+    "选文修改意见": {
+      "zh-CN": "选文修改意见",
+      "en": "Selected-text feedback"
+    },
+    "未发送的选文批注 · ": {
+      "zh-CN": "未发送的选文批注 · ",
+      "en": "Unsent selected-text annotation · "
+    },
+    "收起 Word 预览": {
+      "zh-CN": "收起 Word 预览",
+      "en": "Collapse Word preview"
+    },
+    "预览实际 Word 文件": {
+      "zh-CN": "预览实际 Word 文件",
+      "en": "Preview actual Word file"
+    },
+    "实际 Word 文稿预览": {
+      "zh-CN": "实际 Word 文稿预览",
+      "en": "Actual Word document preview"
+    },
+    "选中报告正文可批注；页眉页脚、动态字段或无法唯一定位的内容保留为待核查。": {
+      "zh-CN": "选中报告正文可批注；页眉页脚、动态字段或无法唯一定位的内容保留为待核查。",
+      "en": "Select report body text to annotate. Headers, footers, dynamic fields, and content without a unique location remain subject to checking."
+    },
+    "选文对应多处段落，请选择实际上下文": {
+      "zh-CN": "选文对应多处段落，请选择实际上下文",
+      "en": "This text matches multiple paragraphs. Choose the actual context."
+    },
+    "选择上下文": {
+      "zh-CN": "选择上下文",
+      "en": "Choose context"
+    },
+    "项目审阅工作台": {
+      "zh-CN": "项目审阅工作台",
+      "en": "Project review workbench"
+    },
+    "当前工作": {
+      "zh-CN": "当前工作",
+      "en": "Current work"
+    },
+    "关联工作目录": {
+      "zh-CN": "关联工作目录",
+      "en": "Link working folder"
+    },
+    "工作台视角": {
+      "zh-CN": "工作台视角",
+      "en": "Workbench view"
+    },
+    "待我处理": {
+      "zh-CN": "待我处理",
+      "en": "Needs attention"
+    },
+    "查找当前项目对象": {
+      "zh-CN": "查找当前项目对象",
+      "en": "Find objects in the current project"
+    },
+    "查找任务、文稿或交付物…": {
+      "zh-CN": "查找任务、文稿或交付物…",
+      "en": "Find tasks, documents, or deliverables…"
+    },
+    "{value0} 项待确认 · ": {
+      "zh-CN": "{value0} 项待确认 · ",
+      "en": "{value0} items need confirmation · "
+    },
+    "来源待复核 · ": {
+      "zh-CN": "来源待复核 · ",
+      "en": "Sources need checking · "
+    },
+    "没有找到匹配对象。": {
+      "zh-CN": "没有找到匹配对象。",
+      "en": "No matching objects found."
+    },
+    "当前没有需要确认的要求或计划。": {
+      "zh-CN": "当前没有需要确认的要求或计划。",
+      "en": "No requirements or plans currently need confirmation."
+    },
+    "还没有任务与产物。在 Agent 中继续工作，生成后会列在这里。": {
+      "zh-CN": "还没有任务与产物。在 Agent 中继续工作，生成后会列在这里。",
+      "en": "No tasks or artifacts yet. Continue in Agent; generated items will appear here."
+    },
+    "可先在原页面提问；需要读写项目文件时再关联目录。": {
+      "zh-CN": "可先在原页面提问；需要读写项目文件时再关联目录。",
+      "en": "Ask about the current page first. Link a directory when project file access is needed."
+    },
+    "此类型没有专用预览，可检查完整结构与来源。": {
+      "zh-CN": "此类型没有专用预览，可检查完整结构与来源。",
+      "en": "No dedicated preview exists for this type. Inspect its complete structure and sources."
+    },
+    "文件版本 ": {
+      "zh-CN": "文件版本 ",
+      "en": "File version "
+    },
+    "磁盘文件已变化。先重新打开并核对；保存时后端会检查原 SHA，草稿不会自动覆盖磁盘。": {
+      "zh-CN": "磁盘文件已变化。先重新打开并核对；保存时后端会检查原 SHA，草稿不会自动覆盖磁盘。",
+      "en": "The disk file changed. Reopen and check it first. Saving checks the original SHA; the draft does not overwrite the disk automatically."
+    },
+    "编辑工作文件": {
+      "zh-CN": "编辑工作文件",
+      "en": "Edit working file"
+    },
+    "与打开的版本一致": {
+      "zh-CN": "与打开的版本一致",
+      "en": "Matches the opened version"
+    },
+    "有未保存修改": {
+      "zh-CN": "有未保存修改",
+      "en": "Unsaved changes"
+    },
+    "保存文件": {
+      "zh-CN": "保存文件",
+      "en": "Save file"
+    },
+    "已保存 · ": {
+      "zh-CN": "已保存 · ",
+      "en": "Saved · "
+    },
+    "。重新打开可查看最新版本。": {
+      "zh-CN": "。重新打开可查看最新版本。",
+      "en": ". Reopen to view the latest version."
+    },
+    "任务书 · 版本 ": {
+      "zh-CN": "任务书 · 版本 ",
+      "en": "Taskbook · Revision "
+    },
+    "来源当前有效": {
+      "zh-CN": "来源当前有效",
+      "en": "Sources currently valid"
+    },
+    "来源待复核": {
+      "zh-CN": "来源待复核",
+      "en": "Sources need checking"
+    },
+    "编辑文稿": {
+      "zh-CN": "编辑文稿",
+      "en": "Edit document"
+    },
+    "此节尚未补充。": {
+      "zh-CN": "此节尚未补充。",
+      "en": "This section has no content yet."
+    },
+    "{value0}内容": {
+      "zh-CN": "{value0}内容",
+      "en": "{value0} content"
+    },
+    " 处精确来源": {
+      "zh-CN": " 处精确来源",
+      "en": " exact source references"
+    },
+    "保存将追加新版本": {
+      "zh-CN": "保存将追加新版本",
+      "en": "Saving appends a new version"
+    },
+    "任务链 · 版本 ": {
+      "zh-CN": "任务链 · 版本 ",
+      "en": "Task chain · Revision "
+    },
+    "依赖通过验收后，下游任务才能开始。每个任务保留自己的运行与证据。": {
+      "zh-CN": "依赖通过验收后，下游任务才能开始。每个任务保留自己的运行与证据。",
+      "en": "Downstream tasks can start after dependencies pass acceptance checks. Each task retains its own runs and evidence."
+    },
+    "节点 {value0} 的详情": {
+      "zh-CN": "节点 {value0} 的详情",
+      "en": "Details for node {value0}"
+    },
+    "逐项查看任务": {
+      "zh-CN": "逐项查看任务",
+      "en": "Inspect tasks individually"
+    },
+    "任务节点详情": {
+      "zh-CN": "任务节点详情",
+      "en": "Task node details"
+    },
+    "待复核": {
+      "zh-CN": "待复核",
+      "en": "Needs review"
+    },
+    "依赖 ": {
+      "zh-CN": "依赖 ",
+      "en": "Dependencies "
+    },
+    "工具与绑定任务": {
+      "zh-CN": "工具与绑定任务",
+      "en": "Tools and linked tasks"
+    },
+    "运行 ": {
+      "zh-CN": "运行 ",
+      "en": "Run "
+    },
+    "本流程交付到 harness 文件；任务执行由后续工作显式决定。": {
+      "zh-CN": "本流程交付到 harness 文件；任务执行由后续工作显式决定。",
+      "en": "This workflow delivers harness files. Task execution is explicitly decided in later work."
+    },
+    "开始 ": {
+      "zh-CN": "开始 ",
+      "en": "Start "
+    },
+    "此次开始的范围与理由": {
+      "zh-CN": "此次开始的范围与理由",
+      "en": "Scope and reason for this start"
+    },
+    "说明已确认的输入和此次要完成的范围": {
+      "zh-CN": "说明已确认的输入和此次要完成的范围",
+      "en": "Describe confirmed inputs and the scope to complete now"
+    },
+    "取消": {
+      "zh-CN": "取消",
+      "en": "Cancel"
+    },
+    "提交中…": {
+      "zh-CN": "提交中…",
+      "en": "Submitting…"
+    },
+    "明确开始": {
+      "zh-CN": "明确开始",
+      "en": "Explicitly start"
+    },
+    "报告产物": {
+      "zh-CN": "报告产物",
+      "en": "Report artifact"
+    },
+    "下载报告": {
+      "zh-CN": "下载报告",
+      "en": "Download report"
+    },
+    "下载独立待确认文件": {
+      "zh-CN": "下载独立待确认文件",
+      "en": "Download separate open-questions file"
+    },
+    "文稿来源与生成回执": {
+      "zh-CN": "文稿来源与生成回执",
+      "en": "Document sources and generation receipt"
+    },
+    "文字说明": {
+      "zh-CN": "文字说明",
+      "en": "Text comment"
+    },
+    "圈选画面": {
+      "zh-CN": "圈选画面",
+      "en": "Mark image"
+    },
+    "自由勾画": {
+      "zh-CN": "自由勾画",
+      "en": "Freehand drawing"
+    },
+    "图片无法解码成有效画面": {
+      "zh-CN": "图片无法解码成有效画面",
+      "en": "The image could not be decoded into a valid frame"
+    },
+    "先在左侧选择真实资料并加入梳理，再选择此离线资料": {
+      "zh-CN": "先在左侧选择真实资料并加入梳理，再选择此离线资料",
+      "en": "Select actual material on the left and add it to discovery before choosing this offline material"
+    },
+    "保存来源": {
+      "zh-CN": "保存来源",
+      "en": "Save source"
+    },
+    "已保存": {
+      "zh-CN": "已保存",
+      "en": "Saved"
+    },
+    "部分覆盖": {
+      "zh-CN": "部分覆盖",
+      "en": "Partial coverage"
+    },
+    "采集失败": {
+      "zh-CN": "采集失败",
+      "en": "Collection failed"
+    },
+    "处理中": {
+      "zh-CN": "处理中",
+      "en": "Processing"
+    },
+    "结果待核查": {
+      "zh-CN": "结果待核查",
+      "en": "Result needs inspection"
+    },
+    "加入梳理": {
+      "zh-CN": "加入梳理",
+      "en": "Add to discovery"
+    },
+    "已撤回桌面控制授权；停止回执可在控制详情查看。": {
+      "zh-CN": "已撤回桌面控制授权；停止回执可在控制详情查看。",
+      "en": "Desktop control authorization was revoked. View the stop receipt in control details."
+    },
+    "问题": {
+      "zh-CN": "问题",
+      "en": "Problem"
+    },
+    "需要": {
+      "zh-CN": "需要",
+      "en": "Need"
+    },
+    "要求": {
+      "zh-CN": "要求",
+      "en": "Requirement"
+    },
+    "约束": {
+      "zh-CN": "约束",
+      "en": "Constraint"
+    },
+    "风险": {
+      "zh-CN": "风险",
+      "en": "Risk"
+    },
+    "假设": {
+      "zh-CN": "假设",
+      "en": "Assumption"
+    },
+    "决定": {
+      "zh-CN": "决定",
+      "en": "Decision"
+    },
+    "用户陈述": {
+      "zh-CN": "用户陈述",
+      "en": "User statement"
+    },
+    "资料事实": {
+      "zh-CN": "资料事实",
+      "en": "Material fact"
+    },
+    "探索问题": {
+      "zh-CN": "探索问题",
+      "en": "Explore the problem"
+    },
+    "明确问题": {
+      "zh-CN": "明确问题",
+      "en": "Define the problem"
+    },
+    "核查与比较": {
+      "zh-CN": "核查与比较",
+      "en": "Investigate and compare"
+    },
+    "完善要求": {
+      "zh-CN": "完善要求",
+      "en": "Refine requirements"
+    },
+    "准备任务计划": {
+      "zh-CN": "准备任务计划",
+      "en": "Prepare task plan"
+    },
+    "官方资料陈述": {
+      "zh-CN": "官方资料陈述",
+      "en": "Statement in official material"
+    },
+    "用户测试记录": {
+      "zh-CN": "用户测试记录",
+      "en": "User test record"
+    },
+    "推断": {
+      "zh-CN": "推断",
+      "en": "Inference"
+    },
+    "待核实": {
+      "zh-CN": "待核实",
+      "en": "Not verified"
+    },
+    "先关联工作目录，或在桌面版本选择电脑文件": {
+      "zh-CN": "先关联工作目录，或在桌面版本选择电脑文件",
+      "en": "Link a working directory first, or choose a computer file in the desktop version"
+    },
+    "请选择当前有效的 DOCX 或 DOTX 模板": {
+      "zh-CN": "请选择当前有效的 DOCX 或 DOTX 模板",
+      "en": "Choose a currently valid DOCX or DOTX template"
+    },
+    "先调整问题和图对这一条目的引用，再删除": {
+      "zh-CN": "先调整问题和图对这一条目的引用，再删除",
+      "en": "Update question and graph references to this item before deleting it"
+    },
+    "确认要求": {
+      "zh-CN": "确认要求",
+      "en": "Confirm requirements"
+    },
+    "读取任务计划": {
+      "zh-CN": "读取任务计划",
+      "en": "Read task plan"
+    },
+    "继续共同梳理": {
+      "zh-CN": "继续共同梳理",
+      "en": "Continue discovery together"
+    },
+    "读取竞品资料": {
+      "zh-CN": "读取竞品资料",
+      "en": "Read competitor material"
+    },
+    "生成精确版本图": {
+      "zh-CN": "生成精确版本图",
+      "en": "Generate exact-version graphs"
+    },
+    "选择 Word 模板": {
+      "zh-CN": "选择 Word 模板",
+      "en": "Choose Word template"
+    },
+    "读取模板": {
+      "zh-CN": "读取模板",
+      "en": "Read template"
+    },
+    "读取模板经验": {
+      "zh-CN": "读取模板经验",
+      "en": "Read template experience"
+    },
+    "生成阶段产物": {
+      "zh-CN": "生成阶段产物",
+      "en": "Generate stage outputs"
+    },
+    "读取上次交付回执": {
+      "zh-CN": "读取上次交付回执",
+      "en": "Read previous delivery receipt"
+    },
+    "选择模板或写法样例": {
+      "zh-CN": "选择模板或写法样例",
+      "en": "Choose template or writing sample"
+    },
+    "文件已变化，请重新选择": {
+      "zh-CN": "文件已变化，请重新选择",
+      "en": "The file changed. Choose it again."
+    },
+    "选择 MD、TXT、DOCX 或 DOTX 文件": {
+      "zh-CN": "选择 MD、TXT、DOCX 或 DOTX 文件",
+      "en": "Choose an MD, TXT, DOCX, or DOTX file"
+    },
+    "选择来源文件": {
+      "zh-CN": "选择来源文件",
+      "en": "Choose source file"
+    },
+    "读取来源文件": {
+      "zh-CN": "读取来源文件",
+      "en": "Read source file"
+    },
+    "观察模板写法": {
+      "zh-CN": "观察模板写法",
+      "en": "Observe template writing style"
+    },
+    "结构": {
+      "zh-CN": "结构",
+      "en": "Structure"
+    },
+    "语气": {
+      "zh-CN": "语气",
+      "en": "Tone"
+    },
+    "术语": {
+      "zh-CN": "术语",
+      "en": "Terminology"
+    },
+    "证据呈现": {
+      "zh-CN": "证据呈现",
+      "en": "Evidence presentation"
+    },
+    "版式": {
+      "zh-CN": "版式",
+      "en": "Layout"
+    },
+    "保存审阅版本": {
+      "zh-CN": "保存审阅版本",
+      "en": "Save reviewed version"
+    },
+    "选择与文字": {
+      "zh-CN": "选择与文字",
+      "en": "Select and comment"
+    },
+    "矩形圈选": {
+      "zh-CN": "矩形圈选",
+      "en": "Rectangle"
+    },
+    "删除": {
+      "zh-CN": "删除",
+      "en": "Delete"
+    },
+    "已删除的历史条目；无法打开原件": {
+      "zh-CN": "已删除的历史条目；无法打开原件",
+      "en": "Deleted historical entry; original file cannot be opened"
+    },
+    "新增": {
+      "zh-CN": "新增",
+      "en": "Added"
+    },
+    "相对首次观察新增": {
+      "zh-CN": "相对首次观察新增",
+      "en": "Added since first observation"
+    },
+    "修改": {
+      "zh-CN": "修改",
+      "en": "Modified"
+    },
+    "实际字节 SHA 已变化": {
+      "zh-CN": "实际字节 SHA 已变化",
+      "en": "Actual byte SHA changed"
+    },
+    "读取原追加历史": {
+      "zh-CN": "读取原追加历史",
+      "en": "Read original append history"
+    },
+    "读取原任务状态": {
+      "zh-CN": "读取原任务状态",
+      "en": "Read original task status"
+    },
+    "请核对当前页、模型配置与准确选文": {
+      "zh-CN": "请核对当前页、模型配置与准确选文",
+      "en": "Check the current page, model configuration, and exact selected text"
+    },
+    "准备只读选文预览": {
+      "zh-CN": "准备只读选文预览",
+      "en": "Prepare read-only selection preview"
+    },
+    "等待原生对话框确认并追加": {
+      "zh-CN": "等待原生对话框确认并追加",
+      "en": "Await native-dialog confirmation and append"
+    },
+    "只读核查原追加操作": {
+      "zh-CN": "只读核查原追加操作",
+      "en": "Inspect original append operation without writing"
+    },
+    "读取追加资格与历史回执": {
+      "zh-CN": "读取追加资格与历史回执",
+      "en": "Read append eligibility and historical receipts"
+    },
+    "撤销本次权限并交由用户接管": {
+      "zh-CN": "撤销本次权限并交由用户接管",
+      "en": "Revoke this permission and return control to the user"
+    },
+    "原生文件打开接口尚未连接": {
+      "zh-CN": "原生文件打开接口尚未连接",
+      "en": "Native file opening is not connected yet"
+    },
+    "原件已变化，请先读取最新版本": {
+      "zh-CN": "原件已变化，请先读取最新版本",
+      "en": "The source changed. Read the latest version first."
+    },
+    "文件字节与来源版本不符，请重新读取": {
+      "zh-CN": "文件字节与来源版本不符，请重新读取",
+      "en": "File bytes do not match the source version. Read it again."
+    },
+    "打开原软件": {
+      "zh-CN": "打开原软件",
+      "en": "Open original application"
+    },
+    "任务与对象已关联": {
+      "zh-CN": "任务与对象已关联",
+      "en": "Tasks and object are linked"
+    },
+    "需要明确对象与任务": {
+      "zh-CN": "需要明确对象与任务",
+      "en": "Specify the object and tasks"
+    },
+    "此格式尚未适配修改": {
+      "zh-CN": "此格式尚未适配修改",
+      "en": "Editing is not supported for this format yet"
+    },
+    "局部变更预览": {
+      "zh-CN": "局部变更预览",
+      "en": "Local change preview"
+    },
+    "限定变更已应用": {
+      "zh-CN": "限定变更已应用",
+      "en": "Scoped changes applied"
+    },
+    "部分应用，需核查": {
+      "zh-CN": "部分应用，需核查",
+      "en": "Partially applied; inspection needed"
+    },
+    "文件冲突，保留人工内容": {
+      "zh-CN": "文件冲突，保留人工内容",
+      "en": "File conflict; manual content retained"
+    },
+    "执行结果未知，需核查": {
+      "zh-CN": "执行结果未知，需核查",
+      "en": "Execution outcome unknown; inspection needed"
+    },
+    "读取时任务与需求依据一致": {
+      "zh-CN": "读取时任务与需求依据一致",
+      "en": "Task and requirements basis matched when read"
+    },
+    "原任务或需求已变化，需核对": {
+      "zh-CN": "原任务或需求已变化，需核对",
+      "en": "Original tasks or requirements changed; checking needed"
+    },
+    "尚未判定": {
+      "zh-CN": "尚未判定",
+      "en": "Not determined"
+    },
+    "数据": {
+      "zh-CN": "数据",
+      "en": "Data"
+    },
+    "表达": {
+      "zh-CN": "表达",
+      "en": "Presentation"
+    },
+    "需重新核对": {
+      "zh-CN": "需重新核对",
+      "en": "Needs checking again"
+    },
+    "影响未知": {
+      "zh-CN": "影响未知",
+      "en": "Impact unknown"
+    },
+    "按声明条件保留": {
+      "zh-CN": "按声明条件保留",
+      "en": "Retained under declared conditions"
+    },
+    "沿用已确认对象关系": {
+      "zh-CN": "沿用已确认对象关系",
+      "en": "Reuse confirmed object relationships"
+    },
+    "实际唯一来源锚点": {
+      "zh-CN": "实际唯一来源锚点",
+      "en": "Actual unique source anchor"
+    },
+    "用户确认的对象关系": {
+      "zh-CN": "用户确认的对象关系",
+      "en": "User-confirmed object relationship"
+    },
+    "实际导出产物的唯一生成任务": {
+      "zh-CN": "实际导出产物的唯一生成任务",
+      "en": "Unique generating task of the actual exported artifact"
+    },
+    "读取原返工记录": {
+      "zh-CN": "读取原返工记录",
+      "en": "Read original rework records"
+    },
+    "读取任务与原生预览": {
+      "zh-CN": "读取任务与原生预览",
+      "en": "Read tasks and native previews"
+    },
+    "请输入准确 JSON Pointer，例如 /tasks/a/requirement": {
+      "zh-CN": "请输入准确 JSON Pointer，例如 /tasks/a/requirement",
+      "en": "Enter an exact JSON Pointer, such as /tasks/a/requirement"
+    },
+    "请从实际已确认方案中选择本次任务版本": {
+      "zh-CN": "请从实际已确认方案中选择本次任务版本",
+      "en": "Choose this task version from an actual confirmed proposal"
+    },
+    "请明确关联的实际任务": {
+      "zh-CN": "请明确关联的实际任务",
+      "en": "Specify the actual linked tasks"
+    },
+    "请明确新值与输入条件声明": {
+      "zh-CN": "请明确新值与输入条件声明",
+      "en": "Specify the new value and input-condition declaration"
+    },
+    "请先核对实际预览和原执行结果": {
+      "zh-CN": "请先核对实际预览和原执行结果",
+      "en": "Check the actual preview and original execution result first"
+    },
+    "读取任务关联": {
+      "zh-CN": "读取任务关联",
+      "en": "Read task links"
+    },
+    "读取并解析实际关系": {
+      "zh-CN": "读取并解析实际关系",
+      "en": "Read and resolve actual relationships"
+    },
+    "请求原 Agent 准备预览": {
+      "zh-CN": "请求原 Agent 准备预览",
+      "en": "Ask original Agent to prepare a preview"
+    },
+    "保存明确对象关系": {
+      "zh-CN": "保存明确对象关系",
+      "en": "Save explicit object relationships"
+    },
+    "保存局部变更预览": {
+      "zh-CN": "保存局部变更预览",
+      "en": "Save local change preview"
+    },
+    "应用已核对局部变更": {
+      "zh-CN": "应用已核对局部变更",
+      "en": "Apply checked local changes"
+    },
+    "打开实际应用版本": {
+      "zh-CN": "打开实际应用版本",
+      "en": "Open actual applied version"
+    },
+    "核查原返工操作": {
+      "zh-CN": "核查原返工操作",
+      "en": "Inspect original rework operation"
+    },
+    "正在重载识别记录": {
+      "zh-CN": "正在重载识别记录",
+      "en": "Reloading recognition records"
+    },
+    "正在本机 CPU 识别": {
+      "zh-CN": "正在本机 CPU 识别",
+      "en": "Recognizing on local CPU"
+    },
+    "请在同一识别行内选择文字；跨行内容保留为画面批注。": {
+      "zh-CN": "请在同一识别行内选择文字；跨行内容保留为画面批注。",
+      "en": "Select text within one recognized line. Cross-line content remains an image annotation."
+    },
+    "模板缺少已关联的真实工作目录": {
+      "zh-CN": "模板缺少已关联的真实工作目录",
+      "en": "The template has no actual linked working directory"
+    },
+    "模板来源已变化，或文件不是 DOCX / DOTX": {
+      "zh-CN": "模板来源已变化，或文件不是 DOCX / DOTX",
+      "en": "The template source changed, or the file is not DOCX / DOTX"
+    },
+    "请选择已经关联并授予写入范围的目录": {
+      "zh-CN": "请选择已经关联并授予写入范围的目录",
+      "en": "Choose a linked directory with existing write access"
+    },
+    "任务网络需要至少保留一个节点": {
+      "zh-CN": "任务网络需要至少保留一个节点",
+      "en": "The task network must retain at least one node"
+    },
+    "先调整引用此节点的依赖、父子关系和问题影响范围，再删除": {
+      "zh-CN": "先调整引用此节点的依赖、父子关系和问题影响范围，再删除",
+      "en": "Update dependencies, parent-child relationships, and question impacts referring to this node before deleting it"
+    },
+    "选择模板": {
+      "zh-CN": "选择模板",
+      "en": "Choose template"
+    },
+    "本机文件选择器尚未连接": {
+      "zh-CN": "本机文件选择器尚未连接",
+      "en": "The local file picker is not connected yet"
+    },
+    "检查任务网络": {
+      "zh-CN": "检查任务网络",
+      "en": "Check task network"
+    },
+    "保存提案": {
+      "zh-CN": "保存提案",
+      "en": "Save proposal"
+    },
+    "确认计划": {
+      "zh-CN": "确认计划",
+      "en": "Confirm plan"
+    },
+    "生成任务书": {
+      "zh-CN": "生成任务书",
+      "en": "Generate taskbook"
+    },
+    "生成草稿报告": {
+      "zh-CN": "生成草稿报告",
+      "en": "Generate draft report"
+    },
+    "输入": {
+      "zh-CN": "输入",
+      "en": "Inputs"
+    },
+    "验收": {
+      "zh-CN": "验收",
+      "en": "Acceptance"
+    },
+    "所需能力": {
+      "zh-CN": "所需能力",
+      "en": "Required capabilities"
+    },
+    "来源必须是列表": {
+      "zh-CN": "来源必须是列表",
+      "en": "Sources must be a list"
+    },
+    "没有找到此节点": {
+      "zh-CN": "没有找到此节点",
+      "en": "This node was not found"
+    },
+    "没有找到匹配节点": {
+      "zh-CN": "没有找到匹配节点",
+      "en": "No matching node found"
+    },
+    "正在读取真实 Word 文件": {
+      "zh-CN": "正在读取真实 Word 文件",
+      "en": "Reading actual Word file"
+    },
+    "此文件较大，请下载后在本机 Word 中查看": {
+      "zh-CN": "此文件较大，请下载后在本机 Word 中查看",
+      "en": "This file is large. Download it and view it in local Word."
+    },
+    "Word 字节与生成凭据 SHA 不符，请重新生成或核查来源": {
+      "zh-CN": "Word 字节与生成凭据 SHA 不符，请重新生成或核查来源",
+      "en": "Word bytes do not match the generation receipt SHA. Regenerate or inspect the source."
+    },
+    "预览容器不可用": {
+      "zh-CN": "预览容器不可用",
+      "en": "Preview container unavailable"
+    },
+    "实际 DOCX 已渲染；复杂分页和字段以本机 Word 为准": {
+      "zh-CN": "实际 DOCX 已渲染；复杂分页和字段以本机 Word 为准",
+      "en": "Actual DOCX rendered; complex pagination and fields should be checked in local Word"
+    },
+    "这段选文不在已覆盖的报告正文内，无法可靠定位。": {
+      "zh-CN": "这段选文不在已覆盖的报告正文内，无法可靠定位。",
+      "en": "This selection is outside the covered report body and cannot be located reliably."
+    },
+    "报告依据的版本已变化，请先生成当前版本的 Word，再批注": {
+      "zh-CN": "报告依据的版本已变化，请先生成当前版本的 Word，再批注",
+      "en": "The report's source version changed. Generate Word from the current version before annotating."
+    },
+    "这段选文无法与实际报告正文可靠对齐，可保留查看或在原软件编辑。": {
+      "zh-CN": "这段选文无法与实际报告正文可靠对齐，可保留查看或在原软件编辑。",
+      "en": "This selection cannot be aligned reliably with the actual report body. Keep it for viewing or edit in the original application."
+    },
+    "需求与图": {
+      "zh-CN": "需求与图",
+      "en": "Requirements and graphs"
+    },
+    "任务与图": {
+      "zh-CN": "任务与图",
+      "en": "Tasks and graphs"
+    },
+    "任务书": {
+      "zh-CN": "任务书",
+      "en": "Taskbook"
+    },
+    "交付": {
+      "zh-CN": "交付",
+      "en": "Delivery"
+    },
+    "批注视图没有有效尺寸": {
+      "zh-CN": "批注视图没有有效尺寸",
+      "en": "The annotation view has no valid dimensions"
+    },
+    "本地服务没有返回写入令牌": {
+      "zh-CN": "本地服务没有返回写入令牌",
+      "en": "The local service did not return a write token"
+    },
+    "本地服务返回了无法解析的响应": {
+      "zh-CN": "本地服务返回了无法解析的响应",
+      "en": "The local service returned an unreadable response"
+    },
+    "文件读取失败": {
+      "zh-CN": "文件读取失败",
+      "en": "File read failed"
+    },
+    "加载更多需要当前目录的观察版本": {
+      "zh-CN": "加载更多需要当前目录的观察版本",
+      "en": "Loading more requires the current directory observation revision"
+    },
+    "文件没有绑定这条交付回答": {
+      "zh-CN": "文件没有绑定这条交付回答",
+      "en": "The file is not bound to this delivery answer"
+    },
+    "文件不属于这条回答的实际交付来源": {
+      "zh-CN": "文件不属于这条回答的实际交付来源",
+      "en": "The file is not part of this answer's actual delivery source"
+    },
+    "文件选择器必须返回实际本机绝对路径": {
+      "zh-CN": "文件选择器必须返回实际本机绝对路径",
+      "en": "The file picker must return an actual local absolute path"
+    },
+    "请选择一个实际文件": {
+      "zh-CN": "请选择一个实际文件",
+      "en": "Choose an actual file"
+    },
+    "所选文件的目录绑定已变化，原有选择保留": {
+      "zh-CN": "所选文件的目录绑定已变化，原有选择保留",
+      "en": "The selected file's directory binding changed. The existing selection is retained."
+    },
+    "缺少实际文件来源，先选择文件": {
+      "zh-CN": "缺少实际文件来源，先选择文件",
+      "en": "No actual file source. Select a file first."
+    },
+    "文件来源版本不一致，原引用未更换": {
+      "zh-CN": "文件来源版本不一致，原引用未更换",
+      "en": "The file source version differs. The original reference was not replaced."
+    },
+    "所选文件已变化，人工内容保留；先重新读取并核对当前版本": {
+      "zh-CN": "所选文件已变化，人工内容保留；先重新读取并核对当前版本",
+      "en": "The selected file changed. Manual content is retained; read and check the current version first."
+    },
+    "选择当前要处理的文件": {
+      "zh-CN": "选择当前要处理的文件",
+      "en": "Choose the file to work on now"
+    },
+    "本轮请选择一个明确的文件": {
+      "zh-CN": "本轮请选择一个明确的文件",
+      "en": "Choose one specific file for this operation"
+    },
+    "所选文件来源已变化，请重新选择": {
+      "zh-CN": "所选文件来源已变化，请重新选择",
+      "en": "The selected file source changed. Select it again."
+    },
+    "当前文件修改仅支持 1 MiB 以内的 UTF-8 文本；反馈可以单独保存": {
+      "zh-CN": "当前文件修改仅支持 1 MiB 以内的 UTF-8 文本；反馈可以单独保存",
+      "en": "Current file editing supports UTF-8 text up to 1 MiB. Feedback can be saved separately."
+    },
+    "授权期间文件发生变化；没有启动修改，先核对当前文件": {
+      "zh-CN": "授权期间文件发生变化；没有启动修改，先核对当前文件",
+      "en": "The file changed during authorization. Editing did not start; check the current file first."
+    },
+    "当前文件来源尚未可核实": {
+      "zh-CN": "当前文件来源尚未可核实",
+      "en": "The current file source cannot be verified yet"
+    },
+    "一条消息最多携带20个批注": {
+      "zh-CN": "一条消息最多携带20个批注",
+      "en": "A message can carry at most 20 annotations"
+    },
+    "交付恢复缺少实际来源版本": {
+      "zh-CN": "交付恢复缺少实际来源版本",
+      "en": "Delivery recovery lacks an actual source version"
+    },
+    "从实际需求工作或提案读取交付回执": {
+      "zh-CN": "从实际需求工作或提案读取交付回执",
+      "en": "Read delivery receipts from the actual discovery work or proposal"
+    },
+    "交付读取入口与当前来源身份不一致": {
+      "zh-CN": "交付读取入口与当前来源身份不一致",
+      "en": "The delivery read entry does not match the current source identity"
+    },
+    "原操作属于另一项目或来源；未恢复为当前交付": {
+      "zh-CN": "原操作属于另一项目或来源；未恢复为当前交付",
+      "en": "The original operation belongs to another project or source and was not restored as this delivery"
+    },
+    "原操作不是此来源类型的交付；需核查原编号": {
+      "zh-CN": "原操作不是此来源类型的交付；需核查原编号",
+      "en": "The original operation is not a delivery for this source type. Inspect its original ID."
+    },
+    "阶段产物": {
+      "zh-CN": "阶段产物",
+      "en": "Stage outputs"
+    },
+    "交付文件": {
+      "zh-CN": "交付文件",
+      "en": "Delivery files"
+    },
+    "交付操作待核对": {
+      "zh-CN": "交付操作待核对",
+      "en": "Delivery operation needs checking"
+    },
+    "交付回执尚未核对": {
+      "zh-CN": "交付回执尚未核对",
+      "en": "Delivery receipt has not been checked"
+    },
+    "读取交付需要原操作编号和实际来源": {
+      "zh-CN": "读取交付需要原操作编号和实际来源",
+      "en": "Reading delivery requires the original operation ID and actual source"
+    },
+    "当前项目或来源已切换，回执未加入另一聊天": {
+      "zh-CN": "当前项目或来源已切换，回执未加入另一聊天",
+      "en": "The project or source changed. The receipt was not added to another conversation."
+    },
+    "已有更新的原回执读取，旧响应未替换当前核对": {
+      "zh-CN": "已有更新的原回执读取，旧响应未替换当前核对",
+      "en": "A newer original-receipt read exists. The late response did not replace the current inspection."
+    },
+    "历史控制回执已失效，需要刷新当前归属": {
+      "zh-CN": "历史控制回执已失效，需要刷新当前归属",
+      "en": "The historical control receipt expired. Refresh current ownership."
+    },
+    "桌面控制状态回执不完整": {
+      "zh-CN": "桌面控制状态回执不完整",
+      "en": "The desktop-control receipt is incomplete"
+    },
+    "桌面控制接口尚未连接，当前由用户操作": {
+      "zh-CN": "桌面控制接口尚未连接，当前由用户操作",
+      "en": "Desktop control is not connected. The user remains in control."
+    },
+    "桌面输入通路尚未完成真实资格验证": {
+      "zh-CN": "桌面输入通路尚未完成真实资格验证",
+      "en": "The desktop-input path has not completed actual qualification"
+    },
+    "当前工作面身份或输入版本尚未同步": {
+      "zh-CN": "当前工作面身份或输入版本尚未同步",
+      "en": "Current surface identity or input revision has not been synchronized"
+    },
+    "当前交互面板已暂停下层电脑输入": {
+      "zh-CN": "当前交互面板已暂停下层电脑输入",
+      "en": "The current interactive panel has paused input to the computer underneath"
+    },
+    "尚未取得可授权的真实 Agent 执行与请求来源": {
+      "zh-CN": "尚未取得可授权的真实 Agent 执行与请求来源",
+      "en": "No actual Agent execution and request source is available for authorization yet"
+    },
+    "与首次观察一致": {
+      "zh-CN": "与首次观察一致",
+      "en": "Matches first observation"
+    },
+    "已修改": {
+      "zh-CN": "已修改",
+      "en": "Modified"
+    },
+    "已删除": {
+      "zh-CN": "已删除",
+      "en": "Deleted"
+    },
+    "未核验": {
+      "zh-CN": "未核验",
+      "en": "Not checked"
+    },
+    "目录观察范围与请求不符": {
+      "zh-CN": "目录观察范围与请求不符",
+      "en": "The directory observation scope differs from the request"
+    },
+    "目录分页版本已变化，请刷新后重试": {
+      "zh-CN": "目录分页版本已变化，请刷新后重试",
+      "en": "The directory page revision changed. Refresh and try again."
+    },
+    "目录分页包含范围外条目": {
+      "zh-CN": "目录分页包含范围外条目",
+      "en": "The directory page includes out-of-scope entries"
+    },
+    "目录分页包含重复条目": {
+      "zh-CN": "目录分页包含重复条目",
+      "en": "The directory page contains duplicate entries"
+    },
+    "反馈文件不属于当前项目": {
+      "zh-CN": "反馈文件不属于当前项目",
+      "en": "The feedback file does not belong to the current project"
+    },
+    "请先写下反馈": {
+      "zh-CN": "请先写下反馈",
+      "en": "Write feedback first"
+    },
+    "任务图节点重复": {
+      "zh-CN": "任务图节点重复",
+      "en": "The task graph has duplicate nodes"
+    },
+    "任务图不能自依赖": {
+      "zh-CN": "任务图不能自依赖",
+      "en": "A task graph node cannot depend on itself"
+    },
+    "图片没有真实 PNG / JPEG 字节签名": {
+      "zh-CN": "图片没有真实 PNG / JPEG 字节签名",
+      "en": "The image has no actual PNG / JPEG byte signature"
+    },
+    "图片格式与扩展名或 MIME 不符": {
+      "zh-CN": "图片格式与扩展名或 MIME 不符",
+      "en": "The image format differs from its extension or MIME type"
+    },
+    "图片字节与来源 SHA 不符": {
+      "zh-CN": "图片字节与来源 SHA 不符",
+      "en": "Image bytes do not match the source SHA"
+    },
+    "普通产物留在聊天；用户可主动查看": {
+      "zh-CN": "普通产物留在聊天；用户可主动查看",
+      "en": "Ordinary artifacts stay in chat; users can open them explicitly"
+    },
+    "没有当前版本的活跃交互请求": {
+      "zh-CN": "没有当前版本的活跃交互请求",
+      "en": "There is no active interactive request for the current version"
+    },
+    "主动打开实际文件或预览；主工作面保留原软件路径": {
+      "zh-CN": "主动打开实际文件或预览；主工作面保留原软件路径",
+      "en": "Explicitly open the actual file or preview; the main surface retains its original-application path"
+    },
+    "轻量内置操作，不阻断其余工作区": {
+      "zh-CN": "轻量内置操作，不阻断其余工作区",
+      "en": "Lightweight built-in interaction; other workspace areas remain available"
+    },
+    "主动审阅当前结构化产物，使用内置互动工具": {
+      "zh-CN": "主动审阅当前结构化产物，使用内置互动工具",
+      "en": "Explicitly review the current structured artifact with built-in interactive tools"
+    },
+    "该产物没有声明交互能力": {
+      "zh-CN": "该产物没有声明交互能力",
+      "en": "This artifact declares no interactive capabilities"
+    },
+    "原 SDK 任务取消已确认。": {
+      "zh-CN": "原 SDK 任务取消已确认。",
+      "en": "Original SDK task cancellation was confirmed."
+    },
+    "原 SDK 任务是否停止仍需核查。": {
+      "zh-CN": "原 SDK 任务是否停止仍需核查。",
+      "en": "Whether the original SDK task stopped still needs checking."
+    },
+    "原解释任务的取消结果仍需核查。": {
+      "zh-CN": "原解释任务的取消结果仍需核查。",
+      "en": "Cancellation of the original interpretation task still needs checking."
+    },
+    "原话包含不完整 Unicode 字符，请重新输入": {
+      "zh-CN": "原话包含不完整 Unicode 字符，请重新输入",
+      "en": "Your text contains an incomplete Unicode character. Enter it again."
+    },
+    "请在用户原话中选中要追加的文字": {
+      "zh-CN": "请在用户原话中选中要追加的文字",
+      "en": "Select the text to append from the user's exact words"
+    },
+    "选文不能截断 Unicode 字符": {
+      "zh-CN": "选文不能截断 Unicode 字符",
+      "en": "A selection cannot split a Unicode character"
+    },
+    "单次追加最多 256 个 UTF-16 单元；请缩小选文": {
+      "zh-CN": "单次追加最多 256 个 UTF-16 单元；请缩小选文",
+      "en": "A single append supports up to 256 UTF-16 units. Reduce the selection."
+    },
+    "本轮追加不支持换行、制表符或控制字符": {
+      "zh-CN": "本轮追加不支持换行、制表符或控制字符",
+      "en": "This append does not support line breaks, tabs, or control characters"
+    },
+    "追加操作或来源引用不完整": {
+      "zh-CN": "追加操作或来源引用不完整",
+      "en": "The append operation or source reference is incomplete"
+    },
+    "用户原话应为 1–16000 个字符；草稿保留，未准备追加": {
+      "zh-CN": "用户原话应为 1–16000 个字符；草稿保留，未准备追加",
+      "en": "The user's exact words must contain 1–16000 characters. The draft is retained; no append was prepared."
+    },
+    "选文与当前用户原话不一致，请重新选择": {
+      "zh-CN": "选文与当前用户原话不一致，请重新选择",
+      "en": "The selection differs from the current user text. Select it again."
+    },
+    "追加历史的操作身份不完整": {
+      "zh-CN": "追加历史的操作身份不完整",
+      "en": "The append-history operation identity is incomplete"
+    },
+    "追加历史元数据不完整；未重发原操作": {
+      "zh-CN": "追加历史元数据不完整；未重发原操作",
+      "en": "Append-history metadata is incomplete. The original operation was not resent."
+    },
+    "追加历史无法读取；原记录保留，未重发": {
+      "zh-CN": "追加历史无法读取；原记录保留，未重发",
+      "en": "Append history could not be read. Original records are retained; nothing was resent."
+    },
+    "追加历史格式或数量需核查；原记录保留，未重发": {
+      "zh-CN": "追加历史格式或数量需核查；原记录保留，未重发",
+      "en": "Append-history format or count needs checking. Original records are retained; nothing was resent."
+    },
+    "追加历史包含重复操作身份，请核查": {
+      "zh-CN": "追加历史包含重复操作身份，请核查",
+      "en": "Append history contains duplicate operation identities. Inspect it."
+    },
+    "此操作身份已绑定另一操作类型": {
+      "zh-CN": "此操作身份已绑定另一操作类型",
+      "en": "This operation identity is bound to another operation type"
+    },
+    "追加历史的原绑定引用已变化": {
+      "zh-CN": "追加历史的原绑定引用已变化",
+      "en": "The original binding reference in append history changed"
+    },
+    "此接管操作已绑定另一意图版本": {
+      "zh-CN": "此接管操作已绑定另一意图版本",
+      "en": "This takeover operation is bound to another intent version"
+    },
+    "追加历史已达本地索引上限，未删除历史或发送新操作": {
+      "zh-CN": "追加历史已达本地索引上限，未删除历史或发送新操作",
+      "en": "The local append-history index is full. No history was deleted and no new operation was sent."
+    },
+    "原生追加回执不完整，请核查原操作": {
+      "zh-CN": "原生追加回执不完整，请核查原操作",
+      "en": "The native append receipt is incomplete. Inspect the original operation."
+    },
+    "回执超出本轮单次末尾追加范围": {
+      "zh-CN": "回执超出本轮单次末尾追加范围",
+      "en": "The receipt exceeds this operation's one-time end-append scope"
+    },
+    "原生追加回执引用不完整": {
+      "zh-CN": "原生追加回执引用不完整",
+      "en": "The native append receipt reference is incomplete"
+    },
+    "原生追加回执属于另一操作": {
+      "zh-CN": "原生追加回执属于另一操作",
+      "en": "The native append receipt belongs to another operation"
+    },
+    "回执追加文字与用户复核选文不同": {
+      "zh-CN": "回执追加文字与用户复核选文不同",
+      "en": "The appended text differs from the user-reviewed selection"
+    },
+    "原生追加预览引用已改变": {
+      "zh-CN": "原生追加预览引用已改变",
+      "en": "The native append preview reference changed"
+    },
+    "原生追加审批引用已改变": {
+      "zh-CN": "原生追加审批引用已改变",
+      "en": "The native append approval reference changed"
+    },
+    "尚未读取追加状态": {
+      "zh-CN": "尚未读取追加状态",
+      "en": "Append status has not been read"
+    },
+    "原缓冲区单次追加已核实 · 未保存文件": {
+      "zh-CN": "原缓冲区单次追加已核实 · 未保存文件",
+      "en": "One-time append to the original buffer verified · File not saved"
+    },
+    "当前软件或追加路径尚未适配": {
+      "zh-CN": "当前软件或追加路径尚未适配",
+      "en": "This application or append path is not supported yet"
+    },
+    "此记事本可准备追加，尚未授权": {
+      "zh-CN": "此记事本可准备追加，尚未授权",
+      "en": "This Notepad can prepare an append; not authorized yet"
+    },
+    "选文预览已锁定，尚未授权": {
+      "zh-CN": "选文预览已锁定，尚未授权",
+      "en": "Selection preview locked; not authorized yet"
+    },
+    "Main 已记录本次明确审批": {
+      "zh-CN": "Main 已记录本次明确审批",
+      "en": "Main recorded this explicit approval"
+    },
+    "尚未配置本次模型": {
+      "zh-CN": "尚未配置本次模型",
+      "en": "No model configured for this operation"
+    },
+    "未完成准确前台交接，需核查": {
+      "zh-CN": "未完成准确前台交接，需核查",
+      "en": "Exact foreground handover was not completed; inspection needed"
+    },
+    "原缓冲区已变化，需重新核查": {
+      "zh-CN": "原缓冲区已变化，需重新核查",
+      "en": "The original buffer changed; check it again"
+    },
+    "可能部分追加，需核查": {
+      "zh-CN": "可能部分追加，需核查",
+      "en": "A partial append is possible; inspection needed"
+    },
+    "追加结果未知，需核查": {
+      "zh-CN": "追加结果未知，需核查",
+      "en": "Append outcome unknown; inspection needed"
+    },
+    "追加状态未知，需核查": {
+      "zh-CN": "追加状态未知，需核查",
+      "en": "Append status unknown; inspection needed"
+    },
+    "历史操作，只读核查": {
+      "zh-CN": "历史操作，只读核查",
+      "en": "Historical operation; read-only inspection"
+    },
+    "本次追加权限已撤销": {
+      "zh-CN": "本次追加权限已撤销",
+      "en": "This append permission was revoked"
+    },
+    "原任务已结束，追加目标尚未核实": {
+      "zh-CN": "原任务已结束，追加目标尚未核实",
+      "en": "The original task ended; the append target has not been verified"
+    },
+    "已取消审批，未授予追加权限": {
+      "zh-CN": "已取消审批，未授予追加权限",
+      "en": "Approval was cancelled; no append permission granted"
+    },
+    "审批已取消": {
+      "zh-CN": "审批已取消",
+      "en": "Approval cancelled"
+    },
+    "正在交接并启动原任务": {
+      "zh-CN": "正在交接并启动原任务",
+      "en": "Handing over and starting the original task"
+    },
+    "原 Agent 正在解释本次已审批指令": {
+      "zh-CN": "原 Agent 正在解释本次已审批指令",
+      "en": "Original Agent is interpreting this approved instruction"
+    },
+    "原任务进行中": {
+      "zh-CN": "原任务进行中",
+      "en": "Original task running"
+    },
+    "正在核对实际缓冲区": {
+      "zh-CN": "正在核对实际缓冲区",
+      "en": "Checking the actual buffer"
+    },
+    "未找到回执；不能据此判定未执行": {
+      "zh-CN": "未找到回执；不能据此判定未执行",
+      "en": "No receipt found. This does not establish that nothing executed."
+    },
+    "当前页引用不完整": {
+      "zh-CN": "当前页引用不完整",
+      "en": "The current-page reference is incomplete"
+    },
+    "服务中未找到原追加回执；不证明没有执行，未自动重新审批或追加。": {
+      "zh-CN": "服务中未找到原追加回执；不证明没有执行，未自动重新审批或追加。",
+      "en": "The service has no original append receipt. This does not prove non-execution; no approval or append was repeated automatically."
+    },
+    "追加回执文字与其原选文摘要不一致": {
+      "zh-CN": "追加回执文字与其原选文摘要不一致",
+      "en": "The append receipt text differs from its original selection digest"
+    },
+    "原 Agent 回复的可信选文读取尚未适配，请使用用户原话": {
+      "zh-CN": "原 Agent 回复的可信选文读取尚未适配，请使用用户原话",
+      "en": "Trusted selection reading from original Agent replies is not supported yet. Use the user's exact words."
+    },
+    "此操作身份已绑定另一原话或来源，未发送": {
+      "zh-CN": "此操作身份已绑定另一原话或来源，未发送",
+      "en": "This operation identity is bound to another text or source. Nothing was sent."
+    },
+    "回执追加文字与原选文不一致": {
+      "zh-CN": "回执追加文字与原选文不一致",
+      "en": "The appended text differs from the original selection"
+    },
+    "只有本轮已核对的选文预览可以请求 Main 原生审批": {
+      "zh-CN": "只有本轮已核对的选文预览可以请求 Main 原生审批",
+      "en": "Only a selection preview verified in this operation can request Main's native approval"
+    },
+    "原追加操作尚未在本地准确记录，未派发": {
+      "zh-CN": "原追加操作尚未在本地准确记录，未派发",
+      "en": "The original append operation was not recorded exactly in the local index and was not dispatched"
+    },
+    "接管操作身份无效": {
+      "zh-CN": "接管操作身份无效",
+      "en": "The takeover operation identity is invalid"
+    },
+    "此接管操作已尝试；请读取当前状态，不重新撤销": {
+      "zh-CN": "此接管操作已尝试；请读取当前状态，不重新撤销",
+      "en": "This takeover operation was already attempted. Read current status instead of revoking again."
+    },
+    "尚无实际当前意图版本，未撤销或接管": {
+      "zh-CN": "尚无实际当前意图版本，未撤销或接管",
+      "en": "No actual current intent revision is available. No revoke or takeover was performed."
+    },
+    "撤销回执尚未核实；请只读检查当前任务": {
+      "zh-CN": "撤销回执尚未核实；请只读检查当前任务",
+      "en": "The revoke receipt is not verified. Inspect the current task without writing."
+    },
+    "原生对象回执不完整，请重新引用": {
+      "zh-CN": "原生对象回执不完整，请重新引用",
+      "en": "The native-object receipt is incomplete. Reference it again."
+    },
+    "观察服务已配置": {
+      "zh-CN": "观察服务已配置",
+      "en": "Observation service configured"
+    },
+    "观察服务未配置": {
+      "zh-CN": "观察服务未配置",
+      "en": "Observation service not configured"
+    },
+    "观察服务状态待核实": {
+      "zh-CN": "观察服务状态待核实",
+      "en": "Observation service status needs checking"
+    },
+    " · 当前仅部分观察": {
+      "zh-CN": " · 当前仅部分观察",
+      "en": " · Partial observation only"
+    },
+    "当前对象尚未取得": {
+      "zh-CN": "当前对象尚未取得",
+      "en": "Current object not available yet"
+    },
+    "原生会话回执不属于本次操作": {
+      "zh-CN": "原生会话回执不属于本次操作",
+      "en": "The native-session receipt does not belong to this operation"
+    },
+    "原生会话尚未连接": {
+      "zh-CN": "原生会话尚未连接",
+      "en": "Native session is not connected"
+    },
+    "原生会话观测尚未连接": {
+      "zh-CN": "原生会话观测尚未连接",
+      "en": "Native-session observation is not connected"
+    },
+    "尚未查到这次操作的服务记录。没有记录不证明未执行；原问题与操作编号保留，请核查，不能自动重发。": {
+      "zh-CN": "尚未查到这次操作的服务记录。没有记录不证明未执行；原问题与操作编号保留，请核查，不能自动重发。",
+      "en": "No service record was found for this operation yet. Missing records do not prove non-execution. The original question and operation ID are retained; inspect the operation without resending."
+    },
+    "原生会话取消接口尚未连接": {
+      "zh-CN": "原生会话取消接口尚未连接",
+      "en": "Native-session cancellation is not connected"
+    },
+    "草稿引用的对象版本已变化；请核对旧反馈并在原生页面重新定位。": {
+      "zh-CN": "草稿引用的对象版本已变化；请核对旧反馈并在原生页面重新定位。",
+      "en": "The object version referenced by this draft changed. Check the old feedback and locate it again in the native page."
+    },
+    "当前宿主尚未接入 App 全屏": {
+      "zh-CN": "当前宿主尚未接入 App 全屏",
+      "en": "This host does not support App fullscreen yet"
+    },
+    "宿主尚未确认 App 全屏状态": {
+      "zh-CN": "宿主尚未确认 App 全屏状态",
+      "en": "The host has not confirmed App fullscreen"
+    },
+    "固定文件与画面批注尚未建立精确关联；请明确本轮范围，原文件目标保留。": {
+      "zh-CN": "固定文件与画面批注尚未建立精确关联；请明确本轮范围，原文件目标保留。",
+      "en": "No exact relationship exists between the pinned file and screen annotation. Specify this operation's scope; the original file target is retained."
+    },
+    "本条消息超过16000字符，草稿保留；请缩小本轮问题或批注范围。": {
+      "zh-CN": "本条消息超过16000字符，草稿保留；请缩小本轮问题或批注范围。",
+      "en": "This message exceeds 16000 characters. The draft is retained; narrow the question or annotation scope."
+    },
+    "本机操作编号已关联另一条问题": {
+      "zh-CN": "本机操作编号已关联另一条问题",
+      "en": "The local operation ID is linked to another question"
+    },
+    "本机操作索引未能读取核对": {
+      "zh-CN": "本机操作索引未能读取核对",
+      "en": "The local operation index could not be read and checked"
+    },
+    "这次操作的实际结果暂未能核查；原问题与操作编号保留，请检查原执行，不能自动重发。": {
+      "zh-CN": "这次操作的实际结果暂未能核查；原问题与操作编号保留，请检查原执行，不能自动重发。",
+      "en": "The actual outcome could not be checked yet. The original question and operation ID are retained. Inspect the original execution; do not resend automatically."
+    },
+    "宿主未确认协作窗口切换，请重试": {
+      "zh-CN": "宿主未确认协作窗口切换，请重试",
+      "en": "The host did not confirm the collaboration-window switch. Try again."
+    },
+    "此宿主尚未提供固定轻量窗口": {
+      "zh-CN": "此宿主尚未提供固定轻量窗口",
+      "en": "This host does not support pinning the lightweight window yet"
+    },
+    "宿主未确认轻量窗口固定状态": {
+      "zh-CN": "宿主未确认轻量窗口固定状态",
+      "en": "The host has not confirmed the lightweight window's pinned state"
+    },
+    "原软件截图不属于当前项目的精确捕获": {
+      "zh-CN": "原软件截图不属于当前项目的精确捕获",
+      "en": "The application screenshot is not an exact capture for the current project"
+    },
+    "窗口捕获缺少完整的精确绑定": {
+      "zh-CN": "窗口捕获缺少完整的精确绑定",
+      "en": "The window capture lacks a complete exact binding"
+    },
+    "文件反馈回执与原始来源或批注不一致；请按操作编号核对，勿重复保存": {
+      "zh-CN": "文件反馈回执与原始来源或批注不一致；请按操作编号核对，勿重复保存",
+      "en": "The file-feedback receipt differs from the original source or annotation. Inspect the operation ID without saving again."
+    },
+    "反馈版本身份不一致": {
+      "zh-CN": "反馈版本身份不一致",
+      "en": "Feedback version identity differs"
+    },
+    "修改关联回执未绑定实际原始文件版本，请核对真实执行记录": {
+      "zh-CN": "修改关联回执未绑定实际原始文件版本，请核对真实执行记录",
+      "en": "The edit-link receipt is not bound to the actual original file version. Inspect the actual execution record."
+    },
+    "历史反馈依据不一致，保留原批注等待核查": {
+      "zh-CN": "历史反馈依据不一致，保留原批注等待核查",
+      "en": "Historical feedback basis differs. The original annotation is retained for inspection."
+    },
+    "文件选择器必须返回本机绝对路径": {
+      "zh-CN": "文件选择器必须返回本机绝对路径",
+      "en": "The file picker must return a local absolute path"
+    },
+    "选择 Word 报告模板": {
+      "zh-CN": "选择 Word 报告模板",
+      "en": "Choose Word report template"
+    },
+    "请选择一份 Word 模板": {
+      "zh-CN": "请选择一份 Word 模板",
+      "en": "Choose a Word template"
+    },
+    "模板来源已变化，请重新选择": {
+      "zh-CN": "模板来源已变化，请重新选择",
+      "en": "The template source changed. Select it again."
+    },
+    "返工回执的项目、原反馈或持久版本身份不一致，请核对原操作": {
+      "zh-CN": "返工回执的项目、原反馈或持久版本身份不一致，请核对原操作",
+      "en": "The rework receipt's project, original feedback, or persistent-version identity differs. Inspect the original operation."
+    },
+    "返工持久引用不一致": {
+      "zh-CN": "返工持久引用不一致",
+      "en": "Persistent rework reference differs"
+    },
+    "任务关联缺少真实文件来源": {
+      "zh-CN": "任务关联缺少真实文件来源",
+      "en": "Task links lack an actual file source"
+    },
+    "任务关联缺少实际对象或输入依据": {
+      "zh-CN": "任务关联缺少实际对象或输入依据",
+      "en": "Task links lack an actual object or input basis"
+    },
+    "预览缺少真实限定范围与影响回执": {
+      "zh-CN": "预览缺少真实限定范围与影响回执",
+      "en": "The preview lacks actual scope and impact receipts"
+    },
+    "返工限定路径不合法": {
+      "zh-CN": "返工限定路径不合法",
+      "en": "The scoped rework path is invalid"
+    },
+    "应用回执缺少真实文件结果": {
+      "zh-CN": "应用回执缺少真实文件结果",
+      "en": "The apply receipt lacks actual file results"
+    },
+    "应用结果的实际文件身份不一致": {
+      "zh-CN": "应用结果的实际文件身份不一致",
+      "en": "The applied result's actual file identity differs"
+    },
+    "原操作编号已绑定另一返工输入，请核对原回执": {
+      "zh-CN": "原操作编号已绑定另一返工输入，请核对原回执",
+      "en": "The original operation ID is bound to another rework input. Inspect the original receipt."
+    },
+    "返工上下文未绑定实际文件来源": {
+      "zh-CN": "返工上下文未绑定实际文件来源",
+      "en": "Rework context is not bound to an actual file source"
+    },
+    "任务方案上下文缺少真实版本": {
+      "zh-CN": "任务方案上下文缺少真实版本",
+      "en": "The task-proposal context lacks an actual version"
+    },
+    "返工引用属于另一记录类型": {
+      "zh-CN": "返工引用属于另一记录类型",
+      "en": "The rework reference belongs to another record type"
+    },
+    "尚无实际对象绑定": {
+      "zh-CN": "尚无实际对象绑定",
+      "en": "No actual object binding exists yet"
+    },
+    "对象原值与持久绑定不一致": {
+      "zh-CN": "对象原值与持久绑定不一致",
+      "en": "The original object value differs from the persistent binding"
+    },
+    "原反馈的实际目录绑定已变化，尚未发送返工提问": {
+      "zh-CN": "原反馈的实际目录绑定已变化，尚未发送返工提问",
+      "en": "The original feedback's actual directory binding changed. No rework question was sent."
+    },
+    "未完成回执操作身份不一致": {
+      "zh-CN": "未完成回执操作身份不一致",
+      "en": "The unfinished receipt's operation identity differs"
+    },
+    "原操作尚未完成，需核查实际文件与执行回执；未自动重新应用。": {
+      "zh-CN": "原操作尚未完成，需核查实际文件与执行回执；未自动重新应用。",
+      "en": "The original operation is not complete. Inspect actual files and execution receipts; nothing was applied again automatically."
+    },
+    "原操作回执绑定了另一返工依据": {
+      "zh-CN": "原操作回执绑定了另一返工依据",
+      "en": "The original operation receipt is bound to another rework basis"
+    },
+    "服务中没有找到原操作回执；这不证明没有执行，请核查，未自动重发。": {
+      "zh-CN": "服务中没有找到原操作回执；这不证明没有执行，请核查，未自动重发。",
+      "en": "No original operation receipt was found in the service. This does not prove non-execution. Inspect it; nothing was resent automatically."
+    },
+    "原操作尚未完成": {
+      "zh-CN": "原操作尚未完成",
+      "en": "The original operation is not complete yet"
+    },
+    "返工返回依据与本次操作不一致": {
+      "zh-CN": "返工返回依据与本次操作不一致",
+      "en": "The returned rework basis differs from this operation"
+    },
+    "请先核对当前任务与对象关联": {
+      "zh-CN": "请先核对当前任务与对象关联",
+      "en": "Check the current task and object links first"
+    },
+    "任务或需求依据已变，请核对旧预览；未应用": {
+      "zh-CN": "任务或需求依据已变，请核对旧预览；未应用",
+      "en": "The task or requirements basis changed. Check the old preview; nothing was applied."
+    },
+    "限定文件尚未得到实际当前版本，未应用": {
+      "zh-CN": "限定文件尚未得到实际当前版本，未应用",
+      "en": "No actual current version of the scoped file is available. Nothing was applied."
+    },
+    "此实际目录绑定没有限定文件的写入许可；预览保留，未应用。先明确单文件授权，再基于新来源准备预览。": {
+      "zh-CN": "此实际目录绑定没有限定文件的写入许可；预览保留，未应用。先明确单文件授权，再基于新来源准备预览。",
+      "en": "This actual directory binding has no write permission for the scoped file. The preview is retained and nothing was applied. Authorize the single file explicitly, then prepare a preview from its new source."
+    },
+    "输入条件需要实际对象关联与明确声明": {
+      "zh-CN": "输入条件需要实际对象关联与明确声明",
+      "en": "Input conditions require an actual object relationship and an explicit declaration"
+    },
+    "缺少真实已保存反馈与文件依据": {
+      "zh-CN": "缺少真实已保存反馈与文件依据",
+      "en": "Actual saved feedback and file basis are missing"
+    },
+    "提问引用了另一文件反馈": {
+      "zh-CN": "提问引用了另一文件反馈",
+      "en": "The question references another file feedback record"
+    },
+    "原生预览与反馈文件身份不一致": {
+      "zh-CN": "原生预览与反馈文件身份不一致",
+      "en": "The native preview's file identity differs from the feedback file"
+    },
+    "识别记录不属于此项目的精确画面": {
+      "zh-CN": "识别记录不属于此项目的精确画面",
+      "en": "The recognition record is not for this project's exact frame"
+    },
+    "识别记录缺少完整版本凭据": {
+      "zh-CN": "识别记录缺少完整版本凭据",
+      "en": "The recognition record lacks a complete version reference"
+    },
+    "识别记录未保留画面观察的事实边界": {
+      "zh-CN": "识别记录未保留画面观察的事实边界",
+      "en": "The recognition record did not retain the limits of frame observations"
+    },
+    "文字框缺少实际解码图片的尺寸和 SHA": {
+      "zh-CN": "文字框缺少实际解码图片的尺寸和 SHA",
+      "en": "Text boxes lack actual decoded-image dimensions and SHA"
+    },
+    "识别行列表无效": {
+      "zh-CN": "识别行列表无效",
+      "en": "The recognition-line list is invalid"
+    },
+    "识别文字或置信度无效": {
+      "zh-CN": "识别文字或置信度无效",
+      "en": "Recognized text or confidence is invalid"
+    },
+    "识别文字框超出实际图片": {
+      "zh-CN": "识别文字框超出实际图片",
+      "en": "A recognition text box exceeds the actual image"
+    },
+    "识别全文与实际行记录不一致": {
+      "zh-CN": "识别全文与实际行记录不一致",
+      "en": "The recognized full text differs from actual line records"
+    },
+    "所选文字不在此识别记录中": {
+      "zh-CN": "所选文字不在此识别记录中",
+      "en": "The selected text is not in this recognition record"
+    },
+    "正在读取实际当前原件": {
+      "zh-CN": "正在读取实际当前原件",
+      "en": "Reading the actual current source"
+    },
+    "当前原件未返回匹配的真实文件身份": {
+      "zh-CN": "当前原件未返回匹配的真实文件身份",
+      "en": "The current source did not return a matching actual file identity"
+    },
+    "交付回执未绑定本次操作；请读取原操作回执，勿重复生成": {
+      "zh-CN": "交付回执未绑定本次操作；请读取原操作回执，勿重复生成",
+      "en": "The delivery receipt is not bound to this operation. Read the original receipt without generating again."
+    },
+    "交付结果不完整，不能声明已完成；请核对原操作回执": {
+      "zh-CN": "交付结果不完整，不能声明已完成；请核对原操作回执",
+      "en": "The delivery result is incomplete and cannot be called complete. Inspect the original operation receipt."
+    },
+    "阶段回执未提供实际待确认数量，请核对原操作": {
+      "zh-CN": "阶段回执未提供实际待确认数量，请核对原操作",
+      "en": "The stage receipt has no actual open-question count. Inspect the original operation."
+    },
+    "完整交付回执缺少 harness、任务书或提交标记，不能声明已完成": {
+      "zh-CN": "完整交付回执缺少 harness、任务书或提交标记，不能声明已完成",
+      "en": "The complete-delivery receipt lacks a harness, taskbook, or commit marker and cannot be called complete"
+    },
+    "交付文件缺少一致的实际来源，请核对回执": {
+      "zh-CN": "交付文件缺少一致的实际来源，请核对回执",
+      "en": "A delivery file lacks a consistent actual source. Inspect the receipt."
+    },
+    "未知交付状态，请核对原操作回执": {
+      "zh-CN": "未知交付状态，请核对原操作回执",
+      "en": "Unknown delivery status. Inspect the original operation receipt."
+    },
+    "交付回执对应另一来源版本，请读取原回执核对": {
+      "zh-CN": "交付回执对应另一来源版本，请读取原回执核对",
+      "en": "The delivery receipt refers to another source version. Read the original receipt to check."
+    },
+    "需求版本已变化，请读取现行版本；本次未生成新产物": {
+      "zh-CN": "需求版本已变化，请读取现行版本；本次未生成新产物",
+      "en": "The requirements version changed. Read the current version; no new artifacts were generated."
+    },
+    "保存到目录需要同时指定实际工作目录与相对交付目录": {
+      "zh-CN": "保存到目录需要同时指定实际工作目录与相对交付目录",
+      "en": "Saving to a directory requires both an actual working directory and a relative delivery directory"
+    },
+    "交付目录未获得当前项目的写入范围": {
+      "zh-CN": "交付目录未获得当前项目的写入范围",
+      "en": "The delivery directory has no write scope in the current project"
+    },
+    "模板不属于当前项目": {
+      "zh-CN": "模板不属于当前项目",
+      "en": "The template does not belong to the current project"
+    },
+    "完整交付需要现行已确认且来源未变化的计划；请读取现行版本，本次未导出": {
+      "zh-CN": "完整交付需要现行已确认且来源未变化的计划；请读取现行版本，本次未导出",
+      "en": "Complete delivery requires a current confirmed plan with unchanged sources. Read the current version; nothing was exported."
+    },
+    "文件不属于此次交付回执": {
+      "zh-CN": "文件不属于此次交付回执",
+      "en": "The file is not part of this delivery receipt"
+    },
+    "尚未返回此文件的实际工作目录来源": {
+      "zh-CN": "尚未返回此文件的实际工作目录来源",
+      "en": "The file's actual working-directory source has not been returned yet"
+    },
+    "交付文件已变化，当前人工修改保留；请核对实际文件后重新定位": {
+      "zh-CN": "交付文件已变化，当前人工修改保留；请核对实际文件后重新定位",
+      "en": "The delivery file changed. Current manual edits are retained; inspect the actual file and locate it again."
+    },
+    "交付文件来源版本已变化，原回执保留；当前文件未自动打开": {
+      "zh-CN": "交付文件来源版本已变化，原回执保留；当前文件未自动打开",
+      "en": "The delivery file's source version changed. The original receipt is retained; the current file was not opened automatically."
+    },
+    "旧交付记录的目录绑定已变化，请核对当前来源": {
+      "zh-CN": "旧交付记录的目录绑定已变化，请核对当前来源",
+      "en": "The historical delivery's directory binding changed. Check the current source."
+    },
+    "项目回执与原连接要求不一致；请核查原操作": {
+      "zh-CN": "项目回执与原连接要求不一致；请核查原操作",
+      "en": "The project receipt differs from the original connection request. Inspect the original operation."
+    },
+    "目录连接记录无法读取，原记录保留；未发送请求": {
+      "zh-CN": "目录连接记录无法读取，原记录保留；未发送请求",
+      "en": "The directory-connection record could not be read. The original is retained; no request was sent."
+    },
+    "目录连接记录格式不一致，未发送请求": {
+      "zh-CN": "目录连接记录格式不一致，未发送请求",
+      "en": "The directory-connection record format differs. No request was sent."
+    },
+    "目录连接记录不完整，原记录保留；未发送请求": {
+      "zh-CN": "目录连接记录不完整，原记录保留；未发送请求",
+      "en": "The directory-connection record is incomplete. The original is retained; no request was sent."
+    },
+    "上次目录连接中断；先核查原操作，不会重新创建": {
+      "zh-CN": "上次目录连接中断；先核查原操作，不会重新创建",
+      "en": "The previous directory connection was interrupted. Inspect its original operation first; it will not be recreated."
+    },
+    "目录连接当前操作缺失，未发送请求": {
+      "zh-CN": "目录连接当前操作缺失，未发送请求",
+      "en": "The directory connection has no current operation. No request was sent."
+    },
+    "目录连接等待时间须为1至30000毫秒": {
+      "zh-CN": "目录连接等待时间须为1至30000毫秒",
+      "en": "The directory-connection wait must be 1–30000 milliseconds"
+    },
+    "正在等待另一窗口完成目录连接；不会重复提交": {
+      "zh-CN": "正在等待另一窗口完成目录连接；不会重复提交",
+      "en": "Waiting for another window's directory connection; no duplicate submission"
+    },
+    "请先确认目录连接要求": {
+      "zh-CN": "请先确认目录连接要求",
+      "en": "Confirm the directory-connection request first"
+    },
+    "原连接的已知回执与另一窗口冲突；内存结果和原记录保留，未发送请求": {
+      "zh-CN": "原连接的已知回执与另一窗口冲突；内存结果和原记录保留，未发送请求",
+      "en": "The original connection's known receipt conflicts with another window. Both the in-memory result and original record are retained; no request was sent."
+    },
+    "目录连接索引已满；未保存的已知结果仍保留，请先核查原操作": {
+      "zh-CN": "目录连接索引已满；未保存的已知结果仍保留，请先核查原操作",
+      "en": "The directory-connection index is full. Unsaved known results are retained; inspect the original operation first."
+    },
+    "当前环境不支持跨窗口安全锁；未发送请求，请在桌面软件或受支持浏览器重试": {
+      "zh-CN": "当前环境不支持跨窗口安全锁；未发送请求，请在桌面软件或受支持浏览器重试",
+      "en": "This environment has no safe cross-window lock. No request was sent. Try the desktop app or a supported browser."
+    },
+    "目录连接锁未取得；未发送请求": {
+      "zh-CN": "目录连接锁未取得；未发送请求",
+      "en": "The directory-connection lock was not acquired. No request was sent."
+    },
+    "另一窗口仍在处理目录连接；等待已结束，未发送请求，可稍后重新读取": {
+      "zh-CN": "另一窗口仍在处理目录连接；等待已结束，未发送请求，可稍后重新读取",
+      "en": "Another window is still handling the directory connection. Waiting ended without a request; read it again later."
+    },
+    "跨窗口安全锁暂不可用；未发送请求": {
+      "zh-CN": "跨窗口安全锁暂不可用；未发送请求",
+      "en": "The safe cross-window lock is temporarily unavailable. No request was sent."
+    },
+    "另一窗口已更新目录连接，原记录保留；请重新读取": {
+      "zh-CN": "另一窗口已更新目录连接，原记录保留；请重新读取",
+      "en": "Another window updated the directory connection. The original record is retained; read it again."
+    },
+    "目录连接记录未能保存，未发送后续请求": {
+      "zh-CN": "目录连接记录未能保存，未发送后续请求",
+      "en": "The directory-connection record could not be saved. No subsequent request was sent."
+    },
+    "连接进度的本机保存未成功；已知结果保留，请勿重新创建": {
+      "zh-CN": "连接进度的本机保存未成功；已知结果保留，请勿重新创建",
+      "en": "Connection progress could not be saved locally. Known results are retained; do not recreate the project."
+    },
+    "原连接结果尚未确认；只核查这个原操作，不会重新创建": {
+      "zh-CN": "原连接结果尚未确认；只核查这个原操作，不会重新创建",
+      "en": "The original connection outcome is not confirmed. Only that operation is inspected; it will not be recreated."
+    },
+    "目录连接的原项目或要求已变化；未发送请求": {
+      "zh-CN": "目录连接的原项目或要求已变化；未发送请求",
+      "en": "The original connection's project or request changed. No request was sent."
+    },
+    "目录连接的项目回执不匹配，未发送请求": {
+      "zh-CN": "目录连接的项目回执不匹配，未发送请求",
+      "en": "The directory connection's project receipt differs. No request was sent."
+    },
+    "请选择新项目或当前项目及实际文件夹": {
+      "zh-CN": "请选择新项目或当前项目及实际文件夹",
+      "en": "Choose a new or current project and an actual folder"
+    },
+    "请选择实际本机绝对目录，目录由系统选择窗口创建": {
+      "zh-CN": "请选择实际本机绝对目录，目录由系统选择窗口创建",
+      "en": "Choose an actual local absolute directory; directory creation uses the system picker"
+    },
+    "关联当前项目需要明确的原项目": {
+      "zh-CN": "关联当前项目需要明确的原项目",
+      "en": "Linking an existing project requires its exact original project"
+    },
+    "请输入不超过200字的工作名称": {
+      "zh-CN": "请输入不超过200字的工作名称",
+      "en": "Enter a work name of no more than 200 characters"
+    },
+    "已有32条未决目录连接，请先核查原操作；未覆盖记录或删除项目": {
+      "zh-CN": "已有32条未决目录连接，请先核查原操作；未覆盖记录或删除项目",
+      "en": "There are already 32 unresolved directory connections. Inspect their original operations first; no records were overwritten and no projects deleted."
+    },
+    "目录连接操作编号无效": {
+      "zh-CN": "目录连接操作编号无效",
+      "en": "The directory-connection operation ID is invalid"
+    },
+    "原连接结果尚未确认；只核查这个原操作，不会重新创建。": {
+      "zh-CN": "原连接结果尚未确认；只核查这个原操作，不会重新创建。",
+      "en": "The original connection outcome is not confirmed. Only that operation is inspected; it will not be recreated."
+    },
+    "目录绑定回执与原项目、路径或写范围不一致": {
+      "zh-CN": "目录绑定回执与原项目、路径或写范围不一致",
+      "en": "The directory-binding receipt differs from the original project, path, or write scope"
+    },
+    "原绑定的历史回执缺失": {
+      "zh-CN": "原绑定的历史回执缺失",
+      "en": "The original binding's historical receipt is missing"
+    },
+    "目录原操作编号不一致": {
+      "zh-CN": "目录原操作编号不一致",
+      "en": "The original directory operation ID differs"
+    },
+    "原目录绑定版本已经变化，请重新确认": {
+      "zh-CN": "原目录绑定版本已经变化，请重新确认",
+      "en": "The original directory-binding revision changed. Confirm it again."
+    },
+    "原连接已提交，但当前目录不可用或依据已变化；历史回执保留，请核对原目录": {
+      "zh-CN": "原连接已提交，但当前目录不可用或依据已变化；历史回执保留，请核对原目录",
+      "en": "The original connection was committed, but the directory is unavailable or its basis changed. The historical receipt is retained; check the original directory."
+    },
+    "原项目创建已经发送": {
+      "zh-CN": "原项目创建已经发送",
+      "en": "Original project creation was sent"
+    },
+    "原项目回执尚未确认": {
+      "zh-CN": "原项目回执尚未确认",
+      "en": "The original project receipt is not confirmed yet"
+    },
+    "原目录绑定已经发送": {
+      "zh-CN": "原目录绑定已经发送",
+      "en": "Original directory binding was sent"
+    },
+    "项目原操作回执与提交内容不一致": {
+      "zh-CN": "项目原操作回执与提交内容不一致",
+      "en": "The original project operation receipt differs from the submitted content"
+    },
+    "原目录缺少已确认项目": {
+      "zh-CN": "原目录缺少已确认项目",
+      "en": "The original directory has no confirmed project"
+    },
+    "原操作阶段缺失": {
+      "zh-CN": "原操作阶段缺失",
+      "en": "The original operation stage is missing"
+    },
+    "模块需要固定来源和版本": {
+      "zh-CN": "模块需要固定来源和版本",
+      "en": "A module requires a fixed source and version"
+    },
+    "操作已卸载": {
+      "zh-CN": "操作已卸载",
+      "en": "The action was unloaded"
+    },
+    "此能力尚不可执行": {
+      "zh-CN": "此能力尚不可执行",
+      "en": "This capability cannot be executed yet"
+    },
+    "对象不属于当前项目": {
+      "zh-CN": "对象不属于当前项目",
+      "en": "The object does not belong to the current project"
+    },
+    "对象作用域已变化": {
+      "zh-CN": "对象作用域已变化",
+      "en": "The object scope changed"
+    },
+    "此批注不属于当前图片的 OCR 选文": {
+      "zh-CN": "此批注不属于当前图片的 OCR 选文",
+      "en": "This annotation is not an OCR selection from the current image"
+    },
+    "来源事实": {
+      "zh-CN": "来源事实",
+      "en": "Source fact"
+    },
+    "待确认假设": {
+      "zh-CN": "待确认假设",
+      "en": "Unconfirmed assumption"
+    },
+    "已接受假设": {
+      "zh-CN": "已接受假设",
+      "en": "Accepted assumption"
+    },
+    "任务链": {
+      "zh-CN": "任务链",
+      "en": "Task chain"
+    },
+    "报告": {
+      "zh-CN": "报告",
+      "en": "Report"
+    },
+    "拆解提案": {
+      "zh-CN": "拆解提案",
+      "en": "Decomposition proposal"
+    },
+    "模型连接": {
+      "zh-CN": "模型连接",
+      "en": "Model connection"
+    },
+    "需求工作": {
+      "zh-CN": "需求工作",
+      "en": "Requirements work"
+    },
+    "竞品资料": {
+      "zh-CN": "竞品资料",
+      "en": "Competitor materials"
+    },
+    "写法经验": {
+      "zh-CN": "写法经验",
+      "en": "Writing experience"
+    },
+    "阶段与交付": {
+      "zh-CN": "阶段与交付",
+      "en": "Stage and delivery"
+    },
+    "图节点 ID 重复": {
+      "zh-CN": "图节点 ID 重复",
+      "en": "Duplicate graph node ID"
+    },
+    "图关系 ID 重复": {
+      "zh-CN": "图关系 ID 重复",
+      "en": "Duplicate graph relationship ID"
+    },
+    "图关系指向不存在的节点": {
+      "zh-CN": "图关系指向不存在的节点",
+      "en": "A graph relationship refers to a nonexistent node"
+    },
+    "当前来源快照不包含这一精确版本与片段": {
+      "zh-CN": "当前来源快照不包含这一精确版本与片段",
+      "en": "The current source snapshot does not contain this exact version and chunk"
+    },
+    "来源摘录范围无效": {
+      "zh-CN": "来源摘录范围无效",
+      "en": "The quotation range is invalid"
+    },
+    "来源片段 SHA 不一致": {
+      "zh-CN": "来源片段 SHA 不一致",
+      "en": "Source chunk SHA differs"
+    },
+    "来源摘录 SHA 不一致": {
+      "zh-CN": "来源摘录 SHA 不一致",
+      "en": "Quotation SHA differs"
+    },
+    "来源观测回执与所选文件不一致": {
+      "zh-CN": "来源观测回执与所选文件不一致",
+      "en": "The source-observation receipt differs from the selected file"
+    },
+    "同步读取未得到此文件的当前精确版本": {
+      "zh-CN": "同步读取未得到此文件的当前精确版本",
+      "en": "Synchronized reading did not return this file's exact current version"
+    },
+    "文件新版本已读取，但未能生成匹配的资料来源；请查看解析回执": {
+      "zh-CN": "文件新版本已读取，但未能生成匹配的资料来源；请查看解析回执",
+      "en": "The new file version was read, but no matching material source was generated. Inspect the parsing receipt."
+    },
+    "选文范围无效": {
+      "zh-CN": "选文范围无效",
+      "en": "The text-selection range is invalid"
+    },
+    "选文缺少文稿字段定位": {
+      "zh-CN": "选文缺少文稿字段定位",
+      "en": "The selection has no document-field locator"
+    },
+    "已保存的识别版本凭据不符": {
+      "zh-CN": "已保存的识别版本凭据不符",
+      "en": "The saved recognition version reference differs"
+    },
+    "要求与关系图": {
+      "zh-CN": "要求与关系图",
+      "en": "Requirements and relationship graphs"
+    },
+    "任务与依赖图": {
+      "zh-CN": "任务与依赖图",
+      "en": "Tasks and dependency graphs"
+    },
+    "提示词与任务链": {
+      "zh-CN": "提示词与任务链",
+      "en": "Prompts and task chain"
+    },
+    "可编辑任务书": {
+      "zh-CN": "可编辑任务书",
+      "en": "Editable taskbook"
+    },
+    "实际报告文件": {
+      "zh-CN": "实际报告文件",
+      "en": "Actual report file"
+    },
+    "本机草稿暂未读到，当前输入仍保留：": {
+      "zh-CN": "本机草稿暂未读到，当前输入仍保留：",
+      "en": "The local draft could not be read yet. Current input is retained: "
+    },
+    "草稿回执不属于当前对象版本": {
+      "zh-CN": "草稿回执不属于当前对象版本",
+      "en": "The draft receipt does not belong to the current object version"
+    },
+    "保存回执不属于本次草稿操作": {
+      "zh-CN": "保存回执不属于本次草稿操作",
+      "en": "The save receipt does not belong to this draft operation"
+    },
+    "本机草稿已有另一版本，当前输入已保留，请先核对。": {
+      "zh-CN": "本机草稿已有另一版本，当前输入已保留，请先核对。",
+      "en": "Another local draft version exists. Current input is retained; check the versions first."
+    },
+    "草稿未保存：": {
+      "zh-CN": "草稿未保存：",
+      "en": "Draft not saved: "
+    },
+    "草稿保存结果待核查；当前输入保留，不会自动重写。": {
+      "zh-CN": "草稿保存结果待核查；当前输入保留，不会自动重写。",
+      "en": "The draft-save outcome needs inspection. Current input is retained and will not be rewritten automatically."
+    },
+    "仍有本机草稿没有完成保存": {
+      "zh-CN": "仍有本机草稿没有完成保存",
+      "en": "Some local drafts have not finished saving"
+    },
+    "操作回执不一致": {
+      "zh-CN": "操作回执不一致",
+      "en": "The operation receipt differs"
+    },
+    "上次保存已核对，当前输入保留；继续编辑可保存后续变化。": {
+      "zh-CN": "上次保存已核对，当前输入保留；继续编辑可保存后续变化。",
+      "en": "The previous save was checked. Current input is retained; continue editing to save later changes."
+    },
+    "仍未能核查上次草稿保存，未重发：": {
+      "zh-CN": "仍未能核查上次草稿保存，未重发：",
+      "en": "The previous draft save still could not be checked. Nothing was resent: "
+    },
+    "宿主工作面展示回执与请求不一致": {
+      "zh-CN": "宿主工作面展示回执与请求不一致",
+      "en": "The host's surface-presentation receipt differs from the request"
+    },
+    "宿主尚未验证中间电脑输入已阻断": {
+      "zh-CN": "宿主尚未验证中间电脑输入已阻断",
+      "en": "The host has not verified that input to the computer underneath is blocked"
+    },
+    "未核验：{reason}": {
+      "zh-CN": "未核验：{reason}",
+      "en": "Not checked: {reason}"
+    },
+    "无法读取界面语言，暂按系统显示。": {
+      "zh-CN": "无法读取界面语言，暂按系统显示。",
+      "en": "Could not read the interface language. Using the system language for now."
+    },
+    " · 只读观察，原生输入未启用": {
+      "zh-CN": " · 只读观察，原生输入未启用",
+      "en": " · Read-only observation; native input is not enabled"
+    },
+    "原追加状态：": {
+      "zh-CN": "原追加状态：",
+      "en": "Original append status: "
+    },
+    "已请求停止自有助手；焦点交接是否发生仍需核查，未自动继续追加。": {
+      "zh-CN": "已请求停止自有助手；焦点交接是否发生仍需核查，未自动继续追加。",
+      "en": "Stopping the owned helper was requested. Whether focus was handed over still needs checking; append did not continue automatically. "
+    },
+    "已收到本次追加权限的撤销回执，未自动继续追加。": {
+      "zh-CN": "已收到本次追加权限的撤销回执，未自动继续追加。",
+      "en": "The revocation receipt for this append permission was received. Append did not continue automatically. "
+    },
+    "关联依据待核对": {
+      "zh-CN": "关联依据待核对",
+      "en": "Relationship basis needs checking"
+    },
+    "无法读取界面语言，保留当前显示。": {
+      "zh-CN": "无法读取界面语言，保留当前显示。",
+      "en": "Could not read the interface language. Keeping the current display."
+    },
+    "固定引用": {
+      "zh-CN": "固定引用",
+      "en": "Pinned reference"
+    },
+    "当前原件未核对": {
+      "zh-CN": "当前原件未核对",
+      "en": "Current source not checked"
+    },
+    "原件已变": {
+      "zh-CN": "原件已变",
+      "en": "Source changed"
+    },
+    "，读取时为 v": {
+      "zh-CN": "，读取时为 v",
+      "en": "; observed v"
+    },
+    "读取时原件一致": {
+      "zh-CN": "读取时原件一致",
+      "en": "Source matched when read"
+    },
+    "原件缺失": {
+      "zh-CN": "原件缺失",
+      "en": "Source missing"
+    },
+    "目录绑定已变": {
+      "zh-CN": "目录绑定已变",
+      "en": "Directory binding changed"
+    },
+    "请选择 {formats} 文件": {
+      "zh-CN": "请选择 {formats} 文件",
+      "en": "Choose a {formats} file"
+    },
+    "任务图缺少依赖节点 {dependency}": {
+      "zh-CN": "任务图缺少依赖节点 {dependency}",
+      "en": "Task graph is missing dependency node {dependency}"
+    },
+    "原操作暂未核对：{error}；未自动重发。": {
+      "zh-CN": "原操作暂未核对：{error}；未自动重发。",
+      "en": "The original operation has not been checked yet: {error}. Nothing was resent automatically."
+    },
+    "{error}（操作 {operation}；可读取已保存步骤，不自动重放）": {
+      "zh-CN": "{error}（操作 {operation}；可读取已保存步骤，不自动重放）",
+      "en": "{error} (operation {operation}; inspect saved steps without replaying)"
+    },
+    "{restored}依据{kind} {id} · v{revision}{historical} · {status}。{pending}打开前核对实际文件版本。": {
+      "zh-CN": "{restored}依据{kind} {id} · v{revision}{historical} · {status}。{pending}打开前核对实际文件版本。",
+      "en": "{restored}Based on {kind} {id} · v{revision}{historical} · {status}. {pending}Actual file versions are checked before opening."
+    },
+    "已读取原交付回执；": {
+      "zh-CN": "已读取原交付回执；",
+      "en": "Original delivery receipt loaded. "
+    },
+    "需求": {
+      "zh-CN": "需求",
+      "en": "requirements"
+    },
+    "提案": {
+      "zh-CN": "提案",
+      "en": "proposal"
+    },
+    "（当前选中 v{revision}，历史来源保留）": {
+      "zh-CN": "（当前选中 v{revision}，历史来源保留）",
+      "en": " (currently selected v{revision}; historical source retained)"
+    },
+    "待确认 {count} 项；": {
+      "zh-CN": "待确认 {count} 项；",
+      "en": "{count} items await confirmation. "
+    },
+    "{state}；来源关联和已保存步骤需核对，未重新生成。": {
+      "zh-CN": "{state}；来源关联和已保存步骤需核对，未重新生成。",
+      "en": "{state}. Source links and saved steps need checking; nothing was generated again."
+    },
+    "原操作仍在处理中": {
+      "zh-CN": "原操作仍在处理中",
+      "en": "The original operation is still processing"
+    },
+    "原操作已中断": {
+      "zh-CN": "原操作已中断",
+      "en": "The original operation was interrupted"
+    },
+    "原操作失败或仅完成部分步骤": {
+      "zh-CN": "原操作失败或仅完成部分步骤",
+      "en": "The original operation failed or completed only some steps"
+    },
+    "{label} · 回执已读取": {
+      "zh-CN": "{label} · 回执已读取",
+      "en": "{label} · Receipt loaded"
+    },
+    "{label}已保存": {
+      "zh-CN": "{label}已保存",
+      "en": "{label} saved"
+    },
+    "原操作 {operation}；{reason}本地编号保留，未自动重发或重新导出。{error}": {
+      "zh-CN": "原操作 {operation}；{reason}本地编号保留，未自动重发或重新导出。{error}",
+      "en": "Original operation {operation}. {reason}The local ID is retained; nothing was resent or exported again automatically.{error}"
+    },
+    "服务中未找到回执，没有记录不证明未生成文件。": {
+      "zh-CN": "服务中未找到回执，没有记录不证明未生成文件。",
+      "en": "No receipt was found in the service. Missing records do not prove that no files were generated. "
+    },
+    "原回执读取或来源核对未完成。": {
+      "zh-CN": "原回执读取或来源核对未完成。",
+      "en": "The original receipt or source check could not be completed. "
+    },
+    " {error}": {
+      "zh-CN": " {error}",
+      "en": " {error}"
+    },
+    "原操作尚未核对：{error}。历史保留，未重新审批或追加。": {
+      "zh-CN": "原操作尚未核对：{error}。历史保留，未重新审批或追加。",
+      "en": "The original operation is not checked yet: {error}. History is retained; no approval or append was repeated."
+    },
+    "{review} {error}": {
+      "zh-CN": "{review} {error}",
+      "en": "{review} {error}"
+    },
+    "原回执已只读核对；本次调用结果需检查。": {
+      "zh-CN": "原回执已只读核对；本次调用结果需检查。",
+      "en": "The original receipt was inspected read-only. This call result needs checking."
+    },
+    "{review}旧操作不重新开始；请核对目标实际内容，再准备新的选文预览。": {
+      "zh-CN": "{review}旧操作不重新开始；请核对目标实际内容，再准备新的选文预览。",
+      "en": "{review}The old operation will not restart. Check the target contents before preparing a new selection preview."
+    },
+    "问题索引未能保存，尚未发送；草稿保留：{error}": {
+      "zh-CN": "问题索引未能保存，尚未发送；草稿保留：{error}",
+      "en": "The question index could not be saved, so nothing was sent. The draft is retained: {error}"
+    },
+    "文件反馈保存未确认（操作 {operation}）；原文字保留，未启动模型或文件修改：{error}": {
+      "zh-CN": "文件反馈保存未确认（操作 {operation}）；原文字保留，未启动模型或文件修改：{error}",
+      "en": "File-feedback saving is unconfirmed (operation {operation}). Original text is retained; no model call or file edit started: {error}"
+    },
+    "请打开要查看的页面": {
+      "zh-CN": "请打开要查看的页面",
+      "en": "Open the page you want to view"
+    },
+    "先切换到要查看的页面": {
+      "zh-CN": "先切换到要查看的页面",
+      "en": "Switch to the page you want to view first"
+    },
+    "请重新打开要查看的页面": {
+      "zh-CN": "请重新打开要查看的页面",
+      "en": "Reopen the page you want to view"
+    },
+    "页面已变化，请重新引用": {
+      "zh-CN": "页面已变化，请重新引用",
+      "en": "The page changed. Reference it again."
+    },
+    "工作区已变化，请重新引用": {
+      "zh-CN": "工作区已变化，请重新引用",
+      "en": "The workspace changed. Reference it again."
+    },
+    "请选择要查看的窗口": {
+      "zh-CN": "请选择要查看的窗口",
+      "en": "Choose the window you want to view"
+    },
+    "先发送或清除批注，再调整布局。": {
+      "zh-CN": "先发送或清除批注，再调整布局。",
+      "en": "Send or clear the annotation before changing the layout."
+    },
+    "本次生成等待预算": {
+      "zh-CN": "本次生成等待预算",
+      "en": "Wait budget for this plan"
+    },
+    "等待 2 分钟": {
+      "zh-CN": "等待 2 分钟",
+      "en": "Wait 2 min"
+    },
+    "等待 5 分钟": {
+      "zh-CN": "等待 5 分钟",
+      "en": "Wait 5 min"
+    },
+    "等待 10 分钟": {
+      "zh-CN": "等待 10 分钟",
+      "en": "Wait 10 min"
+    },
+    "请选择 2、5 或 10 分钟的等待预算。": {
+      "zh-CN": "请选择 2、5 或 10 分钟的等待预算。",
+      "en": "Choose a wait budget of 2, 5, or 10 minutes."
+    },
+    "原模板已变化或无法核对，请重新选择或使用内置版式。": {
+      "zh-CN": "原模板已变化或无法核对，请重新选择或使用内置版式。",
+      "en": "The original template changed or could not be verified. Choose it again or use the built-in layout."
+    },
+    "模板草稿尚未恢复，请核查草稿或明确选择模板。": {
+      "zh-CN": "模板草稿尚未恢复，请核查草稿或明确选择模板。",
+      "en": "The template draft could not be restored. Inspect the draft or explicitly choose a template."
+    },
+    "展开说明": {
+      "zh-CN": "展开说明",
+      "en": "Show description"
+    },
+    "收起说明": {
+      "zh-CN": "收起说明",
+      "en": "Hide description"
+    },
+    "请缩小选文范围，或引用原文说明要修改的位置。": {
+      "zh-CN": "请缩小选文范围，或引用原文说明要修改的位置。",
+      "en": "Select a smaller passage, or quote the original text to describe the change."
+    },
+    "已采用 {count} 项": {
+      "zh-CN": "已采用 {count} 项",
+      "en": "{count} adopted"
+    },
+    "已采用答复": {
+      "zh-CN": "已采用答复",
+      "en": "Adopted response"
+    },
+    "已采用假设": {
+      "zh-CN": "已采用假设",
+      "en": "Adopted assumption"
+    },
+    "其他已保存答复": {
+      "zh-CN": "其他已保存答复",
+      "en": "Other saved responses"
+    },
+    "没有待确认问题": {
+      "zh-CN": "没有待确认问题",
+      "en": "No open questions"
+    },
+    "未提交草稿": {
+      "zh-CN": "未提交草稿",
+      "en": "Unsubmitted draft"
+    },
+    "当前页检查": {
+      "zh-CN": "当前页检查",
+      "en": "Review this page"
+    },
+    "不选择": {
+      "zh-CN": "不选择",
+      "en": "None"
+    },
+    "请先引用要检查的任务计划": {
+      "zh-CN": "请先引用要检查的任务计划",
+      "en": "Reference the task plan to review"
+    },
+    "用于当前页": {
+      "zh-CN": "用于当前页",
+      "en": "Use for this page"
+    },
+    "允许启动所选本地工具": {
+      "zh-CN": "允许启动所选本地工具",
+      "en": "Allow the selected local tool to start"
+    },
+    "移除选择": {
+      "zh-CN": "移除选择",
+      "en": "Clear selection"
+    },
+    "已选择": {
+      "zh-CN": "已选择",
+      "en": "Selected"
+    },
+    "补充本页": {
+      "zh-CN": "补充本页",
+      "en": "Add to this review"
+    },
+    "新问题": {
+      "zh-CN": "新问题",
+      "en": "New question"
+    },
+    "工具调用请求": {
+      "zh-CN": "工具调用请求",
+      "en": "Tool call request"
+    },
+    "待回答": {
+      "zh-CN": "待回答",
+      "en": "Awaiting answer"
+    },
+    "允许一次": {
+      "zh-CN": "允许一次",
+      "en": "Allow once"
+    },
+    "拒绝": {
+      "zh-CN": "拒绝",
+      "en": "Reject"
+    },
+    "使用情况": {
+      "zh-CN": "使用情况",
+      "en": "Usage"
+    },
+    "调用未完成": {
+      "zh-CN": "调用未完成",
+      "en": "Call incomplete"
+    },
+    "业务标准质量尚未评定": {
+      "zh-CN": "业务标准质量尚未评定",
+      "en": "Business criteria quality not assessed"
+    },
+    "结果尚未确认，请核查原操作": {
+      "zh-CN": "结果尚未确认，请核查原操作",
+      "en": "Outcome unconfirmed. Check the original operation."
+    },
+    "所选技能或工具已变化，请重新选择": {
+      "zh-CN": "所选技能或工具已变化，请重新选择",
+      "en": "The selection changed. Select it again."
+    },
+    "技能与工具目录暂不可用": {
+      "zh-CN": "技能与工具目录暂不可用",
+      "en": "Skills and tools are unavailable"
+    },
+    "技能与工具选择无效": {
+      "zh-CN": "技能与工具选择无效",
+      "en": "Invalid skill or tool selection"
+    },
+    "工具来源无效": {
+      "zh-CN": "工具来源无效",
+      "en": "Invalid tool source"
+    },
+    "此工具需要原任务计划依据": {
+      "zh-CN": "此工具需要原任务计划依据",
+      "en": "This tool requires the original task plan"
+    },
+    "原任务计划依据无效": {
+      "zh-CN": "原任务计划依据无效",
+      "en": "The task plan reference is invalid"
+    },
+    "此条暂不能补充，请核查原操作或新建问题": {
+      "zh-CN": "此条暂不能补充，请核查原操作或新建问题",
+      "en": "Check the original operation or start a new question"
+    },
+    "请输入补充内容": {
+      "zh-CN": "请输入补充内容",
+      "en": "Enter additional details"
+    },
+    "原操作回执不匹配": {
+      "zh-CN": "原操作回执不匹配",
+      "en": "The operation receipt does not match"
+    },
+    "当前页检查不能混用保存稿输入": {
+      "zh-CN": "当前页检查不能混用保存稿输入",
+      "en": "Choose the page review or the saved document"
+    },
+    "问题索引未能保存，尚未发送": {
+      "zh-CN": "问题索引未能保存，尚未发送",
+      "en": "The request could not be saved. It was not sent."
+    },
+    "任务交付与验收覆盖": {
+      "zh-CN": "任务交付与验收覆盖",
+      "en": "Delivery and acceptance coverage"
+    },
+    "表格内容": {
+      "zh-CN": "表格内容",
+      "en": "Table content"
+    },
+    "代码内容": {
+      "zh-CN": "代码内容",
+      "en": "Code content"
+    },
+    "浮窗查看": {
+      "zh-CN": "浮窗查看",
+      "en": "Quick view"
+    },
+    "打开链接": {
+      "zh-CN": "打开链接",
+      "en": "Open link"
+    },
+    "当前工作已切换，未打开原回复链接": {
+      "zh-CN": "当前工作已切换，未打开原回复链接",
+      "en": "The current work changed; the original reply link was not opened"
+    },
+    "原记录已变化，请核查原操作": {
+      "zh-CN": "原记录已变化，请核查原操作",
+      "en": "The original record changed; inspect the original operation"
+    },
+    "浮窗暂不可用；原回复保留。": {
+      "zh-CN": "浮窗暂不可用；原回复保留。",
+      "en": "Quick view is temporarily unavailable; the original reply is retained."
+    },
+    "沿用决定 {count} 项 · 待确认": {
+      "zh-CN": "沿用决定 {count} 项 · 待确认",
+      "en": "{count} carried decisions · Awaiting confirmation"
+    },
+    "沿用答复 · 待确认": {
+      "zh-CN": "沿用答复 · 待确认",
+      "en": "Carried response · Awaiting confirmation"
+    },
+    "沿用假设 · 待确认": {
+      "zh-CN": "沿用假设 · 待确认",
+      "en": "Carried assumption · Awaiting confirmation"
+    },
+    "来自已确认版本 {revision}": {
+      "zh-CN": "来自已确认版本 {revision}",
+      "en": "From confirmed version {revision}"
+    },
+    "补充或调整答复": {
+      "zh-CN": "补充或调整答复",
+      "en": "Add or revise a response"
+    },
+    "更新计划确认": {
+      "zh-CN": "更新计划确认",
+      "en": "Update plan confirmation"
+    },
+    "需重新决定 {count} 项": {
+      "zh-CN": "需重新决定 {count} 项",
+      "en": "{count} decisions need review"
+    },
+    "仅结构关联，内容影响仍需审阅": {
+      "zh-CN": "仅结构关联，内容影响仍需审阅",
+      "en": "Structural links only; content impact still needs review"
+    },
+    "全局字段：": {
+      "zh-CN": "全局字段：",
+      "en": "Global fields: "
+    },
+    "请核对所选答复并填写接受理由。": {
+      "zh-CN": "请核对所选答复并填写接受理由。",
+      "en": "Check the selected response and enter a reason for acceptance."
+    },
+    "涉及节点 · {count}": {
+      "zh-CN": "涉及节点 · {count}",
+      "en": "Related nodes · {count}"
+    },
+    "原范围答复 · 仅供参考": {
+      "zh-CN": "原范围答复 · 仅供参考",
+      "en": "Earlier-scope response · Reference only"
+    },
+    "补充当前任务": {
+      "zh-CN": "补充当前任务",
+      "en": "Continue this task"
+    },
+    "补充要求，或询问进度…": {
+      "zh-CN": "补充要求，或询问进度…",
+      "en": "Add a requirement or ask for progress…"
+    },
+    "补充已送达": {
+      "zh-CN": "补充已送达",
+      "en": "Follow-up sent"
+    },
+    "补充已有回复": {
+      "zh-CN": "补充已有回复",
+      "en": "Follow-up answered"
+    },
+    "任务已返回": {
+      "zh-CN": "任务已返回",
+      "en": "Task returned"
+    },
+    "任务状态已更新": {
+      "zh-CN": "任务状态已更新",
+      "en": "Task status updated"
+    },
+    "补充记录": {
+      "zh-CN": "补充记录",
+      "en": "Follow-ups"
+    },
+    "此条补充未执行，内容已保留": {
+      "zh-CN": "此条补充未执行，内容已保留",
+      "en": "This follow-up was not sent. Your text is preserved."
+    },
+    "当前任务暂不能补充，请先核查原操作": {
+      "zh-CN": "当前任务暂不能补充，请先核查原操作",
+      "en": "This task cannot accept a follow-up yet. Check its status first."
+    },
+    "任务仍在运行": {
+      "zh-CN": "任务仍在运行",
+      "en": "The task is still running"
+    },
+    "任务当前空闲": {
+      "zh-CN": "任务当前空闲",
+      "en": "The task is currently idle"
+    },
+    "重新登录": {
+      "zh-CN": "重新登录",
+      "en": "Sign in again"
+    },
+    "请重新登录": {
+      "zh-CN": "请重新登录",
+      "en": "Please sign in again"
+    },
+    "模型连接已失效。重新登录会保留会话与原问题，不会自动重发请求。": {
+      "zh-CN": "模型连接已失效。重新登录会保留会话与原问题，不会自动重发请求。",
+      "en": "The model connection is no longer valid. Signing in again keeps your conversations and requests. No request is resent automatically."
+    },
+    "可读": {
+      "zh-CN": "可读",
+      "en": "Readable"
+    },
+    "本次检查结果": {
+      "zh-CN": "本次检查结果",
+      "en": "Check results"
+    },
+    "检查后内容已变化，以下结果对应检查时的内容。": {
+      "zh-CN": "检查后内容已变化，以下结果对应检查时的内容。",
+      "en": "The content has changed since this check. Results refer to the checked content."
+    },
+    "检查回执不完整，请核对后重新检查。": {
+      "zh-CN": "检查回执不完整，请核对后重新检查。",
+      "en": "The check result is incomplete. Review it before checking again."
+    },
+    "网络结构检查完成": {
+      "zh-CN": "网络结构检查完成",
+      "en": "Network structure checked"
+    },
+    "交付与验收条目检查完成": {
+      "zh-CN": "交付与验收条目检查完成",
+      "en": "Deliverable and acceptance fields checked"
+    },
+    "{nodes} 个节点 · {questions} 项疑问；结构有效。": {
+      "zh-CN": "{nodes} 个节点 · {questions} 项疑问；结构有效。",
+      "en": "{nodes} nodes · {questions} questions; structure is valid."
+    },
+    "{complete} / {total} 项任务已填写交付物、验收条目和来源。": {
+      "zh-CN": "{complete} / {total} 项任务已填写交付物、验收条目和来源。",
+      "en": "{complete} / {total} tasks include deliverables, acceptance fields and sources."
+    },
+    "缺少：{fields}": {
+      "zh-CN": "缺少：{fields}",
+      "en": "Missing: {fields}"
+    },
+    "验收条目": {
+      "zh-CN": "验收条目",
+      "en": "Acceptance fields"
+    },
+    "来源依据": {
+      "zh-CN": "来源依据",
+      "en": "Source basis"
+    },
+    "仅检查结构与条目；业务正确性和实际执行尚未验收。": {
+      "zh-CN": "仅检查结构与条目；业务正确性和实际执行尚未验收。",
+      "en": "Structure and fields only. Business correctness and actual execution have not been accepted."
+    },
+    "{count} 份交付文件已变化或缺失，原交付依据保留。": {
+      "zh-CN": "{count} 份交付文件已变化或缺失，原交付依据保留。",
+      "en": "Changed or missing delivery files: {count}. Original delivery records are retained."
+    },
+    "{count} 份交付文件暂未能核对。": {
+      "zh-CN": "{count} 份交付文件暂未能核对。",
+      "en": "{count} delivered files could not be checked."
+    },
+    "可打开文件版本一致；{count} 份留存记录需要核对。": {
+      "zh-CN": "可打开文件版本一致；{count} 份留存记录需要核对。",
+      "en": "Files to open match the delivered versions; {count} retained records need review."
+    },
+    "另有 {count} 份留存记录需要核对。": {
+      "zh-CN": "另有 {count} 份留存记录需要核对。",
+      "en": "{count} additional retained records need review."
+    },
+    "要求版本或来源需要核对，当前交付依据保持不变。": {
+      "zh-CN": "要求版本或来源需要核对，当前交付依据保持不变。",
+      "en": "The requirement version or sources need review. The delivery basis is retained."
+    },
+    "查看需核对的文件（{count}）": {
+      "zh-CN": "查看需核对的文件（{count}）",
+      "en": "Review files needing attention ({count})"
+    },
+    "暂未能核对": {
+      "zh-CN": "暂未能核对",
+      "en": "Could not be checked"
+    },
+    "报告留存副本": {
+      "zh-CN": "报告留存副本",
+      "en": "Retained report copy"
+    },
+    "待确认事项留存副本": {
+      "zh-CN": "待确认事项留存副本",
+      "en": "Retained pending-items copy"
+    },
+    "待确认事项记录": {
+      "zh-CN": "待确认事项记录",
+      "en": "Pending-items record"
+    },
+    "生成来源快照": {
+      "zh-CN": "生成来源快照",
+      "en": "Generation source snapshot"
+    },
+    "其他核对项": {
+      "zh-CN": "其他核对项",
+      "en": "Additional check"
+    },
+    "已关联此讨论；梳理依据以已加入资料为准。": {
+      "zh-CN": "已关联此讨论；梳理依据以已加入资料为准。",
+      "en": "Linked to this discussion. Requirements use the materials added to this work."
+    },
+    "检查任务结构": {
+      "zh-CN": "检查任务结构",
+      "en": "Check task structure"
+    },
+    "这条来源引用不完整，原引用保留。": {
+      "zh-CN": "这条来源引用不完整，原引用保留。",
+      "en": "This source reference is incomplete. The original reference is retained."
+    },
+    "资料引用": {
+      "zh-CN": "资料引用",
+      "en": "Source reference"
+    },
+    "版本 {revision} · 片段 {chunk} · 原文第 {start}–{end} 字": {
+      "zh-CN": "版本 {revision} · 片段 {chunk} · 原文第 {start}–{end} 字",
+      "en": "Version {revision} · Section {chunk} · Original characters {start}–{end}"
+    },
+    "来源快照尚未读取，已有引用保留。": {
+      "zh-CN": "来源快照尚未读取，已有引用保留。",
+      "en": "The source snapshot has not been read. Existing references are retained."
+    },
+    "摘录内容已核对 · ": {
+      "zh-CN": "摘录内容已核对 · ",
+      "en": "Excerpt content checked · "
+    },
+    "移除此来源": {
+      "zh-CN": "移除此来源",
+      "en": "Remove this reference"
+    },
+    "任务来源": {
+      "zh-CN": "任务来源",
+      "en": "Task sources"
+    },
+    "收起资料引用": {
+      "zh-CN": "收起资料引用",
+      "en": "Close source picker"
+    },
+    "引用资料中的原文": {
+      "zh-CN": "引用资料中的原文",
+      "en": "Quote from source materials"
+    },
+    "引用资料": {
+      "zh-CN": "引用资料",
+      "en": "Source material"
+    },
+    "选择资料": {
+      "zh-CN": "选择资料",
+      "en": "Choose a source"
+    },
+    "原文片段": {
+      "zh-CN": "原文片段",
+      "en": "Source section"
+    },
+    "片段 {index}": {
+      "zh-CN": "片段 {index}",
+      "en": "Section {index}"
+    },
+    "在原文中选取需要引用的内容。": {
+      "zh-CN": "在原文中选取需要引用的内容。",
+      "en": "Select the text to quote from the original."
+    },
+    "引用原文": {
+      "zh-CN": "引用原文",
+      "en": "Original source text"
+    },
+    "核对摘录中…": {
+      "zh-CN": "核对摘录中…",
+      "en": "Checking excerpt…"
+    },
+    "引用选中原文": {
+      "zh-CN": "引用选中原文",
+      "en": "Quote selected text"
+    },
+    "当前来源快照没有可引用的原文，已有引用保留。": {
+      "zh-CN": "当前来源快照没有可引用的原文，已有引用保留。",
+      "en": "The current source snapshot has no text to quote. Existing references are retained."
+    },
+    "请先选取需要引用的原文。": {
+      "zh-CN": "请先选取需要引用的原文。",
+      "en": "Select the original text to quote first."
+    },
+    "选取范围截断了一个字符，请重新选取。": {
+      "zh-CN": "选取范围截断了一个字符，请重新选取。",
+      "en": "The selection splits a character. Select the text again."
+    },
+    "来源引用不完整，未添加引用。": {
+      "zh-CN": "来源引用不完整，未添加引用。",
+      "en": "The source reference is incomplete. No reference was added."
+    },
+    "来源或选段已变化，请重新核对后引用。": {
+      "zh-CN": "来源或选段已变化，请重新核对后引用。",
+      "en": "The source or selection changed. Review it before quoting."
+    },
+    "这段原文已在来源中。": {
+      "zh-CN": "这段原文已在来源中。",
+      "en": "This excerpt is already referenced."
+    },
+    "一个任务最多保留 32 处来源，请先核对已有引用。": {
+      "zh-CN": "一个任务最多保留 32 处来源，请先核对已有引用。",
+      "en": "A task can retain up to 32 references. Review the existing references first."
+    },
+    "来源摘录无法核对，未添加引用。": {
+      "zh-CN": "来源摘录无法核对，未添加引用。",
+      "en": "The source excerpt could not be checked. No reference was added."
+    },
+    "原文与来源记录不一致，未添加引用。": {
+      "zh-CN": "原文与来源记录不一致，未添加引用。",
+      "en": "The original text does not match its source record. No reference was added."
+    },
+    "这处摘录暂未能核对，原引用保留。": {
+      "zh-CN": "这处摘录暂未能核对，原引用保留。",
+      "en": "This excerpt could not be checked. The original reference is retained."
+    },
+    "有草稿修改": {
+      "zh-CN": "有草稿修改",
+      "en": "Draft changes"
+    },
+    "当前显示的是修改草稿，请先保存并确认新版本后再交付。": {
+      "zh-CN": "当前显示的是修改草稿，请先保存并确认新版本后再交付。",
+      "en": "You are viewing draft changes. Save and confirm a new version before delivery."
+    },
+    "请先保存修改为新版本，再确认当前版本。": {
+      "zh-CN": "请先保存修改为新版本，再确认当前版本。",
+      "en": "Save the changes as a new version before confirming."
+    },
+    "更新任务来源引用": {
+      "zh-CN": "更新任务来源引用",
+      "en": "Update task source references"
+    },
+    "来源引用（{count}）": {
+      "zh-CN": "来源引用（{count}）",
+      "en": "Source references ({count})"
+    },
+    "相关讨论": {
+      "zh-CN": "相关讨论",
+      "en": "Related discussions"
+    },
+    "按已保存文件查找关联": {
+      "zh-CN": "按已保存文件查找关联",
+      "en": "Find links for the saved file"
+    },
+    "已保存文件的相关讨论": {
+      "zh-CN": "已保存文件的相关讨论",
+      "en": "Discussions for the saved file"
+    }
+  }
+}

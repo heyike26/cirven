@@ -1,0 +1,68 @@
+{
+  "fault-documents": {
+    "files": [
+      {
+        "path": "tests/test_documents.py",
+        "sha256": "f6346042e242edfbdb87c2cb110f1094fdac94978fde037c123544b275e80677",
+        "collected_tests": 9
+      },
+      {
+        "path": "tests/test_body_limit.py",
+        "sha256": "4ba877a55bdceccf445f500d4d0ed51926ac2518d3dfaec3ad44f6a9ce644f94",
+        "collected_tests": 1
+      },
+      {
+        "path": "tests/test_diagram_documents.py",
+        "sha256": "6c521ccc6d6d01da7e93d0e627271f6bb973bd78d282c66eeacb07871ffadd81",
+        "collected_tests": 4
+      },
+      {
+        "path": "tests/test_docx_documents.py",
+        "sha256": "d2f25c6c27daae76c68a1e30dc074dbf23dc0d49e8bc459b82ee8a511cd81b8c",
+        "collected_tests": 2
+      },
+      {
+        "path": "tests/test_pdf_documents.py",
+        "sha256": "dc76283ea086b11c59b435eb07b1d4649c04aea21844f7870451a401d351a441",
+        "collected_tests": 3
+      },
+      {
+        "path": "tests/test_image_documents.py",
+        "sha256": "a9a57e2db62fd79f02ad4a98f007fce2c033dc2441af79cc7c13a5fde7a047ce",
+        "collected_tests": 10
+      },
+      {
+        "path": "tests/test_long_documents.py",
+        "sha256": "b7f6dd7031feccff0ece658bdfb1e9ab9c7ca23403bf27ecbf5045ed9547a77c",
+        "collected_tests": 4
+      },
+      {
+        "path": "tests/test_document_context.py",
+        "sha256": "b386dfab27c91ab7f68031e06fdcd028ab47a0428369908b448893bd3f140557",
+        "collected_tests": 2
+      }
+    ],
+    "expected_tests": 35,
+    "collection_evidence": "reports/E09-final-test-inventory/source-probes-80699e7",
+    "scope": "All original assertions in these whole files; actual source-bound valid import first, original synthetic fault suites second",
+    "limits": "Original generic fault invariants, not project-specific workflow, upstream build, company model or native Windows qualification; extension active runtime-throw branch requires separate direct evidence"
+  },
+  "fault-extension": {
+    "files": [
+      {
+        "path": "tests/test_extensions.py",
+        "sha256": "385bfaba6db8bbe0e7d935ab03ab12f7e0f37077761e76a0fb2273773f17619a",
+        "collected_tests": 16
+      },
+      {
+        "path": "tests/test_extension_tasks.py",
+        "sha256": "06fe7504911bfbabd484ae17b6a242049503871a6c4980080fd7ca006d36ca1a",
+        "collected_tests": 2
+      }
+    ],
+    "expected_tests": 18,
+    "collection_evidence": "reports/E09-final-test-inventory/source-probes-80699e7",
+    "scope": "All original assertions in these whole files; actual source-bound valid import first, original synthetic fault suites second",
+    "limits": "Original generic fault invariants, not project-specific workflow, upstream build, company model or native Windows qualification; extension active runtime-throw branch requires separate direct evidence"
+  }
+}

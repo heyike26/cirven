@@ -1,0 +1,14 @@
+.as-connection-configuration fieldset{display:grid;gap:12px;min-width:0;margin:0;padding:0;border:0}
+.as-connection-configuration fieldset>label{display:grid;gap:6px;min-width:0}
+.as-connection-configuration fieldset>.as-check{display:flex}
+.as-connection-configuration select,.as-connection-configuration textarea,.as-connection-configuration input[type=search]{box-sizing:border-box;width:100%;min-width:0}
+.as-configuration-heading{display:flex;align-items:center;justify-content:space-between;gap:12px;min-width:0}
+.as-configuration-heading span{min-width:0;overflow-wrap:anywhere}
+.as-configuration-heading button{flex:none}
+.as-configuration-tools,.as-configuration-paths{display:grid;gap:8px;max-height:240px;overflow:auto;min-width:0;margin-block:8px}
+.as-configuration-tools .as-check span,.as-configuration-paths p{min-width:0;overflow-wrap:anywhere}
+.as-configuration-paths p{margin:0}
+.as-configuration-copy{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-block:8px}
+.as-configuration-copy span{flex:1 1 120px}
+
+.as-configuration-copy details{min-width:0;flex:1 1 160px}.as-configuration-copy pre{white-space:pre-wrap;overflow-wrap:anywhere;max-height:200px;overflow:auto}

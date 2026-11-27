@@ -1,0 +1,45 @@
+{
+  "cli_installed": false,
+  "commit": "0282d03eb6fc3091b3deaa3a855d4030dc40cd6c",
+  "files": {
+    "LICENSE": {
+      "bytes": 1060,
+      "sha256": "2510b446bc1f0cf9702453075d20cd88631e20e5642658edb7325d9c1eb534f7",
+      "upstream_path": "LICENSE"
+    },
+    "clarify.md": {
+      "bytes": 19507,
+      "sha256": "5260d798c5671deb9ac7e59d6ffdb69b30c26fb28878d3cc25e30fb71cacc734",
+      "upstream_path": "templates/commands/clarify.md"
+    },
+    "clarity-taxonomy.txt": {
+      "bytes": 1925,
+      "derived_from": "clarify.md",
+      "original_line_end": 128,
+      "original_line_start": 75,
+      "sha256": "bfd552e36b7775b32fde5490a15ab5c37b9fddab05134b3e944dc713410d10fd"
+    },
+    "plan-template.md": {
+      "bytes": 3770,
+      "sha256": "dfba43da2b2a207ff8c177a0fba03af074fd45e261696b4b64172041fad2e992",
+      "upstream_path": "templates/plan-template.md"
+    },
+    "spec-template.md": {
+      "bytes": 4556,
+      "sha256": "3945437fc35cd30a5b2bf7beea680337c3516826d3efa5a6b92c4a7eca1ba28e",
+      "upstream_path": "templates/spec-template.md"
+    },
+    "tasks-template.md": {
+      "bytes": 9182,
+      "sha256": "1e448e9153462e8c5b5a55231a54c756d870a82950d4dd9425a2bf5b7008a0d9",
+      "upstream_path": "templates/tasks-template.md"
+    }
+  },
+  "integration": "CONTROLLED_TEMPLATE_AND_COVERAGE_TAXONOMY",
+  "license": "MIT",
+  "name": "github/spec-kit",
+  "python310_strategy": "No upstream CLI/Python scripts/hooks; read fixed templates and taxonomy as data",
+  "schema_version": "eeas.planning-source.v1",
+  "source_url": "https://github.com/github/spec-kit",
+  "version": "v1.1.3"
+}

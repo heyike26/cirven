@@ -1,0 +1,21 @@
+.as-titleband-leading{display:flex;align-items:center;gap:12px;min-width:0;flex:1}
+.as-titleband-leading .as-titleband-actions{margin-left:0;max-width:calc(100% - 100px)}
+.as-titleband-trailing{display:flex;align-items:center;justify-content:flex-end;min-width:0;flex:1}
+.as-titleband-center{display:flex;justify-content:center;min-width:100px;flex:1;max-width:440px;-webkit-app-region:no-drag}
+.as-titleband[data-has-center=true]{padding-right:0;display:grid;grid-template-columns:minmax(112px,1fr) minmax(100px,min(440px,40vw)) minmax(180px,1fr)}
+.as-titleband[data-has-center=true] .as-titleband-trailing{padding-right:148px}
+.as-agent-header>.as-supervisor-command-center{flex:1;max-width:280px;margin-left:auto}
+@media(max-width:760px){
+  .as-titleband[data-has-center=true]{grid-template-columns:minmax(40px,1fr) minmax(92px,160px) 180px;gap:8px}
+  .as-titleband[data-has-center=true] .as-titleband-leading>strong{display:none}
+  .as-titleband[data-has-center=true] .as-titleband-leading{gap:8px}
+  .as-titleband-leading .as-titleband-actions{max-width:calc(100% - 26px)}
+}
+
+@media(max-width:520px){
+  .as-titleband[data-has-center=true]{grid-template-columns:minmax(56px,1fr) minmax(92px,160px) 180px}
+  .as-titleband[data-has-center=true] .as-directory-toolbar>.as-directory-open{display:none}
+  .as-titleband[data-has-center=true] .as-directory-toolbar button>span,
+  .as-titleband[data-has-center=true] .as-directory-current>svg{display:none}
+  .as-app-frame .as-titleband[data-has-center=true] .as-directory-toolbar button{flex:none;width:28px;min-width:28px;padding:4px;gap:0}
+}

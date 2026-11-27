@@ -1,0 +1,5 @@
+.as-companion-menu-body>.as-interaction-restore-menu-item{min-width:0;align-items:flex-start;white-space:normal}
+.as-companion-menu-body>.as-interaction-restore-menu-item>span{flex:1;min-width:0;overflow-wrap:anywhere;text-align:left}
+.as-companion-menu-body>.as-interaction-restore-menu-item>[data-component=icon]{flex:none;margin-top:2px}
+
+.as-interaction-header>button{margin-left:auto}

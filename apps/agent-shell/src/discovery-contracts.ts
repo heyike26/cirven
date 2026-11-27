@@ -1,0 +1,22 @@
+import type { DocumentRef, PlanningOperation, PlanningProposal, ProviderProfile, Workspace } from './contracts';
+
+export type EntryMode = 'PROBLEM' | 'REQUIREMENTS' | 'TASK_FILE';
+export type DiscoveryPhase = 'DISCOVER' | 'DEFINE' | 'RESEARCH' | 'SPECIFY' | 'PLAN';
+export type ClaimOrigin = 'USER_STATEMENT' | 'SOURCE_FACT' | 'MODEL_SUGGESTION';
+export type DiscoveryClaim = { id:string; text:string; category:'PROBLEM'|'NEED'|'REQUIREMENT'|'CONSTRAINT'|'RISK'|'ASSUMPTION'|'DECISION'; origin:ClaimOrigin; source_anchors:unknown[]; acceptance:string[] };
+export type DiscoveryQuestion = { id:string; text:string; reason:string; category:'MISSING_INPUT'|'CONFLICT'|'UNREASONABLE'|'DECISION'; blocking:boolean; affects_claim_ids:string[]; requested_materials:string[]; source_anchors:unknown[] };
+export type CompetitorObservation = {dimension:string;text:string;status:'OFFICIAL_CLAIM'|'USER_TESTED'|'INFERENCE'|'UNKNOWN';source_anchors:unknown[]};
+export type DiscoveryCompetitor = {id:string;name:string;alternative_type:'DIRECT'|'INDIRECT'|'MANUAL'|'NON_CONSUMPTION';summary:string;observations:CompetitorObservation[]};
+export type DiagramNode = {id:string;label:string;description:string;claim_ids:string[];source_anchors:unknown[];origin:ClaimOrigin};
+export type DiagramEdge = {id:string;source:string;target:string;relation:string;claim_ids:string[];source_anchors:unknown[];origin:ClaimOrigin};
+export type DiscoveryGraph = {id:string;kind:'ARCHITECTURE'|'FLOW'|'MINDMAP';title:string;nodes:DiagramNode[];edges:DiagramEdge[]};
+export type NextAction = {id:string;method:string;action:string;reason:string;expected_artifact:string};
+export type DiscoveryCandidate = {title:string;phase:DiscoveryPhase;summary:string;claims:DiscoveryClaim[];questions:DiscoveryQuestion[];competitors:DiscoveryCompetitor[];graphs:DiscoveryGraph[];next_actions:NextAction[]};
+export type DiscoveryAnswer = {id:string;question_id:string;text:string;session_revision?:number;accepted?:boolean;[key:string]:unknown};
+export type DiscoverySession = {id:string;project_id:string;revision:number;current_revision:number;sha256:string;payload:{entry_mode:EntryMode;execution?:{mode:string;model_calls?:number};workspace_ref?:Pick<Workspace,'id'|'revision'|'binding_sha256'>|null;materials:DocumentRef[];source_receipt:unknown;candidate:DiscoveryCandidate;history:unknown[];status:'DRAFT'|'CONFIRMED';accepted_claim_ids:string[];accepted_graph_ids?:string[];resolutions:unknown[];proposal_ref?:{id:string;revision:number;sha256:string}|null};answers:DiscoveryAnswer[];source_current:boolean;readiness:{requirements_confirmed:boolean;can_plan:boolean;pending_count:number;blocking_count:number;review_status:string;semantic_verification:string;execution_authorized:boolean}};
+export type DiscoveryPlan = {session:DiscoverySession;proposal_ref:{id:string;revision:number;sha256:string};proposal:PlanningProposal};
+export type DiscoveryOperation = {operation_id:string;kind:string;status:'PROCESSING'|'COMPLETED'|'FAILED'|'CANCELLED'|'UNKNOWN_OUTCOME'|'TIMED_OUT'|'INTERRUPTED';session_id:string;basis_revision?:number|null;result?:DiscoverySession|DiscoveryPlan;native_execution?:PlanningOperation['native_execution'];events:unknown[];message?:string};
+export type ProviderRef = ProviderProfile['profile_ref'];
+export type DiscoveryRecoveryOperation=Pick<DiscoveryOperation,'operation_id'|'session_id'|'kind'|'status'|'native_execution'>&{created_at?:string|null;basis_revision?:number|null;sequence?:number};
+export type DiscoveryRecoveryPage={operations:DiscoveryRecoveryOperation[];next_before:number|null};
+export type Resolution = {question_id:string;mode:'ANSWER_ACCEPTED';answer_id:string;reason:string}|{question_id:string;mode:'ASSUMPTION_ACCEPTED';assumption:string;reason:string};

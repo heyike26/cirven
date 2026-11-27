@@ -1,0 +1,41 @@
+{
+  "schema_version": "eeas.environment.v1",
+  "classification": "PUBLIC_EXTERNAL_ONLY",
+  "development_os": "WSL2/Linux",
+  "deployment_targets": [
+    "Windows / Python 3.10 (native NOT_VALIDATED)"
+  ],
+  "tools": {
+    "node": {
+      "status": "AVAILABLE",
+      "version": "v22.23.3"
+    },
+    "npm": {
+      "status": "AVAILABLE",
+      "version": "9.2.0"
+    },
+    "git": {
+      "status": "AVAILABLE",
+      "version": "git version 2.43.0"
+    },
+    "claude": {
+      "status": "AVAILABLE",
+      "version": "2.1.296 (Claude Code)"
+    }
+  },
+  "developer_agent": {
+    "preferred": "claude-code",
+    "actual": "codex",
+    "version": "2.1.296 (Claude Code)"
+  },
+  "product_runtime": {
+    "preferred": "claude-agent-sdk",
+    "version": "0.2.165",
+    "authentication_verified": false,
+    "credential_reference": "process environment only",
+    "live_evidence": []
+  },
+  "private_materials_allowed": false,
+  "real_hardware_enabled": false,
+  "target_python": "3.10"
+}

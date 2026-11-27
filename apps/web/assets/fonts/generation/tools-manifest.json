@@ -1,0 +1,64 @@
+{
+  "schema": "eeas.offline-font-tools.v1",
+  "targets": [
+    "CPython 3.10 Linux x86_64",
+    "CPython 3.10 Windows AMD64"
+  ],
+  "runtime_required": false,
+  "files": [
+    {
+      "package": "fonttools",
+      "version": "4.65.0",
+      "path": "wheels/fonttools-4.65.0-py3-none-any.whl",
+      "url": "https://files.pythonhosted.org/packages/e6/35/f894ceb867118c0261d0f69a9bd516b045a3754238f76c88a49513ac7a83/fonttools-4.65.0-py3-none-any.whl",
+      "metadata_url": "https://pypi.org/pypi/fonttools/4.65.0/json",
+      "sha256": "3060b8c1fc2329fa20265b7c138614143ea7c1624e26c5c180c76aeb74deae6f",
+      "byte_length": 1196441,
+      "licenses": [
+        {
+          "original_member": "fonttools-4.65.0.dist-info/licenses/LICENSE",
+          "path": "licenses/fonttools-4.65.0-py3-none-any.whl/0-LICENSE",
+          "sha256": "6787208f83f659ccbc2223b2fde952ffa6f7e8aca62f1a8a2bf5bc51bb1b2383"
+        },
+        {
+          "original_member": "fonttools-4.65.0.dist-info/licenses/LICENSE.external",
+          "path": "licenses/fonttools-4.65.0-py3-none-any.whl/1-LICENSE.external",
+          "sha256": "94a83aaee0729a0f302d34acc4acecbd9d58366f262429075fe557e4a54b2e69"
+        }
+      ]
+    },
+    {
+      "package": "Brotli",
+      "version": "1.2.0",
+      "path": "wheels/brotli-1.2.0-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.whl",
+      "url": "https://files.pythonhosted.org/packages/48/10/f47854a1917b62efe29bc98ac18e5d4f71df03f629184575b862ef2e743b/brotli-1.2.0-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.whl",
+      "metadata_url": "https://pypi.org/pypi/brotli/1.2.0/json",
+      "sha256": "1b557b29782a643420e08d75aea889462a4a8796e9a6cf5621ab05a3f7da8ef2",
+      "byte_length": 1424307,
+      "licenses": [
+        {
+          "original_member": "brotli-1.2.0.dist-info/licenses/LICENSE",
+          "path": "licenses/brotli-1.2.0-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.whl/0-LICENSE",
+          "sha256": "3d180008e36922a4e8daec11c34c7af264fed5962d07924aea928c38e8663c94"
+        }
+      ]
+    },
+    {
+      "package": "Brotli",
+      "version": "1.2.0",
+      "path": "wheels/brotli-1.2.0-cp310-cp310-win_amd64.whl",
+      "url": "https://files.pythonhosted.org/packages/ac/39/70981d9f47705e3c2b95c0847dfa3e7a37aa3b7c6030aedc4873081ed005/brotli-1.2.0-cp310-cp310-win_amd64.whl",
+      "metadata_url": "https://pypi.org/pypi/brotli/1.2.0/json",
+      "sha256": "ef87b8ab2704da227e83a246356a2b179ef826f550f794b2c52cddb4efbd0196",
+      "byte_length": 369035,
+      "licenses": [
+        {
+          "original_member": "brotli-1.2.0.dist-info/licenses/LICENSE",
+          "path": "licenses/brotli-1.2.0-cp310-cp310-win_amd64.whl/0-LICENSE",
+          "sha256": "60ae0f13e76cc2eaaa108677eefa4ce16b647f6bbe8cf0a1ac9429d82eca7248"
+        }
+      ]
+    }
+  ],
+  "native_windows_generation": "NOT_RUN"
+}

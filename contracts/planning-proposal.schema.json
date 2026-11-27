@@ -1,0 +1,322 @@
+{
+  "$defs": {
+    "PlanningNode": {
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "pattern": "^[A-Za-z0-9_-]{1,100}$",
+          "title": "Id",
+          "type": "string"
+        },
+        "title": {
+          "maxLength": 300,
+          "minLength": 1,
+          "title": "Title",
+          "type": "string"
+        },
+        "description": {
+          "maxLength": 24000,
+          "minLength": 1,
+          "title": "Description",
+          "type": "string"
+        },
+        "kind": {
+          "default": "TASK",
+          "enum": [
+            "TASK",
+            "MILESTONE",
+            "DELIVERABLE",
+            "DECISION"
+          ],
+          "title": "Kind",
+          "type": "string"
+        },
+        "parent_id": {
+          "anyOf": [
+            {
+              "pattern": "^[A-Za-z0-9_-]{1,100}$",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Parent Id"
+        },
+        "depends_on": {
+          "items": {
+            "pattern": "^[A-Za-z0-9_-]{1,100}$",
+            "type": "string"
+          },
+          "maxItems": 2000,
+          "title": "Depends On",
+          "type": "array"
+        },
+        "inputs": {
+          "items": {
+            "type": "string"
+          },
+          "maxItems": 100,
+          "title": "Inputs",
+          "type": "array"
+        },
+        "outputs": {
+          "items": {
+            "type": "string"
+          },
+          "maxItems": 100,
+          "title": "Outputs",
+          "type": "array"
+        },
+        "acceptance": {
+          "items": {
+            "type": "string"
+          },
+          "maxItems": 100,
+          "title": "Acceptance",
+          "type": "array"
+        },
+        "capabilities": {
+          "items": {
+            "type": "string"
+          },
+          "maxItems": 100,
+          "title": "Capabilities",
+          "type": "array"
+        },
+        "risks": {
+          "items": {
+            "type": "string"
+          },
+          "maxItems": 100,
+          "title": "Risks",
+          "type": "array"
+        },
+        "source_anchors": {
+          "items": {
+            "$ref": "#/$defs/QuestionAnchor"
+          },
+          "maxItems": 32,
+          "title": "Source Anchors",
+          "type": "array"
+        },
+        "origin": {
+          "default": "MODEL_SUGGESTION",
+          "enum": [
+            "SOURCE_OUTLINE",
+            "MODEL_SUGGESTION",
+            "USER_STATEMENT"
+          ],
+          "title": "Origin",
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "title",
+        "description"
+      ],
+      "title": "PlanningNode",
+      "type": "object"
+    },
+    "PlanningQuestion": {
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "pattern": "^[A-Za-z0-9_-]{1,100}$",
+          "title": "Id",
+          "type": "string"
+        },
+        "text": {
+          "maxLength": 16000,
+          "minLength": 1,
+          "title": "Text",
+          "type": "string"
+        },
+        "reason": {
+          "maxLength": 4000,
+          "minLength": 1,
+          "title": "Reason",
+          "type": "string"
+        },
+        "category": {
+          "enum": [
+            "MISSING_INPUT",
+            "CONFLICT",
+            "UNREASONABLE",
+            "DECISION"
+          ],
+          "title": "Category",
+          "type": "string"
+        },
+        "blocking": {
+          "default": true,
+          "title": "Blocking",
+          "type": "boolean"
+        },
+        "affects_node_ids": {
+          "items": {
+            "pattern": "^[A-Za-z0-9_-]{1,100}$",
+            "type": "string"
+          },
+          "maxItems": 2000,
+          "title": "Affects Node Ids",
+          "type": "array"
+        },
+        "requested_materials": {
+          "items": {
+            "type": "string"
+          },
+          "maxItems": 100,
+          "title": "Requested Materials",
+          "type": "array"
+        },
+        "source_anchors": {
+          "items": {
+            "$ref": "#/$defs/QuestionAnchor"
+          },
+          "maxItems": 32,
+          "title": "Source Anchors",
+          "type": "array"
+        }
+      },
+      "required": [
+        "id",
+        "text",
+        "reason",
+        "category"
+      ],
+      "title": "PlanningQuestion",
+      "type": "object"
+    },
+    "QuestionAnchor": {
+      "additionalProperties": false,
+      "properties": {
+        "document_id": {
+          "pattern": "^[A-Za-z0-9_-]{1,100}$",
+          "title": "Document Id",
+          "type": "string"
+        },
+        "revision": {
+          "minimum": 1,
+          "title": "Revision",
+          "type": "integer"
+        },
+        "raw_sha256": {
+          "pattern": "^[0-9a-f]{64}$",
+          "title": "Raw Sha256",
+          "type": "string"
+        },
+        "chunk_index": {
+          "minimum": 0,
+          "title": "Chunk Index",
+          "type": "integer"
+        },
+        "chunk_sha256": {
+          "pattern": "^[0-9a-f]{64}$",
+          "title": "Chunk Sha256",
+          "type": "string"
+        },
+        "char_start": {
+          "minimum": 0,
+          "title": "Char Start",
+          "type": "integer"
+        },
+        "char_end": {
+          "exclusiveMinimum": 0,
+          "title": "Char End",
+          "type": "integer"
+        },
+        "quote_sha256": {
+          "pattern": "^[0-9a-f]{64}$",
+          "title": "Quote Sha256",
+          "type": "string"
+        }
+      },
+      "required": [
+        "document_id",
+        "revision",
+        "raw_sha256",
+        "chunk_index",
+        "chunk_sha256",
+        "char_start",
+        "char_end",
+        "quote_sha256"
+      ],
+      "title": "QuestionAnchor",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "title": {
+      "maxLength": 200,
+      "minLength": 1,
+      "title": "Title",
+      "type": "string"
+    },
+    "summary": {
+      "maxLength": 24000,
+      "minLength": 1,
+      "title": "Summary",
+      "type": "string"
+    },
+    "goals": {
+      "items": {
+        "type": "string"
+      },
+      "maxItems": 100,
+      "title": "Goals",
+      "type": "array"
+    },
+    "constraints": {
+      "items": {
+        "type": "string"
+      },
+      "maxItems": 100,
+      "title": "Constraints",
+      "type": "array"
+    },
+    "risks": {
+      "items": {
+        "type": "string"
+      },
+      "maxItems": 100,
+      "title": "Risks",
+      "type": "array"
+    },
+    "assumptions": {
+      "items": {
+        "type": "string"
+      },
+      "maxItems": 100,
+      "title": "Assumptions",
+      "type": "array"
+    },
+    "nodes": {
+      "items": {
+        "$ref": "#/$defs/PlanningNode"
+      },
+      "maxItems": 2000,
+      "minItems": 1,
+      "title": "Nodes",
+      "type": "array"
+    },
+    "questions": {
+      "items": {
+        "$ref": "#/$defs/PlanningQuestion"
+      },
+      "maxItems": 200,
+      "title": "Questions",
+      "type": "array"
+    }
+  },
+  "required": [
+    "title",
+    "summary",
+    "nodes"
+  ],
+  "title": "PlanningCandidate",
+  "type": "object"
+}

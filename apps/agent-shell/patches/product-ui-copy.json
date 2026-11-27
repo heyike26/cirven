@@ -1,0 +1,431 @@
+{
+  "schema_version": 1,
+  "scope": "AUTHORED_APP_COPY_ONLY_ZH_EN",
+  "upstream_commit": "733b2c627e5aec39cb33cc22373bdce33053ef2c",
+  "targets": [
+    {
+      "path": "packages/app/src/i18n/en.ts",
+      "export_name": "dict",
+      "locale": "en",
+      "source_sha256": "589c074e01b06d1ba36c871f295c509da808143e762b865e469f93adbdd4c4c2",
+      "messages": {
+        "dialog.provider.opencode.note": {
+          "expected": "Curated models including Claude, GPT, Gemini and more",
+          "replacement": "Model availability and access depend on the service"
+        },
+        "dialog.provider.opencode.tagline": {
+          "expected": "Reliable optimized models",
+          "replacement": "Model service"
+        },
+        "dialog.provider.opencodeGo.tagline": {
+          "expected": "Low cost subscription for everyone",
+          "replacement": "Third-party model subscription"
+        },
+        "dialog.model.unpaid.freeModels.title": {
+          "expected": "Free models provided by OpenCode",
+          "replacement": "Available free models"
+        },
+        "provider.connect.apiKey.description": {
+          "expected": "Enter your {{provider}} API key to connect your account and use {{provider}} models in OpenCode.",
+          "replacement": "Enter your {{provider}} API key to connect your account and use {{provider}} models in @SHORT_NAME@."
+        },
+        "provider.connect.opencodeZen.line1": {
+          "expected": "OpenCode Zen gives you access to a curated set of reliable optimized models for coding agents.",
+          "replacement": "A third-party model service for agents."
+        },
+        "provider.connect.opencodeZen.line2": {
+          "expected": "With a single API key you'll get access to models such as Claude, GPT, Gemini, GLM and more.",
+          "replacement": "Model availability, pricing and access are determined by the service."
+        },
+        "provider.connect.opencodeZen.visit.suffix": {
+          "expected": " to collect your API key.",
+          "replacement": " to get the service's API key."
+        },
+        "provider.connect.oauth.code.visit.suffix": {
+          "expected": " to collect your authorization code to connect your account and use {{provider}} models in OpenCode.",
+          "replacement": " to collect your authorization code to connect your account and use {{provider}} models in @SHORT_NAME@."
+        },
+        "provider.connect.oauth.auto.visit.suffix": {
+          "expected": " and enter the code below to connect your account and use {{provider}} models in OpenCode.",
+          "replacement": " and enter the code below to connect your account and use {{provider}} models in @SHORT_NAME@."
+        },
+        "dialog.server.description": {
+          "expected": "Switch which OpenCode server this app connects to.",
+          "replacement": "Switch the agent runtime this app connects to."
+        },
+        "wsl.onboarding.step.opencode": {
+          "expected": "OpenCode",
+          "replacement": "Agent runtime"
+        },
+        "wsl.onboarding.checkingOpencode": {
+          "expected": "Checking OpenCode...",
+          "replacement": "Checking agent runtime..."
+        },
+        "wsl.onboarding.checkingOpencodeIn": {
+          "expected": "Checking OpenCode in {{distro}}...",
+          "replacement": "Checking agent runtime in {{distro}}..."
+        },
+        "wsl.onboarding.updatingOpencode": {
+          "expected": "Updating OpenCode...",
+          "replacement": "Updating agent runtime..."
+        },
+        "wsl.onboarding.updatingOpencodeIn": {
+          "expected": "Updating OpenCode in {{distro}}...",
+          "replacement": "Updating agent runtime in {{distro}}..."
+        },
+        "wsl.onboarding.updateOpencodeIn": {
+          "expected": "Update OpenCode in {{distro}}.",
+          "replacement": "Update the agent runtime in {{distro}}."
+        },
+        "wsl.onboarding.updateOpencode": {
+          "expected": "Update OpenCode",
+          "replacement": "Update agent runtime"
+        },
+        "wsl.onboarding.opencodeReadyIn": {
+          "expected": "OpenCode is ready in {{distro}}.",
+          "replacement": "Agent runtime is ready in {{distro}}."
+        },
+        "wsl.onboarding.opencodeReady": {
+          "expected": "OpenCode is ready.",
+          "replacement": "Agent runtime is ready."
+        },
+        "wsl.onboarding.installOpencodeIn": {
+          "expected": "Install OpenCode in {{distro}}.",
+          "replacement": "Install the agent runtime in {{distro}}."
+        },
+        "wsl.onboarding.installOpencode": {
+          "expected": "Install OpenCode",
+          "replacement": "Install agent runtime"
+        },
+        "wsl.onboarding.distroStatus.opencodeMissing": {
+          "expected": "OpenCode not installed",
+          "replacement": "Agent runtime not installed"
+        },
+        "wsl.onboarding.wslNotInstalled.description": {
+          "expected": "WSL (Windows Subsystem for Linux) is required before OpenCode can add a WSL server",
+          "replacement": "WSL (Windows Subsystem for Linux) is required to add a WSL runtime"
+        },
+        "wsl.onboarding.wslUnavailable.description": {
+          "expected": "OpenCode could not verify WSL on this machine.",
+          "replacement": "Could not verify WSL on this machine."
+        },
+        "wsl.onboarding.windowsRestartRequired": {
+          "expected": "Restart Windows to finish installing WSL, then reopen OpenCode.",
+          "replacement": "Restart Windows to finish installing WSL, then reopen @SHORT_NAME@."
+        },
+        "help.tabs.introduction": {
+          "expected": "OpenCode Desktop is now built around tabs.",
+          "replacement": "Use tabs to keep related work together."
+        },
+        "toast.update.description": {
+          "expected": "A new version of OpenCode ({{version}}) is now available to install.",
+          "replacement": "A new application version ({{version}}) is available to install."
+        },
+        "error.page.report.prefix": {
+          "expected": "Please report this error to the OpenCode team",
+          "replacement": "Report this issue with the diagnostic details"
+        },
+        "error.chain.mcpFailed": {
+          "expected": "MCP server \"{{name}}\" failed. Note, OpenCode does not support MCP authentication yet.",
+          "replacement": "MCP server \"{{name}}\" failed. This runtime does not support MCP authentication."
+        },
+        "sidebar.gettingStarted.line1": {
+          "expected": "OpenCode includes free models so you can start immediately.",
+          "replacement": "Connect a model service to begin."
+        },
+        "app.name.desktop": {
+          "expected": "OpenCode Desktop",
+          "replacement": "@DISPLAY_NAME@"
+        },
+        "settings.desktop.wsl.description": {
+          "expected": "Run the OpenCode server inside WSL on Windows.",
+          "replacement": "Run the agent runtime inside WSL on Windows."
+        },
+        "settings.general.row.language.description": {
+          "expected": "Change the display language for OpenCode",
+          "replacement": "Change the display language for @SHORT_NAME@"
+        },
+        "settings.general.row.appearance.description": {
+          "expected": "Customise how OpenCode looks on your device",
+          "replacement": "Customise how @SHORT_NAME@ looks on your device"
+        },
+        "settings.general.row.colorScheme.description": {
+          "expected": "Choose whether OpenCode follows the system, light, or dark theme",
+          "replacement": "Choose whether @SHORT_NAME@ follows the system, light, or dark theme"
+        },
+        "settings.general.row.theme.description": {
+          "expected": "Customise how OpenCode is themed.",
+          "replacement": "Customise the @SHORT_NAME@ theme."
+        },
+        "settings.updates.row.startup.description": {
+          "expected": "Automatically check for updates when OpenCode launches",
+          "replacement": "Automatically check for updates when the app launches"
+        },
+        "settings.updates.toast.latest.description": {
+          "expected": "You're running the latest version of OpenCode.",
+          "replacement": "You're running the latest application version."
+        }
+      }
+    },
+    {
+      "path": "packages/app/src/i18n/zh.ts",
+      "export_name": "dict",
+      "locale": "zh-CN",
+      "source_sha256": "7dccd82e12f7737a7975ff27fd620e59c41a1da35ecdee35f3b0871879330d03",
+      "messages": {
+        "desktop.menu.app": {
+          "expected": "OpenCode",
+          "replacement": "@DISPLAY_NAME@"
+        },
+        "desktop.menu.documentation": {
+          "expected": "OpenCode 文档",
+          "replacement": "运行环境文档"
+        },
+        "desktop.menu.ariaLabel": {
+          "expected": "OpenCode 菜单",
+          "replacement": "@SHORT_NAME@ 菜单"
+        },
+        "desktop.recovery.loadFailed": {
+          "expected": "OpenCode 加载失败",
+          "replacement": "@SHORT_NAME@ 加载失败"
+        },
+        "desktop.recovery.terminated": {
+          "expected": "OpenCode 窗口意外终止",
+          "replacement": "@SHORT_NAME@ 窗口意外终止"
+        },
+        "desktop.recovery.unresponsive": {
+          "expected": "OpenCode 未响应",
+          "replacement": "@SHORT_NAME@ 未响应"
+        },
+        "desktop.wsl.error.installOpencode": {
+          "expected": "OpenCode 安装失败",
+          "replacement": "执行环境安装失败"
+        },
+        "desktop.wsl.error.opencodeMissing": {
+          "expected": "此发行版中未安装 opencode",
+          "replacement": "此发行版中未安装执行环境"
+        },
+        "desktop.wsl.error.opencodeCannotRun": {
+          "expected": "已安装 opencode，但无法运行",
+          "replacement": "已安装执行环境，但无法运行"
+        },
+        "desktop.wsl.error.opencodeNotInstalled": {
+          "expected": "{{distro}} 中未安装 OpenCode",
+          "replacement": "{{distro}} 中未安装执行环境"
+        },
+        "desktop.wsl.error.updateVersion": {
+          "expected": "OpenCode 更新已完成，但 {{distro}} 仍报告版本 {{installed}}；预期版本为 {{expected}}",
+          "replacement": "执行环境更新已完成，但 {{distro}} 仍报告版本 {{installed}}；预期版本为 {{expected}}"
+        },
+        "dialog.provider.opencode.note": {
+          "expected": "精选模型，包括 Claude、GPT、Gemini 等",
+          "replacement": "可用模型和访问权限以模型服务说明为准"
+        },
+        "dialog.provider.opencode.tagline": {
+          "expected": "可靠的优化模型",
+          "replacement": "模型服务"
+        },
+        "dialog.provider.opencodeGo.tagline": {
+          "expected": "适合所有人的低成本订阅",
+          "replacement": "第三方模型订阅"
+        },
+        "dialog.model.unpaid.freeModels.title": {
+          "expected": "OpenCode 提供的免费模型",
+          "replacement": "可用的免费模型"
+        },
+        "provider.connect.apiKey.description": {
+          "expected": "输入你的 {{provider}} API 密钥以连接账户，并在 OpenCode 中使用 {{provider}} 模型。",
+          "replacement": "输入你的 {{provider}} API 密钥以连接账户，并在 @SHORT_NAME@ 中使用 {{provider}} 模型。"
+        },
+        "provider.connect.opencodeZen.line1": {
+          "expected": "OpenCode Zen 为你提供一组精选的可靠优化模型，用于代码智能体。",
+          "replacement": "第三方模型服务，提供适用于智能体的模型连接。"
+        },
+        "provider.connect.opencodeZen.line2": {
+          "expected": "只需一个 API 密钥，你就能使用 Claude、GPT、Gemini、GLM 等模型。",
+          "replacement": "可用模型、价格和访问权限以该服务说明为准。"
+        },
+        "provider.connect.opencodeZen.visit.suffix": {
+          "expected": " 获取你的 API 密钥。",
+          "replacement": " 获取该服务的 API 密钥。"
+        },
+        "provider.connect.oauth.code.visit.suffix": {
+          "expected": " 获取授权码，以连接你的账户并在 OpenCode 中使用 {{provider}} 模型。",
+          "replacement": " 获取授权码，以连接你的账户并在 @SHORT_NAME@ 中使用 {{provider}} 模型。"
+        },
+        "provider.connect.oauth.auto.visit.suffix": {
+          "expected": " 并输入以下代码，以连接你的账户并在 OpenCode 中使用 {{provider}} 模型。",
+          "replacement": " 并输入以下代码，以连接你的账户并在 @SHORT_NAME@ 中使用 {{provider}} 模型。"
+        },
+        "dialog.server.description": {
+          "expected": "切换此应用连接的 OpenCode 服务器。",
+          "replacement": "切换此应用连接的执行环境。"
+        },
+        "wsl.onboarding.step.opencode": {
+          "expected": "OpenCode",
+          "replacement": "执行环境"
+        },
+        "wsl.onboarding.checkingOpencode": {
+          "expected": "正在检查 OpenCode...",
+          "replacement": "正在检查执行环境..."
+        },
+        "wsl.onboarding.checkingOpencodeIn": {
+          "expected": "正在检查 {{distro}} 中的 OpenCode...",
+          "replacement": "正在检查 {{distro}} 中的执行环境..."
+        },
+        "wsl.onboarding.updatingOpencode": {
+          "expected": "正在更新 OpenCode...",
+          "replacement": "正在更新执行环境..."
+        },
+        "wsl.onboarding.updatingOpencodeIn": {
+          "expected": "正在更新 {{distro}} 中的 OpenCode...",
+          "replacement": "正在更新 {{distro}} 中的执行环境..."
+        },
+        "wsl.onboarding.updateOpencodeIn": {
+          "expected": "更新 {{distro}} 中的 OpenCode。",
+          "replacement": "更新 {{distro}} 中的执行环境。"
+        },
+        "wsl.onboarding.updateOpencode": {
+          "expected": "更新 OpenCode",
+          "replacement": "更新执行环境"
+        },
+        "wsl.onboarding.opencodeReadyIn": {
+          "expected": "{{distro}} 中的 OpenCode 已就绪。",
+          "replacement": "{{distro}} 中的执行环境已就绪。"
+        },
+        "wsl.onboarding.opencodeReady": {
+          "expected": "OpenCode 已就绪。",
+          "replacement": "执行环境已就绪。"
+        },
+        "wsl.onboarding.installOpencodeIn": {
+          "expected": "在 {{distro}} 中安装 OpenCode。",
+          "replacement": "在 {{distro}} 中安装执行环境。"
+        },
+        "wsl.onboarding.installOpencode": {
+          "expected": "安装 OpenCode",
+          "replacement": "安装执行环境"
+        },
+        "wsl.onboarding.distroStatus.opencodeMissing": {
+          "expected": "未安装 OpenCode",
+          "replacement": "未安装执行环境"
+        },
+        "wsl.onboarding.wslNotInstalled.description": {
+          "expected": "OpenCode 需要 WSL（Windows Subsystem for Linux）才能添加 WSL 服务器",
+          "replacement": "添加 WSL 执行环境前需要安装 WSL（Windows Subsystem for Linux）"
+        },
+        "wsl.onboarding.wslUnavailable.description": {
+          "expected": "OpenCode 无法验证此设备上的 WSL。",
+          "replacement": "无法验证此设备上的 WSL。"
+        },
+        "wsl.onboarding.windowsRestartRequired": {
+          "expected": "重启 Windows 以完成 WSL 安装，然后重新打开 OpenCode。",
+          "replacement": "重启 Windows 以完成 WSL 安装，然后重新打开 @SHORT_NAME@。"
+        },
+        "help.tabs.introduction": {
+          "expected": "OpenCode Desktop 现已采用以标签页为核心的设计。",
+          "replacement": "使用标签页组织相关工作。"
+        },
+        "toast.update.description": {
+          "expected": "OpenCode 有新版本 ({{version}}) 可安装。",
+          "replacement": "有应用新版本 ({{version}}) 可安装。"
+        },
+        "error.page.report.prefix": {
+          "expected": "请将此错误报告给 OpenCode 团队",
+          "replacement": "请附上诊断信息报告此错误"
+        },
+        "error.chain.mcpFailed": {
+          "expected": "MCP 服务器 \"{{name}}\" 启动失败。注意：OpenCode 暂不支持 MCP 认证。",
+          "replacement": "MCP 服务器 \"{{name}}\" 启动失败。此执行环境不支持 MCP 认证。"
+        },
+        "sidebar.gettingStarted.line1": {
+          "expected": "OpenCode 提供免费模型，你可以立即开始使用。",
+          "replacement": "连接模型服务后开始使用。"
+        },
+        "app.name.desktop": {
+          "expected": "OpenCode Desktop",
+          "replacement": "@DISPLAY_NAME@"
+        },
+        "settings.desktop.wsl.description": {
+          "expected": "在 Windows 的 WSL 环境中运行 OpenCode 服务器。",
+          "replacement": "在 Windows 的 WSL 环境中运行执行环境。"
+        },
+        "settings.general.row.language.description": {
+          "expected": "更改 OpenCode 的显示语言",
+          "replacement": "更改 @SHORT_NAME@ 的显示语言"
+        },
+        "settings.general.row.appearance.description": {
+          "expected": "自定义 OpenCode 在你的设备上的外观",
+          "replacement": "自定义 @SHORT_NAME@ 在你的设备上的外观"
+        },
+        "settings.general.row.colorScheme.description": {
+          "expected": "选择 OpenCode 跟随系统、浅色或深色主题",
+          "replacement": "选择 @SHORT_NAME@ 跟随系统、浅色或深色主题"
+        },
+        "settings.general.row.theme.description": {
+          "expected": "自定义 OpenCode 的主题。",
+          "replacement": "自定义 @SHORT_NAME@ 的主题。"
+        },
+        "settings.updates.row.startup.description": {
+          "expected": "在 OpenCode 启动时自动检查更新",
+          "replacement": "在应用启动时自动检查更新"
+        },
+        "settings.updates.toast.latest.description": {
+          "expected": "你正在使用最新版本的 OpenCode。",
+          "replacement": "你正在使用最新版本的应用。"
+        }
+      }
+    },
+    {
+      "path": "packages/app/src/i18n/desktop-native.ts",
+      "export_name": "DESKTOP_NATIVE_ENGLISH",
+      "locale": "en",
+      "source_sha256": "095c83e0ae475e2773a478813bb83282030ff4a2cd26cba3f5ee89245923a7de",
+      "messages": {
+        "desktop.menu.app": {
+          "expected": "OpenCode",
+          "replacement": "@DISPLAY_NAME@"
+        },
+        "desktop.menu.documentation": {
+          "expected": "OpenCode Documentation",
+          "replacement": "Runtime documentation"
+        },
+        "desktop.menu.ariaLabel": {
+          "expected": "OpenCode menu",
+          "replacement": "@SHORT_NAME@ menu"
+        },
+        "desktop.recovery.loadFailed": {
+          "expected": "OpenCode failed to load",
+          "replacement": "@SHORT_NAME@ failed to load"
+        },
+        "desktop.recovery.terminated": {
+          "expected": "OpenCode window terminated unexpectedly",
+          "replacement": "@SHORT_NAME@ window terminated unexpectedly"
+        },
+        "desktop.recovery.unresponsive": {
+          "expected": "OpenCode is not responding",
+          "replacement": "@SHORT_NAME@ is not responding"
+        },
+        "desktop.wsl.error.installOpencode": {
+          "expected": "OpenCode installation failed",
+          "replacement": "Agent runtime installation failed"
+        },
+        "desktop.wsl.error.opencodeMissing": {
+          "expected": "opencode is not installed in this distro",
+          "replacement": "Agent runtime is not installed in this distro"
+        },
+        "desktop.wsl.error.opencodeCannotRun": {
+          "expected": "opencode is installed but could not run",
+          "replacement": "Agent runtime is installed but could not run"
+        },
+        "desktop.wsl.error.opencodeNotInstalled": {
+          "expected": "OpenCode is not installed in {{distro}}",
+          "replacement": "Agent runtime is not installed in {{distro}}"
+        },
+        "desktop.wsl.error.updateVersion": {
+          "expected": "OpenCode update finished but {{distro}} still reports {{installed}}; expected {{expected}}",
+          "replacement": "Runtime update finished but {{distro}} still reports {{installed}}; expected {{expected}}"
+        }
+      }
+    }
+  ]
+}

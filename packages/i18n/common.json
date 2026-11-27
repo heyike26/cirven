@@ -1,0 +1,57 @@
+{
+  "schema_version": 1,
+  "messages": {
+    "window.main": {
+      "zh-CN": "{product}",
+      "en": "{product}"
+    },
+    "window.orb": {
+      "zh-CN": "{short_name} 快捷助手",
+      "en": "{short_name} quick access"
+    },
+    "window.quick": {
+      "zh-CN": "{short_name} 快捷问答",
+      "en": "{short_name} quick chat"
+    },
+    "window.annotation": {
+      "zh-CN": "{short_name} 页面批注",
+      "en": "{short_name} annotation"
+    },
+    "tray.tooltip": {
+      "zh-CN": "{product} · 右键打开或退出",
+      "en": "{product} · Right-click to open or exit"
+    },
+    "tray.open": {
+      "zh-CN": "打开 {product}",
+      "en": "Open {product}"
+    },
+    "tray.exit": {
+      "zh-CN": "退出 {product}",
+      "en": "Exit {product}"
+    },
+    "notification.title": {
+      "zh-CN": "{product} · 任务提醒",
+      "en": "{product} · Task update"
+    },
+    "language.label": {
+      "zh-CN": "界面语言",
+      "en": "Interface language"
+    },
+    "language.system": {
+      "zh-CN": "跟随系统",
+      "en": "Follow system"
+    },
+    "language.zh-CN": {
+      "zh-CN": "简体中文",
+      "en": "简体中文"
+    },
+    "language.en": {
+      "zh-CN": "English",
+      "en": "English"
+    },
+    "tray.icon_unavailable": {
+      "zh-CN": "{product} 托盘图标未能创建。",
+      "en": "The {product} tray icon could not be created."
+    }
+  }
+}

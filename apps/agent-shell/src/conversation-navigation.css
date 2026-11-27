@@ -1,0 +1,10 @@
+.as-history-preview{box-sizing:border-box;width:min(640px,calc(100vw - 32px));max-height:calc(100dvh - 64px);overflow:auto;padding:24px;border:1px solid var(--as-stroke,#dfe0e2);border-radius:12px;background:var(--as-surface,#fff);color:var(--as-ink,#36393c);font-size:14px;line-height:24px;box-shadow:0 16px 64px #20242a20}
+.as-history-preview::backdrop{background:#20242a24}
+.as-history-preview header{display:flex;align-items:flex-start;gap:16px;margin-bottom:16px}
+.as-history-preview h2{flex:1;min-width:0;margin:0;font-size:16px;line-height:24px;overflow-wrap:anywhere}
+.as-history-preview header button{flex:none;display:grid;place-items:center;width:28px;height:28px;padding:0;border:0;border-radius:8px;background:transparent;color:inherit;font-size:20px;cursor:pointer}
+.as-history-preview small{color:var(--as-muted,#6e7175);font-size:12px}
+.as-history-preview p{margin:16px 0 0;white-space:pre-wrap;overflow-wrap:anywhere}
+.as-history-popover{box-sizing:border-box;display:flex;width:min(360px,calc(100vw - 32px));height:min(560px,70dvh);padding:16px;overflow:hidden}
+.as-history-popover .as-conversation-sidebar{width:100%}
+.as-agent-header>.as-popover-anchor{flex:none}

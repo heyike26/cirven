@@ -1,0 +1,355 @@
+{
+  "edges": [
+    {
+      "claim_ids": [
+        "S03"
+      ],
+      "id": "dep01",
+      "origin": "SOURCE_FACT",
+      "relation": "提供可核对记录",
+      "source": "task01",
+      "source_anchors": [
+        {
+          "char_end": 637,
+          "char_start": 0,
+          "chunk_index": 0,
+          "chunk_sha256": "e691d4b353933921029d1654a7f89b8438167f3dc474aba4cedc5367355871a0",
+          "document_id": "0905c08c-b9b3-4c10-b51f-168950d8863c",
+          "quote_sha256": "e691d4b353933921029d1654a7f89b8438167f3dc474aba4cedc5367355871a0",
+          "raw_sha256": "e691d4b353933921029d1654a7f89b8438167f3dc474aba4cedc5367355871a0",
+          "revision": 1
+        }
+      ],
+      "target": "task02"
+    },
+    {
+      "claim_ids": [
+        "S03"
+      ],
+      "id": "dep02",
+      "origin": "SOURCE_FACT",
+      "relation": "提供审阅结论",
+      "source": "task02",
+      "source_anchors": [
+        {
+          "char_end": 637,
+          "char_start": 0,
+          "chunk_index": 0,
+          "chunk_sha256": "e691d4b353933921029d1654a7f89b8438167f3dc474aba4cedc5367355871a0",
+          "document_id": "0905c08c-b9b3-4c10-b51f-168950d8863c",
+          "quote_sha256": "e691d4b353933921029d1654a7f89b8438167f3dc474aba4cedc5367355871a0",
+          "raw_sha256": "e691d4b353933921029d1654a7f89b8438167f3dc474aba4cedc5367355871a0",
+          "revision": 1
+        }
+      ],
+      "target": "task03"
+    },
+    {
+      "claim_ids": [
+        "S03"
+      ],
+      "id": "dep03",
+      "origin": "SOURCE_FACT",
+      "relation": "提供任务与前置",
+      "source": "task03",
+      "source_anchors": [
+        {
+          "char_end": 637,
+          "char_start": 0,
+          "chunk_index": 0,
+          "chunk_sha256": "e691d4b353933921029d1654a7f89b8438167f3dc474aba4cedc5367355871a0",
+          "document_id": "0905c08c-b9b3-4c10-b51f-168950d8863c",
+          "quote_sha256": "e691d4b353933921029d1654a7f89b8438167f3dc474aba4cedc5367355871a0",
+          "raw_sha256": "e691d4b353933921029d1654a7f89b8438167f3dc474aba4cedc5367355871a0",
+          "revision": 1
+        }
+      ],
+      "target": "task04"
+    },
+    {
+      "claim_ids": [
+        "S03"
+      ],
+      "id": "dep04",
+      "origin": "SOURCE_FACT",
+      "relation": "提供确认内容（确认尚未取得）",
+      "source": "task03",
+      "source_anchors": [
+        {
+          "char_end": 637,
+          "char_start": 0,
+          "chunk_index": 0,
+          "chunk_sha256": "e691d4b353933921029d1654a7f89b8438167f3dc474aba4cedc5367355871a0",
+          "document_id": "0905c08c-b9b3-4c10-b51f-168950d8863c",
+          "quote_sha256": "e691d4b353933921029d1654a7f89b8438167f3dc474aba4cedc5367355871a0",
+          "raw_sha256": "e691d4b353933921029d1654a7f89b8438167f3dc474aba4cedc5367355871a0",
+          "revision": 1
+        }
+      ],
+      "target": "task05"
+    },
+    {
+      "claim_ids": [
+        "S03"
+      ],
+      "id": "dep05",
+      "origin": "SOURCE_FACT",
+      "relation": "提供已核关系",
+      "source": "task04",
+      "source_anchors": [
+        {
+          "char_end": 637,
+          "char_start": 0,
+          "chunk_index": 0,
+          "chunk_sha256": "e691d4b353933921029d1654a7f89b8438167f3dc474aba4cedc5367355871a0",
+          "document_id": "0905c08c-b9b3-4c10-b51f-168950d8863c",
+          "quote_sha256": "e691d4b353933921029d1654a7f89b8438167f3dc474aba4cedc5367355871a0",
+          "raw_sha256": "e691d4b353933921029d1654a7f89b8438167f3dc474aba4cedc5367355871a0",
+          "revision": 1
+        }
+      ],
+      "target": "task05"
+    },
+    {
+      "claim_ids": [
+        "S03"
+      ],
+      "id": "dep06",
+      "origin": "SOURCE_FACT",
+      "relation": "提供T01整链结果",
+      "source": "task01",
+      "source_anchors": [
+        {
+          "char_end": 637,
+          "char_start": 0,
+          "chunk_index": 0,
+          "chunk_sha256": "e691d4b353933921029d1654a7f89b8438167f3dc474aba4cedc5367355871a0",
+          "document_id": "0905c08c-b9b3-4c10-b51f-168950d8863c",
+          "quote_sha256": "e691d4b353933921029d1654a7f89b8438167f3dc474aba4cedc5367355871a0",
+          "raw_sha256": "e691d4b353933921029d1654a7f89b8438167f3dc474aba4cedc5367355871a0",
+          "revision": 1
+        }
+      ],
+      "target": "task06"
+    },
+    {
+      "claim_ids": [
+        "S03"
+      ],
+      "id": "dep07",
+      "origin": "SOURCE_FACT",
+      "relation": "提供T02整链结果",
+      "source": "task02",
+      "source_anchors": [
+        {
+          "char_end": 637,
+          "char_start": 0,
+          "chunk_index": 0,
+          "chunk_sha256": "e691d4b353933921029d1654a7f89b8438167f3dc474aba4cedc5367355871a0",
+          "document_id": "0905c08c-b9b3-4c10-b51f-168950d8863c",
+          "quote_sha256": "e691d4b353933921029d1654a7f89b8438167f3dc474aba4cedc5367355871a0",
+          "raw_sha256": "e691d4b353933921029d1654a7f89b8438167f3dc474aba4cedc5367355871a0",
+          "revision": 1
+        }
+      ],
+      "target": "task06"
+    },
+    {
+      "claim_ids": [
+        "S03"
+      ],
+      "id": "dep08",
+      "origin": "SOURCE_FACT",
+      "relation": "提供T03整链结果",
+      "source": "task03",
+      "source_anchors": [
+        {
+          "char_end": 637,
+          "char_start": 0,
+          "chunk_index": 0,
+          "chunk_sha256": "e691d4b353933921029d1654a7f89b8438167f3dc474aba4cedc5367355871a0",
+          "document_id": "0905c08c-b9b3-4c10-b51f-168950d8863c",
+          "quote_sha256": "e691d4b353933921029d1654a7f89b8438167f3dc474aba4cedc5367355871a0",
+          "raw_sha256": "e691d4b353933921029d1654a7f89b8438167f3dc474aba4cedc5367355871a0",
+          "revision": 1
+        }
+      ],
+      "target": "task06"
+    },
+    {
+      "claim_ids": [
+        "S03"
+      ],
+      "id": "dep09",
+      "origin": "SOURCE_FACT",
+      "relation": "提供T04整链结果",
+      "source": "task04",
+      "source_anchors": [
+        {
+          "char_end": 637,
+          "char_start": 0,
+          "chunk_index": 0,
+          "chunk_sha256": "e691d4b353933921029d1654a7f89b8438167f3dc474aba4cedc5367355871a0",
+          "document_id": "0905c08c-b9b3-4c10-b51f-168950d8863c",
+          "quote_sha256": "e691d4b353933921029d1654a7f89b8438167f3dc474aba4cedc5367355871a0",
+          "raw_sha256": "e691d4b353933921029d1654a7f89b8438167f3dc474aba4cedc5367355871a0",
+          "revision": 1
+        }
+      ],
+      "target": "task06"
+    },
+    {
+      "claim_ids": [
+        "S03"
+      ],
+      "id": "dep10",
+      "origin": "SOURCE_FACT",
+      "relation": "提供T05整链结果",
+      "source": "task05",
+      "source_anchors": [
+        {
+          "char_end": 637,
+          "char_start": 0,
+          "chunk_index": 0,
+          "chunk_sha256": "e691d4b353933921029d1654a7f89b8438167f3dc474aba4cedc5367355871a0",
+          "document_id": "0905c08c-b9b3-4c10-b51f-168950d8863c",
+          "quote_sha256": "e691d4b353933921029d1654a7f89b8438167f3dc474aba4cedc5367355871a0",
+          "raw_sha256": "e691d4b353933921029d1654a7f89b8438167f3dc474aba4cedc5367355871a0",
+          "revision": 1
+        }
+      ],
+      "target": "task06"
+    }
+  ],
+  "id": "G_TASK_DEPENDENCIES",
+  "kind": "FLOW",
+  "nodes": [
+    {
+      "claim_ids": [
+        "S03"
+      ],
+      "description": "S03明确的主要工作包；向T02提供可核对记录，向T06提供整链结果的一部分。",
+      "id": "task01",
+      "label": "T01 导入校验",
+      "origin": "SOURCE_FACT",
+      "source_anchors": [
+        {
+          "char_end": 637,
+          "char_start": 0,
+          "chunk_index": 0,
+          "chunk_sha256": "e691d4b353933921029d1654a7f89b8438167f3dc474aba4cedc5367355871a0",
+          "document_id": "0905c08c-b9b3-4c10-b51f-168950d8863c",
+          "quote_sha256": "e691d4b353933921029d1654a7f89b8438167f3dc474aba4cedc5367355871a0",
+          "raw_sha256": "e691d4b353933921029d1654a7f89b8438167f3dc474aba4cedc5367355871a0",
+          "revision": 1
+        }
+      ]
+    },
+    {
+      "claim_ids": [
+        "S03"
+      ],
+      "description": "S03明确的主要工作包；依赖T01可核对记录，向T03提供审阅结论。",
+      "id": "task02",
+      "label": "T02 工单证据审阅",
+      "origin": "SOURCE_FACT",
+      "source_anchors": [
+        {
+          "char_end": 637,
+          "char_start": 0,
+          "chunk_index": 0,
+          "chunk_sha256": "e691d4b353933921029d1654a7f89b8438167f3dc474aba4cedc5367355871a0",
+          "document_id": "0905c08c-b9b3-4c10-b51f-168950d8863c",
+          "quote_sha256": "e691d4b353933921029d1654a7f89b8438167f3dc474aba4cedc5367355871a0",
+          "raw_sha256": "e691d4b353933921029d1654a7f89b8438167f3dc474aba4cedc5367355871a0",
+          "revision": 1
+        }
+      ]
+    },
+    {
+      "claim_ids": [
+        "S03"
+      ],
+      "description": "S03明确的主要工作包；向T04提供任务与前置，向T05提供确认内容。这里描述资料要求，不表示已有确认。",
+      "id": "task03",
+      "label": "T03 任务和验收编辑",
+      "origin": "SOURCE_FACT",
+      "source_anchors": [
+        {
+          "char_end": 637,
+          "char_start": 0,
+          "chunk_index": 0,
+          "chunk_sha256": "e691d4b353933921029d1654a7f89b8438167f3dc474aba4cedc5367355871a0",
+          "document_id": "0905c08c-b9b3-4c10-b51f-168950d8863c",
+          "quote_sha256": "e691d4b353933921029d1654a7f89b8438167f3dc474aba4cedc5367355871a0",
+          "raw_sha256": "e691d4b353933921029d1654a7f89b8438167f3dc474aba4cedc5367355871a0",
+          "revision": 1
+        }
+      ]
+    },
+    {
+      "claim_ids": [
+        "S03"
+      ],
+      "description": "S03明确的主要工作包；向T05提供已核关系。",
+      "id": "task04",
+      "label": "T04 依赖检查与图导航",
+      "origin": "SOURCE_FACT",
+      "source_anchors": [
+        {
+          "char_end": 637,
+          "char_start": 0,
+          "chunk_index": 0,
+          "chunk_sha256": "e691d4b353933921029d1654a7f89b8438167f3dc474aba4cedc5367355871a0",
+          "document_id": "0905c08c-b9b3-4c10-b51f-168950d8863c",
+          "quote_sha256": "e691d4b353933921029d1654a7f89b8438167f3dc474aba4cedc5367355871a0",
+          "raw_sha256": "e691d4b353933921029d1654a7f89b8438167f3dc474aba4cedc5367355871a0",
+          "revision": 1
+        }
+      ]
+    },
+    {
+      "claim_ids": [
+        "S03"
+      ],
+      "description": "S03明确的主要工作包；依赖T03确认内容并引用T04已核关系。",
+      "id": "task05",
+      "label": "T05 同版交接文书导出",
+      "origin": "SOURCE_FACT",
+      "source_anchors": [
+        {
+          "char_end": 637,
+          "char_start": 0,
+          "chunk_index": 0,
+          "chunk_sha256": "e691d4b353933921029d1654a7f89b8438167f3dc474aba4cedc5367355871a0",
+          "document_id": "0905c08c-b9b3-4c10-b51f-168950d8863c",
+          "quote_sha256": "e691d4b353933921029d1654a7f89b8438167f3dc474aba4cedc5367355871a0",
+          "raw_sha256": "e691d4b353933921029d1654a7f89b8438167f3dc474aba4cedc5367355871a0",
+          "revision": 1
+        }
+      ]
+    },
+    {
+      "claim_ids": [
+        "S03"
+      ],
+      "description": "S03明确的主要工作包；使用T01至T05整链结果，不表示验证已开展。",
+      "id": "task06",
+      "label": "T06 异常恢复与手改保护整链验证",
+      "origin": "SOURCE_FACT",
+      "source_anchors": [
+        {
+          "char_end": 637,
+          "char_start": 0,
+          "chunk_index": 0,
+          "chunk_sha256": "e691d4b353933921029d1654a7f89b8438167f3dc474aba4cedc5367355871a0",
+          "document_id": "0905c08c-b9b3-4c10-b51f-168950d8863c",
+          "quote_sha256": "e691d4b353933921029d1654a7f89b8438167f3dc474aba4cedc5367355871a0",
+          "raw_sha256": "e691d4b353933921029d1654a7f89b8438167f3dc474aba4cedc5367355871a0",
+          "revision": 1
+        }
+      ]
+    }
+  ],
+  "title": "资料明确的六工作包及上游产物依赖（非执行状态图）"
+}

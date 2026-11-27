@@ -1,0 +1,39 @@
+{
+  "schema": "eeas.opencode-plugin-bundle.v1",
+  "id": "eeas.command-observation",
+  "version": "0.1.0",
+  "entry": "index.mjs",
+  "runtime": {
+    "version": "1.19.0",
+    "source_commit": "733b2c627e5aec39cb33cc22373bdce33053ef2c"
+  },
+  "license": "UNLICENSED",
+  "files": [
+    {
+      "path": "index.mjs",
+      "sha256": "5e2870371e2741ad7a0dfec04917fe865822f47c3c14e768206851b986ee5a63",
+      "bytes": 12233
+    },
+    {
+      "path": "files.mjs",
+      "sha256": "0c7c460ac44b22e66774c119bffc62624a29085548d8385496ce640b1132a660",
+      "bytes": 6445
+    },
+    {
+      "path": "budget.mjs",
+      "sha256": "c5a3dee24d5e494aced7d3b92290cd48cd0b151715e27c9a66b4c151a6666757",
+      "bytes": 4314
+    },
+    {
+      "path": "package.json",
+      "sha256": "73af5ced6e09f99065e2eacb04e63cf85c380e359a348baa1cfde5ba5adac5f2",
+      "bytes": 287
+    },
+    {
+      "path": "README.md",
+      "sha256": "c0362071cfe29e14d5b0301ecb95f715c4a4c00ad3220c60d84944001ab3f2b3",
+      "bytes": 3527
+    }
+  ],
+  "new_dependencies": []
+}

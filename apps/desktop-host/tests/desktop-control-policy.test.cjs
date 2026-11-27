@@ -1,0 +1,7 @@
+'use strict';
+const test=require('node:test'),assert=require('node:assert/strict');
+const {delegateInput,takeoverInput}=require('../desktop-control-policy.cjs');
+const ref={id:'a'.repeat(64),revision:1,sha256:'b'.repeat(64)},execution={project_id:'local_project',execution_id:'owned_execution',request_sha256:'c'.repeat(64)};
+const value={operation_id:'delegate_1',surface_ref:ref,expected_input_epoch:2,expected_control_epoch:3,execution_ref:execution,user_requested_delegation:true};
+test('desktop delegation carries exact source and cannot include native handles or endpoints',()=>{assert.deepEqual(delegateInput(value),value);for(const bad of [{...value,hwnd:1},{...value,endpoint:'/shell'},{...value,execution_ref:{...execution,pid:5}},{...value,user_requested_delegation:false},{...value,expected_input_epoch:true}])assert.throws(()=>delegateInput(bad));});
+test('human takeover supports unbound desktop and requires paired exact scope for bound desktop',()=>{assert.deepEqual(takeoverInput({operation_id:'take_1',expected_control_epoch:3}),{operation_id:'take_1',expected_control_epoch:3});const scoped={operation_id:'take_2',expected_control_epoch:3,surface_ref:ref,expected_input_epoch:2};assert.deepEqual(takeoverInput(scoped),scoped);for(const bad of [{...scoped,execution_id:'unrelated'},{operation_id:'take_3',expected_control_epoch:3,surface_ref:ref},{...scoped,expected_control_epoch:0}])assert.throws(()=>takeoverInput(bad));});

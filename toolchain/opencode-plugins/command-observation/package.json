@@ -1,0 +1,1 @@
+{"name":"eeas-opencode-command-observation","version":"0.1.0","private":true,"license":"UNLICENSED","type":"module","main":"index.mjs","exports":{"./server":"./index.mjs"},"engines":{"opencode":"1.19.0","node":">=22"},"dependencies":{},"scripts":{"test":"node --test tests/*.test.mjs"}}

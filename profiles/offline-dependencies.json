@@ -1,0 +1,9 @@
+{
+  "schema_version": "eeas.offline-selection.v1",
+  "targets": {
+    "linux-py310": "vendor/linux-py310/20261012T152738898709Z",
+    "windows-py310": "vendor/windows-py310/20261012T152801109259Z"
+  },
+  "release_status": "DEVELOPMENT_ONLY",
+  "native_windows": "NOT_VALIDATED"
+}

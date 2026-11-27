@@ -1,0 +1,109 @@
+# Cirven 0.1.23 · VS Code companion
+
+This optional extension connects to **your local Cirven desktop App**. It uses the same conversations, model configuration, tasks and original OpenCode loop. A VSIX alone does not install the desktop App.
+
+Open task file on the original conversation opens text in VS Code and sends registered Word and other supported documents to the system application. Cirven checks the current saved version first. When you see Opening requested, check the document in its application.
+
+## Prepare the desktop App
+
+Obtain the complete Windows desktop package from your distributor. Use your organization's offline package on an intranet. Extract it to a local drive and confirm that it contains `START_EEAS.cmd`, `runtime` and `PACKAGE_MANIFEST.json`. Do not select the VSIX folder as the App installation. This extension neither downloads nor silently installs the App.
+
+Sign in or configure your API/intranet model in the desktop App. Provider credentials are not copied into this extension.
+
+## Connect
+
+1. Install the VSIX in local Windows VS Code, then use the **Cirven** editor-title button to open chat in the right secondary sidebar. The command **Cirven: Open chat** opens the same view without occupying the left file Explorer. For testing, use a separate window and isolated D-drive user-data/extensions directories; keep your existing work window open.
+2. Select **Link desktop App**, choosing the installation folder containing `START_EEAS.cmd`.
+3. If needed, select **Start in background**, then **Reconnect**. Approve the first connection in the desktop App. The pending view checks only the original pairing by GET and connects automatically after approval. It does not repeat the pairing POST. The waiting deadline is 115 seconds; closing the view or changing the installation stops the wait.
+4. Choose a project and an existing conversation. Messages and guidance go to that same Agent. Select Build or Plan. A stop request is not confirmation that execution has ended: check the original status.
+
+A compatible installation declares `eeas.ide-companion.v1`, its `ide_companion` capability marker and the bootstrap `--electron --background` option. The marker alone does not prove runtime readiness. Discovery uses only the selected installation's `user-data/ide-companion/discovery.json`, or an explicitly configured data directory; no disks are scanned.
+
+## Language and workspace
+
+Set `eeasCompanion.language` to `system`, `zh-CN` or `en`. System follows VS Code: Chinese resolves to Simplified Chinese, other languages to English. Switching the sidebar language does not reconnect, clear drafts or translate your messages, filenames or model replies. Command and settings labels use VS Code's native NLS and follow the IDE display language. Setup help opens this bundled English guide when English is selected.
+
+The sidebar follows VS Code's light, dark and high-contrast theme. Editor actions use separate light/dark icons; the sidebar container is tinted by VS Code, and the inline Cirven mark follows the Webview foreground immediately. No online fonts or UI resources are loaded. Background reads retain action controls and the current reading position.
+
+VS Code 1.106 or later is required. There is one chat view; its editor-title button only focuses that view. It does not start the desktop App, create a conversation or change files. Native VS Code controls can move or hide the view.
+
+## Existing capabilities and boundaries
+
+Original replies in desktop discussions can open their registered task text file or show the same operation's persisted full-file preview in the native VS Code diff editor. Select saved text, choose **Selection**, add feedback and send: the exact feedback is recorded first, then passed to the same desktop Agent. The quote stays compact by default; full text and **Save feedback only** expand on request. This requires a matching desktop version and individual method grants. A file path never determines its discussion.
+
+Applying changes requires opening and saving the original task file, reviewing its exact preview and explicitly approving it. Dirty buffers are never saved, replaced or overwritten automatically. Selection preserves BOM, CRLF and Unicode positions; changed files, discussions or dirty edits block further submission. Unknown feedback/apply outcomes retain the original operation and draft and allow only inspection, without replay. Applied previews cannot be applied again. Binary files and text over 192 KiB are excluded from this selection/rework path; other native documents still open in their system application.
+
+**Changed files** expands only on request in the selected original conversation. Refresh reads the same project, session, generation and workspace binding. Selecting a row opens the native VS Code diff editor with immutable, read-only historical text. It never uses the current disk or unsaved buffer to fill missing history. The existing **Diff** context action remains a separate saved-file/current-buffer comparison.
+
+The title distinguishes **Change excerpts** from **Full file**. Recorded tool patches provide excerpts with original line locations, not whole-file or byte-exact history. A full-file response must come from the authorized historical snapshot service and pass both UTF-8 text hashes. This client supports that contract; the pinned legacy task history does not itself produce full-file snapshots. Empty, binary, oversized and unavailable evidence is shown honestly. It cannot be accepted, reverted or written back from this view.
+
+Directory reads cover at most 128 files and saved root-session observations; they do not imply complete command/child-session history. The entire response is limited to 512 KiB, each patch to 128 KiB / 128 hunks. Up to eight snapshot pairs / 4 MiB are retained in memory, never on disk. Switching session/generation/workspace clears this cache; old or evicted virtual document references fail instead of displaying fabricated code. These reads do not call a model and are not polled in the background. Desktop support and an explicit grant for `session.diff` / `session.diff.file` are required.
+
+Directory and text reads share one in-flight slot per extension activation, including across session switches. There is no pending queue or automatic follow-up read. While an old read finishes, the view shows reading status; refresh the current conversation explicitly afterward. Cache limits cover the extension's own cache, not immutable documents already held by VS Code. Existing conversation polling remains separate.
+
+Full files retain their original generation and exact source scope. Project, session reference and workspace binding must match the currently read object; the source generation cannot be newer, and directory/text responses must agree on that source. Older sources are marked **Historical version** in the diff title and file tooltip, without claiming a new execution. Unattributable legacy excerpts do not acquire a guessed generation.
+
+- The sidebar reads bounded original conversation history and tool status: at most the latest 80 messages, 80 parts per message and 64,000 text characters, reduced further by the 512 KiB overall reply limit. Only unchanged message DOM in the current projection is reused. Removed rows and scope or language changes release old reuse records; there is no separate Markdown parse cache. Questions, permissions and new-conversation configuration are handled in the desktop App. Child-conversation chat is not connected here.
+- Visible views refresh locally about every 30 seconds when idle, or 5 seconds during execution, with one request in flight and failure backoff. These reads do not call a model. Closing VS Code does not cancel desktop tasks.
+- Drafts use a private local activation slot with revision checks. Other windows do not overwrite it. Old drafts can be explicitly restored as copies. Unsynced input remains in place. Capacity limits are 64 drafts and 128 request metadata entries / 1 MiB per slot, at most 32 slots; no automatic history deletion or archive compaction is implemented.
+- Unknown requests are checked by their original bridge request or business operation, never automatically resent. A known returned execution and a missing local reply are distinct. A local saving failure does not justify another POST.
+- **Selection** adds only explicitly selected trusted local text, up to 8000 characters, marking document version and unsaved state. **Diff** compares a saved file and the current buffer as read-only snapshots, at most 1 MiB each. **Preview** uses the native Markdown preview. Neither action saves or overwrites dirty files.
+- Explicit Markdown file links and original `file` references are clickable within the workspace bound to that exact session. On click, the desktop App rechecks the original message and current FileSource. Office/PDF files open in their system application; code opens in VS Code and Markdown in its native preview, preserving unsaved buffers. Registered authoring-plugin PPTX outputs reuse their original registry. Out-of-root, remote and UNC/WSL destinations, plain filenames and guessed recent reports are not opened. Older Apps need the matching desktop adapter update.
+
+Only local Windows UI extension hosts and trusted `file:` workspaces are supported in this release. WSL, SSH, UNC, virtual filesystems and remote workspaces are not silently shared or remapped. Starting the App uses only its selected packaged `pythonw.exe` and fixed arguments `[-B, scripts/native_package_bootstrap.py, --electron, --background]`, with `shell:false`. Pairing tickets stay in VS Code SecretStorage; DesktopToken, cookies and provider keys are not copied.
+
+The webview has nonce CSP, `connect-src 'none'`, a local media scope and a strict message allowlist. Messages are rendered as text, not executable HTML. Switching conversations does not move editor focus or reload dirty files. Starting a process is not App readiness; the connection must still handshake.
+
+## Package and evidence
+
+Zero runtime npm dependencies. Brand and language assets are copied from the canonical local sources and bound by SHA. The complete icon closure is verified; the toolbar uses a same-geometry monochrome SVG and the extension icon uses a pre-rendered PNG, without a runtime renderer. The selected three-part C/V mark uses the same canonical graphite and cool-silver source across surfaces. Technical IDs remain compatible. Node HTTP/filesystem/controller/renderer tests and CRC/XML/source identity package tests are distinct from real Windows, VS Code, Office or paid-model qualification. They do not certify visual quality or native execution.
+
+```text
+node --test plugins/vscode-companion/tests/*.test.cjs
+python plugins/vscode-companion/scripts/package_vsix.py --out D:/.../eeas-companion-0.1.19.vsix
+```
+
+MIT. The desktop App is supplied separately. No Git or remote file synchronization is performed by this client.
+
+The interface follows the live VS Code theme tokens for surfaces, text, controls, focus and fonts, including light, dark, high-contrast and custom themes. Theme changes keep the same conversation and unsent draft. Context actions are available from the local Context and tools menu. Browser fixture checks do not replace native VS Code qualification.
+
+The narrow pane prioritizes conversation reading. Project selection and context actions expand on demand. Body text starts at 14 px, controls at 13 px and metadata at 12 px, respecting larger host font settings. Layout spacing uses a 4 px scale.
+
+Third-party Markdown parser: `marked 18.0.7` (MIT), pinned local source and license included; no runtime download.
+
+## Local desktop discussions
+
+With a compatible desktop version, read and continue a desktop discussion in the same local project. Guidance and cancellation reference the original operation. Unknown outcomes are inspected without replay. Existing connections require an explicit grant update before reading the new discussion channel.
+
+This channel includes messages, status, guidance, and registered text-file selection feedback, full previews, and explicitly approved application. Existing task-session files, read-only diffs, and Markdown preview remain available. Rework in arbitrary applications or binary documents is outside this text-file channel. Older conversations without an explicit project are not assigned by inference.
+
+
+For original Agent sessions, Plan, Build and admitted Workflow use the same desktop owner. The next-task mode and text share one private-draft revision. Refresh, scope changes and explicit draft-copy recovery preserve that choice. An unconfirmed Workflow choice stays visible and cannot start a new task; guidance keeps the active task's frozen mode. Native-page conversations keep their existing hidden mode control. This does not introduce another Agent runtime or qualify an automatic dependency graph.
+
+
+Recovering a private draft checks the saved project and original conversation, then returns to that work. If its exact scope cannot be confirmed, the draft stays preserved. Recovery never loads an Agent or resends requests.
+
+
+Files opened from a registered desktop discussion do not require opening their folder again in VS Code. Selection still requires the exact Main-opened file and a trusted local window. A later preview in that same discussion can reuse that registered open file, while saved-source checks and explicit approval remain required. Original user messages are readable directly in chat; successful opening and quoting do not leave warning banners.
+
+Native messages acknowledge durable acceptance before SDK readiness and show “Starting the task” in the same discussion. You can request stop during startup; new typing is retained while sending is disabled. “Check result” reads the original operation. New-format requests confirm the complete input identity before clearing an unchanged original draft; older unknown requests without that evidence keep their draft and unknown state without replay. Sending follows the new reply, background updates preserve reading position, and an applied preview expresses success once.
+
+Only unresolved requests belonging to the current discussion are shown beside it. A count for other discussions appears in the optional local-draft disclosure; their records and exact original query scope are retained. Checking an older request can show “Returned · draft kept” without confirming its full input or clearing its draft. Existing desktop discussion names are reused, with full names on hover; naming never changes execution project or file authority. A validated historical apply receipt can show that a preview was previously applied, without rewriting the original reply or applying it again. Starting new work or changing discussion ends an earlier action notice; real errors and connection states remain available.
+
+**View child changes** in the original child record reads its historical differences on request and reuses the read-only native diff editor. Child snapshot references bind the original root scope, workspace and child source; full text retains its verified original write-ledger reference. Partial history remains explicit. Missing command history is not reconstructed from the current disk or unsaved editors. Explicit `session.child.diff` / `session.child.diff.file` pairing grants are required; no background read, new owner or model call is introduced. This entry is read-only. Apply, reject, revert and dirty-editor protection still require implementation and concentrated debugging; source wiring is not live VS Code or Windows qualification.
+
+**Review** on a full historical difference observes the saved version and shows whether it matches the original before/after text. **Accept version** and **Decline version** record your decision about that exact historical version. Each decision has its original operation receipt, complete request digest and review-revision CAS. A later manual save invalidates the old preparation. Lost replies are inspected through the original operation without resubmission; an immutable decision can recover its own receipt without borrowing a newer decision. These actions leave workspace files and the original Agent unchanged and do not rerun a tool or model. They do not restore files or qualify the whole task. Native editor application, revert and unsaved-edit protection are still in development. Separate pairing grants for `session.diff.prepare`, `session.diff.review` and `session.diff.review.operation` are required. New business tests remain authored but not run; no live IDE qualification is claimed.
+
+For an existing complete text file, **Review** offers **Restore before change** and **Apply version after change**. A durable handoff from the same original owner precedes opening the exact Main-authorized URI. Parent identity, saved-byte SHA and buffer version/hash/dirty state are checked before a native VS Code WorkspaceEdit. The intent is saved in the existing private slot before invocation, with native editor Undo retained. The helper never calls Save or reloads the document or creates a second file. Encoding/BOM changes, mixed line endings, file creation/deletion and missing-file cases remain outside this text path; historical excerpts are never guessed into applicable content.
+
+A changed buffer is not a saved file. **File edit pending** provides original-file access, exact handoff inspection and explicit verification after the user saves or undoes the change. **Keep current saved version** resolves only an explicitly chosen, clean editor matching actual saved bytes. Private-slot recovery reads original metadata and never edits again automatically. A recovered copy cannot take over while the original extension-host and parent processes are not confirmed gone. UNKNOWN outcomes are not replayed, and root/child drafts remain. This is source implementation with authored, unrun tests; live VS Code/Windows qualification, safe file lifecycle and general dirty-editor permission integration remain outstanding.
+
+While the original root task is running, **Add child guidance** in its current foreground direct-child record uses the existing composer, private draft and method. The acknowledged root input, exact running task call, child/parent directory and admitted agent are rechecked. Historical names, siblings, background tasks and completed delegations confer no authority. One original prompt_async uses the same owner and shared budget; UNKNOWN is inspected without replay. Root completion also waits for the latest exact child guidance input/result, all sessions idle and no pending question/permission, then independently observes its own result. A child answer is never substituted for the root answer. The execution deadline pauses only when current native tool calls prove every task is waiting on the exact child question/permission; the owner TTL remains fixed. Existing generation input/model budgets apply, with at most 32 delegated guidance records and 8 observed children per root. Source and authored tests exist; actual CLI/IDE/Windows and full workflow acceptance remain unrun.
+
+Exclusive Windows file-lifecycle backend/Main preparation, command and original-receipt interfaces now exist in source (`session.editor.file.prepare`, `.command`, `.operation`, each separately paired). They are distinct from native text WorkspaceEdit: exclusive creation, exact deletion preimage, durable single intent and no UNKNOWN replay. File Undo is an explicit current-state-checked action in the same handoff, not native text Ctrl+Z. Companion controller/native-state/recovery UI wiring and complete NTFS attributes/ACL/timestamp restoration remain unfinished. Source APIs and authored unrun tests do not qualify a usable IDE file lifecycle. Explicit recovery for missing/replaced directories releases only the original handoff and grants no replacement-path authority.
+
+Ordinary NTFS metadata recovery now exists in source: original-action-scoped private material for supported attributes, owner/group/DACL and creation/access/write times must be recorded before deletion and checked on recreation. Changed permissions or leaf identity invalidate old Undo. Only material status/digests are projected; ACL text stays out of the webview and model. Named streams, special NTFS attributes and unavailable permissions retain the original file for native handling. This does not qualify complete NTFS/SACL backup. Business/native cases remain authored and unrun, and companion file-action/recovery UI wiring is still pending.
+
+Original command test reports: explicitly observed saved XML snapshots can be inspected beside the original bash tool, with case details, filters and pages. Re-pair to grant `session.tool.reports` / `session.tool.report`. Inspection reads immutable after-command snapshots without running tests or reading current workspace files. A report with no failures does not qualify the command, current files, target environment or whole task; unchanged bytes do not prove a newly generated report. This addition is source-only pending concentrated debug and actual IDE/Windows validation.
+
+Command observation files can be declared independently in the existing execution configuration: select explicit observation and enter up to 32 workspace-relative file paths, one per line. The original observer saves their contents before and after commands without granting writes. An empty list records command results only; omission retains legacy exact-write-list inference without expanding globs. Turning the option off retains the text; applying a change still requires the existing configuration confirmation. This addition remains source-only pending concentrated business/IDE/Windows validation.

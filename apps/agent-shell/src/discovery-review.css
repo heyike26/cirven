@@ -1,0 +1,37 @@
+.as-discovery-selection{display:flex;flex-wrap:wrap;align-items:center;gap:8px 16px;padding:12px 0;margin-bottom:8px}
+.as-discovery-selection label.as-check{display:flex;align-items:center;gap:12px;min-height:44px;min-width:0;font-size:15px;line-height:1.6;cursor:pointer}
+.as-discovery-selection label.as-check input{flex:none;width:18px;height:18px;margin:0}
+.as-discovery-selection>.as-muted{font-size:13px;line-height:1.6}
+
+/* A narrow workbench pane can exist inside a wide desktop window. Reflow by
+   available item space, rather than relying on the shell compact breakpoint. */
+.as-discovery .as-next-action{flex-wrap:wrap;align-items:flex-start;gap:12px 16px}
+.as-discovery .as-next-action>div{flex:1 1 260px;min-width:0;max-width:100%;overflow-wrap:anywhere}
+.as-discovery .as-next-action>button{flex:none;max-width:100%;white-space:normal;overflow-wrap:normal}
+.as-discovery-guidance{margin:16px 0 24px;min-width:0}
+.as-discovery-guidance>summary{cursor:pointer;font-size:15px;line-height:1.6;padding:8px 0;color:var(--as-muted)}
+.as-discovery .as-discovery-followup{display:flex;flex-wrap:wrap;align-items:center;gap:12px;padding:16px 0;margin:8px 0 16px;border-bottom:1px solid var(--as-border,#dde1e4)}
+.as-discovery-followup>p{flex-basis:100%;margin:0}
+.as-discovery .as-plan-generation{display:flex;gap:12px;flex-wrap:wrap;align-items:center;max-width:100%}
+.as-discovery-records{font-size:16px;line-height:1.6;min-width:0}
+.as-discovery .as-discovery-facts{margin:16px 0 24px}
+.as-discovery-facts>div{display:flex;flex-wrap:wrap;align-items:baseline;gap:4px 16px;margin:12px 0}
+.as-discovery-facts dt{flex:0 1 180px;color:var(--as-muted)}
+.as-discovery-facts dd{flex:1 1 220px;min-width:0;margin:0;overflow-wrap:anywhere}
+.as-discovery-source-list,.as-discovery-history-list{padding-left:24px;margin:16px 0 24px}
+.as-discovery-source-list li,.as-discovery-history-list li{margin:16px 0;overflow-wrap:anywhere}
+.as-discovery-source-list li>span{display:block;color:var(--as-muted);font-size:13px}
+.as-discovery-source-list li>p,.as-discovery-history-list li>p{white-space:pre-wrap;margin:8px 0}
+.as-discovery-history-list li>div{display:flex;align-items:baseline;flex-wrap:wrap;gap:8px 16px}
+.as-discovery-history-list time{font-size:13px;color:var(--as-muted)}
+
+.as-discovery>.as-proposal-toolbar>:is(button,a){display:inline-flex;align-items:center;font-size:15px;line-height:1.6;min-height:40px;padding:8px 12px;max-width:100%;white-space:normal}
+.as-discovery .as-next-action strong{font-size:16px;font-weight:500;line-height:1.8}
+.as-discovery .as-next-action span,.as-discovery .as-next-action small{font-size:13px;line-height:1.6}
+.as-discovery .as-next-action p{font-size:16px;line-height:1.8}
+.as-discovery .as-next-action-details>summary{font-size:15px;line-height:1.6;min-height:40px;padding:8px 0}
+
+/* The shell small-button rule has three class/attribute selectors. Keep
+   this work-chain rule explicit and more specific, without !important or
+   changing global button sizing on unrelated pages. */
+.as-shell .as-discovery button[data-component=button]{font-size:15px;line-height:1.6;min-height:40px;padding:8px 12px}

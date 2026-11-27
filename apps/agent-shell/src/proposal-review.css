@@ -1,0 +1,53 @@
+/* Cirven confirmation review: pending work first, one adopted disclosure. */
+.as-app-frame .as-proposal .as-plan-questions[data-review-layout]{display:flex;flex-direction:column;gap:0;margin-top:32px;min-width:0}
+.as-app-frame .as-proposal .as-plan-questions[data-review-layout]>h3{display:flex;align-items:baseline;gap:8px;margin:0 0 12px;font-size:18px;line-height:1.5}
+.as-app-frame .as-proposal .as-plan-questions[data-review-layout]>h3>span{font-size:13px;margin:0;color:var(--as-muted)}
+.as-app-frame .as-proposal .as-plan-questions[data-review-layout]>p{font-size:13px;line-height:1.7;margin:0 0 20px;color:var(--as-muted)}
+.as-app-frame .as-proposal .as-plan-questions[data-review-layout]>.as-question-card{min-width:0;margin:0 0 20px;padding:20px;border:1px solid var(--as-stroke);background:var(--as-surface);border-radius:12px}
+.as-app-frame .as-proposal .as-plan-questions[data-review-layout]>.as-question-card[hidden]{display:none}
+.as-app-frame .as-proposal .as-plan-questions[data-review-layout]>.as-question-card>div:first-child{display:flex;align-items:flex-start;gap:12px;flex-wrap:wrap}
+.as-app-frame .as-proposal .as-plan-questions[data-review-layout]>.as-question-card>div:first-child>strong{flex:1 1 240px;font-size:15px;line-height:1.7;font-weight:600;min-width:0;overflow-wrap:anywhere}
+.as-app-frame .as-proposal .as-plan-questions[data-review-layout]>.as-question-card>div:first-child>span{font-size:13px;line-height:1.7;white-space:normal;flex:none;max-width:100%;color:var(--as-muted)}
+.as-app-frame .as-proposal .as-plan-questions[data-review-layout]>.as-question-card>p{font-size:14px;line-height:1.75;margin:12px 0;color:var(--as-muted)}
+.as-app-frame .as-proposal .as-plan-questions[data-review-layout]>.as-question-card>small{display:block;font-size:13px;line-height:1.7;margin:8px 0 16px;overflow-wrap:anywhere}
+.as-app-frame .as-proposal .as-plan-questions[data-review-layout]>.as-question-card textarea{font-size:15px;line-height:1.7;min-height:88px;margin-top:12px;padding:12px;max-width:100%}
+.as-app-frame .as-proposal .as-plan-questions[data-review-layout]>.as-question-card details{margin-top:16px;font-size:13px}
+.as-app-frame .as-proposal .as-plan-questions[data-review-layout]>.as-question-card details>summary{font-size:13px;padding-block:8px}
+.as-app-frame .as-proposal .as-plan-questions[data-review-layout]>.as-question-card label{font-size:13px;line-height:1.7;margin:12px 0}
+.as-app-frame .as-proposal .as-plan-questions[data-review-layout] .as-saved-answer{padding:12px 0;margin:12px 0;border-block:1px solid var(--as-stroke);border-radius:0;background:transparent}
+.as-app-frame .as-proposal .as-plan-questions[data-review-layout] .as-saved-answer>span{font-size:13px;line-height:1.7;color:var(--as-muted)}
+.as-app-frame .as-proposal .as-plan-questions[data-review-layout] .as-saved-answer>p{font-size:14px;line-height:1.75;margin:8px 0 0;white-space:pre-wrap}
+.as-app-frame .as-proposal .as-plan-questions[data-review-layout] .as-adopted-toggle{display:flex;align-items:center;gap:12px;width:100%;min-height:44px;padding:12px 0;margin:4px 0 16px;border:0;border-block:1px solid var(--as-stroke);border-radius:0;text-align:left;font-size:14px;line-height:1.7;color:var(--as-ink);background:transparent}
+.as-adopted-toggle>span:first-child{width:12px;flex:none}.as-adopted-toggle>small{margin-left:auto;font-size:13px;color:var(--as-muted)}
+.as-app-frame .as-proposal .as-plan-questions[data-review-layout]>.as-question-adopted{padding:0 0 20px;border:0;border-bottom:1px solid var(--as-stroke);border-radius:0;background:transparent}
+.as-adopted-decision{padding:12px 0 0}.as-app-frame .as-proposal .as-adopted-decision>p{font-size:14px;line-height:1.75;margin:0 0 12px;white-space:pre-wrap}
+.as-app-frame .as-proposal .as-adopted-decision>small{font-size:13px;line-height:1.7;color:var(--as-muted)}
+@media(max-width:480px){.as-app-frame .as-proposal .as-plan-questions[data-review-layout]>.as-question-card{padding:16px}.as-app-frame .as-proposal .as-plan-questions[data-review-layout]>.as-question-adopted{padding:0 0 20px}}
+
+.as-proposal .as-manual-summary{margin-top:16px;padding:16px 0;border-top:1px solid var(--as-stroke);display:flex;gap:8px;align-items:center;flex-wrap:wrap;min-width:0}
+.as-proposal .as-manual-summary>div:first-child{display:flex;gap:12px;align-items:baseline;flex:1 1 220px}
+.as-proposal .as-manual-summary>div>span,.as-proposal .as-manual-summary p{font-size:13px;color:var(--as-muted);line-height:1.7}
+.as-proposal .as-manual-summary p,.as-proposal .as-manual-summary>details{flex-basis:100%;margin:4px 0;overflow-wrap:anywhere}
+.as-proposal .as-manual-node{margin:0 0 24px;padding:16px 0;border-bottom:1px solid var(--as-stroke);min-width:0}
+.as-proposal .as-manual-node>h4{font-size:15px;margin:0 0 16px}.as-proposal .as-manual-hunk{min-width:0;padding:0 0 20px;margin-bottom:20px;border-bottom:1px solid var(--as-stroke)}
+.as-proposal .as-manual-hunk>small{display:block;overflow-wrap:anywhere;font-size:12px;color:var(--as-muted);margin-bottom:8px}
+.as-proposal .as-manual-hunk details>summary{padding:8px 0;font-size:13px}.as-proposal .as-manual-diff{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.as-proposal .as-manual-diff>div{min-width:0}.as-proposal .as-manual-diff span{font-size:12px;color:var(--as-muted)}.as-proposal .as-manual-diff pre,.as-proposal .as-manual-wording{white-space:pre-wrap;overflow-wrap:anywhere;max-width:100%;font-size:13px;line-height:1.75;padding:12px;background:var(--as-surface);border-radius:8px;margin:8px 0}
+.as-proposal .as-manual-modes{display:flex;gap:8px;flex-wrap:wrap;margin:12px 0}.as-proposal .as-manual-modes>button{font-size:13px;min-height:36px;padding:8px 12px;border-radius:8px;border:1px solid var(--as-stroke);background:transparent}.as-proposal .as-manual-modes>button[aria-pressed=true]{background:var(--as-surface);color:var(--as-ink);border-color:var(--as-focus)}
+@media(max-width:600px){.as-proposal .as-manual-diff{grid-template-columns:minmax(0,1fr)}}
+
+/* Plan reading: one local explanation disclosure; graph before export/check details. */
+.as-app-frame .as-proposal .as-plan-description{min-width:0;margin:0 0 16px;border:0;padding:0}
+.as-app-frame .as-proposal .as-plan-description>summary{width:fit-content;max-width:100%;min-height:40px;padding:8px 0;font-size:var(--as-type-control,15px);line-height:1.6;color:var(--as-muted);cursor:pointer}
+.as-app-frame .as-proposal .as-plan-description>summary:hover{color:var(--as-ink)}
+.as-app-frame .as-proposal .as-plan-description>summary:focus-visible{outline:2px solid var(--as-focus);outline-offset:4px;border-radius:4px}
+.as-app-frame .as-proposal .as-plan-description[open]>.as-summary-content{margin-top:8px}
+
+.as-planning-check{margin-block:16px;padding:16px;border:1px solid var(--as-stroke);border-radius:12px}
+.as-planning-check p{margin-block:8px}
+.as-planning-check small{color:var(--as-muted)}
+.as-planning-check ul,.as-delivery-review ul{padding-inline-start:20px;margin-block:8px;max-height:240px;overflow:auto}
+.as-planning-check li,.as-delivery-review li{overflow-wrap:anywhere;margin-block:4px}
+.as-delivery-review summary{cursor:pointer;overflow-wrap:anywhere}
+
+.as-delivery-review ul{font-size:14px;line-height:1.7;color:var(--as-ink)}

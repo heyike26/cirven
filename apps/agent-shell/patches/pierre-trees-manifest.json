@@ -1,0 +1,43 @@
+{
+  "schema_version": 1,
+  "package": "@pierre/trees",
+  "version": "1.0.0-beta.4",
+  "source_repository": "https://github.com/anomalyco/opencode",
+  "source_commit": "733b2c627e5aec39cb33cc22373bdce33053ef2c",
+  "source_url": "https://raw.githubusercontent.com/anomalyco/opencode/733b2c627e5aec39cb33cc22373bdce33053ef2c/patches/@pierre%252Ftrees@1.0.0-beta.4.patch",
+  "upstream_declaration": "staging-native-ui/upstream/package.json patchedDependencies and bun.lock",
+  "reason": "Restore the fixed OpenCode upstream expansion runtime/type patch omitted from the EEAS npm assembly. Original app source is unchanged.",
+  "license_context": "Original OpenCode MIT patch; @pierre/trees Apache-2.0 package notices retained.",
+  "patch_file": "pierre-trees-1.0.0-beta.4.patch",
+  "patch_sha256": "9288191ef74b71771dc9299d822c0a3751ca743a88ab92987650e6a4f89d45e4",
+  "files": [
+    {
+      "path": "dist/model/FileTreeController.js",
+      "before_sha256": "47a54cd41a2dd6e6e77bf719dee1f95eaefecc7241fb45d2eee713515b9ddd67",
+      "before_bytes": 47071,
+      "after_sha256": "879f97cacf773b29d3e2a507367c01267e37a0806b6b157d47888dc3e4c1d6ce",
+      "after_bytes": 47086
+    },
+    {
+      "path": "dist/model/internalTypes.d.ts",
+      "before_sha256": "5fca92cfa4ad6a6b847928c92530d9f7f0a61ce20ff6d2bc3c1ec6db42c5d4b9",
+      "before_bytes": 2048,
+      "after_sha256": "db50f92d220b0f43057dd93704b3ce6f6a5f207cf0fbfc704a81175703f37b52",
+      "after_bytes": 2111
+    },
+    {
+      "path": "dist/model/publicTypes.d.ts",
+      "before_sha256": "938fa90e9b0a282713fbc60c8b70b518e7cacffe33eaf1f258c3a512aa2aeb5e",
+      "before_bytes": 11646,
+      "after_sha256": "50f042d68ca05b8c6aa4074ef85ac61617a5ded421fb3f7b21419806b77e6d28",
+      "after_bytes": 11744
+    },
+    {
+      "path": "dist/render/FileTree.js",
+      "before_sha256": "c1488bf016f30e860dfc560253d28e2454c8741dd9594072ca03ea0c1d2cb822",
+      "before_bytes": 19178,
+      "after_sha256": "6837e764da0727e63dd6f9e06a3922ff66a00c794886e9f563a86be11ac02751",
+      "after_bytes": 19662
+    }
+  ]
+}

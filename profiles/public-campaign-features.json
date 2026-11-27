@@ -1,0 +1,1070 @@
+{
+  "cases": [
+    {
+      "acceptance": "Process this project’s actual Markdown/TXT bytes; preserve license, frozen origin/revision/rawSHA and source lines, including Unicode and tail content.",
+      "evidence_class": "PUBLIC_MATERIAL",
+      "external_qualification": false,
+      "id": "source-text"
+    },
+    {
+      "acceptance": "Process traceable DOCX material from this project; verify paragraphs/tables, parse receipt/derived hash and embedded image anchors against raw bytes.",
+      "evidence_class": "PUBLIC_MATERIAL",
+      "external_qualification": false,
+      "id": "source-docx"
+    },
+    {
+      "acceptance": "Process traceable PDF material from this project; verify pages/text/image anchors and explicit scan/OCR warnings without inventing extracted text.",
+      "evidence_class": "PUBLIC_MATERIAL",
+      "external_qualification": false,
+      "id": "source-pdf"
+    },
+    {
+      "acceptance": "Process traceable PNG/JPEG material from this project; verify media/hash/dimensions, preview/original bytes and explicit absence of OCR.",
+      "evidence_class": "PUBLIC_MATERIAL",
+      "external_qualification": false,
+      "id": "source-raster"
+    },
+    {
+      "acceptance": "Process traceable Visio material from this project; verify sheets/nodes/connectors/source anchors and raw file download.",
+      "evidence_class": "PUBLIC_MATERIAL",
+      "external_qualification": false,
+      "id": "source-vsdx"
+    },
+    {
+      "acceptance": "Process traceable XMind material from this project; verify sheets/topic hierarchy/relationships/source anchors and raw file download.",
+      "evidence_class": "PUBLIC_MATERIAL",
+      "external_qualification": false,
+      "id": "source-xmind"
+    },
+    {
+      "acceptance": "Create and revise this project’s document; check old raw revision remains immutable, current source/search updates, stale writes reject and logical delete revokes reads.",
+      "evidence_class": "PUBLIC_MATERIAL",
+      "external_qualification": false,
+      "id": "source-history"
+    },
+    {
+      "acceptance": "Read this project’s original/parsed content, chunk pagination and graph structure through API and UI; search/citation navigation reaches the final page and exact revision.",
+      "evidence_class": "PUBLIC_MATERIAL",
+      "external_qualification": false,
+      "id": "source-reader"
+    },
+    {
+      "acceptance": "Select actual project chunks/images; preserve raw/derived/asset hashes, explicit coverage and omitted ranges; full long input refuses over-limit without silent truncation.",
+      "evidence_class": "PUBLIC_MATERIAL",
+      "external_qualification": false,
+      "id": "source-context"
+    },
+    {
+      "acceptance": "Create/list/select this project with metadata persisted across reload; a second project cannot read or authorize its documents, tasks, runs, reviews or evidence.",
+      "evidence_class": "PROJECT_WORKFLOW",
+      "external_qualification": false,
+      "id": "project-boundary"
+    },
+    {
+      "acceptance": "Manually save/revise/list/get project requirements with exact source references, assumptions/questions/acceptance and explicit confirmation; stale references are rejected.",
+      "evidence_class": "PROJECT_WORKFLOW",
+      "external_qualification": false,
+      "id": "requirements"
+    },
+    {
+      "acceptance": "Extract suggestions from selected project source in Mock and authorized native modes; proposal references/context match, suggestions never auto-confirm and repeated/different selection has correct lineage.",
+      "evidence_class": "PROJECT_WORKFLOW",
+      "external_qualification": false,
+      "id": "extraction"
+    },
+    {
+      "acceptance": "Plan confirmed project requirements into revisioned tasks with dependencies/budget; unresolved or cyclic/cross-project dependencies reject without replacing history.",
+      "evidence_class": "PROJECT_WORKFLOW",
+      "external_qualification": false,
+      "id": "planning"
+    },
+    {
+      "acceptance": "Create/revise/read/start/list project tasks and runs; freeze source/requirement/stack/protected paths and operation IDs; repeated operations do not duplicate side effects.",
+      "evidence_class": "PROJECT_WORKFLOW",
+      "external_qualification": false,
+      "id": "tasks"
+    },
+    {
+      "acceptance": "For this project approve/reject exact pending scope; denial/expiration/stale source or permission changes reject, approval does not authorize a new scope.",
+      "evidence_class": "PROJECT_WORKFLOW",
+      "external_qualification": false,
+      "id": "approvals"
+    },
+    {
+      "acceptance": "Execute the approved project fixture/workflow with actual independent Runner identity/events/logs/receipt; inspect, cancel and bounded timeout produce observed terminal facts.",
+      "evidence_class": "PROJECT_WORKFLOW",
+      "external_qualification": false,
+      "id": "runner"
+    },
+    {
+      "acceptance": "Interrupt the controller during an actual project run; restart/reconcile immutable journal and child facts without launching a duplicate execution or accepting stale PID identity.",
+      "evidence_class": "PROJECT_WORKFLOW",
+      "external_qualification": false,
+      "id": "recovery"
+    },
+    {
+      "acceptance": "Verify actual project run artifact/tests; execution return is not PASS, stale/tampered/missing/skipped evidence is rejected and prior evidence remains inspectable.",
+      "evidence_class": "PROJECT_WORKFLOW",
+      "external_qualification": false,
+      "id": "verification"
+    },
+    {
+      "acceptance": "Repair a failed project run under explicit count/step/budget limits; preserve failed attempt, parent/source/version lineage, new approval and actual re-verification.",
+      "evidence_class": "PROJECT_WORKFLOW",
+      "external_qualification": false,
+      "id": "repair"
+    },
+    {
+      "acceptance": "Inspect/export this project’s results, logs, evidence and artifacts with exact revision/hash and no secret values; download rejects traversal, foreign project and tampered bytes.",
+      "evidence_class": "PROJECT_WORKFLOW",
+      "external_qualification": false,
+      "id": "results"
+    },
+    {
+      "acceptance": "Open frozen read-only project Task review; text/images/search default off or explicit scope, SDK actual session/events/cost are persisted; reload/new window do not submit again.",
+      "evidence_class": "PROJECT_WORKFLOW",
+      "external_qualification": false,
+      "id": "native-review"
+    },
+    {
+      "acceptance": "Cancel/steer/resume/fork an actual project review using installed SDK APIs; current session, immutable parent/source/profile/permissions and cumulative known budget are enforced.",
+      "evidence_class": "PROJECT_WORKFLOW",
+      "external_qualification": false,
+      "id": "native-session"
+    },
+    {
+      "acceptance": "Import/qualify/review/approve/bind an explicit project extension; tree/manifest/license/permissions and composed stack are immutable, rejected/stale candidates cannot activate.",
+      "evidence_class": "PROJECT_WORKFLOW",
+      "external_qualification": false,
+      "id": "extensions"
+    },
+    {
+      "acceptance": "Use this project in separate workbench/view/run windows, URL/reload/navigation and responsive keyboard dialogs; project/run/source change clears prior text/image/search authorization. Task source guidance must distinguish confirm/select/create, reject STALE and describe manual confirmed UNSOURCED accurately; the saved-requirement selection button is reachable and selects the saved revision. Group goal/output and bounded execution across full desktop width; short-view keyboard reaches real submit, and popup/reload preserve frozen refs without auto-submission. Home inspection light must change actual painted pixels locally with fine-mouse movement while CTA/hero geometry stays fixed, restore on pointerleave and avoid horizontal overflow or new external requests.",
+      "evidence_class": "PROJECT_WORKFLOW",
+      "external_qualification": false,
+      "id": "ui-workspace"
+    },
+    {
+      "acceptance": "Inspect actual connection, route/config source and warnings; invalid versus absent configuration, refresh/retry, manual and OS reduced motion and focus behavior remain explicit. Inspection feedback must cancel on trusted native reduced-motion change and manual reduction, and remain static for coarse/mobile touch; do not infer native Windows qualification from browser emulation.",
+      "evidence_class": "PROJECT_WORKFLOW",
+      "external_qualification": false,
+      "id": "ui-settings"
+    },
+    {
+      "acceptance": "Inject original malformed archives/media, XML/zip size/path/encoding/content/revision conflicts and body limits; ensure no record, unsafe extraction or fake text is accepted; verify original valid raw fixture first.",
+      "evidence_class": "FAULT_BOUNDARY",
+      "external_qualification": false,
+      "id": "fault-documents"
+    },
+    {
+      "acceptance": "Use original approved settings fixtures and actual SDK options: strict explicit model/auth/budget, env precedence, no personal cache/hooks/permissions inheritance; FD swap/stable-read and source mutation reject.",
+      "evidence_class": "FAULT_BOUNDARY",
+      "external_qualification": false,
+      "id": "fault-sdk-route"
+    },
+    {
+      "acceptance": "Use real installed SDK options and original wire fixtures: exact Decimal/Fraction authorization, conservative CLI float serialization, cumulative parent/search ledger, unknown/nonfinite/unsupported cost stays null and blocks continuation.",
+      "evidence_class": "FAULT_BOUNDARY",
+      "external_qualification": false,
+      "id": "fault-sdk-budget"
+    },
+    {
+      "acceptance": "Inject queued cancellation, connect/query/disconnect failure, malformed stream/session and expired/source/permission/profile changes; original result/transcript persists and no stale/mutated query is sent.",
+      "evidence_class": "FAULT_BOUNDARY",
+      "external_qualification": false,
+      "id": "fault-sdk-session"
+    },
+    {
+      "acceptance": "Use actual SDK async-iterable image blocks and original asset fixtures; strict refs/current revision/media/hash, vision opt-in, count/full JSON-base64 payload limits and post-connect policy/source drift are enforced.",
+      "evidence_class": "FAULT_BOUNDARY",
+      "external_qualification": false,
+      "id": "fault-sdk-images"
+    },
+    {
+      "acceptance": "Use local approved MCP protocol fixtures and real installed client: only fixed search registry/query schema, WebFetch/builtin/fetch/unknown tools denied, bounded calls/results/raw encoding and safe per-client parse logging; snippets are not fetched full text.",
+      "evidence_class": "FAULT_BOUNDARY",
+      "external_qualification": false,
+      "id": "fault-search"
+    },
+    {
+      "acceptance": "Inject expired/stale approval, process timeout/controller crash, damaged receipt/journal/PID/log identity and interrupted evidence; preserve independent facts and reject duplicate/stale trust.",
+      "evidence_class": "FAULT_BOUNDARY",
+      "external_qualification": false,
+      "id": "fault-approval-runner"
+    },
+    {
+      "acceptance": "Inject original unsafe extension paths/symlinks/archives, altered tree/license/permission/version and runtime failure; approval and rollback cannot silently activate new code or grant SDK code tools.",
+      "evidence_class": "FAULT_BOUNDARY",
+      "external_qualification": false,
+      "id": "fault-extension"
+    },
+    {
+      "acceptance": "Actually back up/restore original product DB, artifacts, extension journals and native session/checkpoint mirror using current snapshot script; old absolute scope stays immutable, relocated reads work, caches/credentials stay out and damaged archives reject.",
+      "evidence_class": "FAULT_BOUNDARY",
+      "external_qualification": false,
+      "id": "fault-offline-restore"
+    },
+    {
+      "acceptance": "Build/validate this EEAS version and frozen audit inputs; verify manifest/hash/legal files and fresh offline Python dependencies/tests with no external source access. This is harness packaging, not upstream project build success.",
+      "evidence_class": "UPSTREAM_QUALIFICATION",
+      "external_qualification": false,
+      "id": "release-bundle"
+    },
+    {
+      "acceptance": "Separately record this public project’s own approved upstream build/tests at its pinned revision and input toolchain; inability/untested build remains NOT_RUN and is not inferred from EEAS ingest.",
+      "evidence_class": "UPSTREAM_QUALIFICATION",
+      "external_qualification": false,
+      "id": "upstream-build"
+    },
+    {
+      "acceptance": "Run actual offline install/start/doctor/shutdown/readiness/portable-copy for the harness; distinguish installed wheels/test/browser/font kit, target ABI/licensing, package validity and available capabilities.",
+      "evidence_class": "UPSTREAM_QUALIFICATION",
+      "external_qualification": false,
+      "id": "offline-install"
+    },
+    {
+      "acceptance": "Company-approved settings/model/protocol/usage/billing and vision require authorized company live execution with explicit budget; external wire fixtures do not qualify the company endpoint.",
+      "evidence_class": "UPSTREAM_QUALIFICATION",
+      "external_qualification": true,
+      "id": "qual-company-model"
+    },
+    {
+      "acceptance": "Company-approved actual MCP endpoint/tool/schema and network policy require inner-network validation; local fixture search does not prove company MCP compatibility or enable WebFetch.",
+      "evidence_class": "UPSTREAM_QUALIFICATION",
+      "external_qualification": true,
+      "id": "qual-company-search"
+    },
+    {
+      "acceptance": "Native Windows Python3.10/CLI/Runner/process/cancel/restore/browser/offline entrypoints require actual Windows runs; WSL and Win32 semantic fixtures are not native qualification.",
+      "evidence_class": "UPSTREAM_QUALIFICATION",
+      "external_qualification": true,
+      "id": "qual-native-windows"
+    },
+    {
+      "acceptance": "Code tools/subagent permissions require a verified OS transport/isolation provider and explicit approval; current default BLOCKED remains a successful denial test, not qualification.",
+      "evidence_class": "UPSTREAM_QUALIFICATION",
+      "external_qualification": true,
+      "id": "qual-code-isolation"
+    }
+  ],
+  "catalog_base": "108faffc872830f37c6c1c15ade652d71ba2e3ad",
+  "catalog_revision": 6,
+  "display_regions": {
+    "task-list-count": {
+      "cases": [
+        "ui-workspace",
+        "tasks"
+      ],
+      "element": "span"
+    },
+    "task-source-note": {
+      "cases": [
+        "ui-workspace",
+        "tasks",
+        "requirements"
+      ],
+      "element": "p"
+    },
+    "task-source-status": {
+      "cases": [
+        "ui-workspace",
+        "tasks",
+        "requirements"
+      ],
+      "element": "span"
+    },
+    "task-source-title": {
+      "cases": [
+        "ui-workspace",
+        "tasks"
+      ],
+      "element": "strong"
+    }
+  },
+  "inventory_only": true,
+  "minimum_distinct_public_projects": 10,
+  "review": {
+    "limits": "Explicit portable child HOME isolation repair: Linux Path.home no longer resolves developer passwd HOME; same empty HOME/USERPROFILE and declared nonsensitive environment is frozen. All original41 acceptances/68routes/118controls/30CLI/94source inventory unchanged. Whole original34 fresh offline tests actually0F0S; new outer first3PASS1FAIL fixture observer preserved, corrected single separately scoped. Prior v5 P01 25 bound probe outcomes retained without re-signing as current whole version. Runtime apps/packages/frontend remain exact prior tested bytes; no Windows/company/OS sandbox qualification.",
+    "previous_catalog_base": "2179fb28474b940b301c7738cc05e088839f0067",
+    "previous_catalog_revision": 5,
+    "previous_catalog_sha256": "4acca2b280c8ffbb18e8bad740f999f0d5a58433e6ee839c6e1abeea3d2e1007",
+    "source_changes": [
+      {
+        "current_sha256": "0c1df9ae4a678213d68ca8a4e22a09645978a40e6ad3f5c77e978c2353afd05a",
+        "path": "scripts/portable_acceptance.py",
+        "previous_sha256": "11494af89c4820073b72e5ec634e7a4f212dbc00362811e4c3454607796dcd84"
+      }
+    ],
+    "source_commit": "108faffc872830f37c6c1c15ade652d71ba2e3ad",
+    "surface_changes": {
+      "controls": {
+        "added": [],
+        "removed": []
+      },
+      "entry_files": {
+        "added": [],
+        "removed": []
+      },
+      "routes": {
+        "added": [],
+        "removed": []
+      }
+    }
+  },
+  "review_limits": "Every registered project receives every case. Route/control presence and source pins only detect catalog drift; semantic completeness and actual feature acceptance require case evidence and independent review. Missing formats may remain NOT_RUN; original fixtures do not count as project material.",
+  "schema": "eeas.public-campaign-catalog.v1",
+  "source_sha256": {
+    "apps/api/__init__.py": "3ad7d0038ac5342072b02cff5749b902aa6ae51504685e31522d999facd4a007",
+    "apps/api/__main__.py": "0d1d4e194bb3184696b25567d30def1c75057a85d7fbbffa5fbfc6ab995977d5",
+    "apps/api/body_limit.py": "de616ac8a51fc66a62719a793e52b95f464e52d77a71a4484206497096782f30",
+    "apps/api/config.py": "fe6ed02be1145d281ab8d7a375d1ec01dc7fa07db8d12ce2a8158846cca7c884",
+    "apps/api/main.py": "666fff7f659180d00e165e1f4ed153ea7f38d678174d9baddea95c18e7bcaa02",
+    "apps/web/assets/app.css": "781e72af20f9a5bf030af6bbd9f45314866d2203845b8276e43ffbb992cfcca1",
+    "apps/web/assets/app.js": "d399920972adf2c9c07a57c1a32498b93533f346514473bf001f4c09c1a3876d",
+    "apps/web/index.html": "95a6a688f676b4c7391d1410cfeda97196f6df802ca9bf2b9d0d847cb43c65dc",
+    "install-windows.cmd": "a68e81ac2a97e8fee25a0a517921451623d991437a50ebcccd031640229ecd3b",
+    "packages/__init__.py": "e27fe6e78a4b9d2a726b437892f179a7a045b0d4490437a9f8da654838d89f7f",
+    "packages/adapters/__init__.py": "79fe0686f15ed8b3ff3850557506de950a7b9001e54e6020f080722e0e100fa0",
+    "packages/adapters/budget_math.py": "bb89f9c02d038758297c72e1412fec1db1163b9c0525d3b744fba50ec8ae35fd",
+    "packages/adapters/claude_sdk.py": "badf034ff117e152e1ed6af4d61ce45d40f8276610a1d0b9d85a63102ef54d66",
+    "packages/adapters/mock_agent.py": "24ab3afb46022e523d90b851c1c291430a7e194f2c7a440b8a9f1b6f2fc41514",
+    "packages/adapters/planning.py": "a42c0f4a5cd76ccef3e641fe21af5ffc54aa11b793c8fc14503e6f89d4b75ba1",
+    "packages/adapters/search_mcp.py": "807603d47b6e9085a12400af0ce253b8252d92e5d3ef60a6d634bf5895bd77b0",
+    "packages/adapters/settings_profile.py": "ec35bb832d01e0025c04b0f8896e82eae0ed802632e478beb9973c6a30f0d190",
+    "packages/adapters/task_sdk.py": "154b1d767d66d2dd1e5cd0609b78cf68760cfcaa304cb8826544c0d96d1bd6c8",
+    "packages/domain/__init__.py": "7de91e27c74d13d0df378406bd730dd67d597009fdf2da73bf6002d68c3f9b13",
+    "packages/domain/approvals.py": "58c0712c7e7f84a9b09b75e847ccad26e07cc9a0f57b93427cc753960c6b3c7e",
+    "packages/domain/diagram_import.py": "1705f057c880da5dc513f51eb19b04e148604c4bf2007a810d5953c82690559e",
+    "packages/domain/document_chunks.py": "acbd7cde992b6cb37710c48ffebe48ff8a8dd099077e27a06869c26e2d0e8bfc",
+    "packages/domain/document_import.py": "e914dba4d5b417159e9cbed324384e6fd51157b31e680a16d5159851220cf3b9",
+    "packages/domain/docx_import.py": "d78696bbb02c5c866c54968cf347ab902cb4ad0f7623ece4dff77b99a9a7c58e",
+    "packages/domain/migrations/001_projects.sql": "d133427fd015cc419938147d8f1cd30125b3fddea808cae289ed466419db168e",
+    "packages/domain/migrations/002_documents.sql": "80215d51138e5747fe91fd07bd817e9e07c6fb1f78422d7108d39ba1148dfa95",
+    "packages/domain/migrations/003_requirements.sql": "cceb3440a6bd513384be48ada2f5fda3859432d4c620faff7f748b85a067e642",
+    "packages/domain/migrations/004_tasks.sql": "f9c3bfc6d103def1ece000419727b28a0a3493d51c96e08969ae9c67ff69100e",
+    "packages/domain/migrations/005_runner_jobs.sql": "1a12ae59ca1b96bbfb45b5e6c8ccdcd078ec184346f03e37569e70fef345bdee",
+    "packages/domain/migrations/006_run_snapshot.sql": "31c025e4ddc9d754d69ab38a55da7551eccbc6354089e4e0d81b8f963d3a9d64",
+    "packages/domain/migrations/007_agent_executions.sql": "cb805c5484c20ad5fb0539554e4c0bab328475099aeaa0d1fb6597007d14a691",
+    "packages/domain/migrations/008_verification.sql": "f9c4121e6400fc1f014f4cf8a1d9e3511afec7188fe97bd0412f10f1ca42f7f4",
+    "packages/domain/migrations/009_approvals.sql": "60ad0cfa17db014ca3157b5011264dea68ebcc73ac84b3789ad488707b67b8b1",
+    "packages/domain/migrations/010_runner_recovery.sql": "925db5343dc937fa886da30a210723496803b136104ec9c9acf70ea63121a14e",
+    "packages/domain/migrations/011_extensions.sql": "09605266a9136409e2f792fda479dacfe9a0ec9bfe49480400c3498ed42f41c9",
+    "packages/domain/migrations/012_sdk_sessions.sql": "1ce6137a66d85bf9552462414c3f6560db8ec849e01b53c4a9afcd80d72e9615",
+    "packages/domain/migrations/013_task_native_reviews.sql": "b9d9fa77e5b0bb1f2f0605074376b21308b4d98c9972d25e424eb0f0509402a1",
+    "packages/domain/migrations/014_document_parses.sql": "5989db8c1c54716968b47b57d30fe098bde45a2cc8f3dc8d309f9a6e12789fb9",
+    "packages/domain/paths.py": "3b0f41010839b683dfe631c2adda9f74b8fd0f5bbb1d32968c884f3f7d858c10",
+    "packages/domain/pdf_import.py": "3ffc72ec8086226104d6b4b1d20a2460d611a049e79890a81f04955f8bdfada1",
+    "packages/domain/requirements.py": "52e421b9b3042ace6537d204bb6a9767db71adff1f30653178bf92caca804392",
+    "packages/domain/store.py": "cbbd372eaf863cdf68ad713d1daa365ea9c138e744887c983fca5559d6621a51",
+    "packages/domain/task_schema.py": "bb4cf80094a97c9690c70194d06cef283d2c43982c1d2ce622b7b8948b2f17a5",
+    "packages/domain/tasks.py": "5a40055b2b750a6bf95ecf16116f20d0c156a9eca6e324436be36bf06f39f9e1",
+    "packages/extensions/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "packages/extensions/fixtures/v1/plugin.py": "ffc28cc8509052b23a64109541c3a8659dd684458a9e19e08d77163ea4ba35d6",
+    "packages/extensions/fixtures/v2/plugin.py": "7bd78c4cb9526447ff33ffab4fa2f9fb90476ed3ad0fbe6ddf8b09df3a7042dd",
+    "packages/extensions/loader.py": "1f6a34b9557403fdb5430d3f43790ea83b8d9b90591a7e2e61bf6631d9b960b4",
+    "packages/extensions/schema.py": "779066e8c9d8595401bbde95f29f1604f486b36585b4e759f98920e0612a095f",
+    "packages/extensions/service.py": "ad557f1f346bb3c0da7175a53e9f656caf15a49153f1c7b17d0e3cb064c77d81",
+    "packages/runner/__init__.py": "8ac5df8b4f0ec8c8597b31c834fc4ec36c126a6b5a13bb25d1676108b8279ab3",
+    "packages/runner/fixture.py": "032bf17518613bfa6006ab3480ee4527664a4a22a2571dc6eddbb55aec85d706",
+    "packages/runner/supervisor.py": "fdd4d9af479092e9258b98704927fc149ec947d7fa206676055cbcdb67e6339b",
+    "packages/runner/worker.py": "3673a078cc88dc28bc4a06f0668450731b3be240fb6a9dee57b2a9029bbfd268",
+    "packages/verifier/__init__.py": "5588025d9c8a0296cfe4e11e5ede32672d73021ca0199c3038b849c8e969fdd7",
+    "packages/verifier/original_baseline.py": "f304351a484391a1665ced44a31f10f3e46f05ff6a39a89f996a1bb3a15613b3",
+    "packages/verifier/repair.py": "54d8bfe105e2ac10d7f749197c0fc6bc11c8b4478bba30e56e827d9ab0ef2c31",
+    "packages/verifier/service.py": "0607cc8d558af5451d6c1272b0c4502dbc48a8c39e8f4fbbce9ea8e53ab64fc2",
+    "profiles/capabilities.json": "0c28fdd990149ecb3d785030eff4516e50fa3b9b08c4b9d470731ace5a88f5b7",
+    "profiles/dependencies.json": "2dcdaf22c967a4cf5ff2a878144f526ec9d15738b40667299b032122861ac921",
+    "profiles/development-skills.json": "651c5c541c84041d9277d8e1802492e16ebbc6453cabe1f6a1be5570606e46f9",
+    "profiles/environment.json": "5b91f4a86cd2e209a39c05f0a0b9d3cf7c8d1de17de0a680d488480f3d87cb4e",
+    "profiles/offline-dependencies.json": "8bad5142637e23cea5ac6edec272464998a929a15aa31ebca279acb985588a3d",
+    "profiles/offline-test-dependencies.json": "38bfa2e7e9f2b84f45a229dd9e7905a2663b661eb4d75da817ef0afc825b6fd2",
+    "profiles/stack.lock.json": "a90f1d9543d23a277af570abb50e77da7bda994a9c4689c0401fff64b1b7e926",
+    "profiles/windows-dependencies.json": "2cb4a117107b3299b0edcbaf11ed583438aa3ae715daa49e1ab017e9003d2533",
+    "scripts/build_development_bundle.py": "b22964cb66720b74c95b0b7e8b2c44f2974a385d512d11442175342d35fbae7e",
+    "scripts/build_release_bundle.py": "8737a95fe6cf6be84f553a4b71f244003f11a9cdc80abcd59327d271f07e5f97",
+    "scripts/build_web.py": "536a324aee05c822248301c3d7697d9d5a3375ad8c5fd4916694318f6a4f6e66",
+    "scripts/bundle_support.py": "669ba1b38c9bf52fab87773caf3f92ef1fd713d63b4192ab8514772ee0c84d74",
+    "scripts/check_harness.py": "2c525adee850f490a236afd780935a843285637e34753dac0b55617ef92ca132",
+    "scripts/claude_dev.py": "cac6ff2bf80cc7d95510e03a48213c8da11d34052b6840a4f88647c87b5b2d10",
+    "scripts/doctor.py": "68da1d8d4ad3d147e6817c83ac80af3c872057a2410e756a77c3728d51878521",
+    "scripts/install_offline.py": "9ca3b5ac8d768036e014309ad6982404c9bb1c1cc565ced2538aa3644ad68bc1",
+    "scripts/install_test_dependencies.py": "53117934124ac48d8060cea2c1206438c721c7400f9cb9d4089be39931690b25",
+    "scripts/intranet_readiness.py": "053ca59820730813f2cf6aef15f641351b9ca470fbfb98e6219f8ae4384e9598",
+    "scripts/make_fixture.py": "f768b0076596702fed8ab1484bdeb8819c8497a1d3a67242fe5ce22f5bca8ab2",
+    "scripts/make_fixture_plugin.py": "148b2683620b529d65c1d324895887cb9ed68bcfdeb851e29b6412504a34ef7c",
+    "scripts/offline_probe.py": "6d3706ef55a1c428f0d252b2459378b528ee8f7db183784fdfdb7c4bd44f68fb",
+    "scripts/offline_test_support.py": "1b768fbf1faa8ddc295a04a5f2656b837186a03370045eea22ddb6257c3fe8cf",
+    "scripts/portable_acceptance.py": "0c1df9ae4a678213d68ca8a4e22a09645978a40e6ad3f5c77e978c2353afd05a",
+    "scripts/prepare_dependencies.py": "1982366d97fa8461dced73dda3d54f599e6a28f3f3bb2dbf2cd16b50ccbbc02f",
+    "scripts/prepare_offline_tests.py": "384f0081aae5706e721d2fee0a9277de82b967b5b68aadd089748a3af61cf96b",
+    "scripts/probe_airgap_copy.py": "6f8a6761722c9ec69259ae65c4382cff9fbc4601a02ac9f61aba49c620d1796e",
+    "scripts/probe_bundle_copy.py": "0b10c27e4d040f55bde7d52087f7522ba34c35ce5656a61bd16f76024fedff54",
+    "scripts/probe_native_runner.py": "5c29059133a96034a42fdfba5b9d9ca8aa6feb4a413b52807b8119b01f396a19",
+    "scripts/record_slice.py": "9c7133790505f1949f11385ec6ef8751a60c907b5d146eb47c7308bf7c317ec8",
+    "scripts/setup_browser_fonts.py": "e681d3579e8d7afeea05dbfe30a9a8ad98a8b504c84bb1022b3c385225548d4e",
+    "scripts/setup_browser_libs.py": "18da22b151025eae21e5888bedc12b75b3b4ee15323b9fb22166743b490b059d",
+    "scripts/snapshot_data.py": "5a5daa478df154a38b753db818d34b9b6cde6ef683ecbc8da399a0b999261ea9",
+    "scripts/validate_bundle.py": "f96df052506f61636d681e40543341eeac31488ba51484a426359688e772c84d",
+    "start-windows.cmd": "36a16251c5ce21f19c87cda5538e1bf60ccf91cafcac832e05bed74975daabb8",
+    "stop-windows.cmd": "fc80a55dadba56309f81bd64f32abfde857b093d4dbc678566a885f8bd81db7a",
+    "verify-windows.cmd": "8bd19d868b9e929bb4293c5321258491ae11fb9c09d645a11d4fe5f9cbe22411"
+  },
+  "surfaces": {
+    "controls": {
+      "acceptance-text": [
+        "requirements"
+      ],
+      "approval-required": [
+        "tasks"
+      ],
+      "approve-extension": [
+        "extensions"
+      ],
+      "assumptions": [
+        "requirements"
+      ],
+      "cancel-native-review": [
+        "native-session"
+      ],
+      "cancel-run": [
+        "runner"
+      ],
+      "choose-document-file": [
+        "source-history"
+      ],
+      "clear-sources": [
+        "requirements"
+      ],
+      "close-extension-review": [
+        "extensions"
+      ],
+      "close-extraction": [
+        "extraction"
+      ],
+      "close-project-drawer": [
+        "project-boundary"
+      ],
+      "close-upload": [
+        "source-history"
+      ],
+      "configure-extraction": [
+        "extraction"
+      ],
+      "confirmed": [
+        "requirements"
+      ],
+      "description": [
+        "project-boundary"
+      ],
+      "document-download": [
+        "source-history"
+      ],
+      "document-file": [
+        "source-history"
+      ],
+      "document-form": [
+        "source-history"
+      ],
+      "document-new": [
+        "source-history"
+      ],
+      "document-source": [
+        "source-history"
+      ],
+      "evidence-download": [
+        "results"
+      ],
+      "extension-approval-form": [
+        "extensions"
+      ],
+      "extension-file": [
+        "extensions"
+      ],
+      "extension-import-form": [
+        "extensions"
+      ],
+      "extract-chunks-next": [
+        "extraction"
+      ],
+      "extract-chunks-prev": [
+        "extraction"
+      ],
+      "extract-custom-chunks": [
+        "extraction"
+      ],
+      "extract-images-next": [
+        "extraction"
+      ],
+      "extract-images-prev": [
+        "extraction"
+      ],
+      "extract-include-images": [
+        "extraction"
+      ],
+      "extract-mock": [
+        "extraction"
+      ],
+      "extract-preview-context": [
+        "extraction"
+      ],
+      "extract-search-enabled": [
+        "extraction"
+      ],
+      "extract-select-last": [
+        "extraction"
+      ],
+      "extraction-form": [
+        "extraction"
+      ],
+      "fork-native-review": [
+        "native-session"
+      ],
+      "goto:capabilities": [
+        "ui-workspace"
+      ],
+      "goto:library": [
+        "ui-workspace"
+      ],
+      "goto:requirements": [
+        "ui-workspace"
+      ],
+      "home-open-tasks": [
+        "ui-workspace"
+      ],
+      "home-upload": [
+        "source-history"
+      ],
+      "inspect-runner": [
+        "runner"
+      ],
+      "keyword": [
+        "source-reader"
+      ],
+      "library-upload": [
+        "source-history"
+      ],
+      "load-native-context": [
+        "native-review"
+      ],
+      "menu-toggle": [
+        "ui-workspace"
+      ],
+      "mock-behavior": [
+        "tasks"
+      ],
+      "name": [
+        "project-boundary"
+      ],
+      "name:extraction-mode:live": [
+        "extraction"
+      ],
+      "name:extraction-mode:mock": [
+        "extraction"
+      ],
+      "native-context-custom": [
+        "native-review"
+      ],
+      "native-context-document": [
+        "native-review"
+      ],
+      "native-context-first": [
+        "native-review"
+      ],
+      "native-context-last": [
+        "native-review"
+      ],
+      "native-context-next": [
+        "native-review"
+      ],
+      "native-context-prev": [
+        "native-review"
+      ],
+      "native-context-select-last": [
+        "native-review"
+      ],
+      "native-followup-prompt": [
+        "native-session"
+      ],
+      "native-images-next": [
+        "native-review"
+      ],
+      "native-images-prev": [
+        "native-review"
+      ],
+      "native-include-images": [
+        "native-review"
+      ],
+      "native-review-download": [
+        "native-review"
+      ],
+      "native-review-prompt": [
+        "native-review"
+      ],
+      "native-search-enabled": [
+        "native-review"
+      ],
+      "new-project": [
+        "project-boundary"
+      ],
+      "new-project-secondary": [
+        "project-boundary"
+      ],
+      "open-run-window": [
+        "ui-workspace"
+      ],
+      "open-view-window": [
+        "ui-workspace"
+      ],
+      "open-workbench": [
+        "ui-workspace"
+      ],
+      "plan-requirements": [
+        "planning"
+      ],
+      "preview-native-context": [
+        "native-review"
+      ],
+      "project-form": [
+        "project-boundary"
+      ],
+      "questions": [
+        "requirements"
+      ],
+      "read-run-logs": [
+        "runner"
+      ],
+      "reader-extract": [
+        "extraction"
+      ],
+      "reader-first": [
+        "source-reader"
+      ],
+      "reader-last": [
+        "source-reader"
+      ],
+      "reader-next": [
+        "source-reader"
+      ],
+      "reader-prev": [
+        "source-reader"
+      ],
+      "reduce-motion": [
+        "ui-settings"
+      ],
+      "refresh-capabilities": [
+        "extensions"
+      ],
+      "refresh-settings": [
+        "ui-settings"
+      ],
+      "refresh-tasks": [
+        "tasks"
+      ],
+      "repair-run": [
+        "repair"
+      ],
+      "requirement-form": [
+        "requirements"
+      ],
+      "requirement-new": [
+        "requirements"
+      ],
+      "requirement-text": [
+        "requirements"
+      ],
+      "requirement-title": [
+        "requirements"
+      ],
+      "resume-native-review": [
+        "native-session"
+      ],
+      "retry-connection": [
+        "ui-settings"
+      ],
+      "search-form": [
+        "source-reader"
+      ],
+      "sidebar-backdrop": [
+        "ui-workspace"
+      ],
+      "sidebar-projects": [
+        "project-boundary"
+      ],
+      "start-native-review": [
+        "native-review"
+      ],
+      "steer-native-review": [
+        "native-session"
+      ],
+      "structure-next": [
+        "source-reader"
+      ],
+      "structure-prev": [
+        "source-reader"
+      ],
+      "structure-scope": [
+        "source-reader"
+      ],
+      "submit-extraction": [
+        "extraction"
+      ],
+      "task-dependencies": [
+        "tasks"
+      ],
+      "task-form": [
+        "tasks"
+      ],
+      "task-goal": [
+        "tasks"
+      ],
+      "task-paths": [
+        "tasks"
+      ],
+      "task-repairs": [
+        "tasks"
+      ],
+      "task-select-requirement": [
+        "ui-workspace",
+        "requirements",
+        "tasks"
+      ],
+      "task-steps": [
+        "tasks"
+      ],
+      "task-timeout": [
+        "tasks"
+      ],
+      "toolbar-upload": [
+        "source-history"
+      ],
+      "use-extraction-result": [
+        "extraction"
+      ],
+      "verify-run": [
+        "verification"
+      ],
+      "view:approvals": [
+        "ui-workspace"
+      ],
+      "view:capabilities": [
+        "ui-workspace"
+      ],
+      "view:library": [
+        "ui-workspace"
+      ],
+      "view:projects": [
+        "ui-workspace"
+      ],
+      "view:requirements": [
+        "ui-workspace"
+      ],
+      "view:results": [
+        "ui-workspace"
+      ],
+      "view:settings": [
+        "ui-workspace"
+      ],
+      "view:tasks": [
+        "ui-workspace"
+      ]
+    },
+    "entry_files": {
+      "apps/api/__main__.py": [
+        "offline-install"
+      ],
+      "install-windows.cmd": [
+        "offline-install"
+      ],
+      "scripts/build_development_bundle.py": [
+        "release-bundle"
+      ],
+      "scripts/build_release_bundle.py": [
+        "release-bundle"
+      ],
+      "scripts/build_web.py": [
+        "release-bundle"
+      ],
+      "scripts/bundle_support.py": [
+        "release-bundle"
+      ],
+      "scripts/check_harness.py": [
+        "release-bundle"
+      ],
+      "scripts/claude_dev.py": [
+        "fault-sdk-route"
+      ],
+      "scripts/doctor.py": [
+        "offline-install"
+      ],
+      "scripts/install_offline.py": [
+        "offline-install"
+      ],
+      "scripts/install_test_dependencies.py": [
+        "offline-install"
+      ],
+      "scripts/intranet_readiness.py": [
+        "offline-install"
+      ],
+      "scripts/make_fixture.py": [
+        "fault-documents"
+      ],
+      "scripts/make_fixture_plugin.py": [
+        "fault-extension"
+      ],
+      "scripts/offline_probe.py": [
+        "offline-install"
+      ],
+      "scripts/offline_test_support.py": [
+        "offline-install"
+      ],
+      "scripts/portable_acceptance.py": [
+        "offline-install"
+      ],
+      "scripts/prepare_dependencies.py": [
+        "release-bundle"
+      ],
+      "scripts/prepare_offline_tests.py": [
+        "offline-install"
+      ],
+      "scripts/probe_airgap_copy.py": [
+        "offline-install"
+      ],
+      "scripts/probe_bundle_copy.py": [
+        "offline-install"
+      ],
+      "scripts/probe_native_runner.py": [
+        "fault-approval-runner"
+      ],
+      "scripts/record_slice.py": [
+        "verification"
+      ],
+      "scripts/setup_browser_fonts.py": [
+        "offline-install"
+      ],
+      "scripts/setup_browser_libs.py": [
+        "offline-install"
+      ],
+      "scripts/snapshot_data.py": [
+        "fault-offline-restore"
+      ],
+      "scripts/validate_bundle.py": [
+        "release-bundle"
+      ],
+      "start-windows.cmd": [
+        "offline-install"
+      ],
+      "stop-windows.cmd": [
+        "offline-install"
+      ],
+      "verify-windows.cmd": [
+        "offline-install"
+      ]
+    },
+    "routes": {
+      "DELETE /api/projects/{project_id}/documents/{document_id}": [
+        "source-history"
+      ],
+      "GET /": [
+        "ui-workspace"
+      ],
+      "GET /api/bootstrap": [
+        "project-boundary"
+      ],
+      "GET /api/extensions": [
+        "extensions"
+      ],
+      "GET /api/projects": [
+        "project-boundary"
+      ],
+      "GET /api/projects/{project_id}": [
+        "project-boundary"
+      ],
+      "GET /api/projects/{project_id}/agent-executions/{execution_id}": [
+        "results"
+      ],
+      "GET /api/projects/{project_id}/agent-executions/{execution_id}/events": [
+        "results"
+      ],
+      "GET /api/projects/{project_id}/agent-executions/{execution_id}/result": [
+        "results"
+      ],
+      "GET /api/projects/{project_id}/approvals": [
+        "approvals"
+      ],
+      "GET /api/projects/{project_id}/documents": [
+        "source-history"
+      ],
+      "GET /api/projects/{project_id}/documents/{document_id}": [
+        "source-history"
+      ],
+      "GET /api/projects/{project_id}/documents/{document_id}/assets": [
+        "source-context"
+      ],
+      "GET /api/projects/{project_id}/documents/{document_id}/assets/{asset_id}": [
+        "source-context"
+      ],
+      "GET /api/projects/{project_id}/documents/{document_id}/chunks": [
+        "source-reader"
+      ],
+      "GET /api/projects/{project_id}/documents/{document_id}/content": [
+        "source-reader"
+      ],
+      "GET /api/projects/{project_id}/documents/{document_id}/download": [
+        "source-history"
+      ],
+      "GET /api/projects/{project_id}/documents/{document_id}/structure": [
+        "source-reader"
+      ],
+      "GET /api/projects/{project_id}/evidence/{evidence_id}": [
+        "verification"
+      ],
+      "GET /api/projects/{project_id}/evidence/{evidence_id}/download": [
+        "results"
+      ],
+      "GET /api/projects/{project_id}/extension-binding": [
+        "extensions"
+      ],
+      "GET /api/projects/{project_id}/native-reviews/{review_id}": [
+        "native-review"
+      ],
+      "GET /api/projects/{project_id}/native-reviews/{review_id}/events": [
+        "native-review"
+      ],
+      "GET /api/projects/{project_id}/native-reviews/{review_id}/result": [
+        "native-review"
+      ],
+      "GET /api/projects/{project_id}/planning/tasks": [
+        "planning"
+      ],
+      "GET /api/projects/{project_id}/repair-sessions/{session_id}": [
+        "repair"
+      ],
+      "GET /api/projects/{project_id}/requirements": [
+        "requirements"
+      ],
+      "GET /api/projects/{project_id}/requirements/{requirement_id}": [
+        "requirements"
+      ],
+      "GET /api/projects/{project_id}/runs/{run_id}": [
+        "tasks"
+      ],
+      "GET /api/projects/{project_id}/runs/{run_id}/artifacts/{filename:path}": [
+        "results"
+      ],
+      "GET /api/projects/{project_id}/runs/{run_id}/events": [
+        "tasks"
+      ],
+      "GET /api/projects/{project_id}/runs/{run_id}/logs/{stream}": [
+        "runner"
+      ],
+      "GET /api/projects/{project_id}/runs/{run_id}/results": [
+        "results"
+      ],
+      "GET /api/projects/{project_id}/runs/{run_id}/runner": [
+        "runner"
+      ],
+      "GET /api/projects/{project_id}/search": [
+        "source-reader"
+      ],
+      "GET /api/projects/{project_id}/tasks": [
+        "tasks"
+      ],
+      "GET /api/projects/{project_id}/tasks/{task_id}": [
+        "tasks"
+      ],
+      "GET /api/projects/{project_id}/tasks/{task_id}/runs": [
+        "tasks"
+      ],
+      "GET /api/projects/{project_id}/tasks/{task_id}/runs/{run_id}/native-review-scope": [
+        "native-review"
+      ],
+      "GET /api/runner": [
+        "runner"
+      ],
+      "GET /api/runtime": [
+        "ui-settings"
+      ],
+      "GET /health": [
+        "ui-settings"
+      ],
+      "MIDDLEWARE http": [
+        "project-boundary"
+      ],
+      "POST /api/extension-reviews/{review_id}/approve": [
+        "extensions"
+      ],
+      "POST /api/extensions": [
+        "extensions"
+      ],
+      "POST /api/extensions/{snapshot_id}/qualify": [
+        "extensions"
+      ],
+      "POST /api/extensions/{snapshot_id}/review": [
+        "extensions"
+      ],
+      "POST /api/projects": [
+        "project-boundary"
+      ],
+      "POST /api/projects/{project_id}/agent-executions/{execution_id}/cancel": [
+        "results"
+      ],
+      "POST /api/projects/{project_id}/approvals/{approval_id}/decision": [
+        "approvals"
+      ],
+      "POST /api/projects/{project_id}/documents": [
+        "source-history"
+      ],
+      "POST /api/projects/{project_id}/documents/{document_id}/context": [
+        "source-context"
+      ],
+      "POST /api/projects/{project_id}/extension-binding": [
+        "extensions"
+      ],
+      "POST /api/projects/{project_id}/native-reviews/{review_id}/cancel": [
+        "native-session"
+      ],
+      "POST /api/projects/{project_id}/native-reviews/{review_id}/{kind}": [
+        "native-session"
+      ],
+      "POST /api/projects/{project_id}/planning/extract": [
+        "extraction"
+      ],
+      "POST /api/projects/{project_id}/requirements": [
+        "requirements"
+      ],
+      "POST /api/projects/{project_id}/requirements/{requirement_id}/plan": [
+        "planning"
+      ],
+      "POST /api/projects/{project_id}/runs/{run_id}/cancel": [
+        "runner"
+      ],
+      "POST /api/projects/{project_id}/runs/{run_id}/repair": [
+        "repair"
+      ],
+      "POST /api/projects/{project_id}/runs/{run_id}/verify": [
+        "verification"
+      ],
+      "POST /api/projects/{project_id}/tasks": [
+        "tasks"
+      ],
+      "POST /api/projects/{project_id}/tasks/{task_id}/runs": [
+        "tasks"
+      ],
+      "POST /api/projects/{project_id}/tasks/{task_id}/runs/{run_id}/native-reviews": [
+        "native-review"
+      ],
+      "POST /api/shutdown": [
+        "offline-install"
+      ],
+      "PUT /api/projects/{project_id}/documents/{document_id}": [
+        "source-history"
+      ],
+      "PUT /api/projects/{project_id}/requirements/{requirement_id}": [
+        "requirements"
+      ],
+      "PUT /api/projects/{project_id}/tasks/{task_id}": [
+        "tasks"
+      ]
+    }
+  }
+}

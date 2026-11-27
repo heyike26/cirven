@@ -1,0 +1,95 @@
+[
+  {
+    "info": {
+      "id": "msg_133a248910014FL22IPbcZZUVx",
+      "sessionID": "ses_ecc5db7b3ffeqYYxaCB1NzeP3P",
+      "role": "user",
+      "time": {
+        "created": 1791867635857
+      },
+      "agent": "eeas-wire-readonly",
+      "model": {
+        "providerID": "eeas-original-mock-wire",
+        "modelID": "eeas-original-wire-v1"
+      }
+    },
+    "parts": [
+      {
+        "id": "prt_133a24899001Td13p9t0ahD2wA",
+        "sessionID": "ses_ecc5db7b3ffeqYYxaCB1NzeP3P",
+        "messageID": "msg_133a248910014FL22IPbcZZUVx",
+        "type": "text",
+        "text": "Return exactly EEAS_ORIGINAL_MOCK_WIRE_REPLY. This is an original transport fixture. Do not call tools."
+      }
+    ]
+  },
+  {
+    "info": {
+      "id": "msg_133a248ae0015Li3ZhHjB6717Q",
+      "sessionID": "ses_ecc5db7b3ffeqYYxaCB1NzeP3P",
+      "role": "assistant",
+      "time": {
+        "created": 1791867635886,
+        "completed": 1791867636443
+      },
+      "parentID": "msg_133a248910014FL22IPbcZZUVx",
+      "modelID": "eeas-original-wire-v1",
+      "providerID": "eeas-original-mock-wire",
+      "mode": "eeas-wire-readonly",
+      "agent": "eeas-wire-readonly",
+      "path": {
+        "cwd": "/tmp/eeas-original-wire-workspace-o6gnmfq2/original-project",
+        "root": "/"
+      },
+      "cost": 0,
+      "tokens": {
+        "total": 16,
+        "input": 10,
+        "output": 6,
+        "reasoning": 0,
+        "cache": {
+          "read": 0,
+          "write": 0
+        }
+      },
+      "finish": "stop"
+    },
+    "parts": [
+      {
+        "id": "prt_133a24ac3001Ve5VEWM4oaTaMT",
+        "sessionID": "ses_ecc5db7b3ffeqYYxaCB1NzeP3P",
+        "messageID": "msg_133a248ae0015Li3ZhHjB6717Q",
+        "type": "step-start"
+      },
+      {
+        "id": "prt_133a24ac8001iYt5MMRyMZUHNi",
+        "sessionID": "ses_ecc5db7b3ffeqYYxaCB1NzeP3P",
+        "messageID": "msg_133a248ae0015Li3ZhHjB6717Q",
+        "type": "text",
+        "text": "EEAS_ORIGINAL_MOCK_WIRE_REPLY",
+        "time": {
+          "start": 1791867636424,
+          "end": 1791867636429
+        }
+      },
+      {
+        "id": "prt_133a24ad3001IHlVy58OCdXOjx",
+        "sessionID": "ses_ecc5db7b3ffeqYYxaCB1NzeP3P",
+        "messageID": "msg_133a248ae0015Li3ZhHjB6717Q",
+        "type": "step-finish",
+        "reason": "stop",
+        "cost": 0,
+        "tokens": {
+          "total": 16,
+          "input": 10,
+          "output": 6,
+          "reasoning": 0,
+          "cache": {
+            "read": 0,
+            "write": 0
+          }
+        }
+      }
+    ]
+  }
+]

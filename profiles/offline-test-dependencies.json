@@ -1,0 +1,10 @@
+{
+  "install_entry": "scripts/install_test_dependencies.py",
+  "native_windows": "BLOCKED",
+  "optional": true,
+  "schema_version": "eeas.offline-test-selection.v1",
+  "targets": {
+    "linux-py310": "vendor/test-linux-py310/20261012T122102817223Z",
+    "windows-py310": "vendor/test-windows-py310/20261012T122227643230Z"
+  }
+}

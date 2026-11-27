@@ -1,0 +1,5 @@
+# Discovery 原创HTTP状态反例
+
+冻结运行 test_byte_anchor_forgery_rejected_and_source_drift_preserves_snapshot。
+保留首轮13P/1F的原断言：伪造引用返回422，测试作者错误预期400。
+本记录仅复现反例，不能称功能验收通过；随后以实际错误语义修订作者测试，增加正向精确锚点核验。

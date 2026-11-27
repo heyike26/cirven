@@ -1,0 +1,20 @@
+{
+  "schema_version": "eeas.stack-design.v1",
+  "status": "PUBLIC_SOURCE_SNAPSHOT",
+  "eeas_commit": null,
+  "python": "3.10.22",
+  "node": "v22.23.3",
+  "sdk": "0.2.165",
+  "agent_binary": "2.1.294 (Claude Code)",
+  "model_profile_ref": null,
+  "plugins": [],
+  "runner_profiles": [],
+  "settings_source_refs": [],
+  "qualified_evidence": [],
+  "notes": [
+    "Public source dependencies: requirements-source.txt and apps/agent-shell/package-lock.json.",
+    "Windows, enterprise connections and hardware require environment-specific verification."
+  ],
+  "developer_agent_binary": "2.1.296 (Claude Code)",
+  "deployment_target": "Windows x86_64 / Python3.10"
+}

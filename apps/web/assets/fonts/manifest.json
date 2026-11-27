@@ -1,0 +1,331 @@
+{
+  "schema": "eeas.offline-web-fonts.v1",
+  "source_repository": "https://github.com/google/fonts",
+  "source_commit": "66928797f271fed5ee428544e7229685e2d90127",
+  "generator": {
+    "python": "3.10.22",
+    "fonttools": "4.65.0",
+    "Brotli": "1.2.0",
+    "script_sha256": "2c7cad4a8235a97c37ec29592dddcb6cac01009bfb5d833ea7b09920c3e5a9fa"
+  },
+  "fonts": [
+    {
+      "family": "Noto Sans SC",
+      "css_alias": "Studio Sans SC",
+      "original_path": "upstream/notosanssc/NotoSansSC[wght].ttf",
+      "original_sha256": "a3041811a78c361b1de50f953c805e0244951c21c5bd412f7232ef0d899af0da",
+      "woff2_path": "noto-sans-sc-variable.woff2",
+      "woff2_sha256": "aef8c34277afad81ecd0227138a830263c0caea65b7aea66d1195395f097b55a",
+      "woff2_bytes": 7782072,
+      "axes": [
+        {
+          "tag": "wght",
+          "min": 100.0,
+          "default": 100.0,
+          "max": 900.0
+        }
+      ],
+      "names": {
+        "1": [
+          "Noto Sans SC Thin"
+        ],
+        "2": [
+          "Regular"
+        ],
+        "4": [
+          "Noto Sans SC Thin"
+        ],
+        "5": [
+          "Version 2.004-H2;hotconv 1.0.118;makeotfexe 2.5.65603"
+        ],
+        "6": [
+          "NotoSansSC-Thin"
+        ],
+        "16": [
+          "Noto Sans SC"
+        ],
+        "17": [
+          "Thin"
+        ]
+      },
+      "cmap_codepoint_count": 30890,
+      "glyph_count": 31036,
+      "range_coverage": {
+        "cjk_unified": {
+          "covered": 20976,
+          "range_size": 20992,
+          "complete": false
+        },
+        "cjk_extension_a": {
+          "covered": 6582,
+          "range_size": 6592,
+          "complete": false
+        },
+        "cjk_extension_b": {
+          "covered": 54,
+          "range_size": 42720,
+          "complete": false
+        },
+        "basic_latin_printable": {
+          "covered": 95,
+          "range_size": 95,
+          "complete": true
+        },
+        "latin_1_supplement": {
+          "covered": 96,
+          "range_size": 96,
+          "complete": true
+        }
+      },
+      "sample_coverage": {
+        "ui_hans": {
+          "text": "项目工作台材料任务审批验证运行暂停取消重试来源版本原件下载搜索设置预算模型会话恢复分支图片图像节点关系文档历史离线内网中文字体数据许可错误失败成功确认需求已保存未确认候选人工只读全文上下文尾部",
+          "unique_codepoints": 88,
+          "missing": []
+        },
+        "hans_punctuation": {
+          "text": "，。；：？！、（）【】《》“”‘’—…￥",
+          "unique_codepoints": 20,
+          "missing": []
+        },
+        "latin_extended": {
+          "text": "EEAS Studio Manrope ABCDEFGHIJKLMNOPQRSTUVWXYZ abcdefghijklmnopqrstuvwxyz 0123456789 Café Straße naïve Ångström Łódź čćžš ñ € £ ¥",
+          "unique_codepoints": 79,
+          "missing": [
+            "U+0107 ć",
+            "U+010D č",
+            "U+0141 Ł",
+            "U+0161 š",
+            "U+017A ź",
+            "U+017E ž"
+          ]
+        },
+        "interface_symbols_optional": {
+          "text": "→ ← ✓ ⚠ ⌘ ⏎",
+          "unique_codepoints": 7,
+          "missing": []
+        }
+      },
+      "verification": {
+        "full_unsubsetted_cmap": true,
+        "all_glyph_outline_coordinates": true,
+        "horizontal_metrics": true,
+        "names_tables_and_axes": true
+      }
+    },
+    {
+      "family": "Manrope",
+      "css_alias": "Studio Manrope",
+      "original_path": "upstream/manrope/Manrope[wght].ttf",
+      "original_sha256": "3ae11c49db0455a3cc33e37d380f20fdb8c7f8b41dc07625c177e3d87a9d6ae6",
+      "woff2_path": "manrope-variable.woff2",
+      "woff2_sha256": "30b83738add8c9edd9e3450b98036a9a8fb5668d0cbd4eb0ce5fe6761197f21f",
+      "woff2_bytes": 53892,
+      "axes": [
+        {
+          "tag": "wght",
+          "min": 200.0,
+          "default": 200.0,
+          "max": 800.0
+        }
+      ],
+      "names": {
+        "1": [
+          "Manrope ExtraLight"
+        ],
+        "2": [
+          "Regular"
+        ],
+        "4": [
+          "Manrope ExtraLight"
+        ],
+        "5": [
+          "Version 4.505"
+        ],
+        "6": [
+          "Manrope-ExtraLight"
+        ],
+        "16": [
+          "Manrope"
+        ],
+        "17": [
+          "ExtraLight"
+        ]
+      },
+      "cmap_codepoint_count": 678,
+      "glyph_count": 742,
+      "range_coverage": {
+        "cjk_unified": {
+          "covered": 0,
+          "range_size": 20992,
+          "complete": false
+        },
+        "cjk_extension_a": {
+          "covered": 0,
+          "range_size": 6592,
+          "complete": false
+        },
+        "cjk_extension_b": {
+          "covered": 0,
+          "range_size": 42720,
+          "complete": false
+        },
+        "basic_latin_printable": {
+          "covered": 95,
+          "range_size": 95,
+          "complete": true
+        },
+        "latin_1_supplement": {
+          "covered": 96,
+          "range_size": 96,
+          "complete": true
+        }
+      },
+      "sample_coverage": {
+        "ui_hans": {
+          "text": "项目工作台材料任务审批验证运行暂停取消重试来源版本原件下载搜索设置预算模型会话恢复分支图片图像节点关系文档历史离线内网中文字体数据许可错误失败成功确认需求已保存未确认候选人工只读全文上下文尾部",
+          "unique_codepoints": 88,
+          "missing": [
+            "U+4E0A 上",
+            "U+4E0B 下",
+            "U+4E2D 中",
+            "U+4EBA 人",
+            "U+4EF6 件",
+            "U+4EFB 任",
+            "U+4F1A 会",
+            "U+4F53 体",
+            "U+4F5C 作",
+            "U+4FDD 保",
+            "U+5019 候",
+            "U+505C 停",
+            "U+50CF 像",
+            "U+5168 全",
+            "U+5173 关",
+            "U+5185 内",
+            "U+5206 分",
+            "U+529F 功",
+            "U+52A1 务",
+            "U+5386 历",
+            "U+539F 原",
+            "U+53D6 取",
+            "U+53EA 只",
+            "U+53EF 可",
+            "U+53F0 台",
+            "U+53F2 史",
+            "U+56FE 图",
+            "U+578B 型",
+            "U+590D 复",
+            "U+5931 失",
+            "U+5B57 字",
+            "U+5B58 存",
+            "U+5BA1 审",
+            "U+5C3E 尾",
+            "U+5DE5 工",
+            "U+5DF2 已",
+            "U+6062 恢",
+            "U+6210 成",
+            "U+6279 批",
+            "U+636E 据",
+            "U+641C 搜",
+            "U+652F 支",
+            "U+6570 数",
+            "U+6587 文",
+            "U+6599 料",
+            "U+6682 暂",
+            "U+672A 未",
+            "U+672C 本",
+            "U+6750 材",
+            "U+6765 来",
+            "U+6863 档",
+            "U+6A21 模",
+            "U+6C42 求",
+            "U+6D88 消",
+            "U+6E90 源",
+            "U+70B9 点",
+            "U+7247 片",
+            "U+7248 版",
+            "U+76EE 目",
+            "U+786E 确",
+            "U+79BB 离",
+            "U+7B97 算",
+            "U+7CFB 系",
+            "U+7D22 索",
+            "U+7EBF 线",
+            "U+7F51 网",
+            "U+7F6E 置",
+            "U+8282 节",
+            "U+884C 行",
+            "U+8BA4 认",
+            "U+8BB8 许",
+            "U+8BBE 设",
+            "U+8BC1 证",
+            "U+8BD5 试",
+            "U+8BDD 话",
+            "U+8BEF 误",
+            "U+8BFB 读",
+            "U+8D25 败",
+            "U+8F7D 载",
+            "U+8FD0 运",
+            "U+9009 选",
+            "U+90E8 部",
+            "U+91CD 重",
+            "U+9519 错",
+            "U+9700 需",
+            "U+9879 项",
+            "U+9884 预",
+            "U+9A8C 验"
+          ]
+        },
+        "hans_punctuation": {
+          "text": "，。；：？！、（）【】《》“”‘’—…￥",
+          "unique_codepoints": 20,
+          "missing": [
+            "U+3001 、",
+            "U+3002 。",
+            "U+300A 《",
+            "U+300B 》",
+            "U+3010 【",
+            "U+3011 】",
+            "U+FF01 ！",
+            "U+FF08 （",
+            "U+FF09 ）",
+            "U+FF0C ，",
+            "U+FF1A ：",
+            "U+FF1B ；",
+            "U+FF1F ？",
+            "U+FFE5 ￥"
+          ]
+        },
+        "latin_extended": {
+          "text": "EEAS Studio Manrope ABCDEFGHIJKLMNOPQRSTUVWXYZ abcdefghijklmnopqrstuvwxyz 0123456789 Café Straße naïve Ångström Łódź čćžš ñ € £ ¥",
+          "unique_codepoints": 79,
+          "missing": []
+        },
+        "interface_symbols_optional": {
+          "text": "→ ← ✓ ⚠ ⌘ ⏎",
+          "unique_codepoints": 7,
+          "missing": [
+            "U+2318 ⌘",
+            "U+23CE ⏎",
+            "U+26A0 ⚠",
+            "U+2713 ✓"
+          ]
+        }
+      },
+      "verification": {
+        "full_unsubsetted_cmap": true,
+        "all_glyph_outline_coordinates": true,
+        "horizontal_metrics": true,
+        "names_tables_and_axes": true
+      }
+    }
+  ],
+  "subsetting": "NONE",
+  "runtime_fetch": "NONE",
+  "qualification": {
+    "binary_and_cmap": "VERIFIED",
+    "browser_visual": "NOT_RUN",
+    "native_windows": "NOT_RUN"
+  },
+  "limitations": "Coverage is measured from the actual cmap; it is not a claim to cover all CJK extensions, emoji or every script. Browser loading/layout/rendering requires separate UI evidence."
+}

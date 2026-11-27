@@ -1,0 +1,68 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import {spawn} from 'node:child_process';
+import readline from 'node:readline';
+import {resolve,dirname} from 'node:path';
+import {fileURLToPath} from 'node:url';
+import {ApiClient} from '../src/api.ts';
+import {WorkbenchStateApi,ObjectDraftSession,workspaceStateKey,keyIdentity} from '../src/workbench-state.ts';
+import {QuickInbox,conversationIdFor,sameQuickScope} from '../src/quick-inbox.ts';
+import {reviewObjects} from '../src/workbench-review.ts';
+import {candidateTextSelection} from '../src/text-feedback.ts';
+import {textDraftKey} from '../src/annotation-drafts.ts';
+import cytoscape from 'cytoscape';
+import {resizeGraph} from '../src/graph-view.ts';
+const app=resolve(dirname(fileURLToPath(import.meta.url)),'..'),root=resolve(app,'../..');
+const deferred=()=>{let resolve,reject;const promise=new Promise((a,b)=>{resolve=a;reject=b;});return {promise,resolve,reject};};
+const memory=()=>{const data=new Map();return {getItem:key=>data.get(key)??null,setItem:(key,value)=>data.set(key,value),data};};
+function fixture(t){const child=spawn(resolve(root,'.venv/bin/python'),[resolve(app,'tests/delivery-http-fixture.py')],{cwd:root,env:{...process.env,PYTHONDONTWRITEBYTECODE:'1'}}),lines=readline.createInterface({input:child.stdout}),waiting=[],calls=[];let intercept,stderr='';child.stderr.on('data',value=>stderr+=value);lines.on('line',line=>{const item=waiting.shift();if(item){try{item.resolve(JSON.parse(line));}catch(error){item.reject(error);}}});child.on('exit',code=>{for(const item of waiting.splice(0))item.reject(Error(`fixture exited ${code}: ${stderr}`));});t.after(async()=>{child.stdin.end();await new Promise(done=>child.exitCode!==null?done():child.once('exit',done));lines.close();});const raw=command=>new Promise((resolve,reject)=>{waiting.push({resolve,reject});child.stdin.write(JSON.stringify(command)+'\n');});const api=new ApiClient(async(url,options)=>{const call={path:url,method:options?.method??'GET',body:options?.body?JSON.parse(options.body):undefined};calls.push(call);const reply=await raw({...call,headers:options?.headers??{}});if(intercept)await intercept(call,reply);return new Response(JSON.stringify(reply.body),{status:reply.status});});return {api,raw,calls,intercept(fn){intercept=fn;},remote:new WorkbenchStateApi(api)};}
+async function scene(f){const result=await f.raw({fixture:'setup'});assert.equal(result.status,200,JSON.stringify(result.body));return result.body;}
+
+test('actual HTTP/SQLite saves fields, graph view and unsubmitted annotations; restart and changed source isolate original version',async t=>{
+ const f=fixture(t),s=await scene(f),w=s.workspace,source=(await f.api.file(s.pid,w.id,'普通说明.md')).source_ref,key={project_id:s.pid,workspace_id:w.id,binding_revision:w.revision,binding_sha256:w.binding_sha256,kind:'local-file',object_id:source.path,revision:source.revision,sha256:source.sha256};
+ const editor=new ObjectDraftSession(key,f.remote);await editor.ready;editor.set('fields','text','用户未提交的正文 😀');editor.set('view','scroll',{x:0,y:430});await editor.finish();assert.equal(editor.status,'saved');assert.notEqual((await f.api.file(s.pid,w.id,source.path)).content,'用户未提交的正文 😀');
+ const discovery={project_id:s.pid,kind:'discovery',object_id:s.session.id,revision:s.session.revision,sha256:s.session.sha256},selection=await candidateTextSelection(s.session.payload.candidate.summary,0,2,'/summary');
+ const draft=new ObjectDraftSession(discovery,f.remote);await draft.ready;draft.set('fields','answers',{scope:'仍未提交答复'});draft.set('fields','graphFeedback',{'user-flow':{comment:'圈出这个关系',tool:'RECTANGLE',selection:{graph_id:'user-flow',node_ids:['source'],normalized_points:[{x:.1,y:.2}],viewport:{width:800,height:500,zoom:1.3,pan:{x:12,y:-5}}}}});draft.set('fields','textFeedback',{[textDraftKey(selection)]:{comment:'此处需核对',selection}});draft.set('view','graphs',{'user-flow':{zoom:1.3,pan:{x:12,y:-5},positions:{'node:source':{x:81,y:62}},selected:['node:source'],mode:'network',search:'来源'}});await draft.finish();
+ await f.raw({fixture:'restart'});const reopened=new ObjectDraftSession(key,f.remote);await reopened.ready;assert.equal(reopened.value('fields','text',''),'用户未提交的正文 😀');assert.deepEqual(reopened.view.scroll,{x:0,y:430});const restored=new ObjectDraftSession(discovery,f.remote);await restored.ready;assert.equal(restored.fields.textFeedback[textDraftKey(selection)].comment,'此处需核对');assert.equal(restored.fields.graphFeedback['user-flow'].selection.normalized_points.length,1);assert.equal(restored.view.graphs['user-flow'].zoom,1.3);
+ await f.raw({fixture:'tamper',path:source.path,text:'人工修改的新文件'});const latest=await f.api.file(s.pid,w.id,source.path);assert.notEqual(latest.source_ref.sha256,source.sha256);const newer=new ObjectDraftSession({...key,revision:latest.source_ref.revision,sha256:latest.source_ref.sha256},f.remote);await newer.ready;assert.deepEqual(newer.fields,{});assert.equal((await f.remote.load(key)).fields.text,'用户未提交的正文 😀');assert.ok((await f.remote.drafts(s.pid)).drafts.some(value=>keyIdentity(value.key)===keyIdentity(key)));
+});
+
+test('late initial restore never replaces newly typed fields; CAS conflict leaves both draft versions intact',async t=>{
+ const f=fixture(t),s=await scene(f),key=workspaceStateKey(s.workspace),gate=deferred(),received=deferred();
+ await f.remote.save(key,0,{}, {tab:'attention'},false,'layout-initial');let hold=true;f.intercept(async(call)=>{if(hold&&call.path.endsWith('/load')){hold=false;received.resolve();await gate.promise;}});
+ const a=new ObjectDraftSession(key,f.remote);await received.promise;a.set('view','tab','current');gate.resolve();await a.ready;assert.equal(a.view.tab,'current');await a.finish();f.intercept(undefined);
+ const b=new ObjectDraftSession(key,f.remote),c=new ObjectDraftSession(key,f.remote);await Promise.all([b.ready,c.ready]);b.set('view','tab','attention');await b.finish();c.set('view','tab','different-local-choice');await assert.rejects(c.finish(),/另一版本/);assert.equal(c.status,'conflict');assert.equal(c.view.tab,'different-local-choice');assert.equal((await f.remote.load(key)).view.tab,'attention');
+});
+
+test('unknown save is observed by original operation only, preserves later typing; 401 and oversized input never auto replay or clear text',async t=>{
+ const f=fixture(t),s=await scene(f),key={project_id:s.pid,kind:'discovery',object_id:s.session.id,revision:s.session.revision,sha256:s.session.sha256};const session=new ObjectDraftSession(key,f.remote);await session.ready;let lost=true;f.intercept(async(call)=>{if(lost&&call.path.endsWith('/save')){lost=false;throw Error('response lost after actual SQLite commit');}});session.set('fields','reason','原草稿');await session.flush();assert.equal(session.status,'unknown');session.set('fields','reason','继续输入的草稿');await assert.rejects(session.finish(),/待核查/);assert.equal(f.calls.filter(x=>x.path.endsWith('/save')).length,1);f.intercept(undefined);await session.inspect();assert.equal(session.value('fields','reason',''),'继续输入的草稿');assert.equal(f.calls.filter(x=>x.path.endsWith('/save')).length,1);await session.finish();assert.equal((await f.remote.load(key)).fields.reason,'继续输入的草稿');
+ session.set('fields','reason','大'.repeat(1024*1024));await assert.rejects(session.finish(),/未保存/);assert.equal(session.value('fields','reason','').length,1024*1024);assert.ok(['error','conflict'].includes(session.status));
+ const calls=[];const auth=new WorkbenchStateApi(new ApiClient(async(url,options)=>{calls.push([url,options?.method]);return new Response(JSON.stringify(url==='/api/bootstrap'?{csrf_token:'token'}:{error:{code:'AUTH_CHANGED',message:'no retry'}}),{status:url==='/api/bootstrap'?200:401});}));await assert.rejects(auth.save(key,0,{}, {},false,'auth-once'));assert.equal(calls.filter(x=>x[1]==='POST').length,1);
+});
+
+test('Quick inbox ingests exact records atomically before ack, updates same-ref message, recovers missed events and never creates a send',async()=>{
+ const storage=memory(),record={id:'q1',revision:1,sha256:'a'.repeat(64),delivery:'SEND',scope:{projectId:'p',conversationId:'conversation'},comment:'保留原文',regions:[],contextRef:{id:'ctx',revision:1,sha256:'b'.repeat(64)},operationId:'op',message:{operation_id:'op',status:'PROCESSING'}},acks=[];let changed,rows=[record],notifications=0;
+ const bridge={getQuickDrafts:async()=>({records:rows}),ackQuickDraft:async ref=>{assert.ok(storage.getItem('eeas-quick-inbox-v1').includes(ref.id));acks.push(ref);},onQuickDraftsChanged:fn=>{changed=fn;return()=>changed=undefined;},submitQuickDraft:()=>assert.fail('ingest cannot dispatch')};const inbox=new QuickInbox(storage,bridge,()=>notifications++);await inbox.start();assert.equal(inbox.records.length,1);rows=[{...record,message:{operation_id:'op',status:'COMPLETED',text:'实际结果'}}];await inbox.refresh();assert.equal(inbox.records.length,1);assert.equal(inbox.records[0].message.text,'实际结果');inbox.stop();const restarted=new QuickInbox(storage,bridge,()=>{});await restarted.start();assert.equal(restarted.records[0].message.status,'COMPLETED');assert.equal(acks.length,3);restarted.stop();
+ const failed=new QuickInbox({getItem:()=>null,setItem:()=>{throw Error('disk full');}},{getQuickDrafts:async()=>({records:[record]}),ackQuickDraft:()=>assert.fail('must not ack unsaved input')},()=>{});await assert.rejects(failed.flush(),/disk full/);assert.deepEqual(failed.records,[]);assert.ok(notifications>0);
+});
+
+test('conversation identity is stable and isolated; review keeps answered questions pending until current resolution',()=>{
+ const storage=memory(),a=conversationIdFor(storage,{projectId:'a'});assert.equal(conversationIdFor(storage,{projectId:'a'}),a);assert.notEqual(conversationIdFor(storage,{projectId:'b'}),a);assert.notEqual(conversationIdFor(storage,{}),a);assert.equal(sameQuickScope({projectId:'a',workspaceId:'one'},{projectId:'a',workspaceId:'two'}),false);
+ const s={id:'s',project_id:'p',revision:4,sha256:'a'.repeat(64),source_current:true,answers:[{question_id:'q',text:'已回答'}],payload:{candidate:{title:'要求',questions:[{id:'q'}]},resolutions:[],status:'DRAFT'}};const empty={sessions:[s],proposals:[],books:[],harnesses:[],reports:[]};assert.equal(reviewObjects('p',empty)[0].pending,1);s.payload.resolutions=[{question_id:'q',answer_id:'actual'}];assert.equal(reviewObjects('p',empty)[0].pending,0);assert.deepEqual(reviewObjects('other',empty),[]);
+ const selection={quote_sha256:'a',locator:{kind:'CANDIDATE_FIELD',char_start:0,char_end:2,field_pointer:'/summary'}};assert.equal(textDraftKey(selection),textDraftKey({...selection,locator:{field_pointer:'/summary',char_end:2,char_start:0,kind:'CANDIDATE_FIELD'}}));
+});
+
+test('actual Cytoscape resize preserves manual node placement, selection, pan and zoom',()=>{
+ const core=cytoscape({headless:true,elements:[{data:{id:'a'}},{data:{id:'b'}}],layout:{name:'preset'}});core.getElementById('a').position({x:72,y:99});core.getElementById('b').position({x:300,y:15});core.getElementById('a').select();core.viewport({zoom:1.6,pan:{x:30,y:-70}});const before={zoom:core.zoom(),pan:core.pan(),position:core.getElementById('a').position(),selected:core.nodes(':selected').map(n=>n.id())};resizeGraph(core);assert.deepEqual({zoom:core.zoom(),pan:core.pan(),position:core.getElementById('a').position(),selected:core.nodes(':selected').map(n=>n.id())},before);core.destroy();
+});
+
+test('close barrier waits for actual in-flight save and retains editing that arrived during the POST',async()=>{
+ const gate=deferred(),entered=deferred(),writes=[],key={project_id:'p',kind:'local-file',object_id:'f.txt',revision:1,sha256:'a'.repeat(64)};let head={status:'EMPTY',schema_version:1,key,state_revision:0,fields:{},view:{},dirty:false};
+ const remote={load:async()=>head,save:async(k,rev,fields,view,dirty,id)=>{writes.push(fields.text);if(writes.length===1){entered.resolve();await gate.promise;}head={status:'SAVED',schema_version:1,key:k,state_revision:rev+1,fields,view,dirty,operation_id:id};return head;}};
+ const session=new ObjectDraftSession(key,remote);await session.ready;session.set('fields','text','first');const saving=session.flush();await entered.promise;session.set('fields','text','last user input');let closed=false;const closing=session.finish().then(()=>closed=true);await new Promise(done=>setImmediate(done));assert.equal(closed,false);gate.resolve();await Promise.all([saving,closing]);assert.deepEqual(writes,['first','last user input']);assert.equal(head.fields.text,'last user input');assert.equal(closed,true);
+});
+
+test('same-version initial restore merges untouched document sections while preserving a newly edited section',async()=>{
+ const gate=deferred(),key={project_id:'p',kind:'taskbook',object_id:'book',revision:2,sha256:'a'.repeat(64)},baseline=[{section_id:'one',entries:[{entry_id:'a',text:'source A'}]},{section_id:'two',entries:[{entry_id:'b',text:'source B'}]}];
+ const session=new ObjectDraftSession(key,{load:()=>gate.promise,save:async(k,rev,fields,view,dirty,id)=>({status:'SAVED',schema_version:1,key:k,state_revision:rev+1,fields,view,dirty,operation_id:id})});session.registerDefault('fields','sections',baseline);session.set('fields','sections',[{section_id:'one',entries:[{entry_id:'a',text:'typed before GET'}]},baseline[1]]);gate.resolve({status:'SAVED',schema_version:1,key,state_revision:4,fields:{sections:[baseline[0],{section_id:'two',entries:[{entry_id:'b',text:'older unfinished B'}]}]},view:{},dirty:true});await session.ready;assert.equal(session.fields.sections[0].entries[0].text,'typed before GET');assert.equal(session.fields.sections[1].entries[0].text,'older unfinished B');await session.finish();
+});

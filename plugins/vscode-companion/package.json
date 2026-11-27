@@ -1,0 +1,149 @@
+{
+  "name": "eeas-companion",
+  "displayName": "Cirven",
+  "description": "%extension.description%",
+  "version": "0.1.23",
+  "publisher": "eeas-local",
+  "license": "MIT",
+  "engines": {
+    "vscode": "^1.106.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "keywords": [
+    "eeas",
+    "companion",
+    "local",
+    "opencode"
+  ],
+  "extensionKind": [
+    "ui"
+  ],
+  "main": "./extension.cjs",
+  "activationEvents": [
+    "onView:eeasCompanion.chat"
+  ],
+  "capabilities": {
+    "untrustedWorkspaces": {
+      "supported": "limited",
+      "description": "Read connection status only; starting, pairing, messages and editor content require trust."
+    },
+    "virtualWorkspaces": {
+      "supported": false
+    }
+  },
+  "contributes": {
+    "viewsContainers": {
+      "secondarySidebar": [
+        {
+          "id": "eeasCompanion",
+          "title": "Cirven",
+          "icon": "media/brand/icon-monochrome.svg"
+        }
+      ]
+    },
+    "views": {
+      "eeasCompanion": [
+        {
+          "type": "webview",
+          "id": "eeasCompanion.chat",
+          "name": "Cirven"
+        }
+      ]
+    },
+    "commands": [
+      {
+        "command": "eeasCompanion.showChat",
+        "title": "%command.showChat%",
+        "category": "Cirven",
+        "icon": {
+          "light": "media/theme/command-light.svg",
+          "dark": "media/theme/command-dark.svg"
+        }
+      },
+      {
+        "command": "eeasCompanion.configure",
+        "title": "%command.configure%",
+        "category": "Cirven"
+      },
+      {
+        "command": "eeasCompanion.start",
+        "title": "%command.start%",
+        "category": "Cirven"
+      },
+      {
+        "command": "eeasCompanion.connect",
+        "title": "%command.connect%",
+        "category": "Cirven"
+      },
+      {
+        "command": "eeasCompanion.repairPair",
+        "title": "%command.repairPair%",
+        "category": "Cirven"
+      },
+      {
+        "command": "eeasCompanion.reveal",
+        "title": "%command.reveal%",
+        "category": "Cirven"
+      },
+      {
+        "command": "eeasCompanion.attachSelection",
+        "title": "%command.attachSelection%",
+        "category": "Cirven"
+      },
+      {
+        "command": "eeasCompanion.compareSaved",
+        "title": "%command.compareSaved%",
+        "category": "Cirven"
+      },
+      {
+        "command": "eeasCompanion.previewMarkdown",
+        "title": "%command.previewMarkdown%",
+        "category": "Cirven"
+      }
+    ],
+    "configuration": {
+      "title": "Cirven",
+      "properties": {
+        "eeasCompanion.installDirectory": {
+          "type": "string",
+          "default": "",
+          "scope": "application",
+          "description": "%setting.installDirectory.description%"
+        },
+        "eeasCompanion.dataDirectory": {
+          "type": "string",
+          "default": "",
+          "scope": "application",
+          "description": "%setting.dataDirectory.description%"
+        },
+        "eeasCompanion.language": {
+          "type": "string",
+          "enum": [
+            "system",
+            "zh-CN",
+            "en"
+          ],
+          "default": "system",
+          "scope": "application",
+          "description": "%language.description%",
+          "enumDescriptions": [
+            "%language.system%",
+            "%language.zh-CN%",
+            "%language.en%"
+          ]
+        }
+      }
+    },
+    "menus": {
+      "editor/title": [
+        {
+          "command": "eeasCompanion.showChat",
+          "group": "navigation@8"
+        }
+      ]
+    }
+  },
+  "icon": "media/brand/app-256.png"
+}

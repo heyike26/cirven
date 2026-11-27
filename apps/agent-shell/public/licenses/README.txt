@@ -1,0 +1,1 @@
+EEAS AgentShell contains original OpenCode AppInterface/UI code, Ghostty-Web, Cytoscape.js, and the dependencies recorded in dependency-licenses.json. Original license texts are preserved alongside this file. OpenCode source pin: 733b2c627e5aec39cb33cc22373bdce33053ef2c. No second Agent Loop is included.

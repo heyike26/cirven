@@ -1,0 +1,45 @@
+{
+  "provenance": {
+    "source": "NATIVE_R17_BEFORE_RECOVERY.r1.json",
+    "source_sha256": "6cfb473fa4995135ed2f3060043039652afb9cc0915d1a6ac8168d718f67d112",
+    "omitted": "all authored text, reasoning and tool arguments/output"
+  },
+  "owner": {
+    "project_id": "52d6432a-5eeb-4920-aff1-705c3d3caaad",
+    "session_ref": {
+      "id": "05d7ec1c1fe24e81a28695b8283fcde5",
+      "revision": 1,
+      "sha256": "ca7cd44ff8e7068571b1b4ba410c010c815079074bb4611ed6cd34aee9143f67"
+    },
+    "owner_status": "EXPIRED",
+    "connected_owner": false,
+    "observation_is_current": false,
+    "active_operation_id": "2166d648-33bc-44b3-be49-0e08cd77457f"
+  },
+  "message": {
+    "info": {
+      "id": "msg_15a69ed880011eii436bsk6eC8",
+      "role": "assistant",
+      "parentID": "msg_15a69e9c0001RKDhJQGuKh2b69"
+    },
+    "parts": [
+      {
+        "type": "tool",
+        "state": {
+          "status": "running"
+        }
+      }
+    ]
+  },
+  "row": {
+    "role": "user",
+    "native_message_id": "msg_15a69e9c0001RKDhJQGuKh2b69",
+    "operation_id": "2166d648-33bc-44b3-be49-0e08cd77457f",
+    "source": {
+      "kind": "original",
+      "project_id": "52d6432a-5eeb-4920-aff1-705c3d3caaad",
+      "session_id": "05d7ec1c1fe24e81a28695b8283fcde5"
+    },
+    "status": "UNKNOWN_OUTCOME"
+  }
+}

@@ -1,0 +1,23 @@
+import {api,type ApiClient} from './api';
+import type {AgentSession} from './agent-sessions';
+import {originalFileScope} from './original-session-files';
+import type {WorkRequirements} from './original-work-requirements';
+import {configurationCanonical as canonical,configurationHash as hash} from './conversation-configuration';
+
+export type WorkRootScope=Omit<NonNullable<ReturnType<typeof originalFileScope>>,'project_id'>;
+export type WorkRootEntry={operation_id:string;root_sha256:string;root_basis:WorkRequirements['root_basis'];label:string;status:string;dispatch_acknowledged:true;whole_task_acceptance:'NOT_ASSESSED'};
+export type WorkRootCatalog={kind:'ORIGINAL_WORK_ROOTS';version:1;project_id:string;scope:WorkRootScope;query_sha256:string;entries:WorkRootEntry[];coverage:{complete:boolean;reason_codes:string[];scanned_entries:number;operation_bytes_read:number;unacknowledged_messages:number;candidate_count:number;scope:'ORDINARY_ACKNOWLEDGED_MESSAGE_METADATA_NOT_TASK_ACCEPTANCE'};next_offset:number|null;read_only:true;metadata_only:true;model_calls:0;commands_started:0;source_files_written:0;permission_granted:false;automatic_replay:false;whole_task_acceptance:'NOT_ASSESSED'};
+const same=(a:unknown,b:unknown)=>canonical(a)===canonical(b),sha=(v:unknown)=>typeof v==='string'&&/^[a-f0-9]{64}$/.test(v),id=(v:unknown)=>typeof v==='string'&&/^[A-Za-z0-9_-]{1,100}$/.test(v),native=(v:unknown)=>typeof v==='string'&&/^[A-Za-z0-9][A-Za-z0-9_.:-]{0,191}$/.test(v),count=(v:unknown,max:number)=>Number.isSafeInteger(v)&&Number(v)>=0&&Number(v)<=max,text=(v:unknown,max:number)=>typeof v==='string'&&Array.from(v).length<=max&&!v.includes('\0');
+function check(v:unknown):asserts v{if(!v)throw Error('ORIGINAL_WORK_ROOTS_CHANGED');}
+export function workRootScope(s:AgentSession):WorkRootScope{const scope=originalFileScope(s);check(scope);const {project_id,...rest}=scope;return structuredClone(rest);}
+export async function validateWorkRoots(v:WorkRootCatalog,pid:string,scope:WorkRootScope,offset:number){
+ check(v&&new TextEncoder().encode(JSON.stringify(v)).length<=65536&&count(offset,1024)&&v.kind==='ORIGINAL_WORK_ROOTS'&&v.version===1&&v.project_id===pid&&same(v.scope,scope)&&v.query_sha256===await hash({...scope,offset})&&Array.isArray(v.entries)&&v.entries.length<=8&&v.read_only===true&&v.metadata_only===true&&v.model_calls===0&&v.commands_started===0&&v.source_files_written===0&&v.permission_granted===false&&v.automatic_replay===false&&v.whole_task_acceptance==='NOT_ASSESSED');
+ const c=v.coverage;check(c&&typeof c.complete==='boolean'&&Array.isArray(c.reason_codes)&&c.reason_codes.length<=8&&new Set(c.reason_codes).size===c.reason_codes.length&&c.reason_codes.every(r=>['NATIVE_WORK_USES_EXISTING_OBJECT_CONTEXT_ENTRY','OPERATION_SCAN_CAPACITY_REACHED','OPERATION_BYTE_CAPACITY_REACHED','ORIGINAL_OPERATION_UNAVAILABLE','OPERATION_DIRECTORY_UNAVAILABLE','SELECTED_ROOT_UNAVAILABLE'].includes(r))&&c.complete===(c.reason_codes.length===0)&&count(c.scanned_entries,1024)&&count(c.operation_bytes_read,8388608)&&count(c.unacknowledged_messages,c.scanned_entries)&&count(c.candidate_count,c.scanned_entries)&&c.scope==='ORDINARY_ACKNOWLEDGED_MESSAGE_METADATA_NOT_TASK_ACCEPTANCE'&&v.next_offset===(offset+8<c.candidate_count?offset+8:null));
+ const expected=Math.min(8,Math.max(0,c.candidate_count-offset));check(v.entries.length<=expected&&(v.entries.length===expected||c.reason_codes.includes('SELECTED_ROOT_UNAVAILABLE')));
+ const seen=new Set<string>();for(const e of v.entries){const b=e.root_basis;check(e&&id(e.operation_id)&&!seen.has(e.operation_id)&&sha(e.root_sha256)&&b&&await hash(b)===e.root_sha256&&b.project_id===pid&&same(b.session_ref,scope.session_ref)&&same(b.workspace_ref,scope.workspace_ref)&&b.root_operation_id===e.operation_id&&count(b.root_generation,scope.generation)&&b.root_generation>=1&&native(b.native_session_id)&&native(b.native_message_id)&&sha(b.request_sha256)&&text(e.label,280)&&text(e.status,100)&&e.dispatch_acknowledged===true&&e.whole_task_acceptance==='NOT_ASSESSED');seen.add(e.operation_id);}
+ return structuredClone(v);
+}
+export class OriginalWorkRootsApi{
+ constructor(private client:Pick<ApiClient,'request'>=api){}
+ async inspect(s:AgentSession,offset=0,signal?:AbortSignal){const pid=s.project_id,scope=workRootScope(s);check(id(pid)&&count(offset,1024));const path='/api/projects/'+encodeURIComponent(pid)+'/agent-sessions/'+encodeURIComponent(scope.session_ref.id)+'/work-roots/inspect';return validateWorkRoots(await this.client.request<WorkRootCatalog>(path,'POST',{...scope,offset},signal,false),pid,scope,offset);}
+}

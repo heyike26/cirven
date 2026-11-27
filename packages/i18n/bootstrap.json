@@ -1,0 +1,61 @@
+{
+  "schema_version": 1,
+  "messages": {
+    "consoleStarting": {
+      "zh-CN": "正在启动 {brand}：正在校验安装文件，请稍候……",
+      "en": "Starting {brand}: checking installation files…"
+    },
+    "startingTitle": {
+      "zh-CN": "{brand} · 正在启动",
+      "en": "{brand} · Starting"
+    },
+    "verifyBody": {
+      "zh-CN": "正在校验安装文件，请稍候……\n首次启动可能需要数十秒。",
+      "en": "Checking installation files…\nThe first start can take a minute."
+    },
+    "cancel": {
+      "zh-CN": "取消启动",
+      "en": "Cancel startup"
+    },
+    "cancelledBeforeMain": {
+      "zh-CN": "已取消启动；主界面尚未启动。",
+      "en": "Startup was cancelled before the main window started."
+    },
+    "verifyConsole": {
+      "zh-CN": "{brand} 正在校验安装文件：{completed} / {total}",
+      "en": "{brand}: checking installation files ({completed} / {total})"
+    },
+    "verifyCount": {
+      "zh-CN": "{completed} / {total} 个文件已校验",
+      "en": "{completed} / {total} files checked"
+    },
+    "verified": {
+      "zh-CN": "{brand} 安装文件校验完成，正在打开主界面……",
+      "en": "{brand}: installation verified. Opening the app…"
+    },
+    "failed": {
+      "zh-CN": "{brand} 未能启动。",
+      "en": "{brand} could not start."
+    },
+    "diagnostic": {
+      "zh-CN": "诊断文件：{path}",
+      "en": "Diagnostic file: {path}"
+    },
+    "failedTitle": {
+      "zh-CN": "{brand} · 启动失败",
+      "en": "{brand} · Startup failed"
+    },
+    "abnormalExit": {
+      "zh-CN": "{brand} 主界面进程异常退出（退出码 {code}）。原始启动日志：{path}",
+      "en": "{brand} exited unexpectedly (exit code {code}). Original startup log: {path}"
+    },
+    "cancelled": {
+      "zh-CN": "{brand} 已取消启动。",
+      "en": "{brand} startup was cancelled."
+    },
+    "cliFailure": {
+      "zh-CN": "{brand} 安装包启动失败",
+      "en": "{brand} package startup failed"
+    }
+  }
+}

@@ -1,0 +1,249 @@
+{
+  "schema_version": 1,
+  "messages": {
+    "taskReference": {
+      "zh-CN": "此任务的原引用尚未核对，请打开任务动态查看。",
+      "en": "The original task reference could not be verified. Open task activity to check it."
+    },
+    "frameUnavailable": {
+      "zh-CN": "原页面的画面引用不可用。",
+      "en": "The original page image is unavailable."
+    },
+    "startupCancelled": {
+      "zh-CN": "启动已取消。",
+      "en": "Startup was cancelled."
+    },
+    "startingTitle": {
+      "zh-CN": "{brand} · 正在启动",
+      "en": "{brand} · Starting"
+    },
+    "controllerNotReady": {
+      "zh-CN": "本地服务尚未就绪。",
+      "en": "The local service is not ready."
+    },
+    "pairTitle": {
+      "zh-CN": "连接 VS Code",
+      "en": "Connect VS Code"
+    },
+    "pairMessage": {
+      "zh-CN": "允许 {client} 连接 {brand}？",
+      "en": "Allow {client} to connect to {brand}?"
+    },
+    "pairDetail": {
+      "zh-CN": "此连接可查看本机 {brand} 项目和原会话、发送消息与运行中指导、停止选定任务，以及打开已记录的报告。模型配置与密钥仍由 {brand} 管理。",
+      "en": "This connection can view local {brand} projects and conversations, send messages and instructions during a task, stop a selected task, and open recorded reports. {brand} keeps control of model settings and credentials."
+    },
+    "pairAllow": {
+      "zh-CN": "允许连接",
+      "en": "Allow connection"
+    },
+    "pairDeny": {
+      "zh-CN": "拒绝",
+      "en": "Deny"
+    },
+    "closingReview": {
+      "zh-CN": "{brand} 正在核查关闭状态，请在桌面端处理。",
+      "en": "{brand} is checking its shutdown status. Review it in the desktop app."
+    },
+    "pythonMissing": {
+      "zh-CN": "随软件交付的 Python 运行环境不存在。请检查完整安装包。",
+      "en": "The bundled Python runtime is missing. Check the complete installation package."
+    },
+    "launcherMissing": {
+      "zh-CN": "离线安装包缺少服务启动器，请重新解压完整安装包。",
+      "en": "The offline package is missing its service launcher. Extract the complete package again."
+    },
+    "serviceStartFailed": {
+      "zh-CN": "本地服务启动失败，详情见 controller-boot.log。",
+      "en": "The local service could not start. See controller-boot.log."
+    },
+    "serviceStartExited": {
+      "zh-CN": "本地服务在就绪前已退出，详情见 controller-boot.log。",
+      "en": "The local service exited before it was ready. See controller-boot.log."
+    },
+    "serviceTimeout": {
+      "zh-CN": "本地服务在 180 秒内未就绪，请查看 controller-boot.log。",
+      "en": "The local service was not ready within 180 seconds. See controller-boot.log."
+    },
+    "owningPageRequired": {
+      "zh-CN": "此操作仅限当前主窗口。",
+      "en": "This action is only available from the owning main window."
+    },
+    "visibleTaskUnknown": {
+      "zh-CN": "无法核对选中任务，请刷新任务动态。",
+      "en": "The selected task could not be verified. Refresh task activity."
+    },
+    "settingsClosing": {
+      "zh-CN": "应用正在关闭，请稍后再设置。",
+      "en": "The app is closing. Change settings after it has restarted."
+    },
+    "orbUnavailable": {
+      "zh-CN": "此设备无法设置桌面快捷入口。",
+      "en": "The desktop shortcut is unavailable on this device."
+    },
+    "flushReference": {
+      "zh-CN": "退出保存回执不属于当前请求。",
+      "en": "The save receipt does not belong to the current shutdown request."
+    },
+    "draftUnsaved": {
+      "zh-CN": "仍有内容未能保存，窗口已保留；请核对草稿后再关闭。",
+      "en": "Some content could not be saved. The window remains open; check your drafts before closing it."
+    },
+    "operationRequired": {
+      "zh-CN": "需要准确的原操作引用。",
+      "en": "An exact original operation reference is required."
+    },
+    "operationMissing": {
+      "zh-CN": "服务中没有找到此操作回执；执行结果仍需核查，未自动重新发送。",
+      "en": "No receipt was found for this operation. Check its outcome; it has not been sent again."
+    },
+    "chooseFolder": {
+      "zh-CN": "选择工作文件夹",
+      "en": "Choose a work folder"
+    },
+    "chooseFiles": {
+      "zh-CN": "选择资料或 Word 模板",
+      "en": "Choose source files or a Word template"
+    },
+    "materialFilter": {
+      "zh-CN": "工程资料与模板",
+      "en": "Project files and templates"
+    },
+    "allFiles": {
+      "zh-CN": "全部文件",
+      "en": "All files"
+    },
+    "skillRequired": {
+      "zh-CN": "需要准确的 Skill 引用。",
+      "en": "An exact Skill reference is required."
+    },
+    "capabilityRequired": {
+      "zh-CN": "需要准确的能力引用。",
+      "en": "An exact capability reference is required."
+    },
+    "openStopped": {
+      "zh-CN": "应用正在关闭，已停止打开文档。",
+      "en": "Document opening stopped because the app is closing."
+    },
+    "openSuperseded": {
+      "zh-CN": "已有新的打开操作，此请求已失效。",
+      "en": "A newer document-open action has replaced this request."
+    },
+    "presentationChanged": {
+      "zh-CN": "协作视图已变化，请重新选择要打开的文档。",
+      "en": "The collaboration view has changed. Select the document again."
+    },
+    "documentUnresolved": {
+      "zh-CN": "尚未找到可打开的本地文档。",
+      "en": "The local document could not be resolved."
+    },
+    "wordPathTooLong": {
+      "zh-CN": "文稿路径过长，Word 无法可靠打开。文件和当前草稿已保留；请缩短文件路径，生成稿请改用较短的 Cirven 安装目录。",
+      "en": "The document path is too long for Word to open reliably. Your file and current draft are preserved. Shorten the file path; for generated documents, use a shorter Cirven installation path."
+    },
+    "documentsOnly": {
+      "zh-CN": "此入口只能打开文档。",
+      "en": "This action only opens documents."
+    },
+    "previewUnavailable": {
+      "zh-CN": "当前页的准确预览暂不可用。",
+      "en": "An exact preview of the current page is unavailable."
+    },
+    "imageBytesChanged": {
+      "zh-CN": "当前页图像内容已变化，请重新获取。",
+      "en": "The current page image has changed. Capture it again."
+    },
+    "imageDimensionsChanged": {
+      "zh-CN": "当前页图像尺寸已变化，请重新获取。",
+      "en": "The current page image dimensions have changed. Capture it again."
+    },
+    "exitAbnormal": {
+      "zh-CN": "本地服务未正常退出。应用保持打开，退出结果需要核查。",
+      "en": "The local service did not exit normally. The app remains open so you can check the outcome."
+    },
+    "exitUnknown": {
+      "zh-CN": "本地服务退出结果未知。应用保持打开，未强制终止进程。",
+      "en": "The local service exit could not be confirmed. The app remains open; no process was forcibly terminated."
+    },
+    "exitWait": {
+      "zh-CN": "已请求关闭，本地服务在 45 秒内尚未确认正常退出。应用保持打开，未重新发送关闭请求。",
+      "en": "Shutdown was requested, but a normal exit was not confirmed within 45 seconds. The app remains open; the request has not been sent again."
+    },
+    "previousExitUnknown": {
+      "zh-CN": "上次关闭结果仍需核查。本地服务尚未确认正常退出，未重新发送关闭请求。",
+      "en": "The previous shutdown outcome still needs checking. A normal service exit is not confirmed; the request has not been sent again."
+    },
+    "exitContextMissing": {
+      "zh-CN": "缺少可核对的本地服务关闭上下文。应用保持打开。",
+      "en": "The local service shutdown context could not be verified. The app remains open."
+    },
+    "ownersNotClosed": {
+      "zh-CN": "任务或原生协作尚未确认关闭。应用保持打开，当前执行结果需要核查。",
+      "en": "Task or native collaboration shutdown is not confirmed. The app remains open so you can check the current outcome."
+    },
+    "nativeWindowNotDetached": {
+      "zh-CN": "原软件窗口尚未安全移出工作台。请重试关闭，以保留当前编辑。",
+      "en": "The original application window has not safely left the workspace. Check your edits before trying to close again."
+    },
+    "executionNotClosed": {
+      "zh-CN": "自有执行尚未确认关闭。应用保持打开，未重新发送关闭请求。",
+      "en": "Owned execution shutdown is not confirmed. The app remains open; the request has not been sent again."
+    },
+    "flushTimeout": {
+      "zh-CN": "退出前的草稿保存尚未确认，应用保持打开。",
+      "en": "Draft saving has not been confirmed. The app remains open."
+    },
+    "closeIncomplete": {
+      "zh-CN": "工作台关闭未完成",
+      "en": "Workspace shutdown is incomplete"
+    },
+    "idePaused": {
+      "zh-CN": "VS Code 连接已暂停；退出结果确认前不会重新执行任务。",
+      "en": "The VS Code connection is paused. Tasks will not run again while the shutdown outcome is unconfirmed."
+    },
+    "artifactUnowned": {
+      "zh-CN": "这份产物不属于已记录的回答。",
+      "en": "This artifact does not belong to a recorded reply."
+    },
+    "artifactNoFile": {
+      "zh-CN": "这份产物尚无可原生打开的文件引用。",
+      "en": "This artifact has no file reference that can be opened in its native application."
+    },
+    "initialCapture": {
+      "zh-CN": "初始化当前原生页面身份",
+      "en": "Identify the current native page"
+    },
+    "taskUpdateOne": {
+      "zh-CN": "有任务更新，点此查看",
+      "en": "A task has an update. Open to view it."
+    },
+    "taskUpdateMany": {
+      "zh-CN": "{count} 项任务有新动态",
+      "en": "{count} tasks have updates"
+    },
+    "startupFailed": {
+      "zh-CN": "{brand} 启动失败",
+      "en": "{brand} could not start"
+    },
+    "languageUnsupported": {
+      "zh-CN": "请选择跟随系统、简体中文或 English。",
+      "en": "Choose System, Simplified Chinese, or English."
+    },
+    "preferencesFailed": {
+      "zh-CN": "设置未能保存，请检查安装目录写入权限后重试。",
+      "en": "Settings could not be saved. Check write access to the installation folder and try again."
+    },
+    "supervisorQuestion": {
+      "zh-CN": "总管问答",
+      "en": "Coordinator question"
+    },
+    "nativeDeliverySaveTitle": {
+      "zh-CN": "保存已核验交付包",
+      "en": "Save verified delivery bundle"
+    },
+    "nativeDeliverySaveButton": {
+      "zh-CN": "保存新文件",
+      "en": "Save new file"
+    }
+  }
+}

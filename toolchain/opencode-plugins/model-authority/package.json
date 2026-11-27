@@ -1,0 +1,8 @@
+{
+  "name": "eeas-model-authority",
+  "version": "1.3.0",
+  "type": "module",
+  "private": true,
+  "license": "UNLICENSED",
+  "main": "index.mjs"
+}

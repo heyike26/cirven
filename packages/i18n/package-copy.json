@@ -1,0 +1,7 @@
+{
+  "schema_version": 1,
+  "messages": {
+    "readmeTitle": {"zh-CN": "{brand} Windows 内网初版：先读这里", "en": "{brand} for Windows: start here"},
+    "intranetTitle": {"zh-CN": "内网模型、Skill 与本地 MCP 设置", "en": "Intranet models, Skills, and local MCP setup"}
+  }
+}

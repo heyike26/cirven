@@ -1,0 +1,11 @@
+/* File-pane controls share one horizontal budget, including the activity rail. */
+.as-app-frame .as-shell .as-file-pane{padding-inline:12px}
+.as-app-frame .as-shell .as-file-pane>.as-open-folder[data-component=button]{padding:8px 12px;gap:8px;overflow-wrap:normal}
+.as-app-frame .as-shell .as-file-pane .as-explorer-search{flex:none;min-width:0;height:40px;min-height:40px;margin-inline:0;padding:0 8px;gap:8px}
+.as-app-frame .as-shell .as-file-pane .as-explorer-search input:not([type=checkbox]){flex:1;width:0;min-width:0;max-width:none;height:38px;min-height:0;padding:0;border:0;border-radius:0;outline:0;box-shadow:none;background:transparent;font-size:var(--as-type-control,15px);line-height:24px}
+.as-tree-heading{display:flex;align-items:center;gap:8px;min-width:0}
+.as-app-frame .as-tree-header .as-tree-help{display:grid;place-items:center;flex:none;width:24px;height:24px;padding:4px;border:0;border-radius:6px;color:var(--as-muted);background:transparent}
+.as-tree-help svg{width:16px;height:16px;fill:none;stroke:currentColor;stroke-width:1.4;stroke-linecap:round;stroke-linejoin:round}
+.as-tree-help:hover{background:#e4e7eb}
+.as-tree-help:focus-visible{outline:2px solid var(--as-focus);outline-offset:2px}
+.as-explorer-status-help{z-index:1000;max-width:min(240px,calc(100vw - 32px));padding:12px;border:1px solid #d7dde2;border-radius:8px;background:#fff;color:#47515a;box-shadow:0 4px 16px #30384214;font-family:var(--font-family-sans);font-size:12px;line-height:20px;overflow-wrap:anywhere;pointer-events:none}

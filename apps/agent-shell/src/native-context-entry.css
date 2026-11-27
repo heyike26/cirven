@@ -1,0 +1,16 @@
+.as-native-context-entry{display:flex;min-width:0;max-width:160px;margin-right:auto}
+.as-native-context-entry>.as-popover-anchor{display:flex;min-width:0;max-width:100%}
+.as-app-frame .as-native-context-entry .as-current-page-trigger{display:flex;align-items:center;gap:8px;min-width:0;max-width:100%;height:32px;min-height:32px;padding:4px 8px;border:0;border-radius:8px;background:transparent;color:var(--as-muted);font-size:12px;line-height:20px}
+.as-current-page-trigger>span:first-of-type{min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.as-current-page-trigger>[data-component=icon]{flex:none;width:16px;height:16px}
+.as-app-frame .as-current-page-trigger:hover{background:#e8ebee;color:var(--as-ink)}
+.as-current-page-trigger:focus-visible{outline:2px solid var(--as-focus);outline-offset:2px}
+.as-current-page-risk{flex:none;width:16px;height:16px;display:grid;place-items:center;color:var(--as-error);font-size:12px}
+.as-current-page-popover.as-studio-popover{width:min(440px,calc(100vw - 32px));max-height:min(560px,calc(100vh - 80px));padding:16px;overflow:auto}
+.as-current-page-popover .as-native-context{padding:0;border:0;background:none}
+.as-current-page-popover .as-native-context-expanded{padding-top:0;max-height:none;overflow:visible;animation:none}
+.as-current-page-heading{display:flex;align-items:center;gap:12px;margin-bottom:12px}
+.as-current-page-heading>strong{flex:1;min-width:0;font-size:13px;font-weight:500;line-height:20px;overflow-wrap:anywhere}
+.as-current-page-heading>button{display:grid;place-items:center;flex:none;width:28px;height:28px;padding:4px;border:0;border-radius:8px;background:transparent}
+.as-current-page-popover .as-native-context :is(.as-native-context-actions,.as-native-frame-tools,.as-native-feedback-actions) button{font-size:13px;min-height:32px;padding:4px 8px}
+@container agent-pane (max-width:480px){.as-native-context-entry{max-width:48px}.as-current-page-trigger>span:not(.as-current-page-risk){display:none}.as-current-page-trigger[data-risk=true]{gap:4px;padding-inline:4px}}

@@ -1,0 +1,17 @@
+# Original command observations
+
+Pinned OpenCode 1.19.0 / 733b2c627e5aec39cb33cc22373bdce33053ef2c. No new dependencies, command executor, permissions, or model loop. The existing original command admission remains authoritative.
+
+The original CLI `packages/opencode/src/session/tools.ts:106–124` invokes before/after. `tool/shell.ts:625–637` asks native permission and then invokes `shell.env` with the resolved cwd before its own spawn. The exposed shell tool ID remains `bash` (`tool/shell/id.ts`). Before captures only immutable call/input identity; shell.env captures the actual declared pre-source after permission; after captures the original merged output and integer-or-null exit. Never infer argv or separate stdout/stderr.
+
+A read-only projection alone cannot reconstruct historical pre-source. A new Runner would duplicate execution and permission surfaces. This observer preserves the single loop and original operation; the Python controller independently matches the exact saved original part, input/output, parent user message and persisted operation. Exit zero is a command observation, not task acceptance. Old sessions remain readable without being silently reconnected.
+
+`EEAS_COMMAND_OBSERVATION_CONFIG` names the private bounded scope configuration. prepare → plugin ready → bind exact original session → immutable admission index. The scope declares at most 32 literal non-private UTF-8 source files, each ≤256KiB and ≤1MiB total per side. The observer never discovers dependencies from command text or walks the workspace. Empty declarations explicitly lack source coverage. Pre/post equality does not prove the file stayed unchanged throughout execution; TOCTOU and omitted dependencies remain unqualified. Source bytes are content-addressed, immutable and private.
+
+Output stores at most 64KiB of complete UTF-8 characters, along with the original output SHA/length and truthful truncation flags. Original outputPath is only a historical reference; never read arbitrary paths from it. Original timeout/abort exit=null, missing after, tool error or owner close remain UNKNOWN_OUTCOME. No auto retry, second execution or reconstruction from current source occurs. Original command records and failed output are retained when later code is repaired and a new original call performs a retest.
+
+Costs: at most 32 calls per generation, 8 concurrent captures, 16 generation admissions. A shared per-owner budget permanently reserves 2.5MiB per admitted call under a 96MiB cap plus 1MiB emergency metadata allowance (38 reservations); deduplicated source blobs can use less. This is an observation-ledger cap, not an application-wide resource or command sandbox guarantee. No polling or model calls. Capacity or observation failure preserves old records and reduces coverage; it never changes or repeats the original command. Orphan reservations are not silently reclaimed.
+
+Tests use the production hooks, real local files, and a real local shell child with deterministic inputs. That boundary is explicitly not native Windows, actual paid model, complete CLI qualification or independent Runner acceptance.
+
+Each source read also binds its captured parent-chain root dev/ino to the admitted root before storing any blob/pre record. A self-consistent replacement directory is not accepted. Resolved absolute cwd is published only if it exactly appears in the already-clean original tool input; otherwise cwd is null with an explicit coverage reason while valid exit/output observations remain.

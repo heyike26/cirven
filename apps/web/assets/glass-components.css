@@ -1,0 +1,467 @@
+/* Component layer. The shell owns the glass palette, layout and font faces. */
+:root {
+  --glass-control-surface: color-mix(in srgb, var(--glass-surface) 84%, transparent);
+  --glass-control-edge: color-mix(in srgb, var(--glass-ink) 12%, var(--glass-edge));
+  --glass-control-inset: inset 0 1px 0 var(--glass-edge);
+  --glass-control-radius: 10px;
+  --glass-control-ease: cubic-bezier(.16, 1, .3, 1);
+}
+
+/* Quiet, tactile controls; their dimensions do not change on hover or press. */
+button:where(:not(#sidebar-backdrop)), input, textarea, select { font-family: inherit; }
+button:where(:not(#sidebar-backdrop):not(#menu-toggle)),
+.workbench button:where(:not(#sidebar-backdrop):not(#menu-toggle)),
+.upload-drawer button[type=button], .project-drawer button[type=button], .extraction-drawer button[type=button],
+.reader-actions a, .run-heading a, #native-review-download {
+  min-height: 40px;
+  padding: 9px 15px;
+  border: 1px solid var(--glass-control-edge);
+  border-radius: var(--glass-control-radius);
+  color: var(--glass-ink);
+  background: linear-gradient(180deg, var(--glass-surface), var(--glass-control-surface));
+  box-shadow: var(--glass-control-inset), 0 3px 9px color-mix(in srgb, var(--glass-ink) 5%, transparent);
+  font-size: 14px;
+  font-weight: 550;
+  line-height: 1.45;
+  text-decoration: none;
+  text-underline-offset: 3px;
+  transition: background-color 150ms ease, border-color 150ms ease, box-shadow 180ms var(--glass-control-ease);
+}
+button:where(:not(#sidebar-backdrop):not(#menu-toggle):not(:disabled)):hover,
+.workbench button:where(:not(#sidebar-backdrop):not(#menu-toggle):not(:disabled)):hover,
+.reader-actions a:hover, .run-heading a:hover, #native-review-download:hover {
+  color: var(--glass-ink);
+  background: color-mix(in srgb, var(--glass-surface) 88%, var(--glass-accent) 12%);
+  border-color: color-mix(in srgb, var(--glass-accent) 35%, var(--glass-edge));
+  box-shadow: var(--glass-control-inset), 0 5px 14px color-mix(in srgb, var(--glass-ink) 9%, transparent);
+  transform: none;
+}
+button:where(:not(#sidebar-backdrop):not(#menu-toggle)):active,
+.workbench button:where(:not(#sidebar-backdrop):not(#menu-toggle)):active { box-shadow: inset 0 1px 3px color-mix(in srgb, var(--glass-ink) 12%, transparent); }
+button:disabled, button[aria-disabled=true] { opacity: .56; cursor: not-allowed; box-shadow: none; }
+button:focus-visible, a:focus-visible, summary:focus-visible, input:focus-visible, textarea:focus-visible, select:focus-visible {
+  outline: 2px solid var(--glass-accent);
+  outline-offset: 3px;
+}
+.workbench button.primary-button,
+.upload-drawer button.primary-button, .project-drawer button.primary-button, .extraction-drawer button.primary-button,
+#tasks-zone .task-composer-footer .primary-button,
+#requirement-form > button, #document-form button[type=submit], #project-form button[type=submit] {
+  color: var(--glass-accent-ink);
+  background: var(--glass-accent);
+  border-color: var(--glass-accent);
+  box-shadow: inset 0 1px 0 color-mix(in srgb, var(--glass-edge) 22%, transparent), 0 5px 14px color-mix(in srgb, var(--glass-accent) 17%, transparent);
+}
+.workbench button.primary-button:hover,
+.upload-drawer button.primary-button:hover, .project-drawer button.primary-button:hover, .extraction-drawer button.primary-button:hover,
+#tasks-zone .task-composer-footer .primary-button:hover,
+#requirement-form > button:hover, #document-form button[type=submit]:hover, #project-form button[type=submit]:hover {
+  color: var(--glass-accent-ink);
+  background: color-mix(in srgb, var(--glass-accent) 92%, var(--glass-ink));
+  border-color: var(--glass-accent);
+}
+
+/* Readable editing surfaces: no blur behind the text being edited. */
+input:not([type=checkbox]):not([type=radio]):not([type=file]), textarea, select,
+#tasks-zone #task-form input:not([type=checkbox]), #tasks-zone #task-form textarea, #tasks-zone #task-form select,
+.project-drawer input, .project-drawer textarea {
+  min-height: 44px;
+  padding: 11px 13px;
+  color: var(--glass-ink);
+  caret-color: var(--glass-accent);
+  background: color-mix(in srgb, var(--glass-surface) 94%, var(--glass-edge));
+  border: 1px solid var(--glass-control-edge);
+  border-radius: var(--glass-control-radius);
+  box-shadow: inset 0 1px 3px color-mix(in srgb, var(--glass-ink) 4%, transparent), 0 1px 0 var(--glass-edge);
+  font-size: 14px;
+  line-height: 1.6;
+  min-width: 0;
+  transition: border-color 150ms ease, box-shadow 150ms ease;
+}
+input::placeholder, textarea::placeholder { color: var(--glass-muted); opacity: 1; }
+input:not([type=file]):focus, textarea:focus, select:focus { border-color: var(--glass-accent); }
+input[aria-invalid=true], textarea[aria-invalid=true] { border-color: var(--glass-danger); }
+input[type=checkbox], input[type=radio] { accent-color: var(--glass-accent); }
+form label, fieldset legend, .native-context-panel label, .extraction-drawer label {
+  color: var(--glass-ink);
+  font-size: 14px;
+  line-height: 1.65;
+}
+fieldset, form { border-color: var(--glass-control-edge); }
+form small, .view-help, .task-field-note, .document-file-meta { color: var(--glass-muted); }
+form ::selection, .reader-paper ::selection, pre::selection { color: var(--glass-ink); background: color-mix(in srgb, var(--glass-accent) 22%, var(--glass-edge)); }
+
+/* The modal is the elevated material; nested fields are quiet, not more glass. */
+.upload-drawer, .project-drawer, .extraction-drawer {
+  color: var(--glass-ink);
+  background: color-mix(in srgb, var(--glass-surface) 92%, var(--glass-edge));
+  border: 1px solid var(--glass-edge);
+  box-shadow: var(--glass-shadow), inset 0 1px 0 var(--glass-edge);
+  backdrop-filter: blur(24px) saturate(1.15);
+  -webkit-backdrop-filter: blur(24px) saturate(1.15);
+}
+.upload-drawer::backdrop, .project-drawer::backdrop, .extraction-drawer::backdrop {
+  background: color-mix(in srgb, var(--glass-ink) 22%, transparent);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+}
+.drawer-heading, .drawer-heading h2, .drawer-heading button { color: var(--glass-ink); }
+.upload-dropzone {
+  background: color-mix(in srgb, var(--glass-surface) 60%, transparent);
+  border-color: color-mix(in srgb, var(--glass-accent) 45%, var(--glass-edge));
+  color: var(--glass-ink);
+  box-shadow: inset 0 1px 0 var(--glass-edge);
+}
+.upload-dropzone > span, .upload-dropzone .icon, #upload-file-state { color: var(--glass-muted); }
+.upload-dropzone .file-picker-row > span { color: var(--glass-muted); }
+.upload-dropzone.drag-over { background: color-mix(in srgb, var(--glass-accent) 12%, var(--glass-edge)); border-color: var(--glass-accent); transform: none; box-shadow: inset 0 0 0 1px var(--glass-accent); }
+.upload-progress-panel { color: var(--glass-ink); background: var(--glass-control-surface); border-color: var(--glass-control-edge); box-shadow: var(--glass-control-inset); }
+.upload-progress-panel > div { color: var(--glass-ink); }
+.upload-progress-panel p { color: var(--glass-muted); }
+.upload-progress-panel progress { accent-color: var(--glass-accent); }
+.extraction-drawer .drawer-actions { background: color-mix(in srgb, var(--glass-surface) 96%, var(--glass-edge)); border-top: 1px solid var(--glass-control-edge); }
+.extraction-mode label, .extraction-text-panel, .extraction-chunks li { background: var(--glass-control-surface); border-color: var(--glass-control-edge); color: var(--glass-ink); }
+.extraction-mode label:has(input:checked) { background: color-mix(in srgb, var(--glass-accent) 9%, var(--glass-edge)); border-color: var(--glass-accent); }
+.extraction-mode label span, .extraction-mode legend { color: var(--glass-muted); }
+.extraction-receipt { color: var(--glass-ink); background: var(--glass-control-surface); }
+.extraction-state { color: var(--glass-ink); border-left-width: 1px; border-color: var(--glass-accent); }
+
+/* Task composition retains the approved field grouping and mobile layout. */
+#tasks-zone .task-composer, #requirement-form { background:transparent;border:0;border-radius:0;box-shadow:none; }
+#tasks-zone .task-source-bar { background: color-mix(in srgb, var(--glass-surface) 88%, var(--glass-edge)); border-color: var(--glass-control-edge); }
+#tasks-zone .task-source-label, #tasks-zone #task-source-note, #tasks-zone .task-field-note,
+#tasks-zone .task-composer-footer p, #tasks-zone #task-list-count { color: var(--glass-muted); }
+#tasks-zone .task-source-label, #tasks-zone #task-source-note, #tasks-zone .task-field-note,
+#tasks-zone .task-composer-footer p { font-size: 13px; line-height: 1.65; }
+#tasks-zone #task-source-title, #tasks-zone #task-form legend, #tasks-zone #task-form label,
+#tasks-zone .task-list-heading h3, #tasks-zone .task-empty h4 { color: var(--glass-ink); }
+#tasks-zone .task-source-status { color: var(--glass-warning); border-color: color-mix(in srgb, var(--glass-warning) 22%, var(--glass-edge)); background: color-mix(in srgb, var(--glass-warning) 5%, var(--glass-surface)); }
+#tasks-zone .task-source-status[data-phase=create] { color: var(--glass-accent); border-color: color-mix(in srgb, var(--glass-accent) 24%, var(--glass-edge)); background: color-mix(in srgb, var(--glass-accent) 6%, var(--glass-surface)); }
+#tasks-zone #task-select-requirement { color: var(--glass-ink); border-color: var(--glass-control-edge); background: var(--glass-control-surface); }
+#tasks-zone .task-composer-footer { border-color: var(--glass-control-edge); }
+#tasks-zone #execution-tasks .task-empty { background: color-mix(in srgb, var(--glass-surface) 70%, transparent); border-color: var(--glass-control-edge); }
+#tasks-zone #execution-tasks .task-empty p { color: var(--glass-muted); }
+#source-refs li, #requirements li, #planning-tasks li, #execution-tasks > li {
+  color: var(--glass-ink);
+  border-color: var(--glass-control-edge);
+  background: transparent;
+}
+
+/* Reading and result components share one legible paper material. */
+.document-reader, .reader-paper, .document-collection, .document-toc, .document-structure,
+.run-stream, .extension-layout > div, #extension-review { color: var(--glass-ink); background: var(--glass-surface); border-color: var(--glass-edge); }
+.reader-heading, .reader-pagination, .structure-controls, .structure-body, .library-search { border-color: var(--glass-control-edge); }
+.reader-heading h3, #document-content, #structure-kind, #structure-active, .structure-active,
+#structure-list button, #structure-links, #document-toc button { color: var(--glass-ink); }
+.reader-heading .icon, .reader-meta, #reader-meta, #reader-version, #structure-help,
+#structure-page, #reader-page, #structure-list small, .reader-source-actions { color: var(--glass-muted); }
+#structure-list button { background: transparent; border-color: transparent; box-shadow: none; text-align: start; }
+#structure-list button[aria-current=true], #document-toc button[aria-current=true] { color: var(--glass-accent); background: color-mix(in srgb, var(--glass-accent) 9%, var(--glass-surface)); border-color: color-mix(in srgb, var(--glass-accent) 15%, var(--glass-edge)); }
+#structure-links li { border-color: var(--glass-control-edge); }
+#document-content mark { color: var(--glass-ink); background: color-mix(in srgb, var(--glass-accent) 15%, var(--glass-edge)); }
+.document-warnings, #document-warnings { color: var(--glass-warning); background: color-mix(in srgb, var(--glass-warning) 6%, var(--glass-surface)); border-color: color-mix(in srgb, var(--glass-warning) 18%, var(--glass-edge)); }
+.source-identity, .source-identity summary { color: var(--glass-muted); border-color: var(--glass-control-edge); }
+#reader-identity, #extension-binding-details, #extension-review-diff, #extension-review-action { color: var(--glass-muted); background: var(--glass-control-surface); border-color: var(--glass-control-edge); }
+.run-heading, #run-artifacts li, #run-stream, #native-review-panel { border-color: var(--glass-control-edge); }
+.run-heading h3, .run-stream h3, #native-review-panel summary { color: var(--glass-ink); }
+#run-status { color: var(--glass-ink); background: var(--glass-surface); border-color: var(--glass-control-edge); box-shadow: var(--glass-control-inset); }
+#run-identity, #run-budget, #runner-facts, #run-limitations, #native-review-identity { color: var(--glass-muted); }
+#run-events, #run-logs, #native-review-events { color: var(--glass-ink); background: color-mix(in srgb, var(--glass-surface) 90%, var(--glass-edge)); border-color: var(--glass-control-edge); }
+#verification-result { color: var(--glass-ink); }
+#native-review-status { color: var(--glass-ink); }
+.native-context-panel, .native-image-controls, .native-search-controls { color: var(--glass-ink); background: var(--glass-control-surface); border-color: var(--glass-control-edge); }
+#native-context-chunks label, .source-image-choices li { color: var(--glass-ink); background: transparent; border-color: var(--glass-control-edge); }
+#native-context-chunks label:has(input:checked), .source-image-choices li:has(input:checked) { background: color-mix(in srgb, var(--glass-accent) 7%, var(--glass-surface)); border-color: color-mix(in srgb, var(--glass-accent) 35%, var(--glass-edge)); }
+#native-context-summary, #native-context-receipt, .native-context-toolbar, .consent-panel-heading h4 { color: var(--glass-muted); }
+#native-context-chunks label, .source-image-choices label, .extraction-chunks label { font-size: 14px; line-height: 1.65; }
+#native-context-summary, #native-context-receipt, .reader-source-actions, #structure-help { font-size: 13px; line-height: 1.7; }
+.consent-badge { color: var(--glass-ink); background: var(--glass-surface); border-color: var(--glass-control-edge); }
+
+/* Configuration is real read-only state, never a decorative mock settings page. */
+.settings-panel, .settings-grid > article, .settings-qualification { color:var(--glass-ink);background:transparent;border:0;border-top:1px solid var(--glass-control-edge);border-radius:0;box-shadow:none;padding:24px 0; }
+.settings-panel h3, .settings-grid h3, .settings-panel .settings-status dd,
+.settings-switch-row strong, .settings-guide li, .settings-provenance summary { color: var(--glass-ink); }
+.settings-panel p, .settings-grid p, .settings-panel .settings-status dt,
+.settings-switch-row > span > span, #settings-refresh-state, .settings-runtime-facts { color: var(--glass-muted); }
+.settings-status dt, .settings-status dd, .settings-panel .settings-note,
+.settings-panel .settings-runtime-facts, .settings-provenance, .settings-provenance pre { border-color: var(--glass-control-edge); }
+.settings-panel .settings-route-warning { color: var(--glass-warning); background: color-mix(in srgb, var(--glass-warning) 5%, var(--glass-surface)); border-color: color-mix(in srgb, var(--glass-warning) 22%, var(--glass-edge)); }
+.settings-switch-row input[type=checkbox] { width: 42px; height: 26px; min-height: 26px; padding: 0; border-color: var(--glass-control-edge); background: color-mix(in srgb, var(--glass-muted) 15%, var(--glass-surface)); box-shadow: inset 0 1px 3px color-mix(in srgb, var(--glass-ink) 8%, transparent); }
+.settings-switch-row input::before { width: 16px; height: 16px; top: 4px; left: 4px; background: var(--glass-edge); box-shadow: 0 1px 4px color-mix(in srgb, var(--glass-ink) 16%, transparent); }
+.settings-switch-row input:checked { background: var(--glass-accent); border-color: var(--glass-accent); }
+.settings-switch-row input:checked::before { background: var(--glass-accent-ink); }
+.settings-switch-row input:focus-visible { outline-color: var(--glass-accent); }
+
+/* Legacy product IDs own stronger rules than the common component layer. */
+#documents li { color: var(--glass-ink); border-color: var(--glass-control-edge); }
+#documents button:first-child { color: var(--glass-ink); background: transparent; font-size: 14px; }
+#documents li[aria-current=true] { background: color-mix(in srgb, var(--glass-accent) 7%, var(--glass-surface)); }
+#documents li[aria-current=true] button:first-child { color: var(--glass-accent); }
+#documents button:last-child { color: var(--glass-muted); background: var(--glass-control-surface); border-color: var(--glass-control-edge); }
+#documents button:last-child:hover { color: var(--glass-danger); background: color-mix(in srgb, var(--glass-danger) 5%, var(--glass-surface)); border-color: color-mix(in srgb, var(--glass-danger) 25%, var(--glass-edge)); }
+.library-search label, #search-results li { color: var(--glass-ink); border-color: var(--glass-control-edge); }
+.library-search form button, #search-results button { color: var(--glass-ink); background: var(--glass-control-surface); border-color: var(--glass-control-edge); }
+.library-search form button:hover, #search-results button:hover { color: var(--glass-ink); background: color-mix(in srgb, var(--glass-accent) 8%, var(--glass-surface)); border-color: color-mix(in srgb, var(--glass-accent) 35%, var(--glass-edge)); }
+#search-results li { font-size: 13px; line-height: 1.75; }
+#extensions li { color: var(--glass-ink); background: var(--glass-control-surface); border-color: var(--glass-control-edge); }
+#extensions h4, #extension-manifest, #extension-manifest li { color: var(--glass-ink); }
+#extension-state, #extension-binding, .extension-facts, #extension-review-expiry { color: var(--glass-muted); }
+.extension-limit { color: var(--glass-warning); }
+.settings-provenance { color: var(--glass-muted); }
+.settings-provenance pre { color: var(--glass-ink); background: var(--glass-control-surface); border-color: var(--glass-control-edge); }
+.settings-panel-heading { border-color: var(--glass-control-edge); }
+.settings-route-panel .settings-status dt, .settings-route-panel .settings-status dd { border-color: var(--glass-control-edge); }
+
+table { color: var(--glass-ink); border-color: var(--glass-control-edge); font-variant-numeric: tabular-nums; }
+th { color: var(--glass-muted); background: color-mix(in srgb, var(--glass-surface) 75%, transparent); font-weight: 550; }
+td, th { border-color: var(--glass-control-edge); }
+tbody tr:hover { background: color-mix(in srgb, var(--glass-accent) 4%, var(--glass-surface)); }
+.toast { color: var(--glass-ink); background: color-mix(in srgb, var(--glass-surface) 92%, var(--glass-edge)); border-color: var(--glass-edge); border-radius: 13px; box-shadow: var(--glass-shadow), var(--glass-control-inset); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); font-size: 14px; line-height: 1.65; }
+#upload-error, #extraction-error, .error-strip #error { color: var(--glass-danger); background: color-mix(in srgb, var(--glass-danger) 6%, var(--glass-surface)); border-color: color-mix(in srgb, var(--glass-danger) 18%, var(--glass-edge)); overflow-wrap: anywhere; }
+
+@media (max-width: 700px) {
+  button:where(:not(#sidebar-backdrop):not(#menu-toggle)), .workbench button:where(:not(#sidebar-backdrop):not(#menu-toggle)) { min-height: 44px; }
+  input:not([type=checkbox]):not([type=radio]):not([type=file]), textarea, select,
+  #tasks-zone #task-form input:not([type=checkbox]), #tasks-zone #task-form textarea, #tasks-zone #task-form select { font-size: 16px; }
+  .upload-drawer, .project-drawer, .extraction-drawer { backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); }
+}
+@media (prefers-reduced-motion: reduce) {
+  button, input, textarea, select, .upload-dropzone { transition: none !important; }
+}
+.reduce-motion button, .reduce-motion input, .reduce-motion textarea, .reduce-motion select,
+.reduce-motion .upload-dropzone { transition: none !important; }
+
+/* Older browsers get plain readable controls, never the discarded dark theme. */
+@supports not (color: color-mix(in srgb, currentColor 50%, transparent)) {
+  :root {
+    --glass-control-surface: var(--color-paper);
+    --glass-control-edge: var(--glass-muted);
+    --glass-control-inset: none;
+  }
+  .workbench button:where(:not(#sidebar-backdrop):not(#menu-toggle)),
+  .reader-actions a, .run-heading a, #native-review-download,
+  input:not([type=checkbox]):not([type=radio]):not([type=file]), textarea, select,
+  #tasks-zone #task-form input:not([type=checkbox]), #tasks-zone #task-form textarea, #tasks-zone #task-form select,
+  .project-drawer input, .project-drawer textarea,
+  .upload-drawer, .project-drawer, .extraction-drawer,
+  .extraction-drawer .drawer-actions, .upload-dropzone, .upload-dropzone.drag-over,
+  #tasks-zone .task-source-bar, #tasks-zone #execution-tasks .task-empty,
+  #run-events, #run-logs, #native-review-events, .toast { background: var(--color-paper); color: var(--glass-ink); }
+  .workbench button.primary-button,
+  .upload-drawer button.primary-button, .project-drawer button.primary-button, .extraction-drawer button.primary-button,
+  #tasks-zone .task-composer-footer .primary-button,
+  #requirement-form > button, #document-form button[type=submit], #project-form button[type=submit] {
+    background: var(--glass-accent); color: var(--glass-accent-ink); border-color: var(--glass-accent);
+  }
+  #documents li[aria-current=true], #documents button:last-child:hover,
+  #structure-list button[aria-current=true], #document-toc button[aria-current=true],
+  #native-context-chunks label:has(input:checked), .source-image-choices li:has(input:checked),
+  .extraction-mode label:has(input:checked), #document-content mark { background: var(--color-paper); border-color: var(--glass-accent); }
+  #tasks-zone .task-source-status, #tasks-zone .task-source-status[data-phase=create],
+  #document-warnings, .document-warnings, .settings-panel .settings-route-warning,
+  #upload-error, #extraction-error, .error-strip #error { background: var(--color-paper); border-color: currentColor; }
+  .settings-switch-row input[type=checkbox] { background: var(--color-paper); border-color: var(--glass-muted); }
+  .settings-switch-row input::before { background: var(--glass-muted); }
+  .settings-switch-row input:checked { background: var(--glass-accent); border-color: var(--glass-accent); }
+  .settings-switch-row input:checked::before { background: var(--glass-accent-ink); }
+}
+
+/* One continuous file ledger; batch results inherit the shared silver tokens. */
+.upload-file-list { list-style: none; margin: 12px 0; padding: 0; max-height: 260px; overflow: auto; border-block: 1px solid var(--glass-control-edge); }
+.upload-file-list li { display: grid; grid-template-columns: minmax(0,1fr) auto; column-gap: 16px; row-gap: 3px; padding: 12px 2px; border-bottom: 1px solid var(--glass-control-edge); color: var(--glass-ink); background: none; border-radius: 0; box-shadow: none; }
+.upload-file-list li:last-child { border-bottom: 0; }
+.upload-file-title { font-size: 13px; font-weight: 550; line-height: 1.6; overflow-wrap: anywhere; }
+.upload-file-state { font-size: 11px; font-weight: 550; line-height: 1.8; color: var(--glass-muted); transition: color 120ms ease; }
+.upload-file-size { color: var(--glass-muted); font-size: 11px; font-variant-numeric: tabular-nums; }
+.upload-file-error { grid-column: 1/-1; font-size: 12px; line-height: 1.6; overflow-wrap: anywhere; color: var(--glass-error-ink, #7b342d); }
+.upload-file-list [data-state=SAVED] .upload-file-state { color: var(--glass-ink); }
+.upload-file-list :is([data-state=FAILED],[data-state=INVALID],[data-state=UNKNOWN]) .upload-file-state { color: var(--glass-error-ink, #7b342d); }
+.upload-batch-summary { margin-block: 8px 14px; font-size: 12px; color: var(--glass-muted); line-height: 1.6; }
+#upload-stop-remaining { margin-top: 8px; }
+@media (prefers-reduced-motion: reduce) { .upload-file-state { transition: none; } }
+
+/* Operate surfaces: open content and matched foreground/background states. */
+body #main-content { overflow-anchor: none; }
+body .workspace-flow > button {
+  color: var(--glass-ink);
+  background: transparent !important;
+  transition: box-shadow 180ms ease;
+}
+body .workspace-flow > button:is(:hover, :focus-visible):not(:disabled) {
+  color: var(--glass-ink);
+  background: #f5f6f7 !important;
+  box-shadow: inset 0 -2px 0 var(--glass-accent);
+}
+body .workspace-flow > button:active:not(:disabled) { background: #e9edf0 !important; }
+body .workspace-flow > button:is(:hover, :focus-visible, :active) strong,
+body .workspace-flow > button:is(:hover, :focus-visible, :active) b { color: var(--glass-ink); }
+body .workspace-flow > button:is(:hover, :focus-visible, :active) span:not(.flow-index),
+body .workspace-flow > button:is(:hover, :focus-visible, :active) .flow-index,
+body .workspace-flow > button:is(:hover, :focus-visible, :active) .icon { color: var(--glass-muted); }
+body .workspace-flow > button:disabled { background: transparent !important; box-shadow: none; }
+body .workspace-flow > button .icon { transition: transform 260ms cubic-bezier(.16,1,.3,1); }
+@media (hover: hover) and (pointer: fine) {
+  body .workspace-flow > button:hover:not(:disabled) .icon { transform: translateX(5px); }
+}
+
+/* Real local file input, with Chinese chooser and shared quiet material. */
+body .local-file-picker, body .file-picker-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-width: 0;
+  position: relative;
+}
+body .local-file-picker { justify-content: flex-start; margin-top: 8px; }
+body .local-file-picker > button, body .file-picker-row > button {
+  flex: none;
+  color: var(--glass-ink);
+  background: #f7f8f9;
+  border: 1px solid var(--glass-control-edge);
+  box-shadow: inset 0 1px 0 var(--glass-edge);
+  min-height: 44px;
+  font-size: 14px;
+}
+body .local-file-picker > button:is(:hover, :focus-visible):not(:disabled),
+body .file-picker-row > button:is(:hover, :focus-visible):not(:disabled) {
+  color: var(--glass-ink);
+  background: #edf0f2;
+  border-color: var(--glass-accent);
+}
+body .local-file-picker > span, body .file-picker-row > span {
+  color: var(--glass-muted);
+  font-size: 13px;
+  line-height: 1.65;
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+body .local-file-picker .accessible-file-input {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  min-height: 0;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+body input[type=file]::file-selector-button {
+  color: var(--glass-ink);
+  background: #f7f8f9;
+  border: 1px solid var(--glass-control-edge);
+  border-radius: var(--glass-control-radius);
+  padding: 10px 14px;
+  font: inherit;
+}
+
+body #capabilities-zone .page-intro { align-items: flex-start; margin-bottom: 32px; }
+body #capabilities-zone .extension-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.6fr) minmax(240px, .8fr);
+  align-items: start;
+  gap: 40px;
+  margin-top: 0;
+}
+body #capabilities-zone .extension-layout > div {
+  min-width: 0;
+  color: var(--glass-ink);
+  background: transparent;
+  border: 0;
+  border-radius: 0;
+  padding: 0;
+  box-shadow: none;
+}
+body #capabilities-zone h3 { font-size: 20px; font-weight: 550; margin: 0 0 16px; }
+body #extension-import-form {
+  display: flex;
+  align-items: flex-end;
+  flex-wrap: wrap;
+  gap: 16px 20px;
+  border: 0;
+  border-bottom: 1px solid var(--glass-control-edge);
+  border-radius: 0;
+  padding: 0 0 24px;
+  margin: 0 0 16px;
+  background: transparent;
+}
+body .extension-import-picker { flex: 1 1 260px; min-width: 0; }
+body .file-picker-label { color: var(--glass-ink); font-size: 14px; font-weight: 550; }
+body #extension-file-help, body #extension-file-error {
+  font-size: 13px;
+  line-height: 1.75;
+  margin: 8px 0 0;
+  overflow-wrap: anywhere;
+}
+body #extension-file-help { color: var(--glass-muted); }
+body #extension-file-error { color: var(--glass-danger); }
+body #extension-file-error:empty { display: none; }
+body #extension-import-form [type=submit] { flex: none; }
+body #extension-state, body #extension-binding { font-size: 14px; line-height: 1.8; margin: 12px 0; }
+body #extensions { margin: 0; padding: 0; }
+body #extensions > li {
+  list-style: none;
+  color: var(--glass-ink);
+  border: 0;
+  border-bottom: 1px solid var(--glass-control-edge);
+  border-radius: 0;
+  background: transparent;
+  padding: 22px 0;
+  box-shadow: none;
+}
+body #extensions h4 { font-size: 17px; font-weight: 550; margin: 0 0 8px; overflow-wrap: anywhere; }
+body #extensions .extension-facts, body #extensions .extension-limit { font-size: 13px; line-height: 1.8; margin: 8px 0; }
+body .extension-actions { display: flex; flex-wrap: wrap; gap: 8px; margin: 16px 0; }
+body #extensions .extension-actions button { margin: 0; min-height: 44px; font-size: 13px; }
+body #extensions details, body .extension-binding-identity, body .capability-diagnostics { color: var(--glass-muted); font-size: 13px; line-height: 1.8; }
+body #extensions summary, body .extension-binding-identity summary, body .capability-diagnostics summary { cursor: pointer; padding: 8px 0; min-height: 44px; }
+body #extensions pre, body #extension-binding-details, body #extension-review-action,
+body #extension-review-diff, body #capability-summary {
+  color: var(--glass-ink);
+  background: #f5f6f7;
+  border: 1px solid var(--glass-control-edge);
+  border-radius: 8px;
+  padding: 16px;
+  font-size: 12px;
+  line-height: 1.8;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  max-height: 320px;
+  overflow: auto;
+}
+body .extension-binding-identity:has(#extension-binding-details:empty) { display: none; }
+body #extension-review { background: transparent; border: 0; border-top: 1px solid var(--glass-control-edge); border-radius: 0; padding: 24px 0 0; margin-top: 24px; }
+body #extension-review-summary, body #extension-review-expiry { font-size: 13px; line-height: 1.8; }
+body #extension-review-permissions label { display: flex; align-items: flex-start; gap: 8px; padding: 8px 0; overflow-wrap: anywhere; }
+body #extension-approval-form { background: transparent; }
+body .capability-diagnostics { border-top: 1px solid var(--glass-control-edge); margin-top: 36px; padding-top: 16px; }
+body .settings-appearance p { font-size: 14px; line-height: 1.8; }
+@media (max-width: 960px) {
+  body #capabilities-zone .extension-layout { grid-template-columns: minmax(0,1fr); gap: 32px; }
+  body #capabilities-zone .extension-project { border-top: 1px solid var(--glass-control-edge); padding-top: 24px; }
+}
+@media (max-width: 700px) {
+  body .local-file-picker { flex-wrap: wrap; }
+  body .local-file-picker > span { flex-basis: 100%; }
+  body #extension-import-form [type=submit] { width: 100%; }
+  body .extension-actions { display: grid; grid-template-columns: minmax(0,1fr); }
+}
+@media (prefers-reduced-motion: reduce) {
+  body .workspace-flow > button, body .workspace-flow > button .icon { transition: none !important; }
+  body .workspace-flow > button .icon { transform: none !important; }
+}
+
+/* Decorative source illustration follows actual page scroll, never progress. */
+@supports (animation-timeline: scroll()) {
+  @media (prefers-reduced-motion: no-preference) {
+    #studio-hero-image {
+      animation: studio-reading-shift linear both;
+      animation-timeline: scroll(root block);
+      animation-range: 0px 500px;
+    }
+  }
+}
+@keyframes studio-reading-shift {
+  from { transform: translateY(0); }
+  to { transform: translateY(-16px); }
+}

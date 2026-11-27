@@ -1,0 +1,18 @@
+{
+  "command.configure": "Link desktop App",
+  "command.start": "Start desktop App in background",
+  "command.connect": "Connect and pair",
+  "command.repairPair": "Pair again explicitly",
+  "command.reveal": "Open desktop App",
+  "command.attachSelection": "Add current selection to draft",
+  "command.compareSaved": "Compare current document with saved version",
+  "command.previewMarkdown": "Preview current Markdown",
+  "extension.description": "Continue the same Cirven conversations and tasks in your editor.",
+  "language.description": "Interface language for this extension. System follows the VS Code display language.",
+  "setting.installDirectory.description": "Explicit local Windows desktop installation containing START_EEAS.cmd. Never scans disks.",
+  "setting.dataDirectory.description": "Optional explicit desktop data directory. Empty uses <installation>/user-data.",
+  "command.showChat": "Open chat",
+  "language.system": "Follow system",
+  "language.zh-CN": "简体中文",
+  "language.en": "English"
+}

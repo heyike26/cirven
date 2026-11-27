@@ -1,0 +1,171 @@
+{
+  "schema": "eeas.campaign-sdk-fault-plan.v1",
+  "cases": {
+    "fault-sdk-route": {
+      "files": [
+        {
+          "path": "tests/test_sdk_settings.py",
+          "sha256": "53b2d4fba74d3341e5be1755d58cc6a9ff60070374892933a5c813b6efd1dd1d",
+          "collected_tests": 23
+        },
+        {
+          "path": "tests/test_sdk_settings_fd.py",
+          "sha256": "075a2d4fa9d338dc62a2dc202b02125fe3e6c28efa6d20936daf8fa967fb8b5f",
+          "collected_tests": 8
+        },
+        {
+          "path": "tests/test_sdk_settings_windows_contract.py",
+          "sha256": "b2bd53ccad47802dc8b65b17e67e2bcdfb7c27edd54d5d84bea23d22f3ea3ab9",
+          "collected_tests": 10
+        }
+      ],
+      "expected_tests": 41,
+      "reviewed_source_commit": "669204ab2980c21b626bf99c6cad20039d711508",
+      "scope": "All original assertions in these distinct whole files after actual valid bound source ingestion; installed SDK options and synthetic settings/wire fault fixtures",
+      "limits": "Generic original fault invariants, not project-specific public workflow/upstream execution/company qualification/native Windows/OS isolation. Windows API contract doubles are NOT_NATIVE; shared search-call ledger is separate fault-search evidence."
+    },
+    "fault-sdk-budget": {
+      "files": [
+        {
+          "path": "tests/test_sdk_budget_float.py",
+          "sha256": "33c13eb9c917adfff58d007af5ca9da1042d1b2e3e1cec461ad65b927913006f",
+          "collected_tests": 13
+        },
+        {
+          "path": "tests/test_sdk_budget_decimal.py",
+          "sha256": "f0a44d53fb3cb647742c10848bc2526151aed604c56b51178a0aaa5d978afbd6",
+          "collected_tests": 13
+        },
+        {
+          "path": "tests/test_sdk_cost_optional.py",
+          "sha256": "a14b91eec24b1ca3a7404883264ef5dbf8520b855cc2677d6b6753e291e5a5da",
+          "collected_tests": 7
+        }
+      ],
+      "expected_tests": 33,
+      "reviewed_source_commit": "669204ab2980c21b626bf99c6cad20039d711508",
+      "scope": "All original assertions in these distinct whole files after actual valid bound source ingestion; installed SDK options and synthetic settings/wire fault fixtures",
+      "limits": "Generic original fault invariants, not project-specific public workflow/upstream execution/company qualification/native Windows/OS isolation. Windows API contract doubles are NOT_NATIVE; shared search-call ledger is separate fault-search evidence."
+    },
+    "fault-sdk-session": {
+      "files": [
+        {
+          "path": "tests/test_claude_lifecycle.py",
+          "sha256": "16a141fb1f4a5ff63cce0bc95b8ac4721b4ccf2a001a488eb645fcf64cc3817a",
+          "collected_tests": 14
+        },
+        {
+          "path": "tests/test_claude_native_transport.py",
+          "sha256": "e3242640f461a8cddadceef875056a0da21012f3ea19261111628dc09d044221",
+          "collected_tests": 11
+        },
+        {
+          "path": "tests/test_claude_sessions.py",
+          "sha256": "9681e619c0a93c5085cfe028beae02869bd4892b3213e9988fc80e1c87d2e438",
+          "collected_tests": 32
+        },
+        {
+          "path": "tests/test_sdk_query_scope.py",
+          "sha256": "8c61c595b2d9f0a2a3cfa0623b0b74bec49dc2725acafa24e26e8a09fa60e08f",
+          "collected_tests": 5
+        }
+      ],
+      "expected_tests": 62,
+      "reviewed_source_commit": "669204ab2980c21b626bf99c6cad20039d711508",
+      "scope": "All original assertions in these disjoint whole files after actual valid bound source import; installed SDK and original transport/image/source fixtures",
+      "limits": "Original local lifecycle/session/query faults; one small SQLite.backup and directory-copy relocation fixture, no archive build/unpack/install or GUI. No project workflow/upstream/company/native Windows/OS qualification."
+    },
+    "fault-sdk-images": {
+      "files": [
+        {
+          "path": "tests/test_sdk_images.py",
+          "sha256": "fa2b89cdc758d156e4e158adcb1b611ee58949a5d18825815af6147c771ba471",
+          "collected_tests": 27
+        },
+        {
+          "path": "tests/test_sdk_image_policy_race.py",
+          "sha256": "eee2415189550bb28ee0c340f33bf3e5a92c5a1f0a53ff6e35a087152535ba04",
+          "collected_tests": 6
+        }
+      ],
+      "expected_tests": 33,
+      "reviewed_source_commit": "669204ab2980c21b626bf99c6cad20039d711508",
+      "scope": "All original assertions in these disjoint whole files after actual valid bound source import; installed SDK and original transport/image/source fixtures",
+      "limits": "Original valid PNG/JPEG/source/SDK async-iterable/policy drift fixtures; no OCR inference/company vision qualification/native Windows/OS isolation/upstream execution."
+    },
+    "fault-search": {
+      "files": [
+        {
+          "path": "tests/test_sdk_search_mcp.py",
+          "sha256": "48e1053f86c2282f62ca3a5db79846d28402d4015559ae75029d6c3a296a189a",
+          "collected_tests": 40
+        },
+        {
+          "path": "tests/test_search_mcp_boundaries.py",
+          "sha256": "818651c9af067085bb0e9782088f22bfbdc318424885e66c604f7897f8619f9c",
+          "collected_tests": 15
+        }
+      ],
+      "expected_tests": 55,
+      "reviewed_source_commit": "3d23a72e0570419d00654c73c8da21ce71445abd",
+      "scope": "All unchanged assertions in two original whole files, after actual bound source import; installed SDK registry/transport with original local approved MCP protocol and parser fixtures",
+      "limits": "Only original loopback MCP/HTTP responses and synthetic wire/settings; no external source fetch, company MCP/model, public project workflow/upstream execution, native Windows or OS qualification."
+    },
+    "fault-approval-runner": {
+      "files": [
+        {
+          "path": "tests/test_approvals.py",
+          "sha256": "52529b4adc2b0bc65e8c4c3611fdcf6f1e4dee7e644c1f7a3c7182efd6bbe128",
+          "collected_tests": 4
+        },
+        {
+          "path": "tests/test_worker.py",
+          "sha256": "26142ac314e7a4208504d0cf2f3ebe29466673c07373874cafdcb32b06f9b04e",
+          "collected_tests": 5
+        },
+        {
+          "path": "tests/test_recovery.py",
+          "sha256": "4ef566b67787dfe968d2a15ccd1402439dfa6622e6376e47014012dde5e9c5ed",
+          "collected_tests": 9
+        },
+        {
+          "path": "tests/test_native_runner.py",
+          "sha256": "850eebaa576a89cbb9574a66282ac9ed86c58b00c93af896aa6c3026790b51ed",
+          "collected_tests": 3
+        },
+        {
+          "path": "tests/test_repair_approvals.py",
+          "sha256": "705338da0c43d419db92505cb58dc3233033370d11682dd6ea1ed1d8826fab19",
+          "collected_tests": 3
+        }
+      ],
+      "expected_tests": 24,
+      "reviewed_source_commit": "3d23a72e0570419d00654c73c8da21ce71445abd",
+      "scope": "All unchanged assertions in five original whole files, after actual bound source import; actual owned original tool/Worker/supervisor processes and approval/repair/recovery fault fixtures",
+      "limits": "Only original owned temporary processes/data; Windows native remains BLOCKED on Linux, no OS-isolation/device/company model/upstream qualification, no archive install/unpack/build or GUI."
+    },
+    "fault-offline-restore": {
+      "files": [
+        {
+          "path": "tests/test_release_bundle.py",
+          "sha256": "0f81cbda8a38829732f45e8d9c4a2b808246e6b923d419bba09e55ee4fec1416",
+          "collected_tests": 25
+        },
+        {
+          "path": "tests/test_sdk_release_contract.py",
+          "sha256": "c62b0710860d9ce3483c110c6c5d52be68c27f647022d6fa5cb1e7e271858041",
+          "collected_tests": 7
+        },
+        {
+          "path": "tests/test_offline.py",
+          "sha256": "e0055a236355b0524e4e28578cb01aa5758b37dc6c0eea338cf9e39581b4310d",
+          "collected_tests": 2
+        }
+      ],
+      "expected_tests": 34,
+      "reviewed_source_commit": "9d74c52246e96886bdf6ba46e2c1104f926aef92",
+      "scope": "Actual bound source import then unchanged original whole34: fresh Python3.10 no-index runtime with empty HOME, real bundled CLI, SQLite/artifact/native checkpoint backup and restore, damaged bytes/schema/old-code/direct-URL/no-index guards; manifests/locks/licenses/font/dependency declaration actually frozen",
+      "limits": "Current Linux actual install/CLI/restore and original synthetic SDK wire/unsafe archives, no GUI or upstream project build; company model/MCP NOT_RUN, Windows native BLOCKED and OS isolation NOT_QUALIFIED."
+    }
+  }
+}

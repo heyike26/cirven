@@ -1,0 +1,61 @@
+{
+  "schema": "eeas.optional-deliverable-plugin.v1",
+  "id": "eeas.deliverable-authoring",
+  "version": "0.1.0",
+  "license": "MIT",
+  "enabled_by_default": false,
+  "entrypoint": "office_mcp.py",
+  "transport": "OFFICIAL_MCP_STDIO",
+  "required_host": "EEAS source modules; not standalone OpenCode installer",
+  "files": [
+    {
+      "path": "office_mcp.py",
+      "sha256": "cf60a00e1b538de288327fd00be62184936fc57a0c15c375a1b6720c35ed62f7",
+      "bytes": 18811
+    },
+    {
+      "path": "README.md",
+      "sha256": "9eaa7d9393775abd6e0aeb1c61f6a4e8bc3c425e73697747941e700fd74a45e0",
+      "bytes": 4273
+    },
+    {
+      "path": "LICENSE",
+      "sha256": "0a618215858524f1cb07d772c44320c12bbe27fa9c89affda24245f4bc2e8039",
+      "bytes": 1074
+    },
+    {
+      "path": "skills/eeas-deliverable-authoring/SKILL.md",
+      "sha256": "c8b4c0b3b6992c749f6bff4aaa1392d1fbb8192e3b332cae545462bb9dce330d",
+      "bytes": 1770
+    }
+  ],
+  "host_source_sha256": {
+    "packages/domain/pptx_export.py": "1f0b48ea26f6b4bc7bf1ac9e7ef4a3a0a3ad74954e83847457c5a9485af222e0",
+    "packages/domain/report_artifacts.py": "6f352bb3f9300f9a33dba3712c129a74da2fad7d20a2fc5abb2860482a34f98c"
+  },
+  "dependencies": {
+    "mcp": "2.3.0",
+    "python-pptx": "1.0.2",
+    "python": "3.10",
+    "optional_offline_closure": "vendor/office-pptx/{linux,windows}-py310/v018",
+    "windows_closure_manifest_sha256": "0a1013f2865c2f09d4a17fe71777e8beaf37e2de8bbd50b4b5737e0d9f1e0dad"
+  },
+  "tools": [
+    "make_report_deck",
+    "get_report_artifact",
+    "get_report_operation"
+  ],
+  "skill": "skills/eeas-deliverable-authoring/SKILL.md",
+  "permissions": [
+    "READ_EXACT_REGISTERED_PROJECT_SOURCES",
+    "CREATE_NEW_REPORT_ARTIFACT_ONLY"
+  ],
+  "model_loop": "NONE",
+  "native_office": "NOT_RUN",
+  "app_result_projection": "NOT_CONNECTED",
+  "admission_limit_per_project": 1000,
+  "host_dependency_layouts": [
+    "runtime/site-packages",
+    ".venv/lib/python3.10/site-packages"
+  ]
+}

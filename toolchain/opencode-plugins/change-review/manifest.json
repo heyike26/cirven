@@ -1,0 +1,49 @@
+{
+  "schema": "eeas.opencode-plugin-bundle.v1",
+  "id": "eeas.change-review",
+  "version": "0.1.1",
+  "entry": "index.mjs",
+  "runtime": {
+    "version": "1.19.0",
+    "source_commit": "733b2c627e5aec39cb33cc22373bdce33053ef2c"
+  },
+  "license": "UNLICENSED",
+  "files": [
+    {
+      "path": "index.mjs",
+      "sha256": "f2e99624632cde5ca29bccdbd25164c6d6cd6b12ac89de3a5a8d0b31fac19121",
+      "bytes": 18833
+    },
+    {
+      "path": "files.mjs",
+      "sha256": "0c7c460ac44b22e66774c119bffc62624a29085548d8385496ce640b1132a660",
+      "bytes": 6445
+    },
+    {
+      "path": "intent.mjs",
+      "sha256": "ed08d9cfe5e5615ac1224d324d3725b0b524b3ed4e8806cff9a288a44c619833",
+      "bytes": 8044
+    },
+    {
+      "path": "budget.mjs",
+      "sha256": "28cd69080b15a7fe83738dc948a9957229c677fac93ab96f6d0b60604a8cde53",
+      "bytes": 4232
+    },
+    {
+      "path": "lineage.mjs",
+      "sha256": "f59e548800eae5ae9430166a207925ba9a632aff0ce475b611a85e34dc5db996",
+      "bytes": 2395
+    },
+    {
+      "path": "package.json",
+      "sha256": "4341bf102b0469e4841e881903e94e54bec27ed5f40c6925d54b9ec9322a00b2",
+      "bytes": 355
+    },
+    {
+      "path": "README.md",
+      "sha256": "ebcc75c11ffb800b6ec36b10aafcda79d767ed52eb70f53b5c0f0b894a0aca33",
+      "bytes": 15972
+    }
+  ],
+  "new_dependencies": []
+}

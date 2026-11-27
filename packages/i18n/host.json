@@ -1,0 +1,1125 @@
+{
+  "schema_version": 1,
+  "messages": {
+    " · 先列出 20 项": {
+      "zh-CN": " · 先列出 20 项",
+      "en": " · showing the first 20"
+    },
+    " · 悬停查看操作": {
+      "zh-CN": " · 悬停查看操作",
+      "en": " · hover for actions"
+    },
+    " · 观察过期": {
+      "zh-CN": " · 观察过期",
+      "en": " · observation out of date"
+    },
+    " · 重启后待核对": {
+      "zh-CN": " · 重启后待核对",
+      "en": " · check after restart"
+    },
+    " 处批注": {
+      "zh-CN": " 处批注",
+      "en": " annotations"
+    },
+    " 条未读": {
+      "zh-CN": " 条未读",
+      "en": " unread"
+    },
+    " 项待处理": {
+      "zh-CN": " 项待处理",
+      "en": " need attention"
+    },
+    " 项运行中": {
+      "zh-CN": " 项运行中",
+      "en": " running"
+    },
+    "EEAS · 任务提醒": {
+      "zh-CN": "Cirven · 任务提醒",
+      "en": "Cirven · Task notification"
+    },
+    "。点击查看准确任务。": {
+      "zh-CN": "。点击查看准确任务。",
+      "en": ". Click to view the exact task."
+    },
+    "仅这条问题不引用文稿": {
+      "zh-CN": "仅这条问题不引用文稿",
+      "en": "Do not reference this document for this question"
+    },
+    "任务": {
+      "zh-CN": "任务",
+      "en": "Tasks"
+    },
+    "任务动态": {
+      "zh-CN": "任务动态",
+      "en": "Task activity"
+    },
+    "任务操作未完成，请读取最新列表后再选择。": {
+      "zh-CN": "任务操作未完成，请读取最新列表后再选择。",
+      "en": "The task action did not finish. Refresh the list before selecting again."
+    },
+    "任务暂未打开，请重新读取列表。": {
+      "zh-CN": "任务暂未打开，请重新读取列表。",
+      "en": "The task could not be opened. Refresh the list."
+    },
+    "任务状态暂不可读，保留上次列表。": {
+      "zh-CN": "任务状态暂不可读，保留上次列表。",
+      "en": "Task status is unavailable. The previous list is retained."
+    },
+    "任务状态暂无法读取": {
+      "zh-CN": "任务状态暂无法读取",
+      "en": "Task status is unavailable"
+    },
+    "任务状态暂未刷新，保留上次列表。": {
+      "zh-CN": "任务状态暂未刷新，保留上次列表。",
+      "en": "Task status did not refresh. The previous list is retained."
+    },
+    "依据": {
+      "zh-CN": "依据",
+      "en": "Reference"
+    },
+    "保存未完成，内容仍在此处。请重试后再收起或发送。": {
+      "zh-CN": "保存未完成，内容仍在此处。请重试后再收起或发送。",
+      "en": "Saving did not finish. Your content is retained here. Retry before closing or sending."
+    },
+    "保留文字，清除标记并读取当前页？": {
+      "zh-CN": "保留文字，清除标记并读取当前页？",
+      "en": "Keep the text, clear these marks and read the current page?"
+    },
+    "修改暂未保存，内容仍在此处。": {
+      "zh-CN": "修改暂未保存，内容仍在此处。",
+      "en": "Changes are not saved yet. Your content is retained here."
+    },
+    "停止": {
+      "zh-CN": "停止",
+      "en": "Stop"
+    },
+    "停止中": {
+      "zh-CN": "停止中",
+      "en": "Stopping"
+    },
+    "停止回执不属于原操作。": {
+      "zh-CN": "停止回执不属于原操作。",
+      "en": "The stop receipt does not belong to the original operation."
+    },
+    "停止待核查": {
+      "zh-CN": "停止待核查",
+      "en": "Check stop status"
+    },
+    "停止请求结果尚未确认；请核查原操作，不会重复请求。": {
+      "zh-CN": "停止请求结果尚未确认；请核查原操作，不会重复请求。",
+      "en": "The stop request is unconfirmed. Check the original operation; it will not be resent."
+    },
+    "停止请求结果待核查；原任务状态见进展，不会重复请求。": {
+      "zh-CN": "停止请求结果待核查；原任务状态见进展，不会重复请求。",
+      "en": "Check the stop request in the original operation's progress. It will not be resent."
+    },
+    "写明这里的问题或修改意见": {
+      "zh-CN": "写明这里的问题或修改意见",
+      "en": "Describe the problem or change here"
+    },
+    "删除": {
+      "zh-CN": "删除",
+      "en": "Delete"
+    },
+    "加入草稿": {
+      "zh-CN": "加入草稿",
+      "en": "Add to draft"
+    },
+    "原操作尚不能停止。": {
+      "zh-CN": "原操作尚不能停止。",
+      "en": "The original operation cannot be stopped here yet."
+    },
+    "发送": {
+      "zh-CN": "发送",
+      "en": "Send"
+    },
+    "尚未发送，输入已保留。请检查页面来源、模型或所选工具后重试。": {
+      "zh-CN": "尚未发送，输入已保留。请检查页面来源、模型或所选工具后重试。",
+      "en": "Not sent. Your input is kept. Check the page source, model or selected tools, then try again."
+    },
+    "发送结果暂不确定，请查看原操作进展；不会重复发送。": {
+      "zh-CN": "发送结果暂不确定，请查看原操作进展；不会重复发送。",
+      "en": "The send result is uncertain. Check the original operation; it will not be resent."
+    },
+    "取消": {
+      "zh-CN": "取消",
+      "en": "Cancel"
+    },
+    "取消中": {
+      "zh-CN": "取消中",
+      "en": "Cancelling"
+    },
+    "可稍后读取现有状态": {
+      "zh-CN": "可稍后读取现有状态",
+      "en": "Read the existing status later"
+    },
+    "后台读取当前页": {
+      "zh-CN": "后台读取当前页",
+      "en": "Read the current page in the background"
+    },
+    "回复已收到，本机保存未成功；请核查原操作，勿重复发送。": {
+      "zh-CN": "回复已收到，本机保存未成功；请核查原操作，勿重复发送。",
+      "en": "The reply arrived, but local saving failed. Check the original operation; do not resend."
+    },
+    "回复已返回": {
+      "zh-CN": "回复已返回",
+      "en": "Reply received"
+    },
+    "图上文字意见": {
+      "zh-CN": "图上文字意见",
+      "en": "Text feedback on the image"
+    },
+    "图上文字标记": {
+      "zh-CN": "图上文字标记",
+      "en": "Text annotation"
+    },
+    "圈画": {
+      "zh-CN": "圈画",
+      "en": "Draw"
+    },
+    "圈选": {
+      "zh-CN": "圈选",
+      "en": "Mark"
+    },
+    "在冻结画面上圈画或写字 · Enter 完成批注": {
+      "zh-CN": "在冻结画面上圈画或写字 · Enter 完成批注",
+      "en": "Mark or write on the frozen image · Enter to review"
+    },
+    "在冻结画面上批注": {
+      "zh-CN": "在冻结画面上批注",
+      "en": "Annotate the frozen image"
+    },
+    "在冻结的当前页面上批注": {
+      "zh-CN": "在冻结的当前页面上批注",
+      "en": "Annotate the frozen current page"
+    },
+    "在图上输入文字 · Ctrl+Enter 确认 · Esc 取消本次编辑": {
+      "zh-CN": "在图上输入文字 · Ctrl+Enter 确认 · Esc 取消本次编辑",
+      "en": "Write on the image · Ctrl+Enter to confirm · Esc to cancel this edit"
+    },
+    "在当前页面圈选或圈画": {
+      "zh-CN": "在当前页面圈选或圈画",
+      "en": "Mark or draw on the current page"
+    },
+    "在本机软件中打开": {
+      "zh-CN": "在本机软件中打开",
+      "en": "Open in the native application"
+    },
+    "处理中…": {
+      "zh-CN": "处理中…",
+      "en": "Working…"
+    },
+    "处理已中断": {
+      "zh-CN": "处理已中断",
+      "en": "Processing was interrupted"
+    },
+    "处理已取消": {
+      "zh-CN": "处理已取消",
+      "en": "Processing was cancelled"
+    },
+    "处理已结束": {
+      "zh-CN": "处理已结束",
+      "en": "Processing ended"
+    },
+    "处理未完成": {
+      "zh-CN": "处理未完成",
+      "en": "Processing did not finish"
+    },
+    "对话": {
+      "zh-CN": "对话",
+      "en": "Chat"
+    },
+    "尚未取得任务状态": {
+      "zh-CN": "尚未取得任务状态",
+      "en": "Task status has not been read yet"
+    },
+    "工作台": {
+      "zh-CN": "工作台",
+      "en": "Workbench"
+    },
+    "已保留原页面和标记。": {
+      "zh-CN": "已保留原页面和标记。",
+      "en": "The original page and marks are retained."
+    },
+    "已冻结的页面依据": {
+      "zh-CN": "已冻结的页面依据",
+      "en": "Frozen page reference"
+    },
+    "已加入聊天草稿。": {
+      "zh-CN": "已加入聊天草稿。",
+      "en": "Added to the chat draft."
+    },
+    "已发送标记意见": {
+      "zh-CN": "已发送标记意见",
+      "en": "Annotation feedback sent"
+    },
+    "已取消": {
+      "zh-CN": "已取消",
+      "en": "Cancelled"
+    },
+    "已恢复未完成内容。": {
+      "zh-CN": "已恢复未完成内容。",
+      "en": "Unfinished content restored."
+    },
+    "已恢复未完成内容；重新读取页面后才能发送。": {
+      "zh-CN": "已恢复未完成内容；重新读取页面后才能发送。",
+      "en": "Unfinished content restored. Read the page again before sending."
+    },
+    "已绑定的快捷窗口意外关闭。": {
+      "zh-CN": "已绑定的快捷窗口意外关闭。",
+      "en": "The bound quick window closed unexpectedly."
+    },
+    "当前问题": {
+      "zh-CN": "当前问题",
+      "en": "Current question"
+    },
+    "当前页": {
+      "zh-CN": "当前页",
+      "en": "Current page"
+    },
+    "当前页面未取得": {
+      "zh-CN": "当前页面未取得",
+      "en": "Current page unavailable"
+    },
+    "待处理": {
+      "zh-CN": "待处理",
+      "en": "Needs attention"
+    },
+    "快捷入口暂不可用，请在 Agent 中继续。": {
+      "zh-CN": "快捷入口暂不可用，请在 Agent 中继续。",
+      "en": "Quick access is unavailable. Continue in Agent."
+    },
+    "快捷入口未能加载，请在 Agent 中继续。": {
+      "zh-CN": "快捷入口未能加载，请在 Agent 中继续。",
+      "en": "Quick access did not load. Continue in Agent."
+    },
+    "快捷入口窗口意外关闭。": {
+      "zh-CN": "快捷入口窗口意外关闭。",
+      "en": "The quick-access window closed unexpectedly."
+    },
+    "快捷窗口暂不可用，请从 Agent 继续。": {
+      "zh-CN": "快捷窗口暂不可用，请从 Agent 继续。",
+      "en": "The quick window is unavailable. Continue in Agent."
+    },
+    "快捷窗口暂未连接，请稍后重试。": {
+      "zh-CN": "快捷窗口暂未连接，请稍后重试。",
+      "en": "The quick window is not connected. Try again later."
+    },
+    "手动查看冻结依据": {
+      "zh-CN": "手动查看冻结依据",
+      "en": "View the frozen reference"
+    },
+    "打开交付文件": {
+      "zh-CN": "打开交付文件",
+      "en": "Open deliverable"
+    },
+    "执行报错": {
+      "zh-CN": "执行报错",
+      "en": "Execution error"
+    },
+    "执行返回": {
+      "zh-CN": "执行返回",
+      "en": "Execution returned"
+    },
+    "批注": {
+      "zh-CN": "批注",
+      "en": "Annotate"
+    },
+    "批注工具": {
+      "zh-CN": "批注工具",
+      "en": "Annotation tools"
+    },
+    "批注当前页面": {
+      "zh-CN": "批注当前页面",
+      "en": "Annotate the current page"
+    },
+    "换当前页会保留文字，清除本轮标记；原稿历史仍保留。": {
+      "zh-CN": "换当前页会保留文字，清除本轮标记；原稿历史仍保留。",
+      "en": "Changing the page keeps your text and clears these marks. Draft history is retained."
+    },
+    "提问": {
+      "zh-CN": "提问",
+      "en": "Ask"
+    },
+    "提问当前页面": {
+      "zh-CN": "提问当前页面",
+      "en": "Ask about the current page"
+    },
+    "撤销": {
+      "zh-CN": "撤销",
+      "en": "Undo"
+    },
+    "操作暂未完成，内容仍在此处。": {
+      "zh-CN": "操作暂未完成，内容仍在此处。",
+      "en": "The action did not finish. Your content is retained here."
+    },
+    "操作未完成，内容已保留。请重试或展开对话继续。": {
+      "zh-CN": "操作未完成，内容已保留。请重试或展开对话继续。",
+      "en": "The action did not finish. Your content is retained. Retry or open the conversation."
+    },
+    "操作未完成，请再次打开快捷入口。": {
+      "zh-CN": "操作未完成，请再次打开快捷入口。",
+      "en": "The action did not finish. Open quick access again."
+    },
+    "收起": {
+      "zh-CN": "收起",
+      "en": "Collapse"
+    },
+    "收起任务动态": {
+      "zh-CN": "收起任务动态",
+      "en": "Collapse task activity"
+    },
+    "收起依据": {
+      "zh-CN": "收起依据",
+      "en": "Hide reference"
+    },
+    "收起快捷问答": {
+      "zh-CN": "收起快捷问答",
+      "en": "Collapse quick chat"
+    },
+    "文件暂未打开，可展开对话继续。": {
+      "zh-CN": "文件暂未打开，可展开对话继续。",
+      "en": "The file did not open. You can continue in the conversation."
+    },
+    "文字": {
+      "zh-CN": "文字",
+      "en": "Text"
+    },
+    "文字仍在此处，请确认或取消后再继续。": {
+      "zh-CN": "文字仍在此处，请确认或取消后再继续。",
+      "en": "Your text is retained. Confirm or cancel it before continuing."
+    },
+    "文字尚未交给本机保存，请保持编辑框并重试。": {
+      "zh-CN": "文字尚未交给本机保存，请保持编辑框并重试。",
+      "en": "Text has not reached local storage. Keep this editor open and retry."
+    },
+    "文字未保存：每条须有内容且不超过 2000 字，全部文字不超过 16000 字、标记不超过 32 个。请修改，或明确取消/删除。": {
+      "zh-CN": "文字未保存：每条须有内容且不超过 2000 字，全部文字不超过 16000 字、标记不超过 32 个。请修改，或明确取消/删除。",
+      "en": "Text was not saved. Each mark must contain 1–2000 characters; use at most 16000 characters and 32 marks in total. Edit, cancel or delete explicitly."
+    },
+    "文字标记": {
+      "zh-CN": "文字标记",
+      "en": "Text mark"
+    },
+    "文字输入尚未确认，内容仍在编辑框中；请修改或取消后再收起。": {
+      "zh-CN": "文字输入尚未确认，内容仍在编辑框中；请修改或取消后再收起。",
+      "en": "The text is not confirmed. It is retained in the editor; edit or cancel it before collapsing."
+    },
+    "文稿 · ": {
+      "zh-CN": "文稿 · ",
+      "en": "Document · "
+    },
+    "文稿引用尚未安全清除，原依据保留。": {
+      "zh-CN": "文稿引用尚未安全清除，原依据保留。",
+      "en": "The document reference could not be safely cleared. The original reference is retained."
+    },
+    "旧依据；重新引用后可发送。": {
+      "zh-CN": "旧依据；重新引用后可发送。",
+      "en": "Historical reference. Recapture before sending."
+    },
+    "明确关联的项目文稿，只读依据；不表示已识别当前窗口": {
+      "zh-CN": "明确关联的项目文稿，只读依据；不表示已识别当前窗口",
+      "en": "Explicitly linked project document, used read-only; it does not identify the current window"
+    },
+    "显示器已变化，请重新读取页面后再圈选。": {
+      "zh-CN": "显示器已变化，请重新读取页面后再圈选。",
+      "en": "The display changed. Read the page again before marking."
+    },
+    "暂时无法读取当前页面。可直接提问，或重新读取；已写的意见仍保留。": {
+      "zh-CN": "暂时无法读取当前页面。可直接提问，或重新读取；已写的意见仍保留。",
+      "en": "The current page is unavailable. Ask without a page or read it again. Your feedback is retained."
+    },
+    "最近一次观察不可用": {
+      "zh-CN": "最近一次观察不可用",
+      "en": "The latest observation is unavailable"
+    },
+    "最近结束": {
+      "zh-CN": "最近结束",
+      "en": "Recently ended"
+    },
+    "有任务已取消": {
+      "zh-CN": "有任务已取消",
+      "en": "A task was cancelled"
+    },
+    "有任务已明确超时": {
+      "zh-CN": "有任务已明确超时",
+      "en": "A task has an explicit timeout"
+    },
+    "有任务已返回结果": {
+      "zh-CN": "有任务已返回结果",
+      "en": "A task returned a result"
+    },
+    "有任务执行出错": {
+      "zh-CN": "有任务执行出错",
+      "en": "A task reported an execution error"
+    },
+    "有任务等待你的回答": {
+      "zh-CN": "有任务等待你的回答",
+      "en": "A task needs your answer"
+    },
+    "有任务需要核查": {
+      "zh-CN": "有任务需要核查",
+      "en": "A task needs checking"
+    },
+    "未完成，可查看回复。": {
+      "zh-CN": "未完成，可查看回复。",
+      "en": "Not finished. View the reply for details."
+    },
+    "未引用页面": {
+      "zh-CN": "未引用页面",
+      "en": "No page referenced"
+    },
+    "未引用页面。可直接提问，也可重新读取当前页面。": {
+      "zh-CN": "未引用页面。可直接提问，也可重新读取当前页面。",
+      "en": "No page is referenced. Ask directly or read the current page again."
+    },
+    "本机仅保留部分回执，可核查原操作查看完整内容。": {
+      "zh-CN": "本机仅保留部分回执，可核查原操作查看完整内容。",
+      "en": "Only part of the receipt is stored locally. Check the original operation for the full result."
+    },
+    "本次回执的本机保存未成功；请核查原操作，勿重复发送。": {
+      "zh-CN": "本次回执的本机保存未成功；请核查原操作，勿重复发送。",
+      "en": "This receipt was not saved locally. Check the original operation; do not resend."
+    },
+    "本次批注的冻结页面": {
+      "zh-CN": "本次批注的冻结页面",
+      "en": "Frozen page for this annotation"
+    },
+    "本次请求未执行": {
+      "zh-CN": "本次请求未执行",
+      "en": "This request was not executed"
+    },
+    "查看任务": {
+      "zh-CN": "查看任务",
+      "en": "View tasks"
+    },
+    "查看全部": {
+      "zh-CN": "查看全部",
+      "en": "View all"
+    },
+    "查看当前问题进展 · 拖动可移动": {
+      "zh-CN": "查看当前问题进展 · 拖动可移动",
+      "en": "View progress for this question · drag to move"
+    },
+    "查看新回复 · 拖动可移动": {
+      "zh-CN": "查看新回复 · 拖动可移动",
+      "en": "View new reply · drag to move"
+    },
+    "查看进展": {
+      "zh-CN": "查看进展",
+      "en": "View progress"
+    },
+    "标记已较多，请先确认本轮意见。": {
+      "zh-CN": "标记已较多，请先确认本轮意见。",
+      "en": "There are many marks. Review this round of feedback first."
+    },
+    "核查原操作": {
+      "zh-CN": "核查原操作",
+      "en": "Check original operation"
+    },
+    "框选": {
+      "zh-CN": "框选",
+      "en": "Rectangle"
+    },
+    "椭圆": {
+      "zh-CN": "椭圆",
+      "en": "Ellipse"
+    },
+    "椭圆标记": {
+      "zh-CN": "椭圆标记",
+      "en": "Ellipse mark"
+    },
+    "正在保存…": {
+      "zh-CN": "正在保存…",
+      "en": "Saving…"
+    },
+    "正在停止，等待原操作回执…": {
+      "zh-CN": "正在停止，等待原操作回执…",
+      "en": "Stopping; waiting for the original receipt…"
+    },
+    "正在发送…": {
+      "zh-CN": "正在发送…",
+      "en": "Sending…"
+    },
+    "正在取消": {
+      "zh-CN": "正在取消",
+      "en": "Cancelling"
+    },
+    "正在处理": {
+      "zh-CN": "正在处理",
+      "en": "Processing"
+    },
+    "正在排队": {
+      "zh-CN": "正在排队",
+      "en": "Queued"
+    },
+    "正在请求": {
+      "zh-CN": "正在请求",
+      "en": "Requesting"
+    },
+    "正在请求停止…": {
+      "zh-CN": "正在请求停止…",
+      "en": "Requesting stop…"
+    },
+    "此条文稿引用当前不能更改。": {
+      "zh-CN": "此条文稿引用当前不能更改。",
+      "en": "This document reference cannot be changed now."
+    },
+    "此页面暂不能精确原位圈选，请换到单个显示器后重新读取。": {
+      "zh-CN": "此页面暂不能精确原位圈选，请换到单个显示器后重新读取。",
+      "en": "This page cannot be precisely marked in place. Move it to one display and read it again."
+    },
+    "清空": {
+      "zh-CN": "清空",
+      "en": "Clear"
+    },
+    "清除文稿不能更换原问题或页面范围。": {
+      "zh-CN": "清除文稿不能更换原问题或页面范围。",
+      "en": "Clearing a document cannot change the original question or page scope."
+    },
+    "清除此条文稿引用": {
+      "zh-CN": "清除此条文稿引用",
+      "en": "Clear this document reference"
+    },
+    "监督已关闭": {
+      "zh-CN": "监督已关闭",
+      "en": "Monitoring is off"
+    },
+    "监督已关闭，保留最后观察": {
+      "zh-CN": "监督已关闭，保留最后观察",
+      "en": "Monitoring is off; the last observation is retained"
+    },
+    "矩形框选": {
+      "zh-CN": "矩形框选",
+      "en": "Rectangle selection"
+    },
+    "确认": {
+      "zh-CN": "确认",
+      "en": "Confirm"
+    },
+    "确认换页": {
+      "zh-CN": "确认换页",
+      "en": "Change page"
+    },
+    "确认标记": {
+      "zh-CN": "确认标记",
+      "en": "Review marks"
+    },
+    "等待处理": {
+      "zh-CN": "等待处理",
+      "en": "Pending"
+    },
+    "等待补充": {
+      "zh-CN": "等待补充",
+      "en": "Waiting for input"
+    },
+    "箭头": {
+      "zh-CN": "箭头",
+      "en": "Arrow"
+    },
+    "箭头标记": {
+      "zh-CN": "箭头标记",
+      "en": "Arrow mark"
+    },
+    "结果尚不确定，查看原操作进展；不会重复发送。": {
+      "zh-CN": "结果尚不确定，查看原操作进展；不会重复发送。",
+      "en": "The result is uncertain. Check the original operation; it will not be resent."
+    },
+    "结果待核实": {
+      "zh-CN": "结果待核实",
+      "en": "Result needs checking"
+    },
+    "继续提问": {
+      "zh-CN": "继续提问",
+      "en": "Ask another question"
+    },
+    "编辑图上文字": {
+      "zh-CN": "编辑图上文字",
+      "en": "Edit text on the image"
+    },
+    "编辑或删除这条文字标记": {
+      "zh-CN": "编辑或删除这条文字标记",
+      "en": "Edit or delete this text mark"
+    },
+    "自由圈画": {
+      "zh-CN": "自由圈画",
+      "en": "Freehand drawing"
+    },
+    "草稿暂未恢复，可稍后重试；不会覆盖旧草稿。": {
+      "zh-CN": "草稿暂未恢复，可稍后重试；不会覆盖旧草稿。",
+      "en": "The draft could not be restored. Try later; the old draft will not be overwritten."
+    },
+    "补充要解释或修改什么。": {
+      "zh-CN": "补充要解释或修改什么。",
+      "en": "Describe what to explain or change."
+    },
+    "询问当前页面": {
+      "zh-CN": "询问当前页面",
+      "en": "Ask about the current page"
+    },
+    "询问当前页面 · 拖动可移动": {
+      "zh-CN": "询问当前页面 · 拖动可移动",
+      "en": "Ask about the current page · drag to move"
+    },
+    "请先发送或清空当前补充": {
+      "zh-CN": "请先发送或清空当前补充",
+      "en": "Send or clear the current follow-up first"
+    },
+    "请先完成中文输入，再确认或切换。": {
+      "zh-CN": "请先完成中文输入，再确认或切换。",
+      "en": "Finish text composition before confirming or switching."
+    },
+    "请先配置模型连接": {
+      "zh-CN": "请先配置模型连接",
+      "en": "Configure a model connection first"
+    },
+    "请补充要解释或修改什么，标记已保留。": {
+      "zh-CN": "请补充要解释或修改什么，标记已保留。",
+      "en": "Describe what to explain or change. Your marks are retained."
+    },
+    "读取中": {
+      "zh-CN": "读取中",
+      "en": "Reading"
+    },
+    "读取任务动态": {
+      "zh-CN": "读取任务动态",
+      "en": "Read task activity"
+    },
+    "读取当前页…": {
+      "zh-CN": "读取当前页…",
+      "en": "Reading the current page…"
+    },
+    "读取现有状态": {
+      "zh-CN": "读取现有状态",
+      "en": "Read existing status"
+    },
+    "超时，需核查": {
+      "zh-CN": "超时，需核查",
+      "en": "Timed out; check required"
+    },
+    "运行": {
+      "zh-CN": "运行",
+      "en": "Running"
+    },
+    "运行中": {
+      "zh-CN": "运行中",
+      "en": "Running"
+    },
+    "返回提问": {
+      "zh-CN": "返回提问",
+      "en": "Back to question"
+    },
+    "还没有可观察的任务": {
+      "zh-CN": "还没有可观察的任务",
+      "en": "No observable tasks yet"
+    },
+    "这条问题不再引用文稿，原页面与文字已保留。": {
+      "zh-CN": "这条问题不再引用文稿，原页面与文字已保留。",
+      "en": "This question no longer references the document. The original page and text are retained."
+    },
+    "部分任务状态待核查": {
+      "zh-CN": "部分任务状态待核查",
+      "en": "Some task states need checking"
+    },
+    "重做": {
+      "zh-CN": "重做",
+      "en": "Redo"
+    },
+    "重新读取当前页": {
+      "zh-CN": "重新读取当前页",
+      "en": "Read current page again"
+    },
+    "问当前页": {
+      "zh-CN": "问当前页",
+      "en": "Ask about this page"
+    },
+    "问当前页面": {
+      "zh-CN": "问当前页面",
+      "en": "Ask about the current page"
+    },
+    "需核查": {
+      "zh-CN": "需核查",
+      "en": "Needs checking"
+    },
+    "需要已验证的单屏页面画面，才能原位圈选": {
+      "zh-CN": "需要已验证的单屏页面画面，才能原位圈选",
+      "en": "In-place marking requires a verified page image within one display"
+    },
+    "页面画面未能加载，意见已保留，请重新读取。": {
+      "zh-CN": "页面画面未能加载，意见已保留，请重新读取。",
+      "en": "The page image did not load. Your feedback is retained; read it again."
+    },
+    "项目文稿": {
+      "zh-CN": "项目文稿",
+      "en": "Project document"
+    },
+    "，查看任务": {
+      "zh-CN": "，查看任务",
+      "en": "; view tasks"
+    },
+    "{count} 项任务": {
+      "zh-CN": "{count} 项任务",
+      "en": "{count} tasks"
+    },
+    "{count} 项任务有需要关注的更新。点击查看本次任务。": {
+      "zh-CN": "{count} 项任务有需要关注的更新。点击查看本次任务。",
+      "en": "{count} tasks have updates. Click to view these tasks."
+    },
+    "orb.action.annotate": {
+      "zh-CN": "批注",
+      "en": "Mark"
+    },
+    "orb.action.show-agent": {
+      "zh-CN": "对话",
+      "en": "Chat"
+    },
+    "orb.action.workbench": {
+      "zh-CN": "工作台",
+      "en": "Desk"
+    },
+    "orb.action.tasks": {
+      "zh-CN": "总管",
+      "en": "Hub"
+    },
+    "正在生成修订稿…": {
+      "zh-CN": "正在生成修订稿…",
+      "en": "Creating the revised document…"
+    },
+    "修订提案已保留，尚未生成文件。": {
+      "zh-CN": "修订提案已保留，尚未生成文件。",
+      "en": "The revision proposal is preserved. No file has been created yet."
+    },
+    "这段内容需要进一步确认，尚未生成修订文件。": {
+      "zh-CN": "这段内容需要进一步确认，尚未生成修订文件。",
+      "en": "This content needs clarification. No revised file has been created yet."
+    },
+    "已停止生成修订文件；原回复、原文件和提案保留。": {
+      "zh-CN": "已停止生成修订文件；原回复、原文件和提案保留。",
+      "en": "Revision file generation stopped. The original reply, file and proposal are preserved."
+    },
+    "修订文件的生成结果尚未确认；请核查原操作，勿重新生成。": {
+      "zh-CN": "修订文件的生成结果尚未确认；请核查原操作，勿重新生成。",
+      "en": "The revision publication outcome is unconfirmed. Inspect the original operation; do not generate it again."
+    },
+    "修订文件暂不可用，原回复与提案保留；请核查原操作，勿重复发送。": {
+      "zh-CN": "修订文件暂不可用，原回复与提案保留；请核查原操作，勿重复发送。",
+      "en": "The revised file is unavailable. The original reply and proposal are preserved. Inspect the original operation; do not resend."
+    },
+    "回复已收到，修订文件未完成生成；原文件和提案保留，请核查原操作，勿自动重发。": {
+      "zh-CN": "回复已收到，修订文件未完成生成；原文件和提案保留，请核查原操作，勿自动重发。",
+      "en": "The reply was received, but the revised file was not created. The original file and proposal are preserved. Inspect the original operation; do not resend automatically."
+    },
+    "新问题": {
+      "zh-CN": "新问题",
+      "en": "New question"
+    },
+    "首次发送未收到有效回执；原操作编号和内容已保留，未自动重发。": {
+      "zh-CN": "首次发送未收到有效回执；原操作编号和内容已保留，未自动重发。",
+      "en": "The first submission received no valid receipt. Its operation ID and content are retained; nothing was resent automatically."
+    },
+    "读取关联文稿时收到文件占用或位置变化错误。": {
+      "zh-CN": "读取关联文稿时收到文件占用或位置变化错误。",
+      "en": "Reading the linked document reported that the file was busy or its location changed."
+    },
+    "原问题的本机保存尚未核实，已保留当前内容；请先核查原操作。": {
+      "zh-CN": "原问题的本机保存尚未核实，已保留当前内容；请先核查原操作。",
+      "en": "The original question’s local record could not be verified. Current content is retained; check the original operation first."
+    },
+    "首次发送：HTTP {status}；执行结果待核查，未重发。": {
+      "zh-CN": "首次发送：HTTP {status}；执行结果待核查，未重发。",
+      "en": "First submission: HTTP {status}. Outcome unconfirmed; no resend."
+    },
+    "尚未查到原操作记录，不能据此认定未执行；未自动重发。": {
+      "zh-CN": "尚未查到原操作记录，不能据此认定未执行；未自动重发。",
+      "en": "The original operation was not found. This does not prove it was not executed; nothing was resent."
+    },
+    "发送结果尚未确认，内容已保留；可查看原操作，未自动重发。": {
+      "zh-CN": "发送结果尚未确认，内容已保留；可查看原操作，未自动重发。",
+      "en": "The submission outcome is unconfirmed. Content is retained; check the original operation. Nothing was resent."
+    },
+    "固定轻量协作窗口": {
+      "zh-CN": "固定轻量协作窗口",
+      "en": "Pin chat window"
+    },
+    "取消固定轻量窗口": {
+      "zh-CN": "取消固定轻量窗口",
+      "en": "Unpin chat window"
+    },
+    "技能与工具": {
+      "zh-CN": "技能与工具",
+      "en": "Skills and tools"
+    },
+    "当前页检查": {
+      "zh-CN": "当前页检查",
+      "en": "Review this page"
+    },
+    "不选择": {
+      "zh-CN": "不选择",
+      "en": "None"
+    },
+    "暂不可用": {
+      "zh-CN": "暂不可用",
+      "en": "Unavailable"
+    },
+    "请先引用要检查的任务计划": {
+      "zh-CN": "请先引用要检查的任务计划",
+      "en": "Reference the task plan to review"
+    },
+    "用于当前页": {
+      "zh-CN": "用于当前页",
+      "en": "Use for this page"
+    },
+    "允许启动所选本地工具": {
+      "zh-CN": "允许启动所选本地工具",
+      "en": "Allow the selected local tool to start"
+    },
+    "移除选择": {
+      "zh-CN": "移除选择",
+      "en": "Clear selection"
+    },
+    "已选择": {
+      "zh-CN": "已选择",
+      "en": "Selected"
+    },
+    "补充本页": {
+      "zh-CN": "补充本页",
+      "en": "Add to this review"
+    },
+    "工具调用请求": {
+      "zh-CN": "工具调用请求",
+      "en": "Tool request"
+    },
+    "待回答": {
+      "zh-CN": "待回答",
+      "en": "Awaiting answer"
+    },
+    "允许一次": {
+      "zh-CN": "允许一次",
+      "en": "Allow once"
+    },
+    "保存答复": {
+      "zh-CN": "保存答复",
+      "en": "Save response"
+    },
+    "拒绝": {
+      "zh-CN": "拒绝",
+      "en": "Reject"
+    },
+    "使用情况": {
+      "zh-CN": "使用情况",
+      "en": "Usage"
+    },
+    "已完成": {
+      "zh-CN": "已完成",
+      "en": "Completed"
+    },
+    "调用未完成": {
+      "zh-CN": "调用未完成",
+      "en": "Call incomplete"
+    },
+    "尚未调用": {
+      "zh-CN": "尚未调用",
+      "en": "No call observed yet"
+    },
+    "业务标准质量尚未评定": {
+      "zh-CN": "业务标准质量尚未评定",
+      "en": "Business criteria quality not assessed"
+    },
+    "结果尚未确认，请核查原操作": {
+      "zh-CN": "结果尚未确认，请核查原操作",
+      "en": "Outcome unconfirmed. Check the original operation."
+    },
+    "所选技能或工具已变化，请重新选择": {
+      "zh-CN": "所选技能或工具已变化，请重新选择",
+      "en": "The selection changed. Select it again."
+    },
+    "技能与工具目录暂不可用": {
+      "zh-CN": "技能与工具目录暂不可用",
+      "en": "Skills and tools are unavailable"
+    },
+    "技能与工具选择无效": {
+      "zh-CN": "技能与工具选择无效",
+      "en": "Invalid skill or tool selection"
+    },
+    "工具来源无效": {
+      "zh-CN": "工具来源无效",
+      "en": "Invalid tool source"
+    },
+    "此工具需要原任务计划依据": {
+      "zh-CN": "此工具需要原任务计划依据",
+      "en": "This tool requires the original task plan"
+    },
+    "原任务计划依据无效": {
+      "zh-CN": "原任务计划依据无效",
+      "en": "The task plan reference is invalid"
+    },
+    "此条暂不能补充，请核查原操作或新建问题": {
+      "zh-CN": "此条暂不能补充，请核查原操作或新建问题",
+      "en": "Check the original operation or start a new question"
+    },
+    "请输入补充内容": {
+      "zh-CN": "请输入补充内容",
+      "en": "Enter additional details"
+    },
+    "原操作回执不匹配": {
+      "zh-CN": "原操作回执不匹配",
+      "en": "The operation receipt does not match"
+    },
+    "当前页检查不能混用保存稿输入": {
+      "zh-CN": "当前页检查不能混用保存稿输入",
+      "en": "Choose the page review or the saved document"
+    },
+    "问题索引未能保存，尚未发送": {
+      "zh-CN": "问题索引未能保存，尚未发送",
+      "en": "The request could not be saved. It was not sent."
+    },
+    "继续编辑": {
+      "zh-CN": "继续编辑",
+      "en": "Continue editing"
+    },
+    "技能": {
+      "zh-CN": "技能",
+      "en": "Skills"
+    },
+    "工具": {
+      "zh-CN": "工具",
+      "en": "Tools"
+    },
+    "任务交付与验收覆盖": {
+      "zh-CN": "任务交付与验收覆盖",
+      "en": "Delivery and acceptance coverage"
+    },
+    "返回草稿": {
+      "zh-CN": "返回草稿",
+      "en": "Return to draft"
+    },
+    "补充当前任务": {
+      "zh-CN": "补充当前任务",
+      "en": "Continue this task"
+    },
+    "补充要求，或询问进度…": {
+      "zh-CN": "补充要求，或询问进度…",
+      "en": "Add a requirement or ask for progress…"
+    },
+    "补充已送达": {
+      "zh-CN": "补充已送达",
+      "en": "Follow-up sent"
+    },
+    "补充已有回复": {
+      "zh-CN": "补充已有回复",
+      "en": "Follow-up answered"
+    },
+    "任务已返回": {
+      "zh-CN": "任务已返回",
+      "en": "Task returned"
+    },
+    "任务状态已更新": {
+      "zh-CN": "任务状态已更新",
+      "en": "Task status updated"
+    },
+    "补充记录": {
+      "zh-CN": "补充记录",
+      "en": "Follow-ups"
+    },
+    "此条补充未执行，内容已保留": {
+      "zh-CN": "此条补充未执行，内容已保留",
+      "en": "This follow-up was not sent. Your text is preserved."
+    },
+    "当前任务暂不能补充，请先核查原操作": {
+      "zh-CN": "当前任务暂不能补充，请先核查原操作",
+      "en": "This task cannot accept a follow-up yet. Check its status first."
+    },
+    "任务仍在运行": {
+      "zh-CN": "任务仍在运行",
+      "en": "The task is still running"
+    },
+    "任务当前空闲": {
+      "zh-CN": "任务当前空闲",
+      "en": "The task is currently idle"
+    },
+    "继续任务": {
+      "zh-CN": "继续任务",
+      "en": "Continue task"
+    },
+    "允许连接所选远端工具": {
+      "zh-CN": "允许连接所选远端工具",
+      "en": "Allow the selected remote tools to connect"
+    },
+    "请先确认所选工具的连接许可": {
+      "zh-CN": "请先确认所选工具的连接许可",
+      "en": "Confirm the selected tools’ connection permissions first"
+    },
+    "搜索能力": {
+      "zh-CN": "搜索能力",
+      "en": "Search capabilities"
+    },
+    "已选择 {count} 个工具": {
+      "zh-CN": "已选择 {count} 个工具",
+      "en": "{count} tools selected"
+    },
+    "原请求字段与范围": {
+      "zh-CN": "原请求字段与范围",
+      "en": "Original request and scope"
+    },
+    "当前任务暂不能继续，请核查原操作": {
+      "zh-CN": "当前任务暂不能继续，请核查原操作",
+      "en": "This task cannot continue yet. Inspect the original operation."
+    },
+    "暂无可用工具": {
+      "zh-CN": "暂无可用工具",
+      "en": "No tools available"
+    },
+    "未取得本次调用参数": {
+      "zh-CN": "未取得本次调用参数",
+      "en": "Call arguments are unavailable"
+    },
+    "参数已截断": {
+      "zh-CN": "参数已截断",
+      "en": "Arguments truncated"
+    },
+    "部分值已隐藏": {
+      "zh-CN": "部分值已隐藏",
+      "en": "Some values are hidden"
+    },
+    "未取得当前页，请重新读取": {
+      "zh-CN": "未取得当前页，请重新读取",
+      "en": "Current page unavailable. Read it again."
+    },
+    "问总管": {
+      "zh-CN": "问总管",
+      "en": "Ask coordinator"
+    },
+    "全局总管": {
+      "zh-CN": "全局总管",
+      "en": "Coordinator"
+    },
+    "已读取上次保存的进度": {
+      "zh-CN": "已读取上次保存的进度",
+      "en": "Last saved progress loaded"
+    },
+    "讨论切换尚未完成，原稿仍保留。请完成输入后重试。": {
+      "zh-CN": "讨论切换尚未完成，原稿仍保留。请完成输入后重试。",
+      "en": "Chat switching is not complete. Your draft is kept. Finish typing and try again."
+    },
+    "原工作 · ": {
+      "zh-CN": "原工作 · ",
+      "en": "Original work · "
+    },
+    "所选原工作": {
+      "zh-CN": "所选原工作",
+      "en": "Selected original work"
+    },
+    "所选原工作的范围需要核对，原稿保留，请返回对话。": {
+      "zh-CN": "所选原工作的范围需要核对，原稿保留，请返回对话。",
+      "en": "Check the selected original work scope in its conversation. Your input is retained."
+    },
+    "原工作须从共享对话继续，当前文稿或能力任务选择已保留。": {
+      "zh-CN": "原工作须从共享对话继续，当前文稿或能力任务选择已保留。",
+      "en": "Continue original work in its shared conversation. The current document or capability task selection is retained."
+    },
+    "沿用桌面对话中的明确工作选择，不扩大执行权限。": {
+      "zh-CN": "沿用桌面对话中的明确工作选择，不扩大执行权限。",
+      "en": "Uses the explicit work selection in the desktop conversation without extending execution permissions."
+    }
+  }
+}

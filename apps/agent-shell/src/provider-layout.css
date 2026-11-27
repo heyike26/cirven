@@ -1,0 +1,61 @@
+/* Scoped provider typography; keep the shell's silver/graphite colour family. */
+.as-app-frame .as-shell .as-object.as-provider{width:100%;max-width:var(--as-reading-width,760px);min-width:0;margin-inline:auto;font-size:16px;line-height:1.7}
+.as-app-frame .as-provider>h2{font-size:24px;line-height:1.4;font-weight:600;letter-spacing:normal;margin:0 0 12px}
+.as-app-frame .as-provider>p{margin:0 0 24px;max-width:70ch}
+.as-app-frame .as-provider .as-provider-choices{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));width:100%;max-width:560px;margin:0 0 28px}
+.as-app-frame .as-provider .as-provider-choices>button{min-width:0;min-height:44px;padding:12px 16px;font-size:15px;line-height:1.5;white-space:normal;overflow-wrap:normal;word-break:normal}
+.as-app-frame .as-provider .as-provider-api{padding:0 0 24px}
+.as-app-frame .as-provider .as-provider-api>h3,.as-app-frame .as-provider .as-subscription-account>h3{font-size:18px;line-height:1.5;font-weight:600;letter-spacing:normal;margin:0 0 12px}
+.as-app-frame .as-provider .as-provider-api>.as-capability-note{margin:0 0 24px}
+.as-app-frame .as-provider .as-provider-directory{display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:end;gap:12px;margin:0 0 24px}
+.as-app-frame .as-provider .as-provider-directory>label{display:grid;gap:8px;min-width:0;font-size:15px;line-height:1.5}
+.as-app-frame .as-provider .as-provider-directory>button{min-height:44px;padding:12px 16px;font-size:14px;line-height:1.5;max-width:100%;white-space:normal}
+.as-app-frame .as-provider .as-provider-selected{min-width:0;padding:0 0 24px;margin:0 0 24px;border-bottom:1px solid var(--as-stroke,#dce0e3)}
+.as-app-frame .as-provider .as-provider-selected>strong{font-size:16px;font-weight:600}
+.as-app-frame .as-provider .as-provider-selected>p{margin:8px 0;line-height:1.65}
+.as-app-frame .as-provider .as-provider-selected>small{display:block;font-size:13px;line-height:1.6}
+.as-app-frame .as-provider-identifier{min-width:0;max-width:100%;white-space:normal;overflow-wrap:anywhere;word-break:normal}
+.as-app-frame .as-provider .as-capability-note,.as-app-frame .as-provider .as-inline-warning,.as-app-frame .as-provider .as-inline-error{font-size:14px;line-height:1.7;max-width:70ch;overflow-wrap:break-word;word-break:normal}
+.as-app-frame .as-provider-connection{display:grid;grid-template-columns:minmax(0,1fr);gap:20px;min-width:0;font-size:16px;line-height:1.7;margin:0}
+.as-app-frame .as-provider .as-provider-connection>label,.as-app-frame .as-provider-connection fieldset>label,.as-app-frame .as-provider .as-subscription-account label{display:grid;gap:8px;min-width:0;margin:0;font-size:15px;line-height:1.6}
+.as-app-frame .as-provider .as-provider-connection label.as-check,.as-app-frame .as-provider .as-subscription-account label.as-check{display:flex;align-items:flex-start;gap:12px;min-width:0;font-size:14px;line-height:1.65}
+.as-app-frame .as-provider-connection .as-check>span{min-width:0;overflow-wrap:break-word}
+.as-app-frame .as-provider-connection input[type=checkbox]{width:17px;height:17px;min-height:0;flex:none;padding:0;margin:4px 0 0}
+.as-app-frame .as-provider .as-provider-connection :is(input:not([type=checkbox]):not([type=radio]),select,textarea),.as-app-frame .as-provider .as-subscription-account :is(input,select),.as-app-frame .as-provider .as-provider-directory select{box-sizing:border-box;width:100%;min-width:0;max-width:100%;min-height:44px;margin:0;padding:12px 12px;font-size:15px;line-height:1.5;letter-spacing:normal;font-weight:400}
+.as-app-frame .as-provider-connection textarea{min-height:128px;resize:vertical}
+.as-app-frame .as-provider-connection input[type=file]{font-size:14px;overflow:hidden}
+.as-app-frame .as-provider-connection input::file-selector-button{font:inherit;padding:4px 8px;margin-right:8px;max-width:100%}
+.as-app-frame .as-provider .as-provider-connection>.as-capability-form{margin:0;padding:0;border:0;min-width:0}
+.as-app-frame .as-provider .as-provider-connection>.as-capability-form>summary{min-height:44px;padding:12px 4px;font-size:14px;line-height:1.6;border-top:1px solid var(--as-stroke,#dce0e3);white-space:normal;overflow-wrap:break-word;word-break:normal}
+.as-app-frame .as-provider-connection>.as-capability-form[open]>summary{margin-bottom:20px}
+.as-app-frame .as-provider-connection fieldset{display:grid;gap:16px;min-width:0;margin:24px 0 0;padding:0;border:0}
+.as-app-frame .as-provider-connection fieldset>legend{max-width:100%;padding:0;margin:0 0 12px;font-size:16px;font-weight:600;line-height:1.6;overflow-wrap:break-word}
+.as-app-frame .as-provider-connection .as-capability-entry{min-width:0;padding:16px 0;margin:0;border:0;border-bottom:1px solid var(--as-stroke,#dce0e3);background:transparent}
+.as-app-frame .as-provider-connection .as-capability-entry>label{display:grid;gap:8px;min-width:0;margin:0 0 16px;font-size:14px;line-height:1.6}
+.as-app-frame .as-provider-connection .as-capability-entry :is(strong,small){display:block;min-width:0;overflow-wrap:anywhere}
+.as-app-frame .as-provider-connection .as-provider-save-history{min-width:0;font-size:14px;line-height:1.7}
+.as-app-frame .as-provider-connection .as-provider-save-history>summary{min-height:44px;padding:12px 4px;cursor:pointer;overflow-wrap:break-word}
+.as-app-frame .as-provider .as-capability-actions,.as-app-frame .as-provider .as-provider-form-actions{display:flex;align-items:center;justify-content:flex-start;gap:12px;flex-wrap:wrap;min-width:0;margin:0}
+.as-app-frame .as-provider .as-capability-actions>button,.as-app-frame .as-provider .as-provider-form-actions>button{min-width:0;max-width:100%;min-height:44px;padding:12px 16px;font-size:14px;line-height:1.5;white-space:normal;word-break:normal}
+.as-app-frame .as-provider .as-provider-primary{background:#42494d;border-color:#42494d;color:#fff}
+.as-app-frame .as-provider .as-provider-primary:hover:enabled{background:#343b3f;border-color:#343b3f}
+.as-app-frame .as-provider .as-subscription-account{padding:0 0 24px;margin:0;min-width:0;font-size:16px;line-height:1.7}
+.as-app-frame .as-provider .as-subscription-steps{margin:20px 0 28px;gap:16px}
+.as-app-frame .as-provider .as-subscription-steps li{font-size:13px;line-height:1.6}
+.as-app-frame .as-provider .as-subscription-status{margin:0 0 20px}
+.as-app-frame .as-provider .as-subscription-status>strong{font-size:16px;font-weight:600;line-height:1.6}
+.as-app-frame .as-provider .as-subscription-status>span{font-size:14px;color:var(--as-muted,#62686d);line-height:1.65}
+.as-app-frame .as-provider .as-subscription-account .as-capability-note{margin:0 0 20px}
+.as-app-frame .as-provider .as-subscription-selection{gap:16px;margin:20px 0 24px}
+.as-app-frame .as-provider .as-subscription-selection>small{font-size:13px;line-height:1.6;color:var(--as-muted,#62686d)}
+.as-app-frame .as-provider .as-subscription-account details{min-width:0;margin:0;font-size:14px;line-height:1.7}
+.as-app-frame .as-provider .as-subscription-account summary{min-height:44px;padding:12px 4px;line-height:1.6;overflow-wrap:anywhere;word-break:normal}
+.as-app-frame .as-provider .as-subscription-account details[open]>label{margin:12px 0 0}
+.as-app-frame .as-provider .as-provider-details{margin:0 0 20px}
+.as-app-frame .as-provider .as-provider-details dl{display:grid;grid-template-columns:minmax(0,110px) minmax(0,1fr);gap:8px 16px;margin:12px 0 20px;font-size:13px;line-height:1.7}
+.as-app-frame .as-provider .as-provider-details :is(dt,dd){min-width:0;margin:0}
+.as-app-frame .as-provider .as-provider-details dt{color:var(--as-muted,#62686d)}
+.as-app-frame .as-provider .as-subscription-account>.as-capability-actions{margin-block:20px}
+.as-app-frame .as-provider .as-capability-pending{display:flex;align-items:center;gap:12px;font-size:14px;line-height:1.65;min-width:0;overflow-wrap:break-word}
+@media(max-width:560px){.as-app-frame .as-provider .as-provider-directory{grid-template-columns:minmax(0,1fr)}.as-app-frame .as-provider .as-provider-directory>button{justify-self:start}.as-app-frame .as-provider .as-provider-choices>button{padding-inline:12px}}
+@media(max-width:430px){.as-app-frame .as-provider .as-subscription-steps{gap:12px}.as-app-frame .as-provider .as-provider-details dl{grid-template-columns:minmax(0,1fr);row-gap:4px}.as-app-frame .as-provider .as-provider-details dd+dt{margin-top:12px}}
